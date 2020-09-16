@@ -16,9 +16,9 @@ There are no requirements or qualifications to participate in the BFX Workshop. 
 
 # Organizers
 
-This workshop is a collaborative effort between the McDonnell Genome Institute, Department of Medicine, Division of Hematology & Oncology, and Department of Pediatrics with faculty, staff, and student representation and participation from many other Institutes, Departments and Divisions at Washington University School of Medicine in St. Louis.
+This workshop is a collaborative effort between the McDonnell Genome Institute, Department of Medicine, Division of Hematology & Oncology, and Department of Pediatrics with faculty, staff, and student representation and participation from many other Institutes, Departments, and Divisions at Washington University School of Medicine in St. Louis.
 
-The organizers and presenters of this workshop have multi-displinary backgrounds in Bioinformatics, Medicine, Computational Biology, Genetics, Computer Science, Oncology, Virology, Information Systems, Microbiology, Immunology, and many other combinations of both Data and Biological Sciences.
+The organizers and presenters of this workshop have multi-disciplinary backgrounds in Bioinformatics, Medicine, Computational Biology, Genetics, Computer Science, Oncology, Virology, Information Systems, Microbiology, Immunology, and many other combinations of both Data and Biological Sciences.
 
 This team of organizers and presenters are committed to sharing best practice methods, technology, and knowledge from decades of experience working in these fields of study. New and novel applications of genome sequencing data are constantly evolving and even more so the analytical processes and tools used to translate data to information and knowledge are ever growing and changing. The team leading this workshop will focus on standard best practices while having an eye toward the future direction of each Bioinformatics topic.
 
