@@ -15,12 +15,21 @@ Weekly Workshops on Mondays @ 10am
 
 For the Fall 2020 Semester, all BFX Workshops will be held remotely via Zoom. Please see the [Communications](https://github.com/genome/bfx-workshop/blob/master/README.md#communications) section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling.
 
-A BFX Workshop schedule, subject to change, is available below:
+The BFX Workshop schedule, subject to change, is available below:
 
 |Date|Topic(s)|Presenter(s)|
 |----|--------|------------|
 | September 14, 2020 | Planning Session (NO ATTENDANCE) | ORGANIZERS-ONLY |
 | September 21, 2020 | Workshop and Prerequisite Review | Jason Walker, Chris Miller |
+| September 28, 2020 | Sequence Data Generation | Chris Miller |
+| October 5, 2020 | DNA Alignment | Jason Walker |
+| October 12, 2020 | Alignment Workflows | Tom Mooney, Jason Walker |
+| October 19, 2020 | Small Variant Discovery | Alex Paul, Sam Peters, Chris Miller |
+| October 26, 2020 | Parsing and Filtering with Python | Susanna Kiwala, John Garza |
+| November 2, 2020 | Annotation and R | Zach Skidmore|
+
+As presenter dates are confirmed a full Fall 2020 and Spring 2021 academic calendar schedule will be made available. 
+
 
 # Participation
 
