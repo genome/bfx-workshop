@@ -23,12 +23,16 @@ This team of organizers and presenters are committed to sharing best practice me
 ## Slack
 
 For members of the mgibio Slack organization, please use the [#bfx_workshop](https://mgibio.slack.com/archives/CDE4LQHHD) channel. If you do not have access to the mgibio Slack organization please email one of the following organizers:
+
 jason.walker at wustl.edu
+
 c.a.miller at wustl.edu
 
 ## Email
 
 An Office 365 Group named Bioinformatics is used to distribute Calendar invites, announcements, and information regarding this workshop. Questions are welcome as well, but please be mindful that over 100 people subscribe to this alias. [Click here](https://outlook.office365.com/owa/bioinformatics@gowustl.onmicrosoft.com/groupsubscription.ashx?action=join&source=MSExchange/LokiServer&guid=2fdc302a-812b-4984-a57b-62ee21430272) to join.
 
-The email address is: bioinformatics at gowustl.onmicrosoft.com
+The email address is: 
+
+bioinformatics at gowustl.onmicrosoft.com
 
