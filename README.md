@@ -2,6 +2,13 @@
 
 Welcome to the Fall 2020 and Spring 2021 Bioinformatics (BFX) Workshop. 
 
+# Objectives
+
+This workshop series is designed for people who want to:
+1) learn the fundamentals of computational genomics
+2) use this information to improve and expedite their research
+3) expand their knowledge by hearing from experts in other subject areas
+
 # Schedule
 
 Weekly Workshops on Mondays @ 10am
