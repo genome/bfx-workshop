@@ -4,7 +4,11 @@ Welcome to the Fall 2020 and Spring 2021 Bioinformatics (BFX) Workshop.
 
 # Schedule
 
-A tentative schedule is available [here](https://docs.google.com/document/d/1NEgi0krhzKT9TNxWx7aLcYhiQekeRxPR2NN5l-sxwfU/edit?usp=sharing).
+Weekly Workshops on Mondays @ 10am
+
+For the Fall 2020 Semester, all BFX Workshops will be held remotely via Zoom. Please see the Communications section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling.
+
+A tentative BFX Workshop schedule is available [here](https://docs.google.com/document/d/1NEgi0krhzKT9TNxWx7aLcYhiQekeRxPR2NN5l-sxwfU/edit?usp=sharing).
 
 # Participation
 
