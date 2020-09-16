@@ -1,6 +1,6 @@
 # Bioinformatics (BFX) Workshop
 
-Welcome to the Fall 2020 and Spring 2021 Bioinformatics (BFX) Workshop. 
+Welcome to the Fall 2020 and Spring 2021 Bioinformatics (BFX) Workshop! 
 
 # Schedule
 
@@ -17,7 +17,7 @@ A BFX Workshop schedule, subject to change, is available below:
 
 # Participation
 
-There are no requirements or qualifications to participate in the BFX Workshop. All we ask is that any willing participant visit our [Prerequisite](https://github.com/genome/bfx-workshop/blob/master/bfx_workshop_01_overview.ipynb) tutorial to understand the computer systems, tools, and languages that will be used throughout the course. Most of the languages and tools used are common to all fields and applications of Bioinformatics. No academic credits are earned for attending the course and there no attendance requirements.
+There are no requirements or qualifications to participate in the BFX Workshop. All we ask is that any willing participant visit our [Prerequisite](https://github.com/genome/bfx-workshop/blob/master/bfx_workshop_01_overview.ipynb) tutorial to understand the computer systems, tools, and languages that will be used throughout the course. Most of the languages and tools used are common to all fields and applications of Bioinformatics. No academic credits are earned for attending the course and there no attendance requirements.  There will be "assignments" given during some lectures and we strongly encourage you to complete them in order to get the most out of the course - there is no substitute for hands-on learning!
 
 # Organizers
 
