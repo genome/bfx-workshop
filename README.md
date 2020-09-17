@@ -28,7 +28,7 @@ The BFX Workshop schedule, subject to change, is available below:
 | October 26, 2020 | Parsing and Filtering with Python | Susanna Kiwala, John Garza |
 | November 2, 2020 | Annotation and R | Zach Skidmore|
 
-As presenter dates are confirmed a full Fall 2020 and Spring 2021 academic calendar schedule will be made available. 
+As presenter dates are confirmed a full Fall 2020 and Spring 2021 academic calendar schedule will be made available. Probable topics include RNAseq, single-cell RNA, Microbial Genomics, Cancer Genomics, Population Genetics, Immunology, and more.
 
 
 # Participation
