@@ -2,9 +2,9 @@
 
 This week, we cover some basics of how sequence is generated, delve into the details of data and formats, and talk through basic QC of your sequence.
 
-- Lecture Recording
+- [Lecture Recording](https://wustl.box.com/s/33hp9a9e20m0gteavq46a5d2a16u2fe4)
 
-- Slides
+- [Slides](https://docs.google.com/presentation/d/1qrfu-YLaFctKUzuI1n0W_2iboojBvDx2OIRWTBcImsY/edit?usp=sharing)
 
 
 ## Homework Assignment

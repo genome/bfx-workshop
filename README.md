@@ -20,7 +20,7 @@ The BFX Workshop schedule, subject to change, is available below:
 |Date|Topic(s)|Presenter(s)|
 |----|--------|------------|
 | September 21, 2020 | [Workshop and Prerequisite Review](https://github.com/genome/bfx-workshop/tree/master/week_01) | Jason Walker, Chris Miller |
-| September 28, 2020 | Sequence Data Generation | Chris Miller |
+| September 28, 2020 | [Sequence Data Generation](https://github.com/genome/bfx-workshop/tree/master/week_02) | Chris Miller |
 | October 5, 2020 | Bash Tricks + Office Hours | Chris Miller |
 | October 12, 2020 | DNA Alignment | Jason Walker |
 | October 19, 2020 | Alignment Workflows | Tom Mooney, Jason Walker |
