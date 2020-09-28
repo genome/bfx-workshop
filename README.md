@@ -21,11 +21,14 @@ The BFX Workshop schedule, subject to change, is available below:
 |----|--------|------------|
 | September 21, 2020 | [Workshop and Prerequisite Review](https://github.com/genome/bfx-workshop/tree/master/week_01) | Jason Walker, Chris Miller |
 | September 28, 2020 | Sequence Data Generation | Chris Miller |
-| October 5, 2020 | DNA Alignment | Jason Walker |
-| October 12, 2020 | Alignment Workflows | Tom Mooney, Jason Walker |
-| October 19, 2020 | Small Variant Discovery | Alex Paul, Sam Peters, Chris Miller |
-| October 26, 2020 | Parsing and Filtering with Python | Susanna Kiwala, John Garza |
-| November 2, 2020 | Annotation and R | Zach Skidmore|
+| October 5, 2020 | Bash Tricks + Office Hours | Chris Miller |
+| October 12, 2020 | DNA Alignment | Jason Walker |
+| October 19, 2020 | Alignment Workflows | Tom Mooney, Jason Walker |
+| October 26, 2020 | Small Variant Discovery | Alex Paul, Sam Peters, Chris Miller |
+| November 2, 2020 | Short Lecture + Office Hours | TBD |
+| November 9, 2020 | Parsing and Filtering with Python | Susanna Kiwala, John Garza |
+| November 16, 2020 | Annotation and R | Zach Skidmore|
+
 
 As presenter dates are confirmed a full Fall 2020 and Spring 2021 academic calendar schedule will be made available. Probable topics include RNAseq, single-cell RNA, Microbial Genomics, Cancer Genomics, Population Genetics, Immunology, and more.
 
