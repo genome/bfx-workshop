@@ -13,7 +13,7 @@ This workshop series is designed for people who want to:
 
 Weekly Workshops on Mondays @ 10am
 
-For the Fall 2020 Semester, all BFX Workshops will be held remotely via Zoom. Please see the [Communications](https://github.com/genome/bfx-workshop/blob/master/README.md#communications) section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling.
+For the Fall 2020 Semester, all BFX Workshops will be held remotely via Zoom. Please see the [Communications](https://github.com/genome/bfx-workshop/blob/master/README.md#communications) section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling. 
 
 The BFX Workshop schedule, subject to change, is available below:
 
@@ -30,7 +30,7 @@ The BFX Workshop schedule, subject to change, is available below:
 | November 16, 2020 | Annotation and R | Zach Skidmore|
 
 
-As presenter dates are confirmed a full Fall 2020 and Spring 2021 academic calendar schedule will be made available. Probable topics include RNAseq, single-cell RNA, Microbial Genomics, Cancer Genomics, Population Genetics, Immunology, and more.
+As presenter dates are confirmed a full Fall 2020 and Spring 2021 academic calendar schedule will be made available. The first Monday of each month will be a short lecture (15-30m), followed by open "office hours" to get help with assignments, or ask for advice about your own projects. Probable topics include RNAseq, single-cell RNA, Microbial Genomics, Cancer Genomics, Population Genetics, Immunology, and more.
 
 
 # Participation
