@@ -1,5 +1,10 @@
 Throughout this walkthrough, "GROUP" is the name of your compute group in compute1.  (If you run `groups`, specifically this is the part of a group that starts with `compute-` without that prefix included.)
 
+For simplicity when running the following commands, let's set a variable for the group. Replace <GROUP> with your actual group name:
+```bash
+export GROUP=<GROUP>
+```
+
 To launch a cromwell workflow, start by launching an LSF job in a docker container containing Cromwell.
 ```bash
 LSF_DOCKER_VOLUMES="$HOME:$HOME /scratch1/fs1/$GROUP:/scratch1/fs1/$GROUP /storage1/fs1/$GROUP/Active:/storage1/fs1/$GROUP/Active /storage1/fs1/bga/Active:/storage1/fs1/bga/Active" \
