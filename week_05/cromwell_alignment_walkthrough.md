@@ -303,5 +303,18 @@ It will create two directories, `cromwell-executions`, and `cromwell-workflow-lo
 
 </details>
 
+
+
 # Homework
 * If you did not successfully run this workflow, reach out through mgibio [#bfx-workshop](https://mgibio.slack.com/archives/CDE4LQHHD) slack channel
+
+* Once you have the normal sample complete, run the workflow again using the tumor sample.
+
+HINT: Start with this input file: `/storage1/fs1/bga/Active/shared/tbmooney/bfx-workshop-20201019/inputs.yaml`
+
+HINT: The tumor unaligned sequence data is in `/storage1/fs1/bga/Active/shared/analysis-workflows-example-data/unaligned_subset_bams/tumor`
+
+* Once you have aligned tumor and normal sequence data for the HCC1395, can you identify any known variants in IGV.
+
+HINT: https://clinmedjournals.org/articles/jggr/jggr-2-019table1.html
+
