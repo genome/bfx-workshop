@@ -2,14 +2,14 @@ Throughout this walkthrough, "GROUP" is the name of your compute group in comput
 
 To launch a cromwell workflow, start by launching an LSF job in a docker container containing Cromwell.
 ```bash
-LSF_DOCKER_VOLUMES="$HOME:$HOME /scratch1/fs1/GROUP:/scratch1/fs1/GROUP /storage1/fs1/GROUP/Active:/storage1/fs1/GROUP/Active /storage1/fs1/bga/Active:/storage1/fs1/bga/Active" \
-bsub -G compute-GROUP -a 'docker(registry.gsc.wustl.edu/apipe-builder/genome_perl_environment:compute1-8)' -M 8000M -R 'select[mem>8000M] rusage[mem=8000M]' -Is -q general-interactive /bin/bash -l
+LSF_DOCKER_VOLUMES="$HOME:$HOME /scratch1/fs1/$GROUP:/scratch1/fs1/$GROUP /storage1/fs1/$GROUP/Active:/storage1/fs1/$GROUP/Active /storage1/fs1/bga/Active:/storage1/fs1/bga/Active" \
+bsub -G compute-$GROUP -a 'docker(registry.gsc.wustl.edu/apipe-builder/genome_perl_environment:compute1-8)' -M 8000M -R 'select[mem>8000M] rusage[mem=8000M]' -Is -q general-interactive /bin/bash -l
 ```
 
 To work properly on compute1, Cromwell needs to use a directory in the scratch space to run, so we'll make one now.
 ```bash
-mkdir -p /scratch1/fs1/GROUP/USER/bfx-workshop-week5-cromwell
-cd /scratch1/fs1/GROUP/USER/bfx-workshop-week5-cromwell
+mkdir -p /scratch1/fs1/$GROUP/$USER/bfx-workshop-week5-cromwell
+cd /scratch1/fs1/$GROUP/$USER/bfx-workshop-week5-cromwell
 ```
 
 Then it's a matter of supplying the proper files to Cromwell to launch the workflow.  It needs a few things to run:
