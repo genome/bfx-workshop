@@ -1,6 +1,6 @@
 Throughout this walkthrough, "GROUP" is the name of your compute group in compute1.  (If you run `groups`, specifically this is the part of a group that starts with `compute-` without that prefix included.)
 
-For simplicity when running the following commands, let's set a variable for the group. Replace <GROUP> with your actual group name:
+For simplicity when running the following commands, let's set a variable for the group. Replace '<GROUP>' with your actual group name:
 ```bash
 export GROUP=<GROUP>
 ```
