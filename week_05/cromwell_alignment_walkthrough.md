@@ -302,3 +302,6 @@ It will create two directories, `cromwell-executions`, and `cromwell-workflow-lo
 ```
 
 </details>
+
+# Homework
+* If you did not successfully run this workflow, reach out through mgibio [#bfx-workshop](https://mgibio.slack.com/archives/CDE4LQHHD) slack channel
