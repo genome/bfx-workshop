@@ -24,7 +24,7 @@ Then it's a matter of supplying the proper files to Cromwell to launch the workf
 
 We can copy an example configuration file and edit it for our use.
 ```bash
-cp /storage1/fs1/bga/Active/shared/tbmooney/bfx-workshop-20201019/cromwell.config .
+sed 's/USER/YOUR_USER/g' /storage1/fs1/bga/Active/shared/tbmooney/bfx-workshop-20201019/cromwell.config | sed 's/GROUP/YOUR_GROUP/g' > cromwell.config
 ```
 <details>
   <summary>Click for cromwell.config</summary>
