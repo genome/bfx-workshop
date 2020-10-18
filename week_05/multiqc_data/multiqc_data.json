@@ -1,0 +1,4717 @@
+{
+    "report_data_sources": {
+        "VerifyBAMID": {
+            "all_sections": {
+                "H_NJ-HCC1395-HCC1395_BL": "/Users/jwalker/Downloads/first-cromwell-run/cromwell-executions/alignment_exome.cwl/41b226f4-e139-469c-ad63-904996c8fd53/call-qc/qc_exome.cwl/6edb5ee0-d3df-4fe6-94f0-69b4a137e5b3/call-verify_bam_id/execution/final.VerifyBamId.selfSM"
+            }
+        },
+        "GATK": {
+            "base_recalibrator": {
+                "bqsr.table": "/Users/jwalker/Downloads/first-cromwell-run/cromwell-executions/alignment_exome.cwl/41b226f4-e139-469c-ad63-904996c8fd53/call-alignment/sequence_to_bqsr.cwl/18f47eb7-31ba-422e-a450-73d9f76a7964/call-apply_bqsr/inputs/1862506211/bqsr.table"
+            }
+        },
+        "Picard": {
+            "AlignmentSummaryMetrics": {
+                "final": "/Users/jwalker/Downloads/first-cromwell-run/cromwell-executions/alignment_exome.cwl/41b226f4-e139-469c-ad63-904996c8fd53/call-qc/qc_exome.cwl/6edb5ee0-d3df-4fe6-94f0-69b4a137e5b3/call-collect_alignment_summary_metrics/execution/final.AlignmentSummaryMetrics.txt"
+            },
+            "HsMetrics": {
+                "final": "/Users/jwalker/Downloads/first-cromwell-run/cromwell-executions/alignment_exome.cwl/41b226f4-e139-469c-ad63-904996c8fd53/call-qc/qc_exome.cwl/6edb5ee0-d3df-4fe6-94f0-69b4a137e5b3/call-collect_roi_hs_metrics/execution/final.roi-HsMetrics.txt"
+            },
+            "InsertSizeMetrics": {
+                "final": "/Users/jwalker/Downloads/first-cromwell-run/cromwell-executions/alignment_exome.cwl/41b226f4-e139-469c-ad63-904996c8fd53/call-qc/qc_exome.cwl/6edb5ee0-d3df-4fe6-94f0-69b4a137e5b3/call-collect_insert_size_metrics/execution/final.InsertSizeMetrics.txt"
+            },
+            "DuplicationMetrics": {
+                "final": "/Users/jwalker/Downloads/first-cromwell-run/cromwell-executions/alignment_exome.cwl/41b226f4-e139-469c-ad63-904996c8fd53/call-alignment/sequence_to_bqsr.cwl/18f47eb7-31ba-422e-a450-73d9f76a7964/call-mark_duplicates_and_sort/execution/final.merged.NameSorted.mark_dups_metrics.txt"
+            }
+        },
+        "Samblaster": {
+            "all_sections": {
+                "stderr": "/Users/jwalker/Downloads/first-cromwell-run/cromwell-executions/alignment_exome.cwl/41b226f4-e139-469c-ad63-904996c8fd53/call-alignment/sequence_to_bqsr.cwl/18f47eb7-31ba-422e-a450-73d9f76a7964/call-align/shard-1/sequence_align_and_tag_adapter.cwl/4a278bdd-3008-49d0-b8f7-03938272b567/call-align_and_tag/execution/stderr"
+            }
+        },
+        "Samtools": {
+            "flagstat": {
+                "final": "/Users/jwalker/Downloads/first-cromwell-run/cromwell-executions/alignment_exome.cwl/41b226f4-e139-469c-ad63-904996c8fd53/call-qc/qc_exome.cwl/6edb5ee0-d3df-4fe6-94f0-69b4a137e5b3/call-samtools_flagstat/execution/final.bam.flagstat"
+            }
+        }
+    },
+    "report_general_stats_data": [
+        {
+            "H_NJ-HCC1395-HCC1395_BL": {
+                "RG": "ALL",
+                "CHIP_ID": "NA",
+                "#SNPS": 2.0,
+                "#READS": 40.0,
+                "AVG_DP": 20.0,
+                "FREEMIX": 0.0,
+                "FREELK1": 3.79,
+                "FREELK0": 3.79,
+                "FREE_RH": "NA",
+                "FREE_RA": "NA",
+                "CHIPMIX": "NA",
+                "CHIPLK1": "NA",
+                "CHIPLK0": "NA",
+                "CHIP_RH": "NA",
+                "CHIP_RA": "NA",
+                "DPREF": "NA",
+                "RDPHET": "NA",
+                "RDPALT": "NA"
+            }
+        },
+        {
+            "final": {
+                "CATEGORY": "PAIR",
+                "TOTAL_READS": 6816.0,
+                "PF_READS": 6816.0,
+                "PCT_PF_READS": 1.0,
+                "PF_NOISE_READS": 0.0,
+                "PF_READS_ALIGNED": 6807.0,
+                "PCT_PF_READS_ALIGNED": 0.99868,
+                "PF_ALIGNED_BASES": 986100.0,
+                "PF_HQ_ALIGNED_READS": 6802.0,
+                "PF_HQ_ALIGNED_BASES": 985529.0,
+                "PF_HQ_ALIGNED_Q20_BASES": 926388.0,
+                "PF_HQ_MEDIAN_MISMATCHES": 1.0,
+                "PF_MISMATCH_RATE": 0.011089,
+                "PF_HQ_ERROR_RATE": 0.011054,
+                "PF_INDEL_RATE": 0.000291,
+                "MEAN_READ_LENGTH": 151.0,
+                "READS_ALIGNED_IN_PAIRS": 6798.0,
+                "PCT_READS_ALIGNED_IN_PAIRS": 0.998678,
+                "PF_READS_IMPROPER_PAIRS": 23.0,
+                "PCT_PF_READS_IMPROPER_PAIRS": 0.003379,
+                "BAD_CYCLES": 0.0,
+                "STRAND_BALANCE": 0.499927,
+                "PCT_CHIMERAS": 0.000735,
+                "PCT_ADAPTER": 0.0,
+                "PCT_SOFTCLIP": 0.042201,
+                "PCT_HARDCLIP": 0.0,
+                "SAMPLE": "",
+                "LIBRARY": "H_NJ-HCC1395-HCC1395_BL-lg21-lib1",
+                "READ_GROUP": "",
+                "BAIT_SET": "hla_and_brca_genes_bait",
+                "BAIT_TERRITORY": 13918.0,
+                "BAIT_DESIGN_EFFICIENCY": 0.771734,
+                "ON_BAIT_BASES": 589301.0,
+                "NEAR_BAIT_BASES": 157208.0,
+                "OFF_BAIT_BASES": 239785.0,
+                "PCT_SELECTED_BASES": 0.756883,
+                "PCT_OFF_BAIT": 0.243117,
+                "ON_BAIT_VS_SELECTED": 0.789409,
+                "MEAN_BAIT_COVERAGE": 42.340925,
+                "PCT_USABLE_BASES_ON_BAIT": 0.572573,
+                "PCT_USABLE_BASES_ON_TARGET": 0.318951,
+                "FOLD_ENRICHMENT": 10906.768487,
+                "HS_LIBRARY_SIZE": 17740.0,
+                "HS_PENALTY_10X": 11.747788,
+                "HS_PENALTY_20X": 13.078893,
+                "HS_PENALTY_30X": 14.937643,
+                "HS_PENALTY_40X": 17.863675,
+                "HS_PENALTY_50X": 23.504682,
+                "HS_PENALTY_100X": -1.0,
+                "TARGET_TERRITORY": 10741.0,
+                "GENOME_SIZE": 254063420.0,
+                "PF_BASES": 1029216.0,
+                "PF_UNIQUE_READS": 6378.0,
+                "PF_UQ_READS_ALIGNED": 6369.0,
+                "PF_BASES_ALIGNED": 986294.0,
+                "PF_UQ_BASES_ALIGNED": 922851.0,
+                "ON_TARGET_BASES": 328269.0,
+                "PCT_PF_UQ_READS": 0.935739,
+                "PCT_PF_UQ_READS_ALIGNED": 0.998589,
+                "MEAN_TARGET_COVERAGE": 30.559352,
+                "MEDIAN_TARGET_COVERAGE": 33.0,
+                "MAX_TARGET_COVERAGE": 102.0,
+                "MIN_TARGET_COVERAGE": 0.0,
+                "ZERO_CVG_TARGETS_PCT": 0.054545,
+                "PCT_EXC_DUPE": 0.064325,
+                "PCT_EXC_ADAPTER": 0.0,
+                "PCT_EXC_MAPQ": 0.000343,
+                "PCT_EXC_BASEQ": 0.0,
+                "PCT_EXC_OVERLAP": 0.269429,
+                "PCT_EXC_OFF_TARGET": 0.333108,
+                "FOLD_80_BASE_PENALTY": 3.819919,
+                "PCT_TARGET_BASES_1X": 0.959408,
+                "PCT_TARGET_BASES_2X": 0.918536,
+                "PCT_TARGET_BASES_10X": 0.779629,
+                "PCT_TARGET_BASES_20X": 0.681966,
+                "PCT_TARGET_BASES_30X": 0.559911,
+                "PCT_TARGET_BASES_40X": 0.336654,
+                "PCT_TARGET_BASES_50X": 0.1471,
+                "PCT_TARGET_BASES_100X": 0.00121,
+                "AT_DROPOUT": 2.915135,
+                "GC_DROPOUT": 15.450987,
+                "HET_SNP_SENSITIVITY": 0.867314,
+                "HET_SNP_Q": 9.0,
+                "total_count": 6356,
+                "meansum": 1359671.1372,
+                "total_pairs": 6360.0,
+                "summed_mean": 213.78477,
+                "summed_median": 201,
+                "UNPAIRED_READS_EXAMINED": 9.0,
+                "READ_PAIRS_EXAMINED": 3399.0,
+                "SECONDARY_OR_SUPPLEMENTARY_RDS": 5.0,
+                "UNMAPPED_READS": 9.0,
+                "UNPAIRED_READ_DUPLICATES": 0.0,
+                "READ_PAIR_DUPLICATES": 219.0,
+                "READ_PAIR_OPTICAL_DUPLICATES": 36.0,
+                "PERCENT_DUPLICATION": 0.064346,
+                "ESTIMATED_LIBRARY_SIZE": 29769.0
+            }
+        },
+        {
+            "stderr": {
+                "n_dups": 0,
+                "n_tot": 1636,
+                "n_nondups": 1636,
+                "pct_dups": 0.0
+            }
+        },
+        {
+            "final": {
+                "total_passed": 6821,
+                "total_failed": 0,
+                "secondary_passed": 0,
+                "secondary_failed": 0,
+                "supplementary_passed": 5,
+                "supplementary_failed": 0,
+                "duplicates_passed": 439,
+                "duplicates_failed": 0,
+                "mapped_passed": 6812,
+                "mapped_failed": 0,
+                "mapped_passed_pct": 99.87,
+                "mapped_failed_pct": NaN,
+                "paired in sequencing_passed": 6816,
+                "paired in sequencing_failed": 0,
+                "read1_passed": 3408,
+                "read1_failed": 0,
+                "read2_passed": 3408,
+                "read2_failed": 0,
+                "properly paired_passed": 6784,
+                "properly paired_failed": 0,
+                "properly paired_passed_pct": 99.53,
+                "properly paired_failed_pct": NaN,
+                "with itself and mate mapped_passed": 6798,
+                "with itself and mate mapped_failed": 0,
+                "singletons_passed": 9,
+                "singletons_failed": 0,
+                "singletons_passed_pct": 0.13,
+                "singletons_failed_pct": NaN,
+                "with mate mapped to a different chr_passed": 0,
+                "with mate mapped to a different chr_failed": 0,
+                "with mate mapped to a different chr (mapQ >= 5)_passed": 0,
+                "with mate mapped to a different chr (mapQ >= 5)_failed": 0,
+                "flagstat_total": 6821
+            }
+        }
+    ],
+    "report_general_stats_headers": [
+        {
+            "FREEMIX": {
+                "max": 100,
+                "min": 0,
+                "suffix": "%",
+                "format": "{:,.3f}",
+                "modify": 100.0,
+                "scale": "OrRd",
+                "title": "Contamination (S)",
+                "description": "VerifyBamID: FREEMIX -   Sequence-only estimate of contamination.",
+                "namespace": "VerifyBAMID",
+                "rid": "mqc-generalstats-verifybamid-FREEMIX",
+                "colour": "55,126,184",
+                "hidden": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "shared_key": null,
+                "placement": 1000.0,
+                "dmax": 100.0,
+                "dmin": 0.0
+            }
+        },
+        {
+            "PCT_PF_READS_ALIGNED": {
+                "title": "% Aligned",
+                "description": "Percent of aligned reads",
+                "max": 100,
+                "min": 0,
+                "suffix": "%",
+                "format": "{:,.0f}",
+                "scale": "RdYlGn",
+                "modify": 100.0,
+                "namespace": "Picard",
+                "rid": "mqc-generalstats-picard-PCT_PF_READS_ALIGNED",
+                "colour": "77,175,74",
+                "hidden": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "shared_key": null,
+                "placement": 1000.0,
+                "dmax": 100.0,
+                "dmin": 0.0
+            },
+            "FOLD_ENRICHMENT": {
+                "title": "Fold Enrichment",
+                "min": 0,
+                "format": "{:,.0f}",
+                "scale": "Blues",
+                "namespace": "Picard",
+                "description": "Fold Enrichment",
+                "rid": "mqc-generalstats-picard-FOLD_ENRICHMENT",
+                "colour": "77,175,74",
+                "hidden": null,
+                "max": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "shared_key": null,
+                "modify": null,
+                "placement": 1000.0,
+                "dmax": 10906.768487,
+                "dmin": 0.0
+            },
+            "PCT_TARGET_BASES_30X": {
+                "id": "picard_target_bases_30X",
+                "title": "Target Bases 30X",
+                "description": "Percent of target bases with coverage &ge; 30X",
+                "max": 100,
+                "min": 0,
+                "suffix": "%",
+                "format": "{:,.0f}",
+                "scale": "RdYlGn",
+                "modify": 100.0,
+                "namespace": "Picard",
+                "rid": "mqc-generalstats-picard-PCT_TARGET_BASES_30X",
+                "colour": "77,175,74",
+                "hidden": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "shared_key": null,
+                "placement": 1000.0,
+                "dmax": 100.0,
+                "dmin": 0.0
+            },
+            "summed_median": {
+                "title": "Insert Size",
+                "description": "Median Insert Size, all read orientations (bp)",
+                "min": 0,
+                "suffix": " bp",
+                "format": "{:,.0f}",
+                "scale": "GnBu",
+                "namespace": "Picard",
+                "rid": "mqc-generalstats-picard-summed_median",
+                "colour": "77,175,74",
+                "hidden": null,
+                "max": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "shared_key": null,
+                "modify": null,
+                "placement": 1000.0,
+                "dmax": 201.0,
+                "dmin": 0.0
+            },
+            "summed_mean": {
+                "title": "Mean Insert Size",
+                "description": "Mean Insert Size, all read orientations (bp)",
+                "min": 0,
+                "suffix": " bp",
+                "format": "{:,.0f}",
+                "scale": "GnBu",
+                "hidden": true,
+                "namespace": "Picard",
+                "rid": "mqc-generalstats-picard-summed_mean",
+                "colour": "77,175,74",
+                "max": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "shared_key": null,
+                "modify": null,
+                "placement": 1000.0,
+                "dmax": 213.78477,
+                "dmin": 0.0
+            },
+            "PERCENT_DUPLICATION": {
+                "title": "% Dups",
+                "description": "Mark Duplicates - Percent Duplication",
+                "max": 100,
+                "min": 0,
+                "suffix": "%",
+                "scale": "OrRd",
+                "modify": 100.0,
+                "namespace": "Picard",
+                "rid": "mqc-generalstats-picard-PERCENT_DUPLICATION",
+                "format": "{:,.1f}",
+                "colour": "77,175,74",
+                "hidden": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "shared_key": null,
+                "placement": 1000.0,
+                "dmax": 100.0,
+                "dmin": 0.0
+            }
+        },
+        {
+            "pct_dups": {
+                "title": "% Dups",
+                "description": "Percent Duplication",
+                "max": 100,
+                "min": 0,
+                "suffix": "%",
+                "scale": "OrRd",
+                "namespace": "Samblaster",
+                "rid": "mqc-generalstats-samblaster-pct_dups",
+                "format": "{:,.1f}",
+                "colour": "152,78,163",
+                "hidden": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "shared_key": null,
+                "modify": null,
+                "placement": 1000.0,
+                "dmax": 100.0,
+                "dmin": 0.0
+            }
+        },
+        {
+            "flagstat_total": {
+                "title": "M Reads",
+                "description": "Total reads in the bam file (millions)",
+                "min": 0,
+                "modify": 1e-06,
+                "shared_key": "read_count",
+                "placement": 100.0,
+                "hidden": true,
+                "namespace": "Samtools",
+                "rid": "mqc-generalstats-samtools-flagstat_total",
+                "scale": "GnBu",
+                "format": "{:,.1f}",
+                "colour": "255,127,0",
+                "max": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "dmax": 0.006821,
+                "dmin": 0.0
+            },
+            "mapped_passed": {
+                "title": "M Reads Mapped",
+                "description": "Reads Mapped in the bam file (millions)",
+                "min": 0,
+                "modify": 1e-06,
+                "shared_key": "read_count",
+                "placement": 101.0,
+                "namespace": "Samtools",
+                "rid": "mqc-generalstats-samtools-mapped_passed",
+                "scale": "GnBu",
+                "format": "{:,.1f}",
+                "colour": "255,127,0",
+                "hidden": null,
+                "max": null,
+                "ceiling": null,
+                "floor": null,
+                "minRange": null,
+                "dmax": 0.006821,
+                "dmin": 0.0
+            }
+        }
+    ],
+    "report_multiqc_command": "/Users/jwalker/opt/miniconda3/bin/multiqc .",
+    "report_plot_data": {
+        "gatk-base-recalibrator-quality-scores-plot": {
+            "plot_type": "xy_line",
+            "datasets": [
+                [
+                    {
+                        "name": "bqsr.table",
+                        "data": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1,
+                                0
+                            ],
+                            [
+                                2,
+                                0
+                            ],
+                            [
+                                3,
+                                0
+                            ],
+                            [
+                                4,
+                                0
+                            ],
+                            [
+                                5,
+                                0
+                            ],
+                            [
+                                6,
+                                0
+                            ],
+                            [
+                                7,
+                                3418
+                            ],
+                            [
+                                8,
+                                0
+                            ],
+                            [
+                                9,
+                                0
+                            ],
+                            [
+                                10,
+                                44069
+                            ],
+                            [
+                                11,
+                                0
+                            ],
+                            [
+                                12,
+                                0
+                            ],
+                            [
+                                13,
+                                0
+                            ],
+                            [
+                                14,
+                                0
+                            ],
+                            [
+                                15,
+                                0
+                            ],
+                            [
+                                16,
+                                0
+                            ],
+                            [
+                                17,
+                                0
+                            ],
+                            [
+                                18,
+                                0
+                            ],
+                            [
+                                19,
+                                0
+                            ],
+                            [
+                                20,
+                                0
+                            ],
+                            [
+                                21,
+                                28203
+                            ],
+                            [
+                                22,
+                                0
+                            ],
+                            [
+                                23,
+                                0
+                            ],
+                            [
+                                24,
+                                0
+                            ],
+                            [
+                                25,
+                                0
+                            ],
+                            [
+                                26,
+                                16320
+                            ],
+                            [
+                                27,
+                                14671
+                            ],
+                            [
+                                28,
+                                0
+                            ],
+                            [
+                                29,
+                                0
+                            ],
+                            [
+                                30,
+                                0
+                            ],
+                            [
+                                31,
+                                68979
+                            ],
+                            [
+                                32,
+                                0
+                            ],
+                            [
+                                33,
+                                0
+                            ],
+                            [
+                                34,
+                                0
+                            ],
+                            [
+                                35,
+                                0
+                            ],
+                            [
+                                36,
+                                119206
+                            ],
+                            [
+                                37,
+                                0
+                            ],
+                            [
+                                38,
+                                0
+                            ],
+                            [
+                                39,
+                                204451
+                            ],
+                            [
+                                40,
+                                221274
+                            ],
+                            [
+                                41,
+                                0
+                            ],
+                            [
+                                42,
+                                0
+                            ],
+                            [
+                                43,
+                                0
+                            ],
+                            [
+                                44,
+                                0
+                            ],
+                            [
+                                45,
+                                0
+                            ],
+                            [
+                                46,
+                                0
+                            ],
+                            [
+                                47,
+                                0
+                            ],
+                            [
+                                48,
+                                0
+                            ],
+                            [
+                                49,
+                                0
+                            ],
+                            [
+                                50,
+                                0
+                            ],
+                            [
+                                51,
+                                0
+                            ],
+                            [
+                                52,
+                                0
+                            ],
+                            [
+                                53,
+                                0
+                            ],
+                            [
+                                54,
+                                0
+                            ],
+                            [
+                                55,
+                                0
+                            ],
+                            [
+                                56,
+                                0
+                            ],
+                            [
+                                57,
+                                0
+                            ],
+                            [
+                                58,
+                                0
+                            ],
+                            [
+                                59,
+                                0
+                            ],
+                            [
+                                60,
+                                0
+                            ],
+                            [
+                                61,
+                                0
+                            ],
+                            [
+                                62,
+                                0
+                            ],
+                            [
+                                63,
+                                0
+                            ],
+                            [
+                                64,
+                                0
+                            ],
+                            [
+                                65,
+                                0
+                            ],
+                            [
+                                66,
+                                0
+                            ],
+                            [
+                                67,
+                                0
+                            ],
+                            [
+                                68,
+                                0
+                            ],
+                            [
+                                69,
+                                0
+                            ],
+                            [
+                                70,
+                                0
+                            ],
+                            [
+                                71,
+                                0
+                            ],
+                            [
+                                72,
+                                0
+                            ],
+                            [
+                                73,
+                                0
+                            ],
+                            [
+                                74,
+                                0
+                            ],
+                            [
+                                75,
+                                0
+                            ],
+                            [
+                                76,
+                                0
+                            ],
+                            [
+                                77,
+                                0
+                            ],
+                            [
+                                78,
+                                0
+                            ],
+                            [
+                                79,
+                                0
+                            ],
+                            [
+                                80,
+                                0
+                            ],
+                            [
+                                81,
+                                0
+                            ],
+                            [
+                                82,
+                                0
+                            ],
+                            [
+                                83,
+                                0
+                            ],
+                            [
+                                84,
+                                0
+                            ],
+                            [
+                                85,
+                                0
+                            ],
+                            [
+                                86,
+                                0
+                            ],
+                            [
+                                87,
+                                0
+                            ],
+                            [
+                                88,
+                                0
+                            ],
+                            [
+                                89,
+                                0
+                            ],
+                            [
+                                90,
+                                0
+                            ],
+                            [
+                                91,
+                                0
+                            ],
+                            [
+                                92,
+                                0
+                            ],
+                            [
+                                93,
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "name": "bqsr.table",
+                        "data": [
+                            [
+                                0,
+                                0.0
+                            ],
+                            [
+                                1,
+                                0.0
+                            ],
+                            [
+                                2,
+                                0.0
+                            ],
+                            [
+                                3,
+                                0.0
+                            ],
+                            [
+                                4,
+                                0.0
+                            ],
+                            [
+                                5,
+                                0.0
+                            ],
+                            [
+                                6,
+                                0.0
+                            ],
+                            [
+                                7,
+                                0.00474332873988157
+                            ],
+                            [
+                                8,
+                                0.0
+                            ],
+                            [
+                                9,
+                                0.0
+                            ],
+                            [
+                                10,
+                                0.06115674494963162
+                            ],
+                            [
+                                11,
+                                0.0
+                            ],
+                            [
+                                12,
+                                0.0
+                            ],
+                            [
+                                13,
+                                0.0
+                            ],
+                            [
+                                14,
+                                0.0
+                            ],
+                            [
+                                15,
+                                0.0
+                            ],
+                            [
+                                16,
+                                0.0
+                            ],
+                            [
+                                17,
+                                0.0
+                            ],
+                            [
+                                18,
+                                0.0
+                            ],
+                            [
+                                19,
+                                0.0
+                            ],
+                            [
+                                20,
+                                0.0
+                            ],
+                            [
+                                21,
+                                0.03913870697802221
+                            ],
+                            [
+                                22,
+                                0.0
+                            ],
+                            [
+                                23,
+                                0.0
+                            ],
+                            [
+                                24,
+                                0.0
+                            ],
+                            [
+                                25,
+                                0.0
+                            ],
+                            [
+                                26,
+                                0.02264807637064576
+                            ],
+                            [
+                                27,
+                                0.020359676987361762
+                            ],
+                            [
+                                28,
+                                0.0
+                            ],
+                            [
+                                29,
+                                0.0
+                            ],
+                            [
+                                30,
+                                0.0
+                            ],
+                            [
+                                31,
+                                0.0957255919099739
+                            ],
+                            [
+                                32,
+                                0.0
+                            ],
+                            [
+                                33,
+                                0.0
+                            ],
+                            [
+                                34,
+                                0.0
+                            ],
+                            [
+                                35,
+                                0.0
+                            ],
+                            [
+                                36,
+                                0.165428099990147
+                            ],
+                            [
+                                37,
+                                0.0
+                            ],
+                            [
+                                38,
+                                0.0
+                            ],
+                            [
+                                39,
+                                0.2837268297827755
+                            ],
+                            [
+                                40,
+                                0.3070729442915607
+                            ],
+                            [
+                                41,
+                                0.0
+                            ],
+                            [
+                                42,
+                                0.0
+                            ],
+                            [
+                                43,
+                                0.0
+                            ],
+                            [
+                                44,
+                                0.0
+                            ],
+                            [
+                                45,
+                                0.0
+                            ],
+                            [
+                                46,
+                                0.0
+                            ],
+                            [
+                                47,
+                                0.0
+                            ],
+                            [
+                                48,
+                                0.0
+                            ],
+                            [
+                                49,
+                                0.0
+                            ],
+                            [
+                                50,
+                                0.0
+                            ],
+                            [
+                                51,
+                                0.0
+                            ],
+                            [
+                                52,
+                                0.0
+                            ],
+                            [
+                                53,
+                                0.0
+                            ],
+                            [
+                                54,
+                                0.0
+                            ],
+                            [
+                                55,
+                                0.0
+                            ],
+                            [
+                                56,
+                                0.0
+                            ],
+                            [
+                                57,
+                                0.0
+                            ],
+                            [
+                                58,
+                                0.0
+                            ],
+                            [
+                                59,
+                                0.0
+                            ],
+                            [
+                                60,
+                                0.0
+                            ],
+                            [
+                                61,
+                                0.0
+                            ],
+                            [
+                                62,
+                                0.0
+                            ],
+                            [
+                                63,
+                                0.0
+                            ],
+                            [
+                                64,
+                                0.0
+                            ],
+                            [
+                                65,
+                                0.0
+                            ],
+                            [
+                                66,
+                                0.0
+                            ],
+                            [
+                                67,
+                                0.0
+                            ],
+                            [
+                                68,
+                                0.0
+                            ],
+                            [
+                                69,
+                                0.0
+                            ],
+                            [
+                                70,
+                                0.0
+                            ],
+                            [
+                                71,
+                                0.0
+                            ],
+                            [
+                                72,
+                                0.0
+                            ],
+                            [
+                                73,
+                                0.0
+                            ],
+                            [
+                                74,
+                                0.0
+                            ],
+                            [
+                                75,
+                                0.0
+                            ],
+                            [
+                                76,
+                                0.0
+                            ],
+                            [
+                                77,
+                                0.0
+                            ],
+                            [
+                                78,
+                                0.0
+                            ],
+                            [
+                                79,
+                                0.0
+                            ],
+                            [
+                                80,
+                                0.0
+                            ],
+                            [
+                                81,
+                                0.0
+                            ],
+                            [
+                                82,
+                                0.0
+                            ],
+                            [
+                                83,
+                                0.0
+                            ],
+                            [
+                                84,
+                                0.0
+                            ],
+                            [
+                                85,
+                                0.0
+                            ],
+                            [
+                                86,
+                                0.0
+                            ],
+                            [
+                                87,
+                                0.0
+                            ],
+                            [
+                                88,
+                                0.0
+                            ],
+                            [
+                                89,
+                                0.0
+                            ],
+                            [
+                                90,
+                                0.0
+                            ],
+                            [
+                                91,
+                                0.0
+                            ],
+                            [
+                                92,
+                                0.0
+                            ],
+                            [
+                                93,
+                                0.0
+                            ]
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "title": "GATK: Observed Quality Score Counts",
+                "id": "gatk-base-recalibrator-quality-scores-plot",
+                "xlab": "Observed Quality Score",
+                "ylab": "Count",
+                "xDecimals": false,
+                "data_labels": [
+                    {
+                        "name": "Pre-recalibration Count",
+                        "ylab": "Count"
+                    },
+                    {
+                        "name": "Pre-recalibration Percent",
+                        "ylab": "Percent"
+                    }
+                ]
+            }
+        },
+        "picard_aligned_reads": {
+            "plot_type": "bar_graph",
+            "samples": [
+                [
+                    "final"
+                ]
+            ],
+            "datasets": [
+                [
+                    {
+                        "name": "Aligned Reads",
+                        "data": [
+                            3403.5
+                        ]
+                    },
+                    {
+                        "name": "Unaligned Reads",
+                        "data": [
+                            4.5
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "id": "picard_aligned_reads",
+                "title": "Picard: Aligned Reads",
+                "ylab": "# Reads",
+                "cpswitch_counts_label": "Number of Reads"
+            }
+        },
+        "picard_percentage_target_bases": {
+            "plot_type": "xy_line",
+            "datasets": [
+                [
+                    {
+                        "name": "final",
+                        "data": [
+                            [
+                                1,
+                                95.94080000000001
+                            ],
+                            [
+                                2,
+                                91.8536
+                            ],
+                            [
+                                10,
+                                77.9629
+                            ],
+                            [
+                                20,
+                                68.19659999999999
+                            ],
+                            [
+                                30,
+                                55.9911
+                            ],
+                            [
+                                40,
+                                33.6654
+                            ],
+                            [
+                                50,
+                                14.71
+                            ],
+                            [
+                                100,
+                                0.121
+                            ]
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "id": "picard_percentage_target_bases",
+                "title": "Picard: Percentage of target bases",
+                "xlab": "Fold Coverage",
+                "ylab": "Pct of bases",
+                "ymax": 100,
+                "ymin": 0,
+                "xmin": 0,
+                "tt_label": "<b>{point.x}X</b>: {point.y:.2f}%"
+            }
+        },
+        "picard_hybrid_selection_penalty": {
+            "plot_type": "xy_line",
+            "datasets": [
+                [
+                    {
+                        "name": "final",
+                        "data": [
+                            [
+                                10,
+                                11.747788
+                            ],
+                            [
+                                20,
+                                13.078893
+                            ],
+                            [
+                                30,
+                                14.937643
+                            ],
+                            [
+                                40,
+                                17.863675
+                            ],
+                            [
+                                50,
+                                23.504682
+                            ]
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "id": "picard_hybrid_selection_penalty",
+                "title": "Picard: Hybrid Selection Penalty",
+                "xlab": "Fold Coverage",
+                "ylab": "Penalty",
+                "ymin": 0,
+                "xmin": 0,
+                "xDecimals": false,
+                "tt_label": "<b>{point.x}X</b>: {point.y:.2f}%"
+            }
+        },
+        "picard_insert_size": {
+            "plot_type": "xy_line",
+            "datasets": [
+                [
+                    {
+                        "name": "final",
+                        "data": [
+                            [
+                                80,
+                                2
+                            ],
+                            [
+                                81,
+                                2
+                            ],
+                            [
+                                82,
+                                6
+                            ],
+                            [
+                                85,
+                                2
+                            ],
+                            [
+                                86,
+                                2
+                            ],
+                            [
+                                87,
+                                4
+                            ],
+                            [
+                                88,
+                                2
+                            ],
+                            [
+                                90,
+                                4
+                            ],
+                            [
+                                92,
+                                4
+                            ],
+                            [
+                                93,
+                                2
+                            ],
+                            [
+                                94,
+                                2
+                            ],
+                            [
+                                95,
+                                4
+                            ],
+                            [
+                                96,
+                                4
+                            ],
+                            [
+                                97,
+                                4
+                            ],
+                            [
+                                98,
+                                10
+                            ],
+                            [
+                                99,
+                                4
+                            ],
+                            [
+                                100,
+                                4
+                            ],
+                            [
+                                101,
+                                4
+                            ],
+                            [
+                                102,
+                                12
+                            ],
+                            [
+                                103,
+                                6
+                            ],
+                            [
+                                104,
+                                4
+                            ],
+                            [
+                                105,
+                                4
+                            ],
+                            [
+                                106,
+                                4
+                            ],
+                            [
+                                107,
+                                6
+                            ],
+                            [
+                                108,
+                                4
+                            ],
+                            [
+                                109,
+                                10
+                            ],
+                            [
+                                110,
+                                16
+                            ],
+                            [
+                                111,
+                                6
+                            ],
+                            [
+                                112,
+                                12
+                            ],
+                            [
+                                113,
+                                18
+                            ],
+                            [
+                                114,
+                                18
+                            ],
+                            [
+                                115,
+                                10
+                            ],
+                            [
+                                116,
+                                14
+                            ],
+                            [
+                                117,
+                                14
+                            ],
+                            [
+                                118,
+                                12
+                            ],
+                            [
+                                119,
+                                20
+                            ],
+                            [
+                                120,
+                                14
+                            ],
+                            [
+                                121,
+                                18
+                            ],
+                            [
+                                122,
+                                36
+                            ],
+                            [
+                                123,
+                                24
+                            ],
+                            [
+                                124,
+                                16
+                            ],
+                            [
+                                125,
+                                30
+                            ],
+                            [
+                                126,
+                                36
+                            ],
+                            [
+                                127,
+                                34
+                            ],
+                            [
+                                128,
+                                16
+                            ],
+                            [
+                                129,
+                                16
+                            ],
+                            [
+                                130,
+                                24
+                            ],
+                            [
+                                131,
+                                28
+                            ],
+                            [
+                                132,
+                                40
+                            ],
+                            [
+                                133,
+                                30
+                            ],
+                            [
+                                134,
+                                24
+                            ],
+                            [
+                                135,
+                                22
+                            ],
+                            [
+                                136,
+                                26
+                            ],
+                            [
+                                137,
+                                28
+                            ],
+                            [
+                                138,
+                                32
+                            ],
+                            [
+                                139,
+                                18
+                            ],
+                            [
+                                140,
+                                22
+                            ],
+                            [
+                                141,
+                                26
+                            ],
+                            [
+                                142,
+                                40
+                            ],
+                            [
+                                143,
+                                24
+                            ],
+                            [
+                                144,
+                                26
+                            ],
+                            [
+                                145,
+                                42
+                            ],
+                            [
+                                146,
+                                40
+                            ],
+                            [
+                                147,
+                                28
+                            ],
+                            [
+                                148,
+                                42
+                            ],
+                            [
+                                149,
+                                38
+                            ],
+                            [
+                                150,
+                                48
+                            ],
+                            [
+                                151,
+                                38
+                            ],
+                            [
+                                152,
+                                28
+                            ],
+                            [
+                                153,
+                                50
+                            ],
+                            [
+                                154,
+                                36
+                            ],
+                            [
+                                155,
+                                22
+                            ],
+                            [
+                                156,
+                                40
+                            ],
+                            [
+                                157,
+                                36
+                            ],
+                            [
+                                158,
+                                40
+                            ],
+                            [
+                                159,
+                                26
+                            ],
+                            [
+                                160,
+                                48
+                            ],
+                            [
+                                161,
+                                36
+                            ],
+                            [
+                                162,
+                                38
+                            ],
+                            [
+                                163,
+                                36
+                            ],
+                            [
+                                164,
+                                38
+                            ],
+                            [
+                                165,
+                                34
+                            ],
+                            [
+                                166,
+                                44
+                            ],
+                            [
+                                167,
+                                28
+                            ],
+                            [
+                                168,
+                                32
+                            ],
+                            [
+                                169,
+                                56
+                            ],
+                            [
+                                170,
+                                24
+                            ],
+                            [
+                                171,
+                                32
+                            ],
+                            [
+                                172,
+                                40
+                            ],
+                            [
+                                173,
+                                32
+                            ],
+                            [
+                                174,
+                                20
+                            ],
+                            [
+                                175,
+                                56
+                            ],
+                            [
+                                176,
+                                46
+                            ],
+                            [
+                                177,
+                                50
+                            ],
+                            [
+                                178,
+                                28
+                            ],
+                            [
+                                179,
+                                52
+                            ],
+                            [
+                                180,
+                                44
+                            ],
+                            [
+                                181,
+                                42
+                            ],
+                            [
+                                182,
+                                64
+                            ],
+                            [
+                                183,
+                                40
+                            ],
+                            [
+                                184,
+                                30
+                            ],
+                            [
+                                185,
+                                36
+                            ],
+                            [
+                                186,
+                                36
+                            ],
+                            [
+                                187,
+                                40
+                            ],
+                            [
+                                188,
+                                58
+                            ],
+                            [
+                                189,
+                                56
+                            ],
+                            [
+                                190,
+                                52
+                            ],
+                            [
+                                191,
+                                46
+                            ],
+                            [
+                                192,
+                                54
+                            ],
+                            [
+                                193,
+                                44
+                            ],
+                            [
+                                194,
+                                38
+                            ],
+                            [
+                                195,
+                                22
+                            ],
+                            [
+                                196,
+                                44
+                            ],
+                            [
+                                197,
+                                50
+                            ],
+                            [
+                                198,
+                                38
+                            ],
+                            [
+                                199,
+                                34
+                            ],
+                            [
+                                200,
+                                48
+                            ],
+                            [
+                                201,
+                                40
+                            ],
+                            [
+                                202,
+                                56
+                            ],
+                            [
+                                203,
+                                26
+                            ],
+                            [
+                                204,
+                                30
+                            ],
+                            [
+                                205,
+                                38
+                            ],
+                            [
+                                206,
+                                40
+                            ],
+                            [
+                                207,
+                                36
+                            ],
+                            [
+                                208,
+                                32
+                            ],
+                            [
+                                209,
+                                30
+                            ],
+                            [
+                                210,
+                                32
+                            ],
+                            [
+                                211,
+                                32
+                            ],
+                            [
+                                212,
+                                58
+                            ],
+                            [
+                                213,
+                                36
+                            ],
+                            [
+                                214,
+                                24
+                            ],
+                            [
+                                215,
+                                52
+                            ],
+                            [
+                                216,
+                                42
+                            ],
+                            [
+                                217,
+                                28
+                            ],
+                            [
+                                218,
+                                28
+                            ],
+                            [
+                                219,
+                                36
+                            ],
+                            [
+                                220,
+                                36
+                            ],
+                            [
+                                221,
+                                40
+                            ],
+                            [
+                                222,
+                                28
+                            ],
+                            [
+                                223,
+                                32
+                            ],
+                            [
+                                224,
+                                32
+                            ],
+                            [
+                                225,
+                                16
+                            ],
+                            [
+                                226,
+                                32
+                            ],
+                            [
+                                227,
+                                34
+                            ],
+                            [
+                                228,
+                                26
+                            ],
+                            [
+                                229,
+                                32
+                            ],
+                            [
+                                230,
+                                26
+                            ],
+                            [
+                                231,
+                                26
+                            ],
+                            [
+                                232,
+                                34
+                            ],
+                            [
+                                233,
+                                28
+                            ],
+                            [
+                                234,
+                                30
+                            ],
+                            [
+                                235,
+                                30
+                            ],
+                            [
+                                236,
+                                40
+                            ],
+                            [
+                                237,
+                                34
+                            ],
+                            [
+                                238,
+                                20
+                            ],
+                            [
+                                239,
+                                30
+                            ],
+                            [
+                                240,
+                                34
+                            ],
+                            [
+                                241,
+                                22
+                            ],
+                            [
+                                242,
+                                30
+                            ],
+                            [
+                                243,
+                                20
+                            ],
+                            [
+                                244,
+                                30
+                            ],
+                            [
+                                245,
+                                22
+                            ],
+                            [
+                                246,
+                                30
+                            ],
+                            [
+                                247,
+                                24
+                            ],
+                            [
+                                248,
+                                28
+                            ],
+                            [
+                                249,
+                                16
+                            ],
+                            [
+                                250,
+                                20
+                            ],
+                            [
+                                251,
+                                16
+                            ],
+                            [
+                                252,
+                                20
+                            ],
+                            [
+                                253,
+                                36
+                            ],
+                            [
+                                254,
+                                16
+                            ],
+                            [
+                                255,
+                                22
+                            ],
+                            [
+                                256,
+                                18
+                            ],
+                            [
+                                257,
+                                32
+                            ],
+                            [
+                                258,
+                                18
+                            ],
+                            [
+                                259,
+                                16
+                            ],
+                            [
+                                260,
+                                14
+                            ],
+                            [
+                                261,
+                                24
+                            ],
+                            [
+                                262,
+                                24
+                            ],
+                            [
+                                263,
+                                22
+                            ],
+                            [
+                                264,
+                                26
+                            ],
+                            [
+                                265,
+                                26
+                            ],
+                            [
+                                266,
+                                18
+                            ],
+                            [
+                                267,
+                                24
+                            ],
+                            [
+                                268,
+                                18
+                            ],
+                            [
+                                269,
+                                26
+                            ],
+                            [
+                                270,
+                                20
+                            ],
+                            [
+                                271,
+                                20
+                            ],
+                            [
+                                272,
+                                18
+                            ],
+                            [
+                                273,
+                                16
+                            ],
+                            [
+                                274,
+                                14
+                            ],
+                            [
+                                275,
+                                24
+                            ],
+                            [
+                                276,
+                                24
+                            ],
+                            [
+                                277,
+                                22
+                            ],
+                            [
+                                278,
+                                18
+                            ],
+                            [
+                                279,
+                                22
+                            ],
+                            [
+                                280,
+                                20
+                            ],
+                            [
+                                281,
+                                14
+                            ],
+                            [
+                                282,
+                                24
+                            ],
+                            [
+                                283,
+                                12
+                            ],
+                            [
+                                284,
+                                12
+                            ],
+                            [
+                                285,
+                                20
+                            ],
+                            [
+                                286,
+                                12
+                            ],
+                            [
+                                287,
+                                14
+                            ],
+                            [
+                                288,
+                                18
+                            ],
+                            [
+                                289,
+                                14
+                            ],
+                            [
+                                290,
+                                22
+                            ],
+                            [
+                                291,
+                                6
+                            ],
+                            [
+                                292,
+                                10
+                            ],
+                            [
+                                293,
+                                14
+                            ],
+                            [
+                                294,
+                                18
+                            ],
+                            [
+                                295,
+                                8
+                            ],
+                            [
+                                296,
+                                12
+                            ],
+                            [
+                                297,
+                                14
+                            ],
+                            [
+                                298,
+                                16
+                            ],
+                            [
+                                299,
+                                12
+                            ],
+                            [
+                                300,
+                                14
+                            ],
+                            [
+                                301,
+                                6
+                            ],
+                            [
+                                302,
+                                12
+                            ],
+                            [
+                                303,
+                                14
+                            ],
+                            [
+                                304,
+                                12
+                            ],
+                            [
+                                305,
+                                10
+                            ],
+                            [
+                                306,
+                                18
+                            ],
+                            [
+                                307,
+                                8
+                            ],
+                            [
+                                308,
+                                10
+                            ],
+                            [
+                                309,
+                                14
+                            ],
+                            [
+                                310,
+                                14
+                            ],
+                            [
+                                311,
+                                8
+                            ],
+                            [
+                                312,
+                                8
+                            ],
+                            [
+                                313,
+                                12
+                            ],
+                            [
+                                314,
+                                10
+                            ],
+                            [
+                                315,
+                                6
+                            ],
+                            [
+                                316,
+                                10
+                            ],
+                            [
+                                317,
+                                8
+                            ],
+                            [
+                                318,
+                                4
+                            ],
+                            [
+                                319,
+                                10
+                            ],
+                            [
+                                320,
+                                8
+                            ],
+                            [
+                                321,
+                                12
+                            ],
+                            [
+                                322,
+                                8
+                            ],
+                            [
+                                323,
+                                6
+                            ],
+                            [
+                                324,
+                                12
+                            ],
+                            [
+                                325,
+                                10
+                            ],
+                            [
+                                326,
+                                6
+                            ],
+                            [
+                                327,
+                                2
+                            ],
+                            [
+                                328,
+                                14
+                            ],
+                            [
+                                329,
+                                8
+                            ],
+                            [
+                                330,
+                                6
+                            ],
+                            [
+                                331,
+                                8
+                            ],
+                            [
+                                332,
+                                12
+                            ],
+                            [
+                                333,
+                                6
+                            ],
+                            [
+                                334,
+                                2
+                            ],
+                            [
+                                335,
+                                6
+                            ],
+                            [
+                                336,
+                                6
+                            ],
+                            [
+                                337,
+                                6
+                            ],
+                            [
+                                338,
+                                4
+                            ],
+                            [
+                                339,
+                                6
+                            ],
+                            [
+                                340,
+                                8
+                            ],
+                            [
+                                341,
+                                6
+                            ],
+                            [
+                                342,
+                                10
+                            ],
+                            [
+                                343,
+                                6
+                            ],
+                            [
+                                344,
+                                6
+                            ],
+                            [
+                                345,
+                                6
+                            ],
+                            [
+                                346,
+                                8
+                            ],
+                            [
+                                347,
+                                4
+                            ],
+                            [
+                                348,
+                                10
+                            ],
+                            [
+                                349,
+                                12
+                            ],
+                            [
+                                350,
+                                10
+                            ],
+                            [
+                                351,
+                                4
+                            ],
+                            [
+                                352,
+                                8
+                            ],
+                            [
+                                353,
+                                12
+                            ],
+                            [
+                                354,
+                                4
+                            ],
+                            [
+                                355,
+                                4
+                            ],
+                            [
+                                356,
+                                6
+                            ],
+                            [
+                                357,
+                                4
+                            ],
+                            [
+                                358,
+                                2
+                            ],
+                            [
+                                359,
+                                2
+                            ],
+                            [
+                                361,
+                                2
+                            ],
+                            [
+                                362,
+                                4
+                            ],
+                            [
+                                363,
+                                4
+                            ],
+                            [
+                                364,
+                                6
+                            ],
+                            [
+                                366,
+                                2
+                            ],
+                            [
+                                367,
+                                8
+                            ],
+                            [
+                                368,
+                                4
+                            ],
+                            [
+                                369,
+                                4
+                            ],
+                            [
+                                370,
+                                2
+                            ],
+                            [
+                                371,
+                                6
+                            ],
+                            [
+                                372,
+                                2
+                            ],
+                            [
+                                373,
+                                2
+                            ],
+                            [
+                                374,
+                                4
+                            ],
+                            [
+                                375,
+                                4
+                            ],
+                            [
+                                377,
+                                2
+                            ],
+                            [
+                                378,
+                                4
+                            ],
+                            [
+                                379,
+                                4
+                            ],
+                            [
+                                380,
+                                2
+                            ],
+                            [
+                                381,
+                                4
+                            ],
+                            [
+                                382,
+                                2
+                            ],
+                            [
+                                383,
+                                2
+                            ],
+                            [
+                                384,
+                                6
+                            ],
+                            [
+                                386,
+                                2
+                            ],
+                            [
+                                387,
+                                4
+                            ],
+                            [
+                                388,
+                                2
+                            ],
+                            [
+                                389,
+                                4
+                            ],
+                            [
+                                390,
+                                4
+                            ],
+                            [
+                                391,
+                                2
+                            ],
+                            [
+                                392,
+                                2
+                            ],
+                            [
+                                393,
+                                2
+                            ],
+                            [
+                                395,
+                                4
+                            ],
+                            [
+                                396,
+                                6
+                            ],
+                            [
+                                397,
+                                2
+                            ],
+                            [
+                                399,
+                                8
+                            ],
+                            [
+                                400,
+                                2
+                            ],
+                            [
+                                401,
+                                2
+                            ],
+                            [
+                                402,
+                                8
+                            ],
+                            [
+                                403,
+                                2
+                            ],
+                            [
+                                406,
+                                2
+                            ],
+                            [
+                                408,
+                                4
+                            ],
+                            [
+                                409,
+                                2
+                            ],
+                            [
+                                411,
+                                4
+                            ],
+                            [
+                                415,
+                                2
+                            ],
+                            [
+                                416,
+                                4
+                            ],
+                            [
+                                417,
+                                4
+                            ],
+                            [
+                                421,
+                                4
+                            ],
+                            [
+                                425,
+                                2
+                            ],
+                            [
+                                426,
+                                2
+                            ],
+                            [
+                                427,
+                                2
+                            ],
+                            [
+                                428,
+                                4
+                            ],
+                            [
+                                432,
+                                2
+                            ],
+                            [
+                                436,
+                                2
+                            ],
+                            [
+                                437,
+                                4
+                            ],
+                            [
+                                443,
+                                2
+                            ],
+                            [
+                                447,
+                                2
+                            ],
+                            [
+                                448,
+                                2
+                            ],
+                            [
+                                450,
+                                4
+                            ],
+                            [
+                                451,
+                                4
+                            ],
+                            [
+                                453,
+                                2
+                            ],
+                            [
+                                454,
+                                2
+                            ],
+                            [
+                                455,
+                                4
+                            ],
+                            [
+                                461,
+                                4
+                            ],
+                            [
+                                463,
+                                2
+                            ],
+                            [
+                                464,
+                                2
+                            ],
+                            [
+                                468,
+                                2
+                            ],
+                            [
+                                473,
+                                2
+                            ],
+                            [
+                                482,
+                                2
+                            ],
+                            [
+                                486,
+                                2
+                            ],
+                            [
+                                493,
+                                2
+                            ],
+                            [
+                                494,
+                                2
+                            ],
+                            [
+                                498,
+                                2
+                            ],
+                            [
+                                506,
+                                2
+                            ],
+                            [
+                                511,
+                                4
+                            ],
+                            [
+                                522,
+                                2
+                            ],
+                            [
+                                559,
+                                2
+                            ],
+                            [
+                                600,
+                                2
+                            ],
+                            [
+                                602,
+                                2
+                            ]
+                        ]
+                    }
+                ],
+                [
+                    {
+                        "name": "final",
+                        "data": [
+                            [
+                                80,
+                                0.031466331025802395
+                            ],
+                            [
+                                81,
+                                0.031466331025802395
+                            ],
+                            [
+                                82,
+                                0.09439899307740718
+                            ],
+                            [
+                                85,
+                                0.031466331025802395
+                            ],
+                            [
+                                86,
+                                0.031466331025802395
+                            ],
+                            [
+                                87,
+                                0.06293266205160479
+                            ],
+                            [
+                                88,
+                                0.031466331025802395
+                            ],
+                            [
+                                90,
+                                0.06293266205160479
+                            ],
+                            [
+                                92,
+                                0.06293266205160479
+                            ],
+                            [
+                                93,
+                                0.031466331025802395
+                            ],
+                            [
+                                94,
+                                0.031466331025802395
+                            ],
+                            [
+                                95,
+                                0.06293266205160479
+                            ],
+                            [
+                                96,
+                                0.06293266205160479
+                            ],
+                            [
+                                97,
+                                0.06293266205160479
+                            ],
+                            [
+                                98,
+                                0.15733165512901195
+                            ],
+                            [
+                                99,
+                                0.06293266205160479
+                            ],
+                            [
+                                100,
+                                0.06293266205160479
+                            ],
+                            [
+                                101,
+                                0.06293266205160479
+                            ],
+                            [
+                                102,
+                                0.18879798615481436
+                            ],
+                            [
+                                103,
+                                0.09439899307740718
+                            ],
+                            [
+                                104,
+                                0.06293266205160479
+                            ],
+                            [
+                                105,
+                                0.06293266205160479
+                            ],
+                            [
+                                106,
+                                0.06293266205160479
+                            ],
+                            [
+                                107,
+                                0.09439899307740718
+                            ],
+                            [
+                                108,
+                                0.06293266205160479
+                            ],
+                            [
+                                109,
+                                0.15733165512901195
+                            ],
+                            [
+                                110,
+                                0.25173064820641916
+                            ],
+                            [
+                                111,
+                                0.09439899307740718
+                            ],
+                            [
+                                112,
+                                0.18879798615481436
+                            ],
+                            [
+                                113,
+                                0.28319697923222154
+                            ],
+                            [
+                                114,
+                                0.28319697923222154
+                            ],
+                            [
+                                115,
+                                0.15733165512901195
+                            ],
+                            [
+                                116,
+                                0.22026431718061676
+                            ],
+                            [
+                                117,
+                                0.22026431718061676
+                            ],
+                            [
+                                118,
+                                0.18879798615481436
+                            ],
+                            [
+                                119,
+                                0.3146633102580239
+                            ],
+                            [
+                                120,
+                                0.22026431718061676
+                            ],
+                            [
+                                121,
+                                0.28319697923222154
+                            ],
+                            [
+                                122,
+                                0.5663939584644431
+                            ],
+                            [
+                                123,
+                                0.3775959723096287
+                            ],
+                            [
+                                124,
+                                0.25173064820641916
+                            ],
+                            [
+                                125,
+                                0.4719949653870359
+                            ],
+                            [
+                                126,
+                                0.5663939584644431
+                            ],
+                            [
+                                127,
+                                0.5349276274386406
+                            ],
+                            [
+                                128,
+                                0.25173064820641916
+                            ],
+                            [
+                                129,
+                                0.25173064820641916
+                            ],
+                            [
+                                130,
+                                0.3775959723096287
+                            ],
+                            [
+                                131,
+                                0.4405286343612335
+                            ],
+                            [
+                                132,
+                                0.6293266205160478
+                            ],
+                            [
+                                133,
+                                0.4719949653870359
+                            ],
+                            [
+                                134,
+                                0.3775959723096287
+                            ],
+                            [
+                                135,
+                                0.34612964128382634
+                            ],
+                            [
+                                136,
+                                0.40906230333543103
+                            ],
+                            [
+                                137,
+                                0.4405286343612335
+                            ],
+                            [
+                                138,
+                                0.5034612964128383
+                            ],
+                            [
+                                139,
+                                0.28319697923222154
+                            ],
+                            [
+                                140,
+                                0.34612964128382634
+                            ],
+                            [
+                                141,
+                                0.40906230333543103
+                            ],
+                            [
+                                142,
+                                0.6293266205160478
+                            ],
+                            [
+                                143,
+                                0.3775959723096287
+                            ],
+                            [
+                                144,
+                                0.40906230333543103
+                            ],
+                            [
+                                145,
+                                0.6607929515418502
+                            ],
+                            [
+                                146,
+                                0.6293266205160478
+                            ],
+                            [
+                                147,
+                                0.4405286343612335
+                            ],
+                            [
+                                148,
+                                0.6607929515418502
+                            ],
+                            [
+                                149,
+                                0.5978602894902455
+                            ],
+                            [
+                                150,
+                                0.7551919446192574
+                            ],
+                            [
+                                151,
+                                0.5978602894902455
+                            ],
+                            [
+                                152,
+                                0.4405286343612335
+                            ],
+                            [
+                                153,
+                                0.7866582756450597
+                            ],
+                            [
+                                154,
+                                0.5663939584644431
+                            ],
+                            [
+                                155,
+                                0.34612964128382634
+                            ],
+                            [
+                                156,
+                                0.6293266205160478
+                            ],
+                            [
+                                157,
+                                0.5663939584644431
+                            ],
+                            [
+                                158,
+                                0.6293266205160478
+                            ],
+                            [
+                                159,
+                                0.40906230333543103
+                            ],
+                            [
+                                160,
+                                0.7551919446192574
+                            ],
+                            [
+                                161,
+                                0.5663939584644431
+                            ],
+                            [
+                                162,
+                                0.5978602894902455
+                            ],
+                            [
+                                163,
+                                0.5663939584644431
+                            ],
+                            [
+                                164,
+                                0.5978602894902455
+                            ],
+                            [
+                                165,
+                                0.5349276274386406
+                            ],
+                            [
+                                166,
+                                0.6922592825676527
+                            ],
+                            [
+                                167,
+                                0.4405286343612335
+                            ],
+                            [
+                                168,
+                                0.5034612964128383
+                            ],
+                            [
+                                169,
+                                0.881057268722467
+                            ],
+                            [
+                                170,
+                                0.3775959723096287
+                            ],
+                            [
+                                171,
+                                0.5034612964128383
+                            ],
+                            [
+                                172,
+                                0.6293266205160478
+                            ],
+                            [
+                                173,
+                                0.5034612964128383
+                            ],
+                            [
+                                174,
+                                0.3146633102580239
+                            ],
+                            [
+                                175,
+                                0.881057268722467
+                            ],
+                            [
+                                176,
+                                0.723725613593455
+                            ],
+                            [
+                                177,
+                                0.7866582756450597
+                            ],
+                            [
+                                178,
+                                0.4405286343612335
+                            ],
+                            [
+                                179,
+                                0.8181246066708621
+                            ],
+                            [
+                                180,
+                                0.6922592825676527
+                            ],
+                            [
+                                181,
+                                0.6607929515418502
+                            ],
+                            [
+                                182,
+                                1.0069225928256766
+                            ],
+                            [
+                                183,
+                                0.6293266205160478
+                            ],
+                            [
+                                184,
+                                0.4719949653870359
+                            ],
+                            [
+                                185,
+                                0.5663939584644431
+                            ],
+                            [
+                                186,
+                                0.5663939584644431
+                            ],
+                            [
+                                187,
+                                0.6293266205160478
+                            ],
+                            [
+                                188,
+                                0.9125235997482695
+                            ],
+                            [
+                                189,
+                                0.881057268722467
+                            ],
+                            [
+                                190,
+                                0.8181246066708621
+                            ],
+                            [
+                                191,
+                                0.723725613593455
+                            ],
+                            [
+                                192,
+                                0.8495909376966646
+                            ],
+                            [
+                                193,
+                                0.6922592825676527
+                            ],
+                            [
+                                194,
+                                0.5978602894902455
+                            ],
+                            [
+                                195,
+                                0.34612964128382634
+                            ],
+                            [
+                                196,
+                                0.6922592825676527
+                            ],
+                            [
+                                197,
+                                0.7866582756450597
+                            ],
+                            [
+                                198,
+                                0.5978602894902455
+                            ],
+                            [
+                                199,
+                                0.5349276274386406
+                            ],
+                            [
+                                200,
+                                0.7551919446192574
+                            ],
+                            [
+                                201,
+                                0.6293266205160478
+                            ],
+                            [
+                                202,
+                                0.881057268722467
+                            ],
+                            [
+                                203,
+                                0.40906230333543103
+                            ],
+                            [
+                                204,
+                                0.4719949653870359
+                            ],
+                            [
+                                205,
+                                0.5978602894902455
+                            ],
+                            [
+                                206,
+                                0.6293266205160478
+                            ],
+                            [
+                                207,
+                                0.5663939584644431
+                            ],
+                            [
+                                208,
+                                0.5034612964128383
+                            ],
+                            [
+                                209,
+                                0.4719949653870359
+                            ],
+                            [
+                                210,
+                                0.5034612964128383
+                            ],
+                            [
+                                211,
+                                0.5034612964128383
+                            ],
+                            [
+                                212,
+                                0.9125235997482695
+                            ],
+                            [
+                                213,
+                                0.5663939584644431
+                            ],
+                            [
+                                214,
+                                0.3775959723096287
+                            ],
+                            [
+                                215,
+                                0.8181246066708621
+                            ],
+                            [
+                                216,
+                                0.6607929515418502
+                            ],
+                            [
+                                217,
+                                0.4405286343612335
+                            ],
+                            [
+                                218,
+                                0.4405286343612335
+                            ],
+                            [
+                                219,
+                                0.5663939584644431
+                            ],
+                            [
+                                220,
+                                0.5663939584644431
+                            ],
+                            [
+                                221,
+                                0.6293266205160478
+                            ],
+                            [
+                                222,
+                                0.4405286343612335
+                            ],
+                            [
+                                223,
+                                0.5034612964128383
+                            ],
+                            [
+                                224,
+                                0.5034612964128383
+                            ],
+                            [
+                                225,
+                                0.25173064820641916
+                            ],
+                            [
+                                226,
+                                0.5034612964128383
+                            ],
+                            [
+                                227,
+                                0.5349276274386406
+                            ],
+                            [
+                                228,
+                                0.40906230333543103
+                            ],
+                            [
+                                229,
+                                0.5034612964128383
+                            ],
+                            [
+                                230,
+                                0.40906230333543103
+                            ],
+                            [
+                                231,
+                                0.40906230333543103
+                            ],
+                            [
+                                232,
+                                0.5349276274386406
+                            ],
+                            [
+                                233,
+                                0.4405286343612335
+                            ],
+                            [
+                                234,
+                                0.4719949653870359
+                            ],
+                            [
+                                235,
+                                0.4719949653870359
+                            ],
+                            [
+                                236,
+                                0.6293266205160478
+                            ],
+                            [
+                                237,
+                                0.5349276274386406
+                            ],
+                            [
+                                238,
+                                0.3146633102580239
+                            ],
+                            [
+                                239,
+                                0.4719949653870359
+                            ],
+                            [
+                                240,
+                                0.5349276274386406
+                            ],
+                            [
+                                241,
+                                0.34612964128382634
+                            ],
+                            [
+                                242,
+                                0.4719949653870359
+                            ],
+                            [
+                                243,
+                                0.3146633102580239
+                            ],
+                            [
+                                244,
+                                0.4719949653870359
+                            ],
+                            [
+                                245,
+                                0.34612964128382634
+                            ],
+                            [
+                                246,
+                                0.4719949653870359
+                            ],
+                            [
+                                247,
+                                0.3775959723096287
+                            ],
+                            [
+                                248,
+                                0.4405286343612335
+                            ],
+                            [
+                                249,
+                                0.25173064820641916
+                            ],
+                            [
+                                250,
+                                0.3146633102580239
+                            ],
+                            [
+                                251,
+                                0.25173064820641916
+                            ],
+                            [
+                                252,
+                                0.3146633102580239
+                            ],
+                            [
+                                253,
+                                0.5663939584644431
+                            ],
+                            [
+                                254,
+                                0.25173064820641916
+                            ],
+                            [
+                                255,
+                                0.34612964128382634
+                            ],
+                            [
+                                256,
+                                0.28319697923222154
+                            ],
+                            [
+                                257,
+                                0.5034612964128383
+                            ],
+                            [
+                                258,
+                                0.28319697923222154
+                            ],
+                            [
+                                259,
+                                0.25173064820641916
+                            ],
+                            [
+                                260,
+                                0.22026431718061676
+                            ],
+                            [
+                                261,
+                                0.3775959723096287
+                            ],
+                            [
+                                262,
+                                0.3775959723096287
+                            ],
+                            [
+                                263,
+                                0.34612964128382634
+                            ],
+                            [
+                                264,
+                                0.40906230333543103
+                            ],
+                            [
+                                265,
+                                0.40906230333543103
+                            ],
+                            [
+                                266,
+                                0.28319697923222154
+                            ],
+                            [
+                                267,
+                                0.3775959723096287
+                            ],
+                            [
+                                268,
+                                0.28319697923222154
+                            ],
+                            [
+                                269,
+                                0.40906230333543103
+                            ],
+                            [
+                                270,
+                                0.3146633102580239
+                            ],
+                            [
+                                271,
+                                0.3146633102580239
+                            ],
+                            [
+                                272,
+                                0.28319697923222154
+                            ],
+                            [
+                                273,
+                                0.25173064820641916
+                            ],
+                            [
+                                274,
+                                0.22026431718061676
+                            ],
+                            [
+                                275,
+                                0.3775959723096287
+                            ],
+                            [
+                                276,
+                                0.3775959723096287
+                            ],
+                            [
+                                277,
+                                0.34612964128382634
+                            ],
+                            [
+                                278,
+                                0.28319697923222154
+                            ],
+                            [
+                                279,
+                                0.34612964128382634
+                            ],
+                            [
+                                280,
+                                0.3146633102580239
+                            ],
+                            [
+                                281,
+                                0.22026431718061676
+                            ],
+                            [
+                                282,
+                                0.3775959723096287
+                            ],
+                            [
+                                283,
+                                0.18879798615481436
+                            ],
+                            [
+                                284,
+                                0.18879798615481436
+                            ],
+                            [
+                                285,
+                                0.3146633102580239
+                            ],
+                            [
+                                286,
+                                0.18879798615481436
+                            ],
+                            [
+                                287,
+                                0.22026431718061676
+                            ],
+                            [
+                                288,
+                                0.28319697923222154
+                            ],
+                            [
+                                289,
+                                0.22026431718061676
+                            ],
+                            [
+                                290,
+                                0.34612964128382634
+                            ],
+                            [
+                                291,
+                                0.09439899307740718
+                            ],
+                            [
+                                292,
+                                0.15733165512901195
+                            ],
+                            [
+                                293,
+                                0.22026431718061676
+                            ],
+                            [
+                                294,
+                                0.28319697923222154
+                            ],
+                            [
+                                295,
+                                0.12586532410320958
+                            ],
+                            [
+                                296,
+                                0.18879798615481436
+                            ],
+                            [
+                                297,
+                                0.22026431718061676
+                            ],
+                            [
+                                298,
+                                0.25173064820641916
+                            ],
+                            [
+                                299,
+                                0.18879798615481436
+                            ],
+                            [
+                                300,
+                                0.22026431718061676
+                            ],
+                            [
+                                301,
+                                0.09439899307740718
+                            ],
+                            [
+                                302,
+                                0.18879798615481436
+                            ],
+                            [
+                                303,
+                                0.22026431718061676
+                            ],
+                            [
+                                304,
+                                0.18879798615481436
+                            ],
+                            [
+                                305,
+                                0.15733165512901195
+                            ],
+                            [
+                                306,
+                                0.28319697923222154
+                            ],
+                            [
+                                307,
+                                0.12586532410320958
+                            ],
+                            [
+                                308,
+                                0.15733165512901195
+                            ],
+                            [
+                                309,
+                                0.22026431718061676
+                            ],
+                            [
+                                310,
+                                0.22026431718061676
+                            ],
+                            [
+                                311,
+                                0.12586532410320958
+                            ],
+                            [
+                                312,
+                                0.12586532410320958
+                            ],
+                            [
+                                313,
+                                0.18879798615481436
+                            ],
+                            [
+                                314,
+                                0.15733165512901195
+                            ],
+                            [
+                                315,
+                                0.09439899307740718
+                            ],
+                            [
+                                316,
+                                0.15733165512901195
+                            ],
+                            [
+                                317,
+                                0.12586532410320958
+                            ],
+                            [
+                                318,
+                                0.06293266205160479
+                            ],
+                            [
+                                319,
+                                0.15733165512901195
+                            ],
+                            [
+                                320,
+                                0.12586532410320958
+                            ],
+                            [
+                                321,
+                                0.18879798615481436
+                            ],
+                            [
+                                322,
+                                0.12586532410320958
+                            ],
+                            [
+                                323,
+                                0.09439899307740718
+                            ],
+                            [
+                                324,
+                                0.18879798615481436
+                            ],
+                            [
+                                325,
+                                0.15733165512901195
+                            ],
+                            [
+                                326,
+                                0.09439899307740718
+                            ],
+                            [
+                                327,
+                                0.031466331025802395
+                            ],
+                            [
+                                328,
+                                0.22026431718061676
+                            ],
+                            [
+                                329,
+                                0.12586532410320958
+                            ],
+                            [
+                                330,
+                                0.09439899307740718
+                            ],
+                            [
+                                331,
+                                0.12586532410320958
+                            ],
+                            [
+                                332,
+                                0.18879798615481436
+                            ],
+                            [
+                                333,
+                                0.09439899307740718
+                            ],
+                            [
+                                334,
+                                0.031466331025802395
+                            ],
+                            [
+                                335,
+                                0.09439899307740718
+                            ],
+                            [
+                                336,
+                                0.09439899307740718
+                            ],
+                            [
+                                337,
+                                0.09439899307740718
+                            ],
+                            [
+                                338,
+                                0.06293266205160479
+                            ],
+                            [
+                                339,
+                                0.09439899307740718
+                            ],
+                            [
+                                340,
+                                0.12586532410320958
+                            ],
+                            [
+                                341,
+                                0.09439899307740718
+                            ],
+                            [
+                                342,
+                                0.15733165512901195
+                            ],
+                            [
+                                343,
+                                0.09439899307740718
+                            ],
+                            [
+                                344,
+                                0.09439899307740718
+                            ],
+                            [
+                                345,
+                                0.09439899307740718
+                            ],
+                            [
+                                346,
+                                0.12586532410320958
+                            ],
+                            [
+                                347,
+                                0.06293266205160479
+                            ],
+                            [
+                                348,
+                                0.15733165512901195
+                            ],
+                            [
+                                349,
+                                0.18879798615481436
+                            ],
+                            [
+                                350,
+                                0.15733165512901195
+                            ],
+                            [
+                                351,
+                                0.06293266205160479
+                            ],
+                            [
+                                352,
+                                0.12586532410320958
+                            ],
+                            [
+                                353,
+                                0.18879798615481436
+                            ],
+                            [
+                                354,
+                                0.06293266205160479
+                            ],
+                            [
+                                355,
+                                0.06293266205160479
+                            ],
+                            [
+                                356,
+                                0.09439899307740718
+                            ],
+                            [
+                                357,
+                                0.06293266205160479
+                            ],
+                            [
+                                358,
+                                0.031466331025802395
+                            ],
+                            [
+                                359,
+                                0.031466331025802395
+                            ],
+                            [
+                                361,
+                                0.031466331025802395
+                            ],
+                            [
+                                362,
+                                0.06293266205160479
+                            ],
+                            [
+                                363,
+                                0.06293266205160479
+                            ],
+                            [
+                                364,
+                                0.09439899307740718
+                            ],
+                            [
+                                366,
+                                0.031466331025802395
+                            ],
+                            [
+                                367,
+                                0.12586532410320958
+                            ],
+                            [
+                                368,
+                                0.06293266205160479
+                            ],
+                            [
+                                369,
+                                0.06293266205160479
+                            ],
+                            [
+                                370,
+                                0.031466331025802395
+                            ],
+                            [
+                                371,
+                                0.09439899307740718
+                            ],
+                            [
+                                372,
+                                0.031466331025802395
+                            ],
+                            [
+                                373,
+                                0.031466331025802395
+                            ],
+                            [
+                                374,
+                                0.06293266205160479
+                            ],
+                            [
+                                375,
+                                0.06293266205160479
+                            ],
+                            [
+                                377,
+                                0.031466331025802395
+                            ],
+                            [
+                                378,
+                                0.06293266205160479
+                            ],
+                            [
+                                379,
+                                0.06293266205160479
+                            ],
+                            [
+                                380,
+                                0.031466331025802395
+                            ],
+                            [
+                                381,
+                                0.06293266205160479
+                            ],
+                            [
+                                382,
+                                0.031466331025802395
+                            ],
+                            [
+                                383,
+                                0.031466331025802395
+                            ],
+                            [
+                                384,
+                                0.09439899307740718
+                            ],
+                            [
+                                386,
+                                0.031466331025802395
+                            ],
+                            [
+                                387,
+                                0.06293266205160479
+                            ],
+                            [
+                                388,
+                                0.031466331025802395
+                            ],
+                            [
+                                389,
+                                0.06293266205160479
+                            ],
+                            [
+                                390,
+                                0.06293266205160479
+                            ],
+                            [
+                                391,
+                                0.031466331025802395
+                            ],
+                            [
+                                392,
+                                0.031466331025802395
+                            ],
+                            [
+                                393,
+                                0.031466331025802395
+                            ],
+                            [
+                                395,
+                                0.06293266205160479
+                            ],
+                            [
+                                396,
+                                0.09439899307740718
+                            ],
+                            [
+                                397,
+                                0.031466331025802395
+                            ],
+                            [
+                                399,
+                                0.12586532410320958
+                            ],
+                            [
+                                400,
+                                0.031466331025802395
+                            ],
+                            [
+                                401,
+                                0.031466331025802395
+                            ],
+                            [
+                                402,
+                                0.12586532410320958
+                            ],
+                            [
+                                403,
+                                0.031466331025802395
+                            ],
+                            [
+                                406,
+                                0.031466331025802395
+                            ],
+                            [
+                                408,
+                                0.06293266205160479
+                            ],
+                            [
+                                409,
+                                0.031466331025802395
+                            ],
+                            [
+                                411,
+                                0.06293266205160479
+                            ],
+                            [
+                                415,
+                                0.031466331025802395
+                            ],
+                            [
+                                416,
+                                0.06293266205160479
+                            ],
+                            [
+                                417,
+                                0.06293266205160479
+                            ],
+                            [
+                                421,
+                                0.06293266205160479
+                            ],
+                            [
+                                425,
+                                0.031466331025802395
+                            ],
+                            [
+                                426,
+                                0.031466331025802395
+                            ],
+                            [
+                                427,
+                                0.031466331025802395
+                            ],
+                            [
+                                428,
+                                0.06293266205160479
+                            ],
+                            [
+                                432,
+                                0.031466331025802395
+                            ],
+                            [
+                                436,
+                                0.031466331025802395
+                            ],
+                            [
+                                437,
+                                0.06293266205160479
+                            ],
+                            [
+                                443,
+                                0.031466331025802395
+                            ],
+                            [
+                                447,
+                                0.031466331025802395
+                            ],
+                            [
+                                448,
+                                0.031466331025802395
+                            ],
+                            [
+                                450,
+                                0.06293266205160479
+                            ],
+                            [
+                                451,
+                                0.06293266205160479
+                            ],
+                            [
+                                453,
+                                0.031466331025802395
+                            ],
+                            [
+                                454,
+                                0.031466331025802395
+                            ],
+                            [
+                                455,
+                                0.06293266205160479
+                            ],
+                            [
+                                461,
+                                0.06293266205160479
+                            ],
+                            [
+                                463,
+                                0.031466331025802395
+                            ],
+                            [
+                                464,
+                                0.031466331025802395
+                            ],
+                            [
+                                468,
+                                0.031466331025802395
+                            ],
+                            [
+                                473,
+                                0.031466331025802395
+                            ],
+                            [
+                                482,
+                                0.031466331025802395
+                            ],
+                            [
+                                486,
+                                0.031466331025802395
+                            ],
+                            [
+                                493,
+                                0.031466331025802395
+                            ],
+                            [
+                                494,
+                                0.031466331025802395
+                            ],
+                            [
+                                498,
+                                0.031466331025802395
+                            ],
+                            [
+                                506,
+                                0.031466331025802395
+                            ],
+                            [
+                                511,
+                                0.06293266205160479
+                            ],
+                            [
+                                522,
+                                0.031466331025802395
+                            ],
+                            [
+                                559,
+                                0.031466331025802395
+                            ],
+                            [
+                                600,
+                                0.031466331025802395
+                            ],
+                            [
+                                602,
+                                0.031466331025802395
+                            ]
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "smooth_points": 500,
+                "smooth_points_sumcounts": [
+                    true,
+                    false
+                ],
+                "id": "picard_insert_size",
+                "title": "Picard: Insert Size",
+                "ylab": "Count",
+                "xlab": "Insert Size (bp)",
+                "xDecimals": false,
+                "tt_label": "<b>{point.x} bp</b>: {point.y:.0f}",
+                "ymin": 0,
+                "data_labels": [
+                    {
+                        "name": "Counts",
+                        "ylab": "Coverage"
+                    },
+                    {
+                        "name": "Percentages",
+                        "ylab": "Percentage of Counts"
+                    }
+                ]
+            }
+        },
+        "picard_deduplication": {
+            "plot_type": "bar_graph",
+            "samples": [
+                [
+                    "final"
+                ]
+            ],
+            "datasets": [
+                [
+                    {
+                        "name": "Unique Pairs",
+                        "data": [
+                            6360.0
+                        ]
+                    },
+                    {
+                        "name": "Unique Unpaired",
+                        "data": [
+                            9.0
+                        ]
+                    },
+                    {
+                        "name": "Duplicate Pairs Optical",
+                        "data": [
+                            72.0
+                        ]
+                    },
+                    {
+                        "name": "Duplicate Pairs Nonoptical",
+                        "data": [
+                            366.0
+                        ]
+                    },
+                    {
+                        "name": "Unmapped",
+                        "data": [
+                            9.0
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "id": "picard_deduplication",
+                "title": "Picard: Deduplication Stats",
+                "ylab": "# Reads",
+                "cpswitch_counts_label": "Number of Reads",
+                "cpswitch_c_active": false,
+                "stacking": "percent"
+            }
+        },
+        "samblaster_duplicates": {
+            "plot_type": "bar_graph",
+            "samples": [
+                [
+                    "stderr"
+                ]
+            ],
+            "datasets": [
+                [
+                    {
+                        "name": "Non-duplicates",
+                        "data": [
+                            1636.0
+                        ]
+                    }
+                ]
+            ],
+            "config": {
+                "id": "samblaster_duplicates",
+                "title": "Samblaster: Number of duplicate reads",
+                "ylab": "Number of reads"
+            }
+        },
+        "samtools-flagstat-dp": {
+            "plot_type": "beeswarm",
+            "samples": [
+                [
+                    "final"
+                ],
+                [
+                    "final"
+                ],
+                [
+                    "final"
+                ],
+                [
+                    "final"
+                ],
+                [
+                    "final"
+                ],
+                [
+                    "final"
+                ],
+                [
+                    "final"
+                ],
+                [
+                    "final"
+                ],
+                [
+                    "final"
+                ],
+                [
+                    "final"
+                ],
+                [
+                    "final"
+                ]
+            ],
+            "datasets": [
+                [
+                    0.006821
+                ],
+                [
+                    0.006821
+                ],
+                [
+                    0.0068119999999999995
+                ],
+                [
+                    4.9999999999999996e-06
+                ],
+                [
+                    0.000439
+                ],
+                [
+                    0.006816
+                ],
+                [
+                    0.006784
+                ],
+                [
+                    0.006797999999999999
+                ],
+                [
+                    9e-06
+                ],
+                [
+                    0.0
+                ],
+                [
+                    0.0
+                ]
+            ],
+            "categories": [
+                {
+                    "namespace": "",
+                    "title": "Total Reads",
+                    "description": "Total Reads",
+                    "max": 0.006821,
+                    "min": 0.0,
+                    "suffix": "M reads",
+                    "decimalPlaces": 2,
+                    "bordercol": "rgb(55,126,184)"
+                },
+                {
+                    "namespace": "",
+                    "title": "Total Passed QC",
+                    "description": "Total Passed QC",
+                    "max": 0.006821,
+                    "min": 0.0,
+                    "suffix": "M reads",
+                    "decimalPlaces": 2,
+                    "bordercol": "rgb(55,126,184)"
+                },
+                {
+                    "namespace": "",
+                    "title": "Mapped",
+                    "description": "Mapped",
+                    "max": 0.006821,
+                    "min": 0.0,
+                    "suffix": "M reads",
+                    "decimalPlaces": 2,
+                    "bordercol": "rgb(55,126,184)"
+                },
+                {
+                    "namespace": "",
+                    "title": "Supplementary Alignments",
+                    "description": "Supplementary Alignments",
+                    "max": 0.006821,
+                    "min": 0.0,
+                    "suffix": "M reads",
+                    "decimalPlaces": 2,
+                    "bordercol": "rgb(55,126,184)"
+                },
+                {
+                    "namespace": "",
+                    "title": "Duplicates",
+                    "description": "Duplicates",
+                    "max": 0.006821,
+                    "min": 0.0,
+                    "suffix": "M reads",
+                    "decimalPlaces": 2,
+                    "bordercol": "rgb(55,126,184)"
+                },
+                {
+                    "namespace": "",
+                    "title": "Paired in Sequencing",
+                    "description": "Paired in Sequencing",
+                    "max": 0.006821,
+                    "min": 0.0,
+                    "suffix": "M reads",
+                    "decimalPlaces": 2,
+                    "bordercol": "rgb(55,126,184)"
+                },
+                {
+                    "namespace": "",
+                    "title": "Properly Paired",
+                    "description": "Properly Paired",
+                    "max": 0.006821,
+                    "min": 0.0,
+                    "suffix": "M reads",
+                    "decimalPlaces": 2,
+                    "bordercol": "rgb(55,126,184)"
+                },
+                {
+                    "namespace": "",
+                    "title": "Self and mate mapped",
+                    "description": "Reads with itself and mate mapped",
+                    "max": 0.006821,
+                    "min": 0.0,
+                    "suffix": "M reads",
+                    "decimalPlaces": 2,
+                    "bordercol": "rgb(55,126,184)"
+                },
+                {
+                    "namespace": "",
+                    "title": "Singletons",
+                    "description": "Singletons",
+                    "max": 0.006821,
+                    "min": 0.0,
+                    "suffix": "M reads",
+                    "decimalPlaces": 2,
+                    "bordercol": "rgb(55,126,184)"
+                },
+                {
+                    "namespace": "",
+                    "title": "Mate mapped to diff chr",
+                    "description": "Mate mapped to different chromosome",
+                    "max": 0.006821,
+                    "min": 0.0,
+                    "suffix": "M reads",
+                    "decimalPlaces": 2,
+                    "bordercol": "rgb(55,126,184)"
+                },
+                {
+                    "namespace": "",
+                    "title": "Diff chr (mapQ >= 5)",
+                    "description": "Mate mapped to different chromosome (mapQ >= 5)",
+                    "max": 0.006821,
+                    "min": 0.0,
+                    "suffix": "M reads",
+                    "decimalPlaces": 2,
+                    "bordercol": "rgb(55,126,184)"
+                }
+            ]
+        }
+    },
+    "report_saved_raw_data": {
+        "multiqc_verifybamid": {
+            "H_NJ-HCC1395-HCC1395_BL": {
+                "RG": "ALL",
+                "CHIP_ID": "NA",
+                "#SNPS": 2.0,
+                "#READS": 40.0,
+                "AVG_DP": 20.0,
+                "FREEMIX": 0.0,
+                "FREELK1": 3.79,
+                "FREELK0": 3.79,
+                "FREE_RH": "NA",
+                "FREE_RA": "NA",
+                "CHIPMIX": "NA",
+                "CHIPLK1": "NA",
+                "CHIPLK0": "NA",
+                "CHIP_RH": "NA",
+                "CHIP_RA": "NA",
+                "DPREF": "NA",
+                "RDPHET": "NA",
+                "RDPALT": "NA"
+            }
+        },
+        "multiqc_picard_AlignmentSummaryMetrics": {
+            "final": {
+                "CATEGORY": "PAIR",
+                "TOTAL_READS": 6816.0,
+                "PF_READS": 6816.0,
+                "PCT_PF_READS": 1.0,
+                "PF_NOISE_READS": 0.0,
+                "PF_READS_ALIGNED": 6807.0,
+                "PCT_PF_READS_ALIGNED": 0.99868,
+                "PF_ALIGNED_BASES": 986100.0,
+                "PF_HQ_ALIGNED_READS": 6802.0,
+                "PF_HQ_ALIGNED_BASES": 985529.0,
+                "PF_HQ_ALIGNED_Q20_BASES": 926388.0,
+                "PF_HQ_MEDIAN_MISMATCHES": 1.0,
+                "PF_MISMATCH_RATE": 0.011089,
+                "PF_HQ_ERROR_RATE": 0.011054,
+                "PF_INDEL_RATE": 0.000291,
+                "MEAN_READ_LENGTH": 151.0,
+                "READS_ALIGNED_IN_PAIRS": 6798.0,
+                "PCT_READS_ALIGNED_IN_PAIRS": 0.998678,
+                "PF_READS_IMPROPER_PAIRS": 23.0,
+                "PCT_PF_READS_IMPROPER_PAIRS": 0.003379,
+                "BAD_CYCLES": 0.0,
+                "STRAND_BALANCE": 0.499927,
+                "PCT_CHIMERAS": 0.000735,
+                "PCT_ADAPTER": 0.0,
+                "PCT_SOFTCLIP": 0.042201,
+                "PCT_HARDCLIP": 0.0,
+                "SAMPLE": "H_NJ-HCC1395-HCC1395_BL",
+                "LIBRARY": "H_NJ-HCC1395-HCC1395_BL-lg21-lib1",
+                "READ_GROUP": ""
+            }
+        },
+        "multiqc_picard_HsMetrics": {
+            "final": {
+                "BAIT_SET": "hla_and_brca_genes_bait",
+                "BAIT_TERRITORY": 13918.0,
+                "BAIT_DESIGN_EFFICIENCY": 0.771734,
+                "ON_BAIT_BASES": 589301.0,
+                "NEAR_BAIT_BASES": 157208.0,
+                "OFF_BAIT_BASES": 239785.0,
+                "PCT_SELECTED_BASES": 0.756883,
+                "PCT_OFF_BAIT": 0.243117,
+                "ON_BAIT_VS_SELECTED": 0.789409,
+                "MEAN_BAIT_COVERAGE": 42.340925,
+                "PCT_USABLE_BASES_ON_BAIT": 0.572573,
+                "PCT_USABLE_BASES_ON_TARGET": 0.318951,
+                "FOLD_ENRICHMENT": 10906.768487,
+                "HS_LIBRARY_SIZE": 17740.0,
+                "HS_PENALTY_10X": 11.747788,
+                "HS_PENALTY_20X": 13.078893,
+                "HS_PENALTY_30X": 14.937643,
+                "HS_PENALTY_40X": 17.863675,
+                "HS_PENALTY_50X": 23.504682,
+                "HS_PENALTY_100X": -1.0,
+                "TARGET_TERRITORY": 10741.0,
+                "GENOME_SIZE": 254063420.0,
+                "TOTAL_READS": 6816.0,
+                "PF_READS": 6816.0,
+                "PF_BASES": 1029216.0,
+                "PF_UNIQUE_READS": 6378.0,
+                "PF_UQ_READS_ALIGNED": 6369.0,
+                "PF_BASES_ALIGNED": 986294.0,
+                "PF_UQ_BASES_ALIGNED": 922851.0,
+                "ON_TARGET_BASES": 328269.0,
+                "PCT_PF_READS": 1.0,
+                "PCT_PF_UQ_READS": 0.935739,
+                "PCT_PF_UQ_READS_ALIGNED": 0.998589,
+                "MEAN_TARGET_COVERAGE": 30.559352,
+                "MEDIAN_TARGET_COVERAGE": 33.0,
+                "MAX_TARGET_COVERAGE": 102.0,
+                "MIN_TARGET_COVERAGE": 0.0,
+                "ZERO_CVG_TARGETS_PCT": 0.054545,
+                "PCT_EXC_DUPE": 0.064325,
+                "PCT_EXC_ADAPTER": 0.0,
+                "PCT_EXC_MAPQ": 0.000343,
+                "PCT_EXC_BASEQ": 0.0,
+                "PCT_EXC_OVERLAP": 0.269429,
+                "PCT_EXC_OFF_TARGET": 0.333108,
+                "FOLD_80_BASE_PENALTY": 3.819919,
+                "PCT_TARGET_BASES_1X": 0.959408,
+                "PCT_TARGET_BASES_2X": 0.918536,
+                "PCT_TARGET_BASES_10X": 0.779629,
+                "PCT_TARGET_BASES_20X": 0.681966,
+                "PCT_TARGET_BASES_30X": 0.559911,
+                "PCT_TARGET_BASES_40X": 0.336654,
+                "PCT_TARGET_BASES_50X": 0.1471,
+                "PCT_TARGET_BASES_100X": 0.00121,
+                "AT_DROPOUT": 2.915135,
+                "GC_DROPOUT": 15.450987,
+                "HET_SNP_SENSITIVITY": 0.867314,
+                "HET_SNP_Q": 9.0,
+                "SAMPLE": "",
+                "LIBRARY": "",
+                "READ_GROUP": ""
+            }
+        },
+        "multiqc_picard_insertSize": {
+            "final_FR": {
+                "SAMPLE_NAME": "final",
+                "MEDIAN_INSERT_SIZE": 201.0,
+                "MODE_INSERT_SIZE": 182.0,
+                "MEDIAN_ABSOLUTE_DEVIATION": 43.0,
+                "MIN_INSERT_SIZE": 80.0,
+                "MAX_INSERT_SIZE": 18822.0,
+                "MEAN_INSERT_SIZE": 213.78477,
+                "STANDARD_DEVIATION": 70.456694,
+                "READ_PAIRS": 3180.0,
+                "PAIR_ORIENTATION": "FR",
+                "WIDTH_OF_10_PERCENT": 17.0,
+                "WIDTH_OF_20_PERCENT": 33.0,
+                "WIDTH_OF_30_PERCENT": 49.0,
+                "WIDTH_OF_40_PERCENT": 69.0,
+                "WIDTH_OF_50_PERCENT": 87.0,
+                "WIDTH_OF_60_PERCENT": 109.0,
+                "WIDTH_OF_70_PERCENT": 133.0,
+                "WIDTH_OF_80_PERCENT": 161.0,
+                "WIDTH_OF_90_PERCENT": 219.0,
+                "WIDTH_OF_95_PERCENT": 295.0,
+                "WIDTH_OF_99_PERCENT": 473.0,
+                "SAMPLE": "H_NJ-HCC1395-HCC1395_BL",
+                "LIBRARY": "H_NJ-HCC1395-HCC1395_BL-lg21-lib1",
+                "READ_GROUP": ""
+            }
+        },
+        "multiqc_picard_dups": {
+            "final": {
+                "LIBRARY": "H_NJ-HCC1395-HCC1395_BL-lg21-lib1",
+                "UNPAIRED_READS_EXAMINED": 9.0,
+                "READ_PAIRS_EXAMINED": 3399.0,
+                "SECONDARY_OR_SUPPLEMENTARY_RDS": 5.0,
+                "UNMAPPED_READS": 9.0,
+                "UNPAIRED_READ_DUPLICATES": 0.0,
+                "READ_PAIR_DUPLICATES": 219.0,
+                "READ_PAIR_OPTICAL_DUPLICATES": 36.0,
+                "PERCENT_DUPLICATION": 0.064346,
+                "ESTIMATED_LIBRARY_SIZE": 29769.0,
+                "READS_IN_DUPLICATE_PAIRS": 438.0,
+                "READS_IN_UNIQUE_PAIRS": 6360.0,
+                "READS_IN_UNIQUE_UNPAIRED": 9.0,
+                "READS_IN_DUPLICATE_PAIRS_OPTICAL": 72.0,
+                "READS_IN_DUPLICATE_PAIRS_NONOPTICAL": 366.0,
+                "READS_IN_DUPLICATE_UNPAIRED": 0.0,
+                "READS_UNMAPPED": 9.0
+            }
+        },
+        "multiqc_samblaster": {
+            "stderr": {
+                "n_dups": 0,
+                "n_tot": 1636,
+                "n_nondups": 1636,
+                "pct_dups": 0.0
+            }
+        },
+        "multiqc_samtools_flagstat": {
+            "final": {
+                "total_passed": 6821,
+                "total_failed": 0,
+                "secondary_passed": 0,
+                "secondary_failed": 0,
+                "supplementary_passed": 5,
+                "supplementary_failed": 0,
+                "duplicates_passed": 439,
+                "duplicates_failed": 0,
+                "mapped_passed": 6812,
+                "mapped_failed": 0,
+                "mapped_passed_pct": 99.87,
+                "mapped_failed_pct": NaN,
+                "paired in sequencing_passed": 6816,
+                "paired in sequencing_failed": 0,
+                "read1_passed": 3408,
+                "read1_failed": 0,
+                "read2_passed": 3408,
+                "read2_failed": 0,
+                "properly paired_passed": 6784,
+                "properly paired_failed": 0,
+                "properly paired_passed_pct": 99.53,
+                "properly paired_failed_pct": NaN,
+                "with itself and mate mapped_passed": 6798,
+                "with itself and mate mapped_failed": 0,
+                "singletons_passed": 9,
+                "singletons_failed": 0,
+                "singletons_passed_pct": 0.13,
+                "singletons_failed_pct": NaN,
+                "with mate mapped to a different chr_passed": 0,
+                "with mate mapped to a different chr_failed": 0,
+                "with mate mapped to a different chr (mapQ >= 5)_passed": 0,
+                "with mate mapped to a different chr (mapQ >= 5)_failed": 0,
+                "flagstat_total": 6821
+            }
+        },
+        "multiqc_general_stats": {
+            "final": {
+                "Samtools_mqc-generalstats-samtools-flagstat_total": 6821,
+                "Samtools_mqc-generalstats-samtools-mapped_passed": 6812,
+                "Picard_mqc-generalstats-picard-PCT_PF_READS_ALIGNED": 0.99868,
+                "Picard_mqc-generalstats-picard-FOLD_ENRICHMENT": 10906.768487,
+                "Picard_mqc-generalstats-picard-PCT_TARGET_BASES_30X": 0.559911,
+                "Picard_mqc-generalstats-picard-summed_median": 201,
+                "Picard_mqc-generalstats-picard-summed_mean": 213.78477,
+                "Picard_mqc-generalstats-picard-PERCENT_DUPLICATION": 0.064346
+            },
+            "H_NJ-HCC1395-HCC1395_BL": {
+                "VerifyBAMID_mqc-generalstats-verifybamid-FREEMIX": 0.0
+            },
+            "stderr": {
+                "Samblaster_mqc-generalstats-samblaster-pct_dups": 0.0
+            }
+        }
+    },
+    "config_analysis_dir_abs": [
+        "/Users/jwalker/Downloads/first-cromwell-run"
+    ],
+    "config_analysis_dir": [
+        "."
+    ],
+    "config_creation_date": "2020-10-18, 17:51",
+    "config_git_hash": null,
+    "config_intro_text": null,
+    "config_report_comment": null,
+    "config_report_header_info": null,
+    "config_script_path": "/Users/jwalker/opt/miniconda3/lib/python3.8/site-packages/multiqc/utils",
+    "config_short_version": "1.9",
+    "config_subtitle": null,
+    "config_title": null,
+    "config_version": "1.9"
+}
