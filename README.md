@@ -24,7 +24,7 @@ The BFX Workshop schedule, subject to change, is available below:
 | October 5, 2020 | [Exploring Data + Office Hours](https://github.com/genome/bfx-workshop/tree/master/week_03) | Chris Miller [Zoom Video](https://wustl.box.com/s/izp40y14wtrgags79a0tjej36hvqkglf)|
 | October 12, 2020 | [DNA Alignment Fundamentals](https://github.com/genome/bfx-workshop/blob/master/week_04) | Jason Walker [Zoom Video](https://wustl.box.com/s/7a3utaz585558lmg5y8e3wx35q4rvy4t)|
 | October 19, 2020 | [DNA Alignment Best Practices & Workflows](https://github.com/genome/bfx-workshop/blob/master/week_05) | Jason Walker, John Garza, Tom Mooney [Zoom Video](https://wustl.box.com/s/bc4m5bcv0cylocx12kry2kr74itd8xgs) |
-| October 26, 2020 | Small Variant Discovery | Alex Paul, Sam Peters, Chris Miller |
+| October 26, 2020 | [Docker and Germline Variant Discovery](https://github.com/genome/bfx-workshop/blob/master/week_06) | Sam Peters, Chris Miller [Zoom Video](https://wustl.box.com/s/snxmlc1j05sdmpzeqd3giufuntbi9li3)
 | November 2, 2020 | Short Lecture + Office Hours | TBD |
 | November 9, 2020 | Parsing and Filtering with Python | Susanna Kiwala, John Garza |
 | November 16, 2020 | Annotation and R | Zach Skidmore|
