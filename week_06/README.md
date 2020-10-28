@@ -82,12 +82,15 @@ The starting point for this exercise is the alignment files that you generated i
 
 3) Use command line utilities that tells you how many variants were called (don't count the header line!)
 
-4) Open IGV and load the bam file and the VCF using "Open File".  go to the position of the first variant in your VCF.  Would you consider that variant high-confidence?   
+4) Open IGV, make sure you have genome build hg38 set, then load the bam file and the VCF using "Open File".  go to the position of the first variant in your VCF.  Do you have high confidence that this variant is homozygous?   
 
-5) Now jump to the location of your variant with >100 reads of support. Is that variant high-quality?
+5) Now jump to the location of your variant with >100 reads of support. Are you more confident in this site or the previous one?
 
-6) Click on the name of your VCF file in the lefthand panel, then hit "CTRL-F".  Note how it jumps to the next variant in the file.  Jump through until you find an insertion or deletion. Note how it is represented in IGV.
+6) Click on the name of your VCF file in the lefthand panel, then hit "CTRL-F".  Note how it jumps to the next variant in the file.  Jump through until you find the following:
 
+- an insertion and a deletion. Note how each is represented in IGV.
+- a heterozygous variant
+- a variant that lies in the exon of a gene
 
 
 
