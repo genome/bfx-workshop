@@ -24,13 +24,21 @@ The BFX Workshop schedule, subject to change, is available below:
 | October 5, 2020 | [Exploring Data + Office Hours](https://github.com/genome/bfx-workshop/tree/master/week_03) | Chris Miller [Zoom Video](https://wustl.box.com/s/izp40y14wtrgags79a0tjej36hvqkglf)|
 | October 12, 2020 | [DNA Alignment Fundamentals](https://github.com/genome/bfx-workshop/blob/master/week_04) | Jason Walker [Zoom Video](https://wustl.box.com/s/7a3utaz585558lmg5y8e3wx35q4rvy4t)|
 | October 19, 2020 | [DNA Alignment Best Practices & Workflows](https://github.com/genome/bfx-workshop/blob/master/week_05) | Jason Walker, John Garza, Tom Mooney [Zoom Video](https://wustl.box.com/s/bc4m5bcv0cylocx12kry2kr74itd8xgs) |
-| October 26, 2020 | [Docker and Germline Variant Discovery](https://github.com/genome/bfx-workshop/blob/master/week_06) | Sam Peters, Chris Miller [Zoom Video](https://wustl.box.com/s/snxmlc1j05sdmpzeqd3giufuntbi9li3)
-| November 2, 2020 | Short Lecture + Office Hours | TBD |
-| November 9, 2020 | Parsing and Filtering with Python | Susanna Kiwala, John Garza |
-| November 16, 2020 | Annotation and R | Zach Skidmore|
+| October 26, 2020 | [Docker and Germline Variant Calling](https://github.com/genome/bfx-workshop/blob/master/week_06) | Sam Peters, Chris Miller [Zoom Video](https://wustl.box.com/s/snxmlc1j05sdmpzeqd3giufuntbi9li3)
+| November 2, 2020 | [Exploring Data + Office Hours](https://github.com/genome/bfx-workshop/blob/master/week_07) | Chris Miller, et al. |
+| November 23, 2020 | Somatic Variant Calling | |
+| November 16, 2020 | Parsing and Filtering with Python | Susanna Kiwala, John Garza |
+| November 23, 2020 | Annotation and R | Zach Skidmore|
+| November 30, 2020 | THANKSGIVING BREAK | |
+| December 7, 2020 | Short Lecture + Office Hours | |
+| December 14, 2020 | | |
+| December 21, 2020 | | |
+| December 28, 2020 | WINTER BREAK | |
+| Jan 4, 2020 | Viral Genomics | Todd Wylie |
+| Jan 11, 2020 | Microbial Genomics | Kristine Wylie |
 
 
-As presenter dates are confirmed a full Fall 2020 and Spring 2021 academic calendar schedule will be made available. The first Monday of each month will be a short lecture (15-30m), followed by open "office hours" to get help with assignments, or ask for advice about your own projects. Probable topics include RNAseq, single-cell RNA, Microbial Genomics, Cancer Genomics, Population Genetics, Immunology, and more.
+As presenter dates are confirmed a full Spring 2021 academic calendar schedule will be posted here. The first Monday of each month will be a short lecture (15-30m), followed by open "office hours" to get help with assignments, or ask for advice about your own projects. Probable topics include RNAseq, single-cell RNA, Microbial Genomics, Cancer Genomics, Population Genetics, Immunology, and more.
 
 
 # Participation
