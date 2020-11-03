@@ -2,7 +2,7 @@
 
 - Description
 
-- [Lecture Recording]()
+- [Lecture Recording](https://wustl.box.com/s/ivtmdn677mooltqz1irgelc2m4aiwjno)
 
 ### Exploring data with bash - part 2
 
