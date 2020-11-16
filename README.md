@@ -19,15 +19,15 @@ The BFX Workshop schedule, subject to change, is available below:
 
 |Date|Topic(s)|Presenter(s)|
 |----|--------|------------|
-| September 21, 2020 | [Workshop and Prerequisite Review](https://github.com/genome/bfx-workshop/tree/master/week_01) | Jason Walker, Chris Miller [Zoom Video](https://wustl.box.com/s/d6e1rqybagbi0nlo8abess4t4hjq5d6x) |
-| September 28, 2020 | [Sequence Data Generation](https://github.com/genome/bfx-workshop/tree/master/week_02) | Chris Miller [Zoom Video](https://wustl.box.com/s/33hp9a9e20m0gteavq46a5d2a16u2fe4) |
-| October 5, 2020 | [Exploring Data + Office Hours](https://github.com/genome/bfx-workshop/tree/master/week_03) | Chris Miller [Zoom Video](https://wustl.box.com/s/izp40y14wtrgags79a0tjej36hvqkglf)|
-| October 12, 2020 | [DNA Alignment Fundamentals](https://github.com/genome/bfx-workshop/blob/master/week_04) | Jason Walker [Zoom Video](https://wustl.box.com/s/7a3utaz585558lmg5y8e3wx35q4rvy4t)|
-| October 19, 2020 | [DNA Alignment Best Practices & Workflows](https://github.com/genome/bfx-workshop/blob/master/week_05) | Jason Walker, John Garza, Tom Mooney [Zoom Video](https://wustl.box.com/s/bc4m5bcv0cylocx12kry2kr74itd8xgs) |
-| October 26, 2020 | [Docker and Germline Variant Calling](https://github.com/genome/bfx-workshop/blob/master/week_06) | Sam Peters, Chris Miller [Zoom Video](https://wustl.box.com/s/snxmlc1j05sdmpzeqd3giufuntbi9li3)
-| November 2, 2020 | [Exploring Data + Office Hours](https://github.com/genome/bfx-workshop/blob/master/week_07) | Chris Miller [Zoom Link](https://wustl.box.com/s/ivtmdn677mooltqz1irgelc2m4aiwjno)|
-| November 9, 2020 | [Somatic Variant Calling](https://github.com/genome/bfx-workshop/blob/master/week_08) | Chris Miller [Zoom Link](https://wustl.box.com/s/yizndcjs9kgutm3yg9pj7su2dmz0vv1d)|
-| November 16, 2020 | [Parsing and Filtering VCFs with Python](https://github.com/genome/bfx-workshop/blob/master/week_09) | Susanna Kiwala, John Garza |
+| September 21, 2020 | [Workshop and Prerequisite Review](https://github.com/genome/bfx-workshop/tree/master/week_01) | Jason Walker, Chris Miller [Video](https://wustl.box.com/s/d6e1rqybagbi0nlo8abess4t4hjq5d6x) |
+| September 28, 2020 | [Sequence Data Generation](https://github.com/genome/bfx-workshop/tree/master/week_02) | Chris Miller [Video](https://wustl.box.com/s/33hp9a9e20m0gteavq46a5d2a16u2fe4) |
+| October 5, 2020 | [Exploring Data + Office Hours](https://github.com/genome/bfx-workshop/tree/master/week_03) | Chris Miller [Video](https://wustl.box.com/s/izp40y14wtrgags79a0tjej36hvqkglf)|
+| October 12, 2020 | [DNA Alignment Fundamentals](https://github.com/genome/bfx-workshop/blob/master/week_04) | Jason Walker [Video](https://wustl.box.com/s/7a3utaz585558lmg5y8e3wx35q4rvy4t)|
+| October 19, 2020 | [DNA Alignment Best Practices & Workflows](https://github.com/genome/bfx-workshop/blob/master/week_05) | Jason Walker, John Garza, Tom Mooney [Video](https://wustl.box.com/s/bc4m5bcv0cylocx12kry2kr74itd8xgs) |
+| October 26, 2020 | [Docker and Germline Variant Calling](https://github.com/genome/bfx-workshop/blob/master/week_06) | Sam Peters, Chris Miller [Video](https://wustl.box.com/s/snxmlc1j05sdmpzeqd3giufuntbi9li3)
+| November 2, 2020 | [Exploring Data + Office Hours](https://github.com/genome/bfx-workshop/blob/master/week_07) | Chris Miller [Video](https://wustl.box.com/s/ivtmdn677mooltqz1irgelc2m4aiwjno)|
+| November 9, 2020 | [Somatic Variant Calling](https://github.com/genome/bfx-workshop/blob/master/week_08) | Chris Miller [Video](https://wustl.box.com/s/yizndcjs9kgutm3yg9pj7su2dmz0vv1d)|
+| November 16, 2020 | [Parsing and Filtering VCFs with Python](https://github.com/genome/bfx-workshop/blob/master/week_09) | Susanna Kiwala, John Garza [Video](https://wustl.box.com/s/mkgx6aac8zjuc3e3p49mp11p2l5lp3bi)|
 | November 23, 2020 | Annotation and R | Zach Skidmore |
 | November 30, 2020 | THANKSGIVING BREAK | |
 | December 7, 2020 | Short Lecture + Office Hours | |
