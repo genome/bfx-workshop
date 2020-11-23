@@ -31,8 +31,8 @@ The BFX Workshop schedule, subject to change, is available below:
 | November 23, 2020 | Annotation and R | Zach Skidmore |
 | November 30, 2020 | THANKSGIVING BREAK | |
 | December 7, 2020 | Short Lecture + Office Hours | |
-| December 14, 2020 | | |
-| December 21, 2020 | | |
+| December 14, 2020 | RNA-seq Part 1 | Kelsy Cotto |
+| December 21, 2020 | RNA-seq Part 2 | Kelsy Cotto |
 | December 28, 2020 | WINTER BREAK | |
 | Jan 4, 2020 | Viral Genomics | Todd Wylie |
 | Jan 11, 2020 | Microbial Genomics | Kristine Wylie |
