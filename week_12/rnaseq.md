@@ -1,3 +1,10 @@
+## Week 12 - RNAseq part 1
+
+- [Lecture Slides](https://github.com/genome/bfx-workshop/blob/master/week_12/RNASeq_IntrotoRNA.pdf)
+- [Lecture Recording](https://wustl.box.com/s/6bguhi1d6su0ezv27glkd0cq0ea17d7v)
+
+##Notes
+
 ### Obtain RNA-seq test data.
 The test data consists of two commercially available RNA samples: [Universal Human Reference (UHR)](/assets/module_1/UHR.pdf) and [Human Brain Reference (HBR)](/assets/module_1/HBR.pdf). The UHR is total RNA isolated from a diverse set of 10 cancer cell lines. The HBR is total RNA isolated from the brains of 23 Caucasians, male and female, of varying age but mostly 60-80 years old.
 
