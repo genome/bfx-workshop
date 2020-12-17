@@ -30,8 +30,8 @@ The BFX Workshop schedule, subject to change, is available below:
 | November 16, 2020 | [Parsing and Filtering VCFs with Python](https://github.com/genome/bfx-workshop/blob/master/week_09) | Susanna Kiwala, John Garza [Video](https://wustl.box.com/s/mkgx6aac8zjuc3e3p49mp11p2l5lp3bi)|
 | November 23, 2020 | [Annotation and R](https://github.com/genome/bfx-workshop/blob/master/week_10) | Zach Skidmore [Video](https://wustl.box.com/s/s7i82kbmw36j7rxhbwehniflk4apwq7k)|
 | November 30, 2020 | THANKSGIVING BREAK | |
-| December 7, 2020 | Short Lecture + Office Hours | |
-| December 14, 2020 | RNA-seq Part 1 | Kelsy Cotto |
+| December 7, 2020 | [Visualizing variants + Office Hours](https://github.com/genome/bfx-workshop/tree/master/week_11) | Zach Skidmore [Video](https://wustl.box.com/s/4mdyp7jpv2tmpb2y4spxp9ylug3mr4hx) |
+| December 14, 2020 | [RNA-seq Part 1](https://github.com/genome/bfx-workshop/tree/master/week_12) | Kelsy Cotto [Video](https://wustl.box.com/s/6bguhi1d6su0ezv27glkd0cq0ea17d7v)|
 | December 21, 2020 | RNA-seq Part 2 | Kelsy Cotto |
 | December 28, 2020 | WINTER BREAK | |
 | Jan 4, 2020 | Viral Genomics | Todd Wylie |
