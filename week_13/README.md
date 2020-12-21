@@ -55,3 +55,17 @@ tail transcript_tpms_all_samples.tsv
 ```
 
 ***
+
+```bash
+cd ~/rnaseq
+mkdir -p sleuth/input
+mkdir -p sleuth/results
+cd sleuth/input
+
+docker run -v ~/rnaseq:/docker_workspace zlskidmore/kallisto:0.46.0 kallisto quant --rf-stranded -b 100 --index=/docker_workspace/kallisto/chr22_ERCC92_transcripts_kallisto_index --output-dir=/docker_workspace/sleuth/input/UHR_Rep1_ERCC-Mix1 --threads=4 --plaintext /docker_workspace/data/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz /docker_workspace/data/UHR_Rep1_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz
+docker run -v ~/rnaseq:/docker_workspace zlskidmore/kallisto:0.46.0 kallisto quant --rf-stranded -b 100 --index=/docker_workspace/kallisto/chr22_ERCC92_transcripts_kallisto_index --output-dir=/docker_workspace/sleuth/input/UHR_Rep2_ERCC-Mix1 --threads=4 --plaintext /docker_workspace/data/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz /docker_workspace/data/UHR_Rep2_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz
+docker run -v ~/rnaseq:/docker_workspace zlskidmore/kallisto:0.46.0 kallisto quant --rf-stranded -b 100 --index=/docker_workspace/kallisto/chr22_ERCC92_transcripts_kallisto_index --output-dir=/docker_workspace/sleuth/input/UHR_Rep3_ERCC-Mix1 --threads=4 --plaintext /docker_workspace/data/UHR_Rep3_ERCC-Mix1_Build37-ErccTranscripts-chr22.read1.fastq.gz /docker_workspace/data/UHR_Rep3_ERCC-Mix1_Build37-ErccTranscripts-chr22.read2.fastq.gz
+
+docker run -v ~/rnaseq:/docker_workspace zlskidmore/kallisto:0.46.0 kallisto quant --rf-stranded -b 100 --index=/docker_workspace/kallisto/chr22_ERCC92_transcripts_kallisto_index --output-dir=/docker_workspace/sleuth/input/HBR_Rep1_ERCC-Mix2 --threads=4 --plaintext /docker_workspace/data/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz /docker_workspace/data/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz
+docker run -v ~/rnaseq:/docker_workspace zlskidmore/kallisto:0.46.0 kallisto quant --rf-stranded -b 100 --index=/docker_workspace/kallisto/chr22_ERCC92_transcripts_kallisto_index --output-dir=/docker_workspace/sleuth/input/HBR_Rep2_ERCC-Mix2 --threads=4 --plaintext /docker_workspace/data/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz /docker_workspace/data/HBR_Rep2_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz
+docker run -v ~/rnaseq:/docker_workspace zlskidmore/kallisto:0.46.0 kallisto quant --rf-stranded -b 100 --index=/docker_workspace/kallisto/chr22_ERCC92_transcripts_kallisto_index --output-dir=/docker_workspace/sleuth/input/HBR_Rep3_ERCC-Mix2 --threads=4 --plaintext /docker_workspace/data/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz /docker_workspace/data/HBR_Rep3_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz
