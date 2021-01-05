@@ -34,12 +34,23 @@ The BFX Workshop schedule, subject to change, is available below:
 | December 14, 2020 | [RNA-seq Part 1](https://github.com/genome/bfx-workshop/tree/master/week_12) | Kelsy Cotto [Video](https://wustl.box.com/s/6bguhi1d6su0ezv27glkd0cq0ea17d7v)|
 | December 21, 2020 | [RNA-seq Part 2](https://github.com/genome/bfx-workshop/tree/master/week_13) | Kelsy Cotto [Video](https://wustl.box.com/s/w818n3r2vkfvlog4claaumccvdyavxsn)|
 | December 28, 2020 | WINTER BREAK | |
-| Jan 4, 2020 | Viral Genomics | Todd Wylie |
+| Jan 4, 2020 | [Viral Genomics](https://github.com/genome/bfx-workshop/tree/master/week_14) | Todd Wylie [Video](https://wustl.box.com/s/hwerlzg4t3qi3bly1s4bejg74nypume7) |
 | Jan 11, 2020 | Microbial Genomics | Kristine Wylie |
+| Jan 18, 2021 | MLK DAY - NO MEETING | | 
+| Jan 25, 2021 | Bisulfite Sequencing and Analysis | Chris Miller |
+| Feb 1, 2021 | Prereq Review + Office Hours w/RIS | | 
+| Feb 8, 2021 | Single-cell RNA-seq pt 1 | Allegra Petti |
+| Feb 15, 2021 | Single-cell RNA-seq pt 2 | Allegra Petti |
+| Feb 22, 2021 | ctDNA/error-corrected sequencing | Aadel Chaudhuri | 
+| Mar 1, 2021 | Short talk + Office Hours | TBD | 
+| Mar 8, 2021 | 16S analysis using R-studio, DADA2, and DESeq2 | Brigida Rusconi |
+| Mar 15, 2021 | SPRING BREAK | | 
+| Mar 22, 2021 | Genome Assembly and Long Reads | Chad Tomlinson |
+| Mar 29, 2021 | TBD | | 
+| Apr 5, 2021 | Short talk + Office Hours | | 
+| April 12, 2021 | COMPBIO | Ruteja Barve, Chad Storer | 
 
-
-As presenter dates are confirmed a full Spring 2021 academic calendar schedule will be posted here. The first Monday of each month will be a short lecture (15-30m), followed by open "office hours" to get help with assignments, or ask for advice about your own projects. Probable topics include RNAseq, single-cell RNA, Microbial Genomics, Cancer Genomics, Population Genetics, Immunology, and more.
-
+The first Monday of each month will be a short lecture (15-30m), followed by open "office hours" to get help with assignments, or ask for advice about your own projects. Please contact the organizers if you have suggestions for additional lectures.
 
 # Participation
 
