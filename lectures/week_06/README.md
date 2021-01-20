@@ -66,7 +66,7 @@ We'll cover how to deploy these images to a public repository (so that you can s
 
 ### Detecting Germline Variants
 
-The starting point for this exercise is the alignment files that you generated in last week's [alignment workflow exercise](https://github.com/genome/bfx-workshop/blob/master/week_05/cromwell_alignment_walkthrough.md).  I'll assume that you've copied the `final.bam` and `final.bai` files to your working directory.
+The starting point for this exercise is the alignment files that you generated in last week's [alignment workflow exercise](https://github.com/genome/bfx-workshop/blob/master/lectures/week_05/cromwell_alignment_walkthrough.md).  I'll assume that you've copied the `final.bam` and `final.bai` files to your working directory.
 
 1) run GATK HaplotypeCaller on this data, to produce a VCF file of germline variant calls.  Some hints:
 

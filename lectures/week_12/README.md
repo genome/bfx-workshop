@@ -1,6 +1,6 @@
 ## Week 12 - RNAseq part 1
 
-- [Lecture Slides](https://github.com/genome/bfx-workshop/blob/master/week_12/RNASeq_IntrotoRNA.pdf)
+- [Lecture Slides](https://github.com/genome/bfx-workshop/blob/master/lectures/week_12/RNASeq_IntrotoRNA.pdf)
 - [Lecture Recording](https://wustl.box.com/s/6bguhi1d6su0ezv27glkd0cq0ea17d7v)
 
 ## Assignment
