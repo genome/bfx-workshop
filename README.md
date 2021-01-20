@@ -35,7 +35,7 @@ The BFX Workshop schedule, subject to change, is available below:
 | December 21, 2020 | [RNA-seq Part 2](https://github.com/genome/bfx-workshop/tree/master/week_13) | Kelsy Cotto [Video](https://wustl.box.com/s/w818n3r2vkfvlog4claaumccvdyavxsn)|
 | December 28, 2020 | WINTER BREAK | |
 | Jan 4, 2020 | [Viral Genomics](https://github.com/genome/bfx-workshop/tree/master/week_14) | Todd Wylie [Video](https://wustl.box.com/s/hwerlzg4t3qi3bly1s4bejg74nypume7) |
-| Jan 11, 2020 | Microbial Genomics | Kristine Wylie |
+| Jan 11, 2020 | [Microbial Genomics](https://github.com/genome/bfx-workshop/tree/master/week_15) | Kristine Wylie [Video](https://wustl.box.com/s/8wt8qtptki8tfgzvrb7jf0wpr3sfr8sm)|
 | Jan 18, 2021 | MLK DAY - NO MEETING | | 
 | Jan 25, 2021 | Bisulfite Sequencing and Analysis | Chris Miller |
 | Feb 1, 2021 | Prereq Review + Office Hours w/RIS | | 
