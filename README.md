@@ -37,7 +37,7 @@ The BFX Workshop schedule, subject to change, is available below:
 | Jan 4, 2020 | [Viral Genomics](https://github.com/genome/bfx-workshop/tree/master/lectures/week_14) | Todd Wylie [Video](https://wustl.box.com/s/hwerlzg4t3qi3bly1s4bejg74nypume7) |
 | Jan 11, 2020 | [Microbial Genomics](https://github.com/genome/bfx-workshop/tree/master/lectures/week_15) | Kristine Wylie [Video](https://wustl.box.com/s/8wt8qtptki8tfgzvrb7jf0wpr3sfr8sm)|
 | Jan 18, 2021 | MLK DAY - NO MEETING | | 
-| Jan 25, 2021 | [Bisulfite Sequencing and Analysis](https://github.com/genome/bfx-workshop/tree/master/lectures/week_16) | Chris Miller [Video] (https://wustl.box.com/s/m7ibzvi40uoycc1u65hfonkv4bg9g8xi) |
+| Jan 25, 2021 | [Bisulfite Sequencing and Analysis](https://github.com/genome/bfx-workshop/tree/master/lectures/week_16) | Chris Miller [Video](https://wustl.box.com/s/m7ibzvi40uoycc1u65hfonkv4bg9g8xi) |
 | Feb 1, 2021 | Prereq Review + Office Hours w/RIS | | 
 | Feb 8, 2021 | Single-cell RNA-seq pt 1 | Allegra Petti |
 | Feb 15, 2021 | Single-cell RNA-seq pt 2 | Allegra Petti |
