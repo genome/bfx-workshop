@@ -38,15 +38,15 @@ The BFX Workshop schedule, subject to change, is available below:
 | Jan 11, 2020 | [Microbial Genomics](https://github.com/genome/bfx-workshop/tree/master/lectures/week_15) | Kristine Wylie [Video](https://wustl.box.com/s/8wt8qtptki8tfgzvrb7jf0wpr3sfr8sm)|
 | Jan 18, 2021 | MLK DAY - NO MEETING | | 
 | Jan 25, 2021 | [Bisulfite Sequencing and Analysis](https://github.com/genome/bfx-workshop/tree/master/lectures/week_16) | Chris Miller [Video](https://wustl.box.com/s/m7ibzvi40uoycc1u65hfonkv4bg9g8xi) |
-| Feb 1, 2021 | Prereq Review + Office Hours w/RIS | | 
-| Feb 8, 2021 | Single-cell RNA-seq pt 1 | Allegra Petti |
-| Feb 15, 2021 | Single-cell RNA-seq pt 2 | Allegra Petti |
-| Feb 22, 2021 | ctDNA/error-corrected sequencing | Aadel Chaudhuri | 
+| Feb 1, 2021 | Prereq Review + Office Hours w/RIS | |
+| Feb 1, 2021 | Office Hours | | 
+| Feb 15, 2021 | Single-cell RNA-seq pt 1 | Allegra Petti |
+| Feb 22, 2021 | Single-cell RNA-seq pt 2 | Allegra Petti |
 | Mar 1, 2021 | Short talk + Office Hours | TBD | 
 | Mar 8, 2021 | 16S analysis using R-studio, DADA2, and DESeq2 | Brigida Rusconi |
 | Mar 15, 2021 | SPRING BREAK | | 
 | Mar 22, 2021 | Genome Assembly and Long Reads | Chad Tomlinson |
-| Mar 29, 2021 | TBD | | 
+| Mar 29, 2021 | ctDNA/error-corrected sequencing | Aadel Chaudhuri |  
 | Apr 5, 2021 | Short talk + Office Hours | | 
 | April 12, 2021 | COMPBIO | Ruteja Barve, Chad Storer | 
 
