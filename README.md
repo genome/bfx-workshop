@@ -41,8 +41,7 @@ The BFX Workshop schedule, subject to change, is available below:
 | Feb 1, 2021 | Prereq Review + Office Hours w/RIS | Elyn Fritz-Waters [Video](https://wustl.box.com/s/8sm45d93qrmz6jlauv5nd6t2h4g3c5so)|
 | Feb 1, 2021 | Office Hours | | 
 | Feb 15, 2021 | [Single-cell RNA-seq pt 1](https://github.com/genome/bfx-workshop/tree/master/lectures/week_18) | Allegra Petti [Video](https://wustl.box.com/s/i8vzwy76jj0548587runyzw28rexu709)|
-| Feb 22, 2021 | [Single-cell RNA-seq pt 2](https://github.com/genome/bfx-works\
-hop/tree/master/lectures/week_19) | Allegra Petti [Video](https://wustl.box.com/s/mq4oksoza8x68sjj72wz9qwaiuvz0kex) |
+| Feb 22, 2021 | [Single-cell RNA-seq pt 2](https://github.com/genome/bfx-workshop/tree/master/lectures/week_19) | Allegra Petti [Video](https://wustl.box.com/s/mq4oksoza8x68sjj72wz9qwaiuvz0kex) |
 | Mar 1, 2021 | Short talk + Office Hours | TBD | 
 | Mar 8, 2021 | 16S analysis using R-studio, DADA2, and DESeq2 | Brigida Rusconi |
 | Mar 15, 2021 | SPRING BREAK | | 
