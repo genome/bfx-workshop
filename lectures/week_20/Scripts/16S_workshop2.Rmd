@@ -1,0 +1,116 @@
+---
+title: "16S_Workshop_2"
+author: "Brigida Rusconi"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output: html_document
+---
+Outline:
+1) Merge multiple sequence runs
+2) remove chimeras
+3) assign taxonomy
+4) create phylogenetic tree
+
+This Markdown file will deal with chimera removal and taxonomy assignment. It is separate from the error correction and filtering of the DADA2 as this is the time where you will combine data from different runs if you do indeed have samples dispersed over different runs.
+
+```{r setup, include=FALSE}
+#CHANGE ME
+path <- "/storage1/fs1/b.a.rusconi/Active/MiSeq_SOP" 
+#change to the number of cores selected in the interactive session
+ncores<-10
+
+knitr::opts_chunk$set(fig.width=8,
+                      fig.height=6,
+                      fig.path=paste(path,"/figures/",sep = ""),
+                      dev='pdf',
+                      warning=FALSE,
+                      message=FALSE)
+```
+
+```{r, general}
+# Load libraries
+library(ShortRead)
+packageVersion("ShortRead")
+library(dada2)
+packageVersion("dada2")
+library(ggplot2)
+packageVersion("ggplot2")
+library("msa")
+packageVersion("msa")
+library("phangorn")
+packageVersion("phangorn")
+library("phyloseq")
+packageVersion("phyloseq")
+library("microbiomeutilities")
+packageVersion("microbiomeutilities")
+```
+Be careful here with the multithread option to set it to the max of cores that you selected when you started the bsub command. Also make sure to allocate enough memory as this is a memory intensive step. You will need a local copy of the silva databases to run this command.
+
+Remove Chimeras.ATTENTION IF YOU HAVE MULTIPLE RUNS THIS IS WHERE YOU MERGE THEM BACK TOGETHER.
+Most of your reads should remain after chimera removal (it is not uncommon for a majority of sequence variants to be removed though). If most of your reads were removed as chimeric, upstream processing may need to be revisited. In almost all cases this is caused by primer sequences with ambiguous nucleotides that were not removed prior to beginning the DADA2 pipeline
+
+```{r eval=FALSE, include=FALSE}
+# Merge multiple runs (if necessary)
+#CHANGE PATH NAMES
+#st1 <- readRDS("path/to/run1/output/seqtab.rds")
+#st2 <- readRDS("path/to/run2/output/seqtab.rds")
+#st3 <- readRDS("path/to/run3/output/seqtab.rds")
+#st.all <- mergeSequenceTables(st1, st2, st3)
+
+#if only one run then use 
+st.all<- readRDS(paste(path,"/seqtab.rds",sep=""))
+```
+
+```{r, chimeras}
+#Filter chimeric reads
+seqtab.nochim <- removeBimeraDenovo(st.all, method="consensus", multithread=ncores, verbose=TRUE)
+dim(seqtab.nochim) 
+sum(seqtab.nochim)/sum(st.all)    #ensuring retained majority of reads
+
+
+
+saveRDS(seqtab.nochim, paste(path,"/seqtab.nochim.rds",sep=""))
+save.image(paste(path,"/workshop_16S.RData",sep=""))
+```
+
+For the taxonomy databases I created a taxonomy folder in my active storage and then imported the files with wget.
+```{r, read chimera file}
+set.seed(100)
+#CHANGE ME
+path1<- "/storage1/fs1/b.a.rusconi/Active/Taxonomy"
+tax <- assignTaxonomy(seqtab.nochim, paste(path1,"/silva_nr99_v138_train_set.fa.gz",sep = "" ),multithread=ncores)
+tax.plus <- addSpecies(tax, paste(path1,"/silva_species_assignment_v138.fa.gz", sep=""))
+colnames(tax.plus) <- c("Kingdom", "Phylum", "Class", "Order", "Family", "Genus", "Species")
+
+# CHANGE ME ...
+saveRDS(tax.plus, paste(path,"/tax_final.rds",sep = "")) 
+```
+
+This step takes quite some time. Only use it if you need phylogeny for your distance metrics. Check if there are new releases of the taxanomy database and keep track of the version that you used. Remember that the interactive session on the cluster has a time limit of 1 day. You might want to run this not in interactive mode to avoid the process from stopping before it is done if you expect to have a lot of samples with high diversity.
+```{r, tree}
+seqs <- getSequences(seqtab.nochim)
+
+names(seqs) <- seqs # This propagates to the tip labels of the tree
+mult <- msa(seqs, method="ClustalW", type="dna", order="input")
+
+phang.align <- as.phyDat(mult, type="DNA", names=getSequence(seqtab))
+
+dm <- dist.ml(phang.align)
+treeNJ <- NJ(dm) # Note, tip order != sequence order
+fit = pml(treeNJ, data=phang.align)
+
+fitGTR <- update(fit, k=4, inv=0.2)
+fitGTR <- optim.pml(fitGTR, model="GTR", optInv=TRUE, optGamma=TRUE,
+                       rearrangement = "stochastic", control = pml.control(trace = 0))
+detach("package:phangorn", unload=TRUE)
+#CHANGE ME
+save.image(paste(path,"/workshop_16S.RData",sep = ""))
+```
+
+Now let's combine the tree with the taxonomy and feature table into a phyloseq object for downstream analysis.
+```{r, create phyloseq object}
+ps.silva <- phyloseq(otu_table(t(seqtab.nochim),taxa_are_rows=TRUE), tax_table(tax.plus), phy_tree(fitGTR$tree))
+#this changes the ASV labels from the sequence to ASV with numbers and stores the sequence in the refseq slot of the phyloseq object
+ps.silva<-add_refseq(ps.silva,tag = "ASV")
+#CHANGE ME
+saveRDS(ps.silva, paste(path,"/silva_workshop.rds",sep = "")) 
+```
