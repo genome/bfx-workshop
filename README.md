@@ -45,7 +45,7 @@ The BFX Workshop schedule, subject to change, is available below:
 | Mar 1, 2021 | Short talk + Office Hours | TBD | 
 | Mar 8, 2021 | 16S analysis using R-studio, DADA2, and DESeq2 | Brigida Rusconi |
 | Mar 15, 2021 | SPRING BREAK | | 
-| Mar 22, 2021 | Genome Assembly and Long Reads | Chad Tomlinson |
+| Mar 22, 2021 | [Genome Assembly and Long Reads]() | Chad Tomlinson [Video](https://wustl.box.com/s/z9y6bkpf3e4af9w3z13zf12yy0s7wxyo) |
 | Mar 29, 2021 | ctDNA/error-corrected sequencing | Aadel Chaudhuri |  
 | Apr 5, 2021 | Short talk + Office Hours | | 
 | April 12, 2021 | COMPBIO | Ruteja Barve, Chad Storer | 
