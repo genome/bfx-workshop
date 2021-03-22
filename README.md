@@ -43,9 +43,9 @@ The BFX Workshop schedule, subject to change, is available below:
 | Feb 15, 2021 | [Single-cell RNA-seq pt 1](https://github.com/genome/bfx-workshop/tree/master/lectures/week_18) | Allegra Petti [Video](https://wustl.box.com/s/i8vzwy76jj0548587runyzw28rexu709)|
 | Feb 22, 2021 | [Single-cell RNA-seq pt 2](https://github.com/genome/bfx-workshop/tree/master/lectures/week_19) | Allegra Petti [Video](https://wustl.box.com/s/mq4oksoza8x68sjj72wz9qwaiuvz0kex) |
 | Mar 1, 2021 | Short talk + Office Hours | TBD | 
-| Mar 8, 2021 | 16S analysis using R-studio, DADA2, and DESeq2 | Brigida Rusconi [Video](https://wustl.box.com/s/a4b0ynwmf7ajo4ndrrpqtwe3pvz97afe) |
+| Mar 8, 2021 | [16S analysis using R-studio, DADA2, and DESeq2](https://github.com/genome/bfx-workshop/tree/master/lectures/week_20) | Brigida Rusconi [Video](https://wustl.box.com/s/a4b0ynwmf7ajo4ndrrpqtwe3pvz97afe) |
 | Mar 15, 2021 | SPRING BREAK | | 
-| Mar 22, 2021 | [Genome Assembly and Long Reads]() | Chad Tomlinson [Video](https://wustl.box.com/s/z9y6bkpf3e4af9w3z13zf12yy0s7wxyo) |
+| Mar 22, 2021 | [Genome Assembly and Long Reads](https://github.com/genome/bfx-workshop/tree/master/lectures/week_21) | Chad Tomlinson [Video](https://wustl.box.com/s/z9y6bkpf3e4af9w3z13zf12yy0s7wxyo) |
 | Mar 29, 2021 | ctDNA/error-corrected sequencing | Aadel Chaudhuri |  
 | Apr 5, 2021 | Short talk + Office Hours | | 
 | April 12, 2021 | COMPBIO | Ruteja Barve, Chad Storer | 
