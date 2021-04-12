@@ -46,7 +46,7 @@ The BFX Workshop schedule, subject to change, is available below:
 | Mar 8, 2021 | [16S analysis using R-studio, DADA2, and DESeq2](https://github.com/genome/bfx-workshop/tree/master/lectures/week_20) | Brigida Rusconi [Video](https://wustl.box.com/s/a4b0ynwmf7ajo4ndrrpqtwe3pvz97afe) |
 | Mar 15, 2021 | SPRING BREAK | | 
 | Mar 22, 2021 | [Genome Assembly and Long Reads](https://github.com/genome/bfx-workshop/tree/master/lectures/week_21) | Chad Tomlinson [Video](https://wustl.box.com/s/z9y6bkpf3e4af9w3z13zf12yy0s7wxyo) |
-| Mar 29, 2021 | ctDNA/error-corrected sequencing | Aadel Chaudhuri |  
+| Mar 29, 2021 | [ctDNA/error-corrected sequencing](https://github.com/genome/bfx-workshop/tree/master/lectures/week_22) | Aadel Chaudhuri [Video](https://wustl.box.com/s/kcguh3p4jxqwx7qes3qcd16el2q3nngk) |
 | Apr 5, 2021 | Short talk + Office Hours | | 
 | April 12, 2021 | COMPBIO | Ruteja Barve, Chad Storer | 
 
