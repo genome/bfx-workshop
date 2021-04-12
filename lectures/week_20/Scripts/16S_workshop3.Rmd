@@ -1,0 +1,313 @@
+---
+title: "16S_DESeq2"
+author: "Brigida Rusconi"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output: html_document
+---
+Outline:
+1) Check library size for each sample
+2) remove contaminants
+3) Check for outliers with beta diversity
+4) Estimate alpha diversity with DivNet and Breakaway
+5) Visualize distribution
+6) Differential Abbundance
+
+This Markdown file is a mashup from the tutorials from https://astrobiomike.github.io/amplicon/dada2_workflow_ex
+https://f1000research.com/articles/5-1492
+https://github.com/adw96/DivNet
+
+The important thing is that you keep track of what you do and that you document if you remove outliers or filter data, but honestly you will need to look at each experiment and decide what works for your data. Filtering is experiment specific, just keep track of what you did and you will be fine.
+
+
+```{r setup, include=FALSE}
+#CHANGE ME
+path <- "/storage1/fs1/b.a.rusconi/Active/MiSeq_SOP" 
+
+knitr::opts_chunk$set(fig.width=8,
+                      fig.height=6,
+                      fig.path=paste(path,"/figures/",sep = ""),
+                      dev='pdf',
+                      warning=FALSE,
+                      message=FALSE)
+```
+Import libraries needed
+```{r, libraries}
+library(phyloseq)
+library(microbiome)
+library(knitr)
+library(tidyverse)
+library(DESeq2)
+library(magrittr)
+library(DivNet)
+library(breakaway)
+library(ggplot2)
+library(ggpubr)
+library(data.table)
+library(dendextend)
+library(vegan)
+```
+
+Read in the DADA2 generated file together with a metadata file with information on the samples that were sequenced.
+```{r, read in file}
+#CHANGE ME
+path <- "/storage1/fs1/b.a.rusconi/Active/MiSeq_SOP" 
+
+ps.silva2 = readRDS(paste(path,"/silva_workshop.rds",sep=""))
+map <- import_qiime_sample_data(paste(path,"/mouse.txt",sep=""))
+ps <- merge_phyloseq(ps.silva2, map)
+#we don't use the mock sample so some sequences are dropped. always good to run this if you subset your data.
+ps<-prune_taxa(taxa_sums(ps) > 0, ps)
+
+```
+
+Here we can plot the counts for each sample to identify problematic samples.
+```{r number of reads}
+reads_sample <- readcount(ps)
+sample_data(ps)$reads_sample <- reads_sample
+
+#define x variable to plot library size, could be run, treatment or other criteria
+xvar<-"times"
+
+ p <- ggplot(sample_data(ps), aes_string(xvar, fill=xvar,y = log10(reads_sample))) +
+    geom_violin()  + geom_jitter(alpha=0.5, width = 0.15) +
+     theme_bw()+theme(legend.position = "none",panel.grid.major = element_blank(),)+ylab("log10(library size)")
+ p
+ 
+ tdt = data.table(tax_table(ps),TotalCounts = taxa_sums(ps),OTU = taxa_names(ps))
+ggplot(tdt, aes(TotalCounts)) + 
+  geom_histogram() + 
+  ggtitle("Histogram of Total Counts")+ ylab("ASV count")
+```
+
+If your sample is from tissue or environment you might have quite a few reads that map to mitochondria or other kingdoms that you are not interested in, so you can remove those. If your sample is from a source that is well characterized (human or mouse stool) then you might want to get rid of ASVs that do not match at the Phylum level as they are probably just artefacts. If you have the data from an extraction control you can use the decontam package to remove those artefacts at this step.
+```{r, remove contaminant sequences}
+#check if you have other kingdoms in your sample
+unique(tax_table(ps)[,"Phylum"] )
+#if that's the case you can run the next line to keep only bacteria
+#ps=subset_taxa(ps, Kingdom=="Bacteria")
+ps=subset_taxa(ps,Phylum!="NA")
+ps.1=subset_taxa(ps, Family!="Mitochondria")
+
+#library(decontam)
+
+#lets assume that we have a column in the metadata that marks the blank samples, you have to create a logical vector to indicate which samples are blank we can use this statement to do so. Change the text after == to match what you called a blank sample
+
+#vector_for_decontam <- which(sample_data(ps)$blank=="extr_control")
+
+#contam_df <- isContaminant(t(otu_table(ps)), neg=vector_for_decontam)
+
+  # getting vector holding the identified contaminant IDs
+#contam_asvs <- row.names(contam_df[contam_df$contaminant == TRUE, ])
+ # use this to remove the contaminant ASVs form the feature count table
+#ps1<-prune_taxa(contam_asvs,ps)
+```
+
+
+Check for outliers with beta diversity measures.First we need to normalize the data, some people use down sampling or rarefaction, but more recent publications suggest that is not appropriate for ASV data. We therefore will use DESeq2 normalization of our data. To do the variance stabilization we need to first add a minimal value to the 0 counts which we do with the gm_mean function.
+```{r, beta diversity}
+#color for treatment
+treatmentlist<-unique(sample_data(ps)$times)
+treatmentpalette<-c("#44AA99", "#117733")
+names(treatmentpalette)<-treatmentlist
+
+cols          <- treatmentpalette[get_variable(sample_data(ps.1), "times")] 
+
+samples1<-sample_data(ps.1)$SampleID
+
+
+
+gm_mean = function(x, na.rm=TRUE){
+  exp(sum(log(x[x > 0]), na.rm=na.rm) / length(x))
+}
+
+ds<-phyloseq_to_deseq2(ps.1, ~ times)
+geoMeans = apply(counts(ds), 1, gm_mean)
+ds = estimateSizeFactors(ds, geoMeans = geoMeans)
+normcounts<-counts(ds, normalized=TRUE)
+norm.ps<-phyloseq(otu_table(normcounts,taxa_are_rows=TRUE), tax_table(ps), sample_data(map))
+
+# data as a multidimensional scaling to look if there are any outliers
+out.bray <- ordinate(norm.ps, method = "MDS", distance = "bray")
+p.MDS.outlier <- plot_ordination(norm.ps, out.bray, color = "times", axes = c(1,2)) +
+  ggtitle("Outlier Evaluation: MDS of Bray-Curtis Distances") +geom_point(size=3)+theme_bw(base_size = 10,base_family = "Helvetica")+theme(legend.position="none")+scale_color_manual(values=treatmentpalette)
+p.MDS.outlier 
+#or we can present the data as a dendogram
+bray1 = phyloseq::distance(norm.ps, method="bray")
+myhclust = hclust(bray1)
+
+clust_dend <- as.dendrogram(myhclust, hang=0.1)
+dend_cols <- as.character(cols[order.dendrogram(clust_dend)])
+labels_colors(clust_dend) <- dend_cols
+plot(clust_dend, ylab="ASV Bray-Curtis",xlab="SampleID")
+
+#how to remove outliers
+#repeat plotting with adding sample names based on that make a sample ID list of the samples you want to discard. Outliers can be due to sequencing or extraction issues as well as treatment failure. 
+#p.MDS.outlier+geom_text(aes(label = sample_data(norm.ps)$SampleID),check_overlap = FALSE, vjust = -1)
+#outlier.list<-c("F3D0")
+#ps.out<-subset_samples(ps.1,SampleID!=outlier.list)
+
+
+```
+
+if there are no outliers that need to be removed we can test if there is a significant difference between the community structures. First we check that our data can actually be used in a permanova. The dispersion within each group that you are comparing needs to be homogenous. We can check that with betadisper. ATTENTION you want a non significant difference to move forward with PERMANOVA. 
+```{r, beta PERMANOVA}
+
+anova(betadisper(bray1, sample_data(norm.ps)$times))
+p.adonis<-adonis(bray1~sample_data(norm.ps)$times)
+p.adonis
+#now can add the stats to the bray curtis MDS we calculated before if we didn't remove any outliers otherwise redo the ordination without the outliers.
+p.MDS.outlier+ annotate("text",x=-0.25,y=0.25, label="PERMANOVA =0.001")
+```
+
+There is a lot of controversy on how to best assess alpha diversity metrics for sparse data, such as 16S. Here we use a package developed by adw96 that tries to correct for the lack of information in 16S data prior to diversity estimates. More information can be found at https://github.com/adw96/DivNet. We will also use phyloseq to visualize other alpha diversity metrics. If you removed outliers remember to change the phyloseq object to match the reduced dataset.
+```{r, alpha diversity}
+#X defines the category you want to use to compare the diversity
+divnet_genus <-  divnet(tax_glom(ps.1, taxrank="Genus"), X="times", ncores = 4,tuning = "careful")
+divnet_genus
+
+
+divnet_genus$shannon %>% 
+  plot(tax_glom(ps.1, taxrank="Genus"), color = "times") +
+  xlab("Time") +
+  ylab("Shannon diversity estimate\n(phylum level)") +
+  coord_cartesian(ylim = c(0,3))
+
+estimates <- divnet_genus$shannon %>% summary %$% estimate
+ses <- sqrt(divnet_genus$`shannon-variance`)
+X <- breakaway::make_design_matrix(tax_glom(ps.1,taxrank = "Genus"), "times")
+pred_div<-betta_random(estimates, ses, X,groups=names(divnet_genus$shannon))$table
+
+
+p_rich<-plot_richness(ps.1, x="times",color="times", measures=c("Simpson", "Shannon")) + geom_violin()+geom_jitter(alpha=0.5, width = 0.15)+
+  scale_color_manual(values=treatmentpalette)+ theme_bw()+ theme(legend.position = "none",axis.title.y = element_blank())
+p_rich
+#calculate evenness
+ps1.meta <- meta(ps.1)
+tab <- evenness(ps.1, "pielou")
+ps1.meta$peilou<-tab$pielou
+p1 <- ggviolin(ps1.meta, x = "times", y = "peilou",
+ add = "jitter", fill = "times", palette = treatmentpalette)+theme(legend.position = "none") +ylab("Pielou Evenness")
+p1
+```
+
+
+
+
+Create a graph with relative abundance of the phyla with more than 1% frequency
+```{r, create phylum overview}
+
+ps.phylum <- ps.1 %>%
+          tax_glom(taxrank = "Phylum")%>%  
+          microbiome::transform(transform = "compositional")%>%
+  psmelt()
+
+#group together what is below 1%
+ps.phylum$Phylum<-as.factor(ps.phylum$Phylum)
+levels(ps.phylum$Phylum) <- c(levels(ps.phylum$Phylum), "Other")
+ps.phylum<-within(ps.phylum,Phylum[Abundance < 0.01] <- "Other")
+old.lvl<-levels(ps.phylum$Phylum)
+ps.phylum$Phylum<-factor(ps.phylum$Phylum, levels=c(sort(old.lvl[old.lvl!="Other"], decreasing=T), "Other"))
+phylumlist<-unique(ps.phylum[,"Phylum"])
+
+#Based on the length define how many colors you need."#44AA99", "#117733", "#999933", "#DDCC77", "#661100"
+length(phylumlist)
+#the least abundant is the first color
+phylumpalette=c("grey","#332288", "#6699CC", "#88CCEE")
+
+#fct_reorder organizes the plot with the most abundant at the bottom
+c <- ggplot(ps.phylum, aes(x = SampleID, y = Abundance, fill=fct_reorder(Phylum,Abundance),width=.9)) + 
+  geom_bar(stat = "identity") +
+  facet_grid(~times, scales = "free_x",space="free_x") +theme_bw()+
+  theme(axis.title.x = element_blank(),legend.title = element_blank(), axis.text.x = element_blank(), panel.grid = element_blank(), axis.ticks.x = element_blank() )+scale_fill_manual(values = phylumpalette)+ylab("Relative Abundace")
+c
+```
+
+Create a graph with classes at more than 1%. Be careful if any of your ASVs are classified as NA you need to first add an actual text "NA" to the class
+```{r, class taxonomy}
+#constant color for class with relative abundance over 1%
+unique(tax_table(ps.1)[,"Class"])
+#if there is a class NA make the appropriate change as described below
+#ps.2<-ps.1
+#tax_table(ps.2)[,3][is.na(tax_table(ps.2)[,"Class"])] <- "NA"
+
+ps.class <- ps.1 %>%
+          tax_glom(taxrank = "Class")%>%  
+          microbiome::transform(transform = "compositional")%>%
+  psmelt()
+
+ps.class$Class<-as.factor(ps.class$Class)
+levels(ps.class$Class)<-c(levels(ps.class$Class),"Other")
+ps.class<-within(ps.class,Class[Abundance < 0.01] <- "Other")
+old.lvl<-levels(ps.class$Class)
+ps.class$Class<-factor(ps.class$Class, levels=c(sort(old.lvl[old.lvl!="Other"], decreasing=T), "Other"))
+
+classlist<-unique(ps.class[,"Class"])
+length(classlist)
+#adapt number of classes to the length of the class list "#114477", "#4477AA", "#77AADD", "#117777", "#44AAAA", "#77CCCC", "#117744", "#44AA77", "#88CCAA", "#777711", "#AAAA44", "#DDDD77"
+#the least abundant is the first color
+classpalette=c("grey","#771155", "#AA4488", "#CC99BB","#77CCCC")
+
+
+#fct_reorder organizes the plot with the most abundant at the bottom
+de <- ggplot(ps.class, aes(x = SampleID, y = Abundance, fill = fct_reorder(Class,Abundance))) + 
+  geom_bar(stat = "identity") +
+  facet_grid(~times, scales = "free",space="free_x") +theme_bw()+
+  theme(axis.title.x = element_blank(),legend.title = element_blank(), axis.text.x = element_blank(), panel.grid = element_blank(), axis.ticks.x = element_blank() )+scale_fill_manual(values = classpalette)+ylab("Relative Abundace")
+de
+
+```
+
+
+
+
+Differential abundance. With DESeq you can set up quite complex comparisons that take into account interactions between different metadata. How you setup your comparison depends on your experiment and you would need adapt the formula to your own needs. If your factor has more than 2 levels you can run all against all or define which one is the control setting and only run all others against the control. More detail is provided in the bookchapter 11 that you can find here https://link.springer.com/content/pdf/10.1007%2F978-981-13-1534-3.pdf. 
+
+You can then get the significant ASVs for each interaction and use venn-diagrams to represent the overlap. Often the ASVs are further divided into down vs up, but keep in mind that some taxa might move in opposite directions depending on your treatement group.
+
+```{r, deseq}
+library(apeglm)
+# the term after ~ is what you will use for the comparison. This can be more than one variable depending on your experiment
+
+ds1<-phyloseq_to_deseq2(ps.1, ~ times)
+ds <- DESeq2::DESeq(ds1, test = "Wald", fitType = "local", sfType = "poscounts")
+alpha = 0.05
+
+#plotMA shows the log2 fold changes attributable to a given variable over the mean of normalized counts for all the samples. Samples with adjusted p value is less than 0.1 are colored in blue
+
+plotMA(ds)
+
+#it is more useful visualize the MA-plot for the shrunken log2 fold changes, which remove the noise associated with log2 fold changes from low count genes without requiring arbitrary filtering thresholds.
+
+ res_LFC <- lfcShrink(ds, coef=2, type="apeglm")
+ 
+ plotMA(res_LFC)
+
+
+#retrieve the results and use the control group as the last one in the contrast formula
+res.dds = DESeq2::results(ds,contrast=c("times", "Late", "Early"),cooksCutoff = FALSE)
+
+#add back taxonomy information to graph data, always sort for adjusted values due to the high number of comparisons
+sigtab_dds_1 = res.dds[which(res.dds$padj < alpha ), ]
+sigtab_dds_1= cbind(as(sigtab_dds_1, "data.frame"), as(tax_table(ps.1)[rownames(sigtab_dds_1), ], "matrix"))
+
+write.csv(paste(path, "deseq2_results.csv",sep = ""))
+
+px = tapply(sigtab_dds_1$log2FoldChange, sigtab_dds_1$Family, function(px) max(px))
+px = sort(px, TRUE)
+sigtab_dds_1$Family = factor(as.character(sigtab_dds_1$Family), levels=names(px))
+
+p3 <- ggplot(sigtab_dds_1, aes(x = Family, y = log2FoldChange, color = Class)) +
+  geom_point(size = 4) +
+  labs(y = "\nLog2 Fold-Change for Late vs. Early", x = "") +theme_bw()+
+  theme(axis.text.x = element_text(color = "black", size = 12),
+        axis.text.y = element_text(color = "black", size = 12,face = "italic"),
+        axis.title.y = element_text(size = 14),
+        axis.title.x = element_text(size = 14),
+        legend.text = element_text(size = 12),
+        legend.title = element_blank(),
+        legend.position = "bottom") +
+  coord_flip() +
+  geom_hline(yintercept = 0, linetype="dotted")
+
+```
+

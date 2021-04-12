@@ -1,0 +1,160 @@
+---
+title: "16S_workshop1"
+author: "Brigida Rusconi"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output: html_document
+---
+Outline
+1) install all the packages needed for the analysis
+2) read in and filter reads
+3) error correction
+
+This Markdown file is to start cleaning your reads and do some error correction. This step needs to be done independently for each sequencing run, as the error rate is run specific. You will need to download the fastq files from the DADA2 tutorial to recapitulate the data presented in this workshop. You can get the data by using "wget https://mothur.s3.us-east-2.amazonaws.com/wiki/miseqsopdata.zip" in command line. Save it in your active storage or locally. Then run unzip miseqsopdata.zip to extract the data. It's best to mount the storage disk on your computer so you can easily access it and import data. This script is modeled on the tutorial developed by Benjamin Callahan the developer of DADA2.
+More info on https://benjjneb.github.io/dada2/tutorial.html
+
+General options
+I use the same location of where my fastq files are to store my figures in a figure folder. Change the path name to your active storage location.
+```{r setup, include=FALSE}
+#CHANGE ME
+path <- "/storage1/fs1/b.a.rusconi/Active/MiSeq_SOP" 
+#change to the number of cores that you selected for the interactive session
+ncores<-10
+
+knitr::opts_chunk$set(fig.width=8,
+                      fig.height=6,
+                      fig.path=paste(path,"/figures/",sep = ""),
+                      dev='pdf',
+                      warning=FALSE,
+                      message=FALSE)
+```
+
+Get all the packages installed that we need for the analysis
+```{r initiate-environment}
+.cran_packages <- c("tidyverse", "cowplot", "picante", "vegan", "HMP", "dendextend", "rms", "devtools", "remotes")
+
+.bioc_packages <- c("phyloseq", "DESeq2", "metagenomeSeq", "ALDEx2", "dada2","vegan","msa","phangorn","apeglm")
+
+
+.inst <- .cran_packages %in% installed.packages()
+if(any(!.inst)) {
+  install.packages(.cran_packages[!.inst])
+}
+
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+install.packages("BiocManager")
+BiocManager::install(.bioc_packages)
+
+devtools::install_github("adw96/breakaway")
+devtools::install_github("adw96/DivNet")
+devtools::install_github(repo = "UVic-omics/selbal")
+devtools::install_github("microsud/microbiomeutilities")
+devtools::install_github("microbiome/microbiome")
+
+```
+
+
+Start by defining the location of the fastq files and check their quality.
+```{r, file location}
+library(dada2)
+library(phyloseq)
+#Listing path to sequence files should be in your storage1 folder that you loaded
+#CHANGE ME
+
+
+#Getting matched lists of the forward and reverse fastq files and extracting sample names
+fnFs <- sort(list.files(path, pattern="_R1_001.fastq", full.names = TRUE))
+fnRs <- sort(list.files(path, pattern="_R2_001.fastq", full.names = TRUE))
+sample.names <- sapply(strsplit(basename(fnFs), "_"), `[`, 1)                 #extracting string prior to the first underscore
+
+#sanity check that the files are in order and the names are as expected
+head(fnFs)                   
+head(fnRs)
+sample.names
+
+#sanity check that we have copied over all the files
+if(length(fnFs) != length(fnRs)) stop("Forward and reverse files do not match.")
+
+#Inspect read quality profiles
+plotQualityProfile(fnFs[1:2])
+plotQualityProfile(fnRs[1:2])
+
+#CHANGE ME
+save.image(paste(path,"/workshop_16S.RData",sep=""))
+```
+
+Based on the quality plots we can decide the values for the trimming and filtering of the forward and reverse reads. Make sure that truncation leaves enough to provide overlap between fwd and rev reads to merge them.
+
+DADA2 offers the option to multithread a lot of the functions. Be careful as this can be a problem when running on the interactive mode of the RIS compute cluster if you have not set the number of cores when running bsub. Does not accept reads with N and a maximum of 2 expected errors.
+```{r, filter and trim}
+
+#Filter and trim forward and reverse reads
+filtFs <- file.path(path, "filtered", paste0(sample.names, "_F_filt.fastq.gz"))    #Place filtered files in new filtered subdirectory
+filtRs <- file.path(path, "filtered", paste0(sample.names, "_R_filt.fastq.gz"))
+#add names
+names(filtFs) <- sample.names               
+names(filtRs) <- sample.names
+#sanity check
+head(filtFs)                                
+
+# ATTENTION CHANGE VALUES FOR lenf lenr ACCORDING TO PLOT RESULTS
+lenf<-240
+lenr<-160
+
+#in the interactive mode the multithread is limited I had to play around to find a limit of 3 threads.
+out <- filterAndTrim(fnFs, filtFs, fnRs, filtRs, truncLen=c(lenf,lenr),
+                     maxN=0, maxEE=c(2,2), truncQ=2, rm.phix=TRUE,
+                     compress=TRUE, multithread=ncores)                    
+head(out)
+
+```
+Calculate error correction for this run
+```{r, error correction}
+#Learn error rates
+errF <- learnErrors(filtFs, multithread=ncores)
+errR <- learnErrors(filtRs, multithread=ncores)
+plotErrors(errF, nominalQ=TRUE)
+errF$err_out
+
+
+#Sample inference
+dadaFs <- dada(filtFs, err=errF, multithread=ncores)
+dadaRs <- dada(filtRs, err=errR, multithread=ncores)
+dadaFs[[1]]
+
+
+#Merge F and R reads
+mergers <- mergePairs(dadaFs, filtFs, dadaRs, filtRs, verbose=TRUE)
+head(mergers[[1]])
+#CHANGE ME
+save.image(paste(path,"/workshop_16S.RData",sep=""))
+```
+If after merging you lost a lot of reads it means there were some issues in the trimming or error correction that prevented the overlap between the fwd and the reverse reads.
+Now check the length of the merged sequences. If they are much longer or shorter than expected after trimming you might want to get rid of these sequences.
+```{r, check length}
+#Construct sequence table
+seqtab <- makeSequenceTable(mergers)
+dim(seqtab)
+
+
+#Inspect distribution of sequence lengths
+table(nchar(getSequences(seqtab)))
+
+#check if you lost anything during filtering or error correction
+#Tracking reads through the pipeline
+getN <- function(x) sum(getUniques(x))
+track <- cbind(out, sapply(dadaFs, getN), sapply(dadaRs, getN), sapply(mergers, getN))
+colnames(track) <- c("input", "filtered", "denoisedF", "denoisedR", "merged")
+rownames(track) <- sample.names
+head(track)
+#use this code if you have sequences that are too short or long due to non specific priming replace start and stop with numbers according to length distribution of your samples
+#seqtab2 <- seqtab[,nchar(colnames(seqtab)) %in% start:stop]). 
+
+#CHANGE ME
+saveRDS(seqtab, paste(path,"/seqtab.rds",sep=""))
+save.image(paste(path,"/workshop_16S.RData",sep=""))
+```
+
+```
+This is a great place to do a last sanity check. Outside of filtering, there should no step in which a majority of reads are lost. If a majority of reads failed to merge, you may need to revisit the truncLen parameter used in the filtering step and make sure that the truncated reads span your amplicon. If a majority of reads were removed as chimeric, you may need to revisit the removal of primers, as the ambiguous nucleotides in unremoved primers interfere with chimera identification.
+ 
