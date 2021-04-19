@@ -48,7 +48,7 @@ The BFX Workshop schedule, subject to change, is available below:
 | Mar 22, 2021 | [Genome Assembly and Long Reads](https://github.com/genome/bfx-workshop/tree/master/lectures/week_21) | Chad Tomlinson [Video](https://wustl.box.com/s/z9y6bkpf3e4af9w3z13zf12yy0s7wxyo) |
 | Mar 29, 2021 | [ctDNA/error-corrected sequencing](https://github.com/genome/bfx-workshop/tree/master/lectures/week_22) | Aadel Chaudhuri [Video](https://wustl.box.com/s/kcguh3p4jxqwx7qes3qcd16el2q3nngk) |
 | Apr 5, 2021 | Short talk + Office Hours | | 
-| April 12, 2021 | COMPBIO | Ruteja Barve, Chad Storer [Video](https://wustl.box.com/s/czbsi080l494atdqi0rfsz0vi7yypezb)| 
+| April 12, 2021 | COMPBIO | Ruteja Barve, Chad Storer [Video](https://wustl.box.com/s/oi9iean3pheposghxfwq3ipi45lseuqx)| 
 
 The first Monday of each month will be a short lecture (15-30m), followed by open "office hours" to get help with assignments, or ask for advice about your own projects. Please contact the organizers if you have suggestions for additional lectures.
 
