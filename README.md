@@ -49,7 +49,7 @@ The BFX Workshop schedule, subject to change, is available below:
 | Mar 29, 2021 | [ctDNA/error-corrected sequencing](https://github.com/genome/bfx-workshop/tree/master/lectures/week_22) | Aadel Chaudhuri [Video](https://wustl.box.com/s/kcguh3p4jxqwx7qes3qcd16el2q3nngk) |
 | Apr 5, 2021 | Short talk + Office Hours | | 
 | April 12, 2021 | [COMPBIO](https://becker.wustl.edu/resources/software/compbio/) | Ruteja Barve, Chad Storer [Video](https://wustl.box.com/s/oi9iean3pheposghxfwq3ipi45lseuqx)| 
-| April 19, 2021 | [Genome Modeling System: Troubleshooting](https://github.com/genome/genome/wiki/CWL-Somatic-Pipeline-Walkthrough) | Chris Miller [Video](https://wustl.box.com/s/dmd71r23bho62pjunv9n3zrw2qsfggny)| 
+| April 19, 2021 | [Genome Modeling System: Concepts and Troubleshooting](https://github.com/genome/genome/wiki/CWL-Somatic-Pipeline-Walkthrough) | Chris Miller [Video](https://wustl.box.com/s/dmd71r23bho62)| 
 | April 26, 2021 | Cloud Computing: Getting Started | TBD Medicine, Oncology, MGI | 
 
 The first Monday of each month will be a short lecture (15-30m), followed by open "office hours" to get help with assignments, or ask for advice about your own projects. Please contact the organizers if you have suggestions for additional lectures.
