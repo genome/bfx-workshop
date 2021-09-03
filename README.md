@@ -1,6 +1,6 @@
 # Bioinformatics (BFX) Workshop
 
-Welcome to the Fall 2020 and Spring 2021 Bioinformatics (BFX) Workshop! 
+Welcome to the Fall 2021 and Spring 2020 Bioinformatics (BFX) Workshop! 
 
 # Objectives
 
@@ -13,46 +13,30 @@ This workshop series is designed for people who want to:
 
 Weekly Workshops on Mondays @ 10am
 
-For the Fall 2020 Semester, all BFX Workshops will be held remotely via Zoom. Please see the [Communications](https://github.com/genome/bfx-workshop/blob/master/README.md#communications) section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling. 
+For the Fall 2021 Semester, we will start by holding all BFX Workshops remotely via Zoom. Please see the [Communications](https://github.com/genome/bfx-workshop/blob/master/README.md#communications) section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling.
 
-The BFX Workshop schedule, subject to change, is available below:
+The BFX Workshop schedule, _subject to change_, is available below. Last year's course materials can still be accessed in the "archive" folder.
+
+The first Monday of each month will be a short lecture (15-30m), followed by open "office hours" to get help with assignments, or ask for advice about your own projects. Please contact the organizers if you have suggestions for additional lectures.
 
 |Date|Topic(s)|Presenter(s)|
 |----|--------|------------|
-| September 21, 2020 | [Workshop and Prerequisite Review](https://github.com/genome/bfx-workshop/tree/master/lectures/week_01) | Jason Walker, Chris Miller [Video](https://wustl.box.com/s/d6e1rqybagbi0nlo8abess4t4hjq5d6x) |
-| September 28, 2020 | [Sequence Data Generation](https://github.com/genome/bfx-workshop/tree/master/lectures/week_02) | Chris Miller [Video](https://wustl.box.com/s/33hp9a9e20m0gteavq46a5d2a16u2fe4) |
-| October 5, 2020 | [Exploring Data + Office Hours](https://github.com/genome/bfx-workshop/tree/master/lectures/week_03) | Chris Miller [Video](https://wustl.box.com/s/izp40y14wtrgags79a0tjej36hvqkglf)|
-| October 12, 2020 | [DNA Alignment Fundamentals](https://github.com/genome/bfx-workshop/blob/master/lectures/week_04) | Jason Walker [Video](https://wustl.box.com/s/7a3utaz585558lmg5y8e3wx35q4rvy4t)|
-| October 19, 2020 | [DNA Alignment Best Practices & Workflows](https://github.com/genome/bfx-workshop/blob/master/lectures/week_05) | Jason Walker, John Garza, Tom Mooney [Video](https://wustl.box.com/s/bc4m5bcv0cylocx12kry2kr74itd8xgs) |
-| October 26, 2020 | [Docker and Germline Variant Calling](https://github.com/genome/bfx-workshop/blob/master/lectures/week_06) | Sam Peters, Chris Miller [Video](https://wustl.box.com/s/snxmlc1j05sdmpzeqd3giufuntbi9li3)
-| November 2, 2020 | [Exploring Data + Office Hours](https://github.com/genome/bfx-workshop/blob/master/lectures/week_07) | Chris Miller [Video](https://wustl.box.com/s/ivtmdn677mooltqz1irgelc2m4aiwjno)|
-| November 9, 2020 | [Somatic Variant Calling](https://github.com/genome/bfx-workshop/blob/master/lectures/week_08) | Chris Miller [Video](https://wustl.box.com/s/yizndcjs9kgutm3yg9pj7su2dmz0vv1d)|
-| November 16, 2020 | [Parsing and Filtering VCFs with Python](https://github.com/genome/bfx-workshop/blob/master/lectures/week_09) | Susanna Kiwala, John Garza [Video](https://wustl.box.com/s/mkgx6aac8zjuc3e3p49mp11p2l5lp3bi)|
-| November 23, 2020 | [Annotation and R](https://github.com/genome/bfx-workshop/blob/master/lectures/week_10) | Zach Skidmore [Video](https://wustl.box.com/s/s7i82kbmw36j7rxhbwehniflk4apwq7k)|
-| November 30, 2020 | THANKSGIVING BREAK | |
-| December 7, 2020 | [Visualizing variants + Office Hours](https://github.com/genome/bfx-workshop/tree/master/lectures/week_11) | Zach Skidmore [Video](https://wustl.box.com/s/4mdyp7jpv2tmpb2y4spxp9ylug3mr4hx) |
-| December 14, 2020 | [RNA-seq Part 1](https://github.com/genome/bfx-workshop/tree/master/lectures/week_12) | Kelsy Cotto [Video](https://wustl.box.com/s/6bguhi1d6su0ezv27glkd0cq0ea17d7v)|
-| December 21, 2020 | [RNA-seq Part 2](https://github.com/genome/bfx-workshop/tree/master/lectures/week_13) | Kelsy Cotto [Video](https://wustl.box.com/s/w818n3r2vkfvlog4claaumccvdyavxsn)|
-| December 28, 2020 | WINTER BREAK | |
-| Jan 4, 2020 | [Viral Genomics](https://github.com/genome/bfx-workshop/tree/master/lectures/week_14) | Todd Wylie [Video](https://wustl.box.com/s/hwerlzg4t3qi3bly1s4bejg74nypume7) |
-| Jan 11, 2020 | [Microbial Genomics](https://github.com/genome/bfx-workshop/tree/master/lectures/week_15) | Kristine Wylie [Video](https://wustl.box.com/s/8wt8qtptki8tfgzvrb7jf0wpr3sfr8sm)|
-| Jan 18, 2021 | MLK DAY - NO MEETING | | 
-| Jan 25, 2021 | [Bisulfite Sequencing and Analysis](https://github.com/genome/bfx-workshop/tree/master/lectures/week_16) | Chris Miller [Video](https://wustl.box.com/s/m7ibzvi40uoycc1u65hfonkv4bg9g8xi) |
-| Feb 1, 2021 | Prereq Review + Office Hours w/RIS | Elyn Fritz-Waters [Video](https://wustl.box.com/s/8sm45d93qrmz6jlauv5nd6t2h4g3c5so)|
-| Feb 1, 2021 | Office Hours | | 
-| Feb 15, 2021 | [Single-cell RNA-seq pt 1](https://github.com/genome/bfx-workshop/tree/master/lectures/week_18) | Allegra Petti [Video](https://wustl.box.com/s/i8vzwy76jj0548587runyzw28rexu709)|
-| Feb 22, 2021 | [Single-cell RNA-seq pt 2](https://github.com/genome/bfx-workshop/tree/master/lectures/week_19) | Allegra Petti [Video](https://wustl.box.com/s/mq4oksoza8x68sjj72wz9qwaiuvz0kex) |
-| Mar 1, 2021 | Short talk + Office Hours | TBD | 
-| Mar 8, 2021 | [16S analysis using R-studio, DADA2, and DESeq2](https://github.com/genome/bfx-workshop/tree/master/lectures/week_20) | Brigida Rusconi [Video](https://wustl.box.com/s/a4b0ynwmf7ajo4ndrrpqtwe3pvz97afe) |
-| Mar 15, 2021 | SPRING BREAK | | 
-| Mar 22, 2021 | [Genome Assembly and Long Reads](https://github.com/genome/bfx-workshop/tree/master/lectures/week_21) | Chad Tomlinson [Video](https://wustl.box.com/s/z9y6bkpf3e4af9w3z13zf12yy0s7wxyo) |
-| Mar 29, 2021 | [ctDNA/error-corrected sequencing](https://github.com/genome/bfx-workshop/tree/master/lectures/week_22) | Aadel Chaudhuri [Video](https://wustl.box.com/s/kcguh3p4jxqwx7qes3qcd16el2q3nngk) |
-| Apr 5, 2021 | Short talk + Office Hours | | 
-| April 12, 2021 | [COMPBIO](https://becker.wustl.edu/resources/software/compbio/) | Ruteja Barve, Chad Storer [Video](https://wustl.box.com/s/oi9iean3pheposghxfwq3ipi45lseuqx)| 
-| April 19, 2021 | [Genome Modeling System: Concepts and Troubleshooting](https://github.com/genome/genome/wiki/CWL-Somatic-Pipeline-Walkthrough) | Chris Miller [Video](https://wustl.box.com/s/dmd71r23bho62pjunv9n3zrw2qsfggny)| 
-| April 26, 2021 | Cloud Computing: Getting Started | TBD Medicine, Oncology, MGI | 
-
-The first Monday of each month will be a short lecture (15-30m), followed by open "office hours" to get help with assignments, or ask for advice about your own projects. Please contact the organizers if you have suggestions for additional lectures.
+| September 13, 2020 | Workshop Intro and Prerequisite Review | Chris Miller, Jason Walker | 
+| September 20, 2020 | Sequence Data Generation | Chris Miller |
+| September 27 | Exploring Data + Office Hours | Chris Miller | 
+| October 04 | DNA Alignment Fundamentals | Jason Walker |
+| October 11 | NO MEETING | |
+| October 18 | DNA Alignment Workflows | |
+| October 25 | Exploring Data + Office Hours | |
+| November 01 | Docker and Germline Variant Calling | |
+| November 08 | Somatic Variant Calling | |
+| November 15 | Parsing and Filtering VCFs with Python | |
+| November 22 | THANKSGIVING BREAK | |
+| November 29 | Annotation and R | |
+| December 06 | RNAseq part 1 | |
+| December 13 | RNAseq part 2 | |
+| December 20 | Visualizing variants + Office Hours | |
+| December 27 | WINTER BREAK | |
 
 # Participation
 
@@ -83,4 +67,3 @@ An Office 365 Group named Bioinformatics is used to distribute Calendar invites,
 The email address is: 
 
 bioinformatics at gowustl.onmicrosoft.com
-
