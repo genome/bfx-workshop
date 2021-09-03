@@ -98,7 +98,7 @@ Uh oh - looking at the inputs that CWL expects, we're missing the `interval_list
 
 Another useful parameter here is the "scatter_count".  This pipeline is set up such that it'll split up your data into chunks and run them in parallel, to speed things up.  In this case, we're just going to use 2, since our data is very small. Our pipelines often use as many as 50 for WGS data.
 
-One last thing we need for our workflow is the cromwell configuration that tells it about our environment and where to stick the results.  Make a copy of the one that you created in the [week 05 homework](https://github.com/genome/bfx-workshop/blob/master/lectures/week_05/cromwell_alignment_walkthrough.md), changing the paths as need. 
+One last thing we need for our workflow is the cromwell configuration that tells it about our environment and where to stick the results.  Make a copy of the one that you created in the [week 05 homework](https://github.com/genome/bfx-workshop/blob/master/archive/lectures/week_05/cromwell_alignment_walkthrough.md), changing the paths as need. 
 
 Okay, now we're set up to actually run.  Fire up a container that contains cromwell (our workflow manager), giving it 4 gigs of memory: 
 ``` 
