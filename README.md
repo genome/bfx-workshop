@@ -1,6 +1,6 @@
 # Bioinformatics (BFX) Workshop
 
-Welcome to the Fall 2021 and Spring 2020 Bioinformatics (BFX) Workshop! 
+Welcome to the Fall 2021 and Spring 2022 Bioinformatics (BFX) Workshop! 
 
 # Objectives
 
@@ -21,8 +21,8 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 
 |Date|Topic(s)|Presenter(s)|
 |----|--------|------------|
-| September 13, 2020 | Workshop Intro and Prerequisite Review | Chris Miller, Jason Walker | 
-| September 20, 2020 | Sequence Data Generation | Chris Miller |
+| September 13 | Workshop Intro and Prerequisite Review | Chris Miller, Jason Walker | 
+| September 20 | Sequence Data Generation | Chris Miller |
 | September 27 | Exploring Data + Office Hours | Chris Miller | 
 | October 04 | DNA Alignment Fundamentals | Jason Walker |
 | October 11 | NO MEETING | |
