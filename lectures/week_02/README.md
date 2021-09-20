@@ -14,7 +14,7 @@ Let's play around with some real sequence data and QC it.  See the lecture for s
 
 2) We're going to work with data from a human cell line posted here: [https://www.dropbox.com/s/yqb2shv1l9qegl5/bfx_week02_data.tar](https://www.dropbox.com/s/yqb2shv1l9qegl5/bfx_week02_data.tar) Make a directory called "week2", and download the tarball to the cluster using the command line (`wget` or `curl`).
 
-3) Use `tar -xvf` to extract the directory, then cd into the directory and look around.  We're not going to use all of this data in this week's homework. Let's focus on the contents of `Exome_Tumor.tar`. Untar it, then unzip the fastqs and unzip them.
+3) Use `tar -xvf` to extract the directory, then cd into the directory and look around.  We're not going to use all of this data in this week's homework. Let's focus on the contents of `Exome_Tumor.tar`. Untar it, then unzip the fastq files.
 
 4) Look at the first three records of each fastq file. Take a close look at the read names and how they match up across files.
 
