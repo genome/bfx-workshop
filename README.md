@@ -22,7 +22,7 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 |Date|Topic(s)|Presenter(s)|
 |----|--------|------------|
 | September 13 | [Workshop Intro and Prerequisite Review](https://github.com/genome/bfx-workshop/tree/master/lectures/week_01) | Chris Miller, Jason Walker | 
-| September 20 | Sequence Data Generation | Chris Miller |
+| September 20 | [Sequence Data Generation](https://github.com/genome/bfx-workshop/tree/master/lectures/week_02) | Chris Miller |
 | September 27 | Exploring Data + Office Hours | Chris Miller | 
 | October 04 | DNA Alignment Fundamentals | Jason Walker |
 | October 11 | NO MEETING | |
