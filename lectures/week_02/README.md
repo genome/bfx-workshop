@@ -4,7 +4,7 @@ This week, we cover some basics of how sequence is generated, delve into the det
 
 - Lecture Recording
 
-- Slides](https://github.com/genome/bfx-workshop/blob/master/lectures/week_02/bfx_workshop_02_sequencing.pdf
+- [Slides](https://github.com/genome/bfx-workshop/blob/master/lectures/week_02/bfx_workshop_02_sequencing.pdf)
 
 ## Homework Assignment
 
