@@ -37,6 +37,7 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 | December 13 | RNAseq part 2 | |
 | December 20 | Visualizing variants + Office Hours | |
 | December 27 | WINTER BREAK | |
+| Spring 2022 | Dates TBA | |
 
 # Participation
 
@@ -69,3 +70,7 @@ An Office 365 Group named Bioinformatics is used to distribute Calendar invites,
 The email address is: 
 
 bioinformatics at gowustl.onmicrosoft.com
+
+## Archived Lectures
+
+If you'd like to look back at the past, The [course info and lectures from the 2020-2021 school year](https://github.com/genome/bfx-workshop/tree/v2020-2021) are still available in the archives.
