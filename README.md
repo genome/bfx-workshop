@@ -23,7 +23,7 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 |----|--------|------------|
 | September 13 | [Workshop Intro and Prerequisite Review](https://github.com/genome/bfx-workshop/tree/master/lectures/week_01) | Chris Miller, Jason Walker | 
 | September 20 | [Sequence Data Generation](https://github.com/genome/bfx-workshop/tree/master/lectures/week_02) | Chris Miller |
-| September 27 | RIS Infrastructure + Office Hours |  | 
+| September 27 | [RIS Infrastructure + Office Hours](https://wustl.box.com/s/003l9e3q1oh8631fdzct90aafcuxot1b) | Stephen Tahan, Chris Miller | 
 | October 04 | DNA Alignment Fundamentals | Jason Walker |
 | October 11 | NO MEETING | |
 | October 18 | DNA Alignment Workflows | |
