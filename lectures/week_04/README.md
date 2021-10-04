@@ -2,7 +2,7 @@
 
 This week, we cover some basics of how sequence is generated, delve into the details of data and formats, and talk through basic QC of your sequence.
 
-- [Lecture Recording - TBD]()
+- [Lecture Recording](https://wustl.box.com/s/8321yviqwusinike4ipct0y6y5afm3vm)
 
 - [Slides](https://github.com/genome/bfx-workshop/blob/master/lectures/week_04/bfx_workshop_04_alignment.pdf)
 
