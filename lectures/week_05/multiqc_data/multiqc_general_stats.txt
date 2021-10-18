@@ -1,0 +1,4 @@
+Sample	VerifyBAMID_mqc-generalstats-verifybamid-FREEMIX	Samtools_mqc-generalstats-samtools-flagstat_total	Samtools_mqc-generalstats-samtools-mapped_passed	Picard_mqc-generalstats-picard-PCT_PF_READS_ALIGNED	Picard_mqc-generalstats-picard-FOLD_ENRICHMENT	Picard_mqc-generalstats-picard-PCT_TARGET_BASES_30X	Picard_mqc-generalstats-picard-summed_median	Picard_mqc-generalstats-picard-summed_mean	Picard_mqc-generalstats-picard-PERCENT_DUPLICATION	Samblaster_mqc-generalstats-samblaster-pct_dups
+H_NJ-HCC1395-HCC1395_BL	0.0									
+final		6821	6812	0.99868	10906.768487	0.559911	201	213.78477	0.064346	
+stderr										0.0
