@@ -1,0 +1,2 @@
+Sample	n_dups	n_tot	n_nondups	pct_dups
+stderr	0	1636	1636	0.0
