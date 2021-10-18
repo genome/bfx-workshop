@@ -26,7 +26,7 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 | September 27 | [RIS Infrastructure + Office Hours](https://wustl.box.com/s/003l9e3q1oh8631fdzct90aafcuxot1b) | Stephen Tahan, Chris Miller | 
 | October 04 | [DNA Alignment Fundamentals](https://github.com/genome/bfx-workshop/tree/master/lectures/week_04) | Jason Walker |
 | October 11 | NO MEETING | |
-| October 18 | DNA Alignment Workflows | |
+| October 18 | [DNA Alignment Workflows](https://github.com/genome/bfx-workshop/tree/master/lectures/week_05) | Jason Walker, Tom Mooney |
 | October 25 | Exploring Data + Office Hours | |
 | November 01 | Docker and Germline Variant Calling | |
 | November 08 | Somatic Variant Calling | |
