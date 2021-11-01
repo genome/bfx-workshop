@@ -1,6 +1,6 @@
 ## Week 3: Docker fundamentals and Germline Variant Calling
 
-- [Lecture Recording]
+- [Lecture Recording](https://wustl.box.com/s/23iyu9ntm24uvsjwhyyh4dzro13pa4l2)
 - [Slides](bfx_workshop_06_docker_variant_calling_2021.pdf)
 
 
