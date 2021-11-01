@@ -28,7 +28,7 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 | October 11 | NO MEETING | |
 | October 18 | [DNA Alignment Workflows](https://github.com/genome/bfx-workshop/tree/master/lectures/week_05) | Jason Walker, Tom Mooney |
 | October 25 | [Exploring Data + Office Hours](https://github.com/genome/bfx-workshop/tree/master/lectures/week_06) | Chris Miller |
-| November 01 | Docker and Germline Variant Calling | |
+| November 01 | [Docker and Germline Variant Calling](https://github.com/genome/bfx-workshop/tree/master/lectures/week_07) | |
 | November 08 | Somatic Variant Calling | |
 | November 15 | Parsing and Filtering VCFs with Python | |
 | November 22 | THANKSGIVING BREAK | |
