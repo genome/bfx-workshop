@@ -30,7 +30,7 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 | October 25 | [Exploring Data + Office Hours](https://github.com/genome/bfx-workshop/tree/master/lectures/week_06) | Chris Miller |
 | November 01 | [Docker and Germline Variant Calling](https://github.com/genome/bfx-workshop/tree/master/lectures/week_07) | Alex Paul, Chris Miller |
 | November 08 | [Somatic Variant Calling](https://github.com/genome/bfx-workshop/tree/master/lectures/week_08) | Chris Miller|
-| November 15 | Parsing and Filtering VCFs with Python | |
+| November 15 | [Parsing and Filtering VCFs with Python](https://github.com/genome/bfx-workshop/tree/master/lectures/week_09) | John Garza, Susanna Kiwala |
 | November 22 | THANKSGIVING BREAK | |
 | November 29 | Annotation and R | |
 | December 06 | RNAseq part 1 | |
