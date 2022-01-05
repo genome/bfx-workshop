@@ -33,11 +33,27 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 | November 15 | [Parsing and Filtering VCFs with Python](https://github.com/genome/bfx-workshop/tree/master/lectures/week_09) | John Garza, Susanna Kiwala |
 | November 22 | THANKSGIVING BREAK | |
 | November 29 | [Annotation and R](https://github.com/genome/bfx-workshop/tree/master/lectures/week_10) | Zach Skidmore |
-| December 06 | RNAseq part 1 | |
-| December 13 | RNAseq part 2 | |
+| December 06 | RNAseq part 1 | Felicia Gomez |
+| December 13 | RNAseq part 2 | Huiming Xia |
 | December 20 | Visualizing variants + Office Hours | |
 | December 27 | WINTER BREAK | |
-| Spring 2022 | Dates TBA | |
+| January 10, 2022 | Epigenomics/Bisulfite sequencing | Chris Miller |
+| January 17, 2022 | MLK Day - no meeting |  | 
+| January 24, 2022 | Office Hours - short talk | Chris Miller | 
+| January 31, 2022 | Error-corrected sequencing/ctDNA | Aadel Chaudhuri | 
+| February 7, 2022 | Single-cell RNAseq | Allegra Petti |
+| February 14, 2022 | Single-cell RNAseq | Allegra Petti |
+| February 21, 2022 | Viral Genomics | Todd Wylie  |
+| February 28, 2022 | Office Hours - short talk | |
+| March 7, 2022 |  |  |
+| March 14, 2022 |  |  |  
+| March 21, 2022 | Genome Assembly and Long-Reads | Chad Tomlinson | 
+| March 28, 2022 | Office Hours - short talk |  | 
+| April 4, 2022 | GenVisR/R | Zach Skidmore |
+| April 11, 2022 | Cloud Computing part 1 | |
+| April 18, 2022 | Spring Break - no meeting | |
+| April 25, 2022 | Cloud Computing part 2 | |
+| May 2, 2022 | Office Hours - short talk | |
 
 # Participation
 
