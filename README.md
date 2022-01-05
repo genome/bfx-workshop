@@ -35,7 +35,7 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 | November 29 | [Annotation and R](https://github.com/genome/bfx-workshop/tree/master/lectures/week_10) | Zach Skidmore |
 | December 06 | RNAseq part 1 | Felicia Gomez |
 | December 13 | RNAseq part 2 | Huiming Xia |
-| December 20 | Visualizing variants + Office Hours | |
+| December 20 | No meeting | |
 | December 27 | WINTER BREAK | |
 | January 10, 2022 | Epigenomics/Bisulfite sequencing | Chris Miller |
 | January 17, 2022 | MLK Day - no meeting |  | 
