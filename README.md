@@ -33,11 +33,11 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 | November 15 | [Parsing and Filtering VCFs with Python](https://github.com/genome/bfx-workshop/tree/master/lectures/week_09) | John Garza, Susanna Kiwala |
 | November 22 | THANKSGIVING BREAK | |
 | November 29 | [Annotation and R](https://github.com/genome/bfx-workshop/tree/master/lectures/week_10) | Zach Skidmore |
-| December 06 | RNAseq part 1 | Felicia Gomez |
-| December 13 | RNAseq part 2 | Huiming Xia |
+| December 06 | [RNAseq part 1](https://github.com/genome/bfx-workshop/tree/master/lectures/week_11) | Felicia Gomez |
+| December 13 | [RNAseq part 2](https://github.com/genome/bfx-workshop/tree/master/lectures/week_12) | Huiming Xia |
 | December 20 | No meeting | |
 | December 27 | WINTER BREAK | |
-| January 10, 2022 | Epigenomics/Bisulfite sequencing | Chris Miller |
+| January 10, 2022 | [Epigenomics/Bisulfite sequencing](https://github.com/genome/bfx-workshop/tree/master/lectures/week_13) | Chris Miller |
 | January 17, 2022 | MLK Day - no meeting |  | 
 | January 24, 2022 | Office Hours - short talk | Chris Miller | 
 | January 31, 2022 | Error-corrected sequencing/ctDNA | Aadel Chaudhuri | 
