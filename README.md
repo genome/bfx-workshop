@@ -39,7 +39,7 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 | December 27 | WINTER BREAK | |
 | January 10, 2022 | [Epigenomics/Bisulfite sequencing](https://github.com/genome/bfx-workshop/tree/master/lectures/week_13) | Chris Miller |
 | January 17, 2022 | MLK Day - no meeting |  | 
-| January 24, 2022 | Office Hours - short talk | Chris Miller | 
+| January 24, 2022 | [Office Hours + Command line skills](https://github.com/genome/bfx-workshop/tree/master/lectures/week_14) | Chris Miller | 
 | January 31, 2022 | Error-corrected sequencing/ctDNA | Aadel Chaudhuri | 
 | February 7, 2022 | Single-cell RNAseq | Allegra Petti |
 | February 14, 2022 | Single-cell RNAseq | Allegra Petti |
