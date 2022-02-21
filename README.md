@@ -43,7 +43,7 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 | January 31, 2022 | [Error-corrected sequencing/ctDNA](https://github.com/genome/bfx-workshop/tree/master/lectures/week_15) | Aadel Chaudhuri | 
 | February 7, 2022 | [Single-cell RNAseq Pt 1](https://github.com/genome/bfx-workshop/tree/master/lectures/week_16) | Allegra Petti |
 | February 14, 2022 | [Single-cell RNAseq Pt 2](https://github.com/genome/bfx-workshop/tree/master/lectures/week_17) | Allegra Petti |
-| February 21, 2022 | Viral Genomics | Todd Wylie  |
+| February 21, 2022 | [Viral Genomics](https://github.com/genome/bfx-workshop/tree/master/lectures/week_18) | Todd Wylie  |
 | February 28, 2022 | Office Hours - short talk | |
 | March 7, 2022 |  |  |
 | March 14, 2022 |  |  |  
