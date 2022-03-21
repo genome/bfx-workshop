@@ -45,9 +45,9 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 | February 14, 2022 | [Single-cell RNAseq Pt 2](https://github.com/genome/bfx-workshop/tree/master/lectures/week_17) | Allegra Petti |
 | February 21, 2022 | [Viral Genomics](https://github.com/genome/bfx-workshop/tree/master/lectures/week_18) | Todd Wylie  |
 | February 28, 2022 | Office Hours - short talk | |
-| March 7, 2022 |  |  |
+| March 7, 2022 | No meeting |  |
 | March 14, 2022 | All of Us data and pipelines | Thomas Kannampallil |
-| March 21, 2022 | Genome Assembly and Long-Reads | Chad Tomlinson | 
+| March 21, 2022 | [Genome Assembly and Long-Reads](https://github.com/genome/bfx-workshop/tree/master/lectures/week_22) | Chad Tomlinson | 
 | March 28, 2022 | Office Hours - short talk |  | 
 | April 4, 2022 | GenVisR/R | Zach Skidmore |
 | April 11, 2022 | Cloud Computing part 1 | |
