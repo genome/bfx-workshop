@@ -50,10 +50,10 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 | March 21, 2022 | [Genome Assembly and Long-Reads](https://github.com/genome/bfx-workshop/tree/master/lectures/week_22) | Chad Tomlinson | 
 | March 28, 2022 | Office Hours - short talk |  | 
 | April 4, 2022 | [GenVisR/R](https://github.com/genome/bfx-workshop/tree/master/lectures/week_24) | Zach Skidmore |
-| April 11, 2022 | Cloud Computing part 1 | |
-| April 18, 2022 | Spring Break - no meeting | |
-| April 25, 2022 | Cloud Computing part 2 | |
-| May 2, 2022 | Office Hours - short talk | |
+| April 11, 2022 | No Meeting | |
+| April 18, 2022 | No meeting | |
+| April 25, 2022 | Cloud Computing part 1 | |
+| May 2, 2022 | Cloud Computing part 2 | |
 
 # Participation
 
