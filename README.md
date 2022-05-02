@@ -53,7 +53,7 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 | April 11, 2022 | No Meeting | |
 | April 18, 2022 | No meeting | |
 | April 25, 2022 | [Public Cloud for Bioinformatics (Part 1)](https://github.com/genome/bfx-workshop/tree/master/lectures/week_27) | Jason Walker |
-| May 2, 2022 | Public Cloud for Bioinformatics (Part 2) | |
+| May 2, 2022 | [Public Cloud for Bioinformatics (Part 2)](https://github.com/genome/bfx-workshop/tree/master/lectures/week_28) | Chris Miller, Jason Walker |
 
 # Participation
 
