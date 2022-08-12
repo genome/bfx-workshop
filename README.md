@@ -1,6 +1,6 @@
 # Bioinformatics (BFX) Workshop
 
-Welcome to the Fall 2021 and Spring 2022 Bioinformatics (BFX) Workshop! 
+Welcome to the Fall 2022 and Spring 2023 Bioinformatics (BFX) Workshop! 
 
 # Objectives
 
