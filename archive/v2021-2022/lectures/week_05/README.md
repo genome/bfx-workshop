@@ -4,13 +4,13 @@ This week, we cover some basics of how sequence is generated, delve into the det
 
 - [Lecture Recording](https://wustl.box.com/s/7lbbspa88zdgc8jhh2es6tognuyjcit3)
 
-- [Slides](https://github.com/genome/bfx-workshop/blob/master/lectures/week_05/bfx_workshop_05_alignment.pdf)
+- [Slides](bfx_workshop_05_alignment.pdf)
 
-- [cwltool Tutorial](https://github.com/genome/bfx-workshop/blob/master/lectures/week_05/example_walkthrough.md)
+- [cwltool Tutorial](example_walkthrough.md)
 
-- [DNA Alignment Workflow Tutorial](https://github.com/genome/bfx-workshop/blob/master/lectures/week_05/bfx_workshop_05_alignment.ipynb)
+- [DNA Alignment Workflow Tutorial](bfx_workshop_05_alignment.ipynb)
 
-- [Cromwell Tutorial](https://github.com/genome/bfx-workshop/blob/master/lectures/week_05/example_walkthrough.md)
+- [Cromwell Tutorial](example_walkthrough.md)
 
 ## Homework Assignment
 

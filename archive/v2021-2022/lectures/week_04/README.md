@@ -4,9 +4,9 @@ This week, we cover some basics of how sequence is generated, delve into the det
 
 - [Lecture Recording](https://wustl.box.com/s/8321yviqwusinike4ipct0y6y5afm3vm)
 
-- [Slides](https://github.com/genome/bfx-workshop/blob/master/lectures/week_04/bfx_workshop_04_alignment.pdf)
+- [Slides](bfx_workshop_04_alignment.pdf)
 
-- [Tutorial](https://github.com/genome/bfx-workshop/blob/master/lectures/week_04/bfx_workshop_04_alignment.ipynb)
+- [Tutorial](bfx_workshop_04_alignment.ipynb)
 
 ## Homework Assignment
 
