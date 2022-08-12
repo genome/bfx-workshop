@@ -13,7 +13,7 @@ This workshop series is designed for people who want to:
 
 Weekly Workshops on Mondays @ 10am
 
-For the Fall 2021 Semester, we will start by holding all BFX Workshops remotely via Zoom. Please see the [Communications](https://github.com/genome/bfx-workshop/blob/master/README.md#communications) section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling.
+For the Fall 2022 Semester, we will be holding all BFX Workshops in Mid-Campus Center (MCC) 11th floor Main Conference Room as well as a hybrid option via Zoom. Please see the [Communications](README.md#communications) section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling.
 
 The BFX Workshop schedule, _subject to change_, is available below. Last year's course materials can still be accessed in the "archive" folder.
 
@@ -21,43 +21,44 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 
 |Date|Topic(s)|Presenter(s)|
 |----|--------|------------|
-| September 13 | [Workshop Intro and Prerequisite Review](https://github.com/genome/bfx-workshop/tree/master/lectures/week_01) | Chris Miller, Jason Walker | 
-| September 20 | [Sequence Data Generation](https://github.com/genome/bfx-workshop/tree/master/lectures/week_02) | Chris Miller |
-| September 27 | [RIS Infrastructure + Office Hours](https://wustl.box.com/s/003l9e3q1oh8631fdzct90aafcuxot1b) | Stephen Tahan, Chris Miller | 
-| October 04 | [DNA Alignment Fundamentals](https://github.com/genome/bfx-workshop/tree/master/lectures/week_04) | Jason Walker |
-| October 11 | NO MEETING | |
-| October 18 | [DNA Alignment Workflows](https://github.com/genome/bfx-workshop/tree/master/lectures/week_05) | Jason Walker, Tom Mooney |
-| October 25 | [Exploring Data + Office Hours](https://github.com/genome/bfx-workshop/tree/master/lectures/week_06) | Chris Miller |
-| November 01 | [Docker and Germline Variant Calling](https://github.com/genome/bfx-workshop/tree/master/lectures/week_07) | Alex Paul, Chris Miller |
-| November 08 | [Somatic Variant Calling](https://github.com/genome/bfx-workshop/tree/master/lectures/week_08) | Chris Miller|
-| November 15 | [Parsing and Filtering VCFs with Python](https://github.com/genome/bfx-workshop/tree/master/lectures/week_09) | John Garza, Susanna Kiwala |
-| November 22 | THANKSGIVING BREAK | |
-| November 29 | [Annotation and R](https://github.com/genome/bfx-workshop/tree/master/lectures/week_10) | Zach Skidmore |
-| December 06 | [RNAseq part 1](https://github.com/genome/bfx-workshop/tree/master/lectures/week_11) | Felicia Gomez |
-| December 13 | [RNAseq part 2](https://github.com/genome/bfx-workshop/tree/master/lectures/week_12) | Huiming Xia |
-| December 20 | No meeting | |
-| December 27 | WINTER BREAK | |
-| January 10, 2022 | [Epigenomics/Bisulfite sequencing](https://github.com/genome/bfx-workshop/tree/master/lectures/week_13) | Chris Miller |
-| January 17, 2022 | MLK Day - no meeting |  | 
-| January 24, 2022 | [Office Hours + Command line skills](https://github.com/genome/bfx-workshop/tree/master/lectures/week_14) | Chris Miller | 
-| January 31, 2022 | [Error-corrected sequencing/ctDNA](https://github.com/genome/bfx-workshop/tree/master/lectures/week_15) | Aadel Chaudhuri | 
-| February 7, 2022 | [Single-cell RNAseq Pt 1](https://github.com/genome/bfx-workshop/tree/master/lectures/week_16) | Allegra Petti |
-| February 14, 2022 | [Single-cell RNAseq Pt 2](https://github.com/genome/bfx-workshop/tree/master/lectures/week_17) | Allegra Petti |
-| February 21, 2022 | [Viral Genomics](https://github.com/genome/bfx-workshop/tree/master/lectures/week_18) | Todd Wylie  |
-| February 28, 2022 | Office Hours - short talk | |
-| March 7, 2022 | No meeting |  |
-| March 14, 2022 | All of Us data and pipelines | Thomas Kannampallil |
-| March 21, 2022 | [Genome Assembly and Long-Reads](https://github.com/genome/bfx-workshop/tree/master/lectures/week_22) | Chad Tomlinson | 
-| March 28, 2022 | Office Hours - short talk |  | 
-| April 4, 2022 | [GenVisR/R](https://github.com/genome/bfx-workshop/tree/master/lectures/week_24) | Zach Skidmore |
-| April 11, 2022 | No Meeting | |
-| April 18, 2022 | No meeting | |
-| April 25, 2022 | [Public Cloud for Bioinformatics (Part 1)](https://github.com/genome/bfx-workshop/tree/master/lectures/week_27) | Jason Walker |
-| May 2, 2022 | [Public Cloud for Bioinformatics (Part 2)](https://github.com/genome/bfx-workshop/tree/master/lectures/week_28) | Chris Miller, Jason Walker |
+| September 12, 2022 | [Workshop Intro and Prerequisite Review](lectures/week_01) | Chris Miller, Jason Walker | 
+| September 19, 2022 | [Sequence Data Generation](lectures/week_02) | Chris Miller |
+| September 26, 2022 | [RIS Infrastructure + Office Hours](https://wustl.box.com/s/003l9e3q1oh8631fdzct90aafcuxot1b) | Stephen Tahan, Chris Miller | 
+| October 3, 2022 | [DNA Alignment Fundamentals](lectures/week_04) | Jason Walker |
+| October 10, 2022 | NO MEETING | |
+| October 17, 2022 | [DNA Alignment Workflows](lectures/week_05) | Jason Walker, Tom Mooney |
+| October 24, 2022 | [Exploring Data + Office Hours](lectures/week_06) | Chris Miller |
+| October 31, 2022 | [Docker and Germline Variant Calling](lectures/week_07) | Alex Paul, Chris Miller |
+| November 7, 2022 | [Somatic Variant Calling](lectures/week_08) | Chris Miller|
+| November 14, 2022 | [Parsing and Filtering VCFs with Python](lectures/week_09) | John Garza, Susanna Kiwala |
+| November 21, 2022 | THANKSGIVING BREAK | |
+| November 28, 2022 | [Annotation and R](lectures/week_10) | Zach Skidmore |
+| December 5, 2022 | [RNAseq part 1](lectures/week_11) | Felicia Gomez |
+| December 12, 2022 | [RNAseq part 2](lectures/week_12) | Huiming Xia |
+| December 19, 2022 | WINTER BREAK | |
+| December 26, 2022 | WINTER BREAK | |
+| January 2, 2023 | WINTER BREAK | |
+| January 9, 2023 | [Epigenomics/Bisulfite sequencing](lectures/week_13) | Chris Miller |
+| January 16, 2023 | NO MEETING |  | 
+| January 23, 2023 | [Office Hours + Command line skills](lectures/week_14) | Chris Miller | 
+| January 30, 2023 | [Error-corrected sequencing/ctDNA](lectures/week_15) | Aadel Chaudhuri | 
+| February 6, 2023 | [Single-cell RNAseq Pt 1](lectures/week_16) | Allegra Petti |
+| February 13, 2023 | [Single-cell RNAseq Pt 2](lectures/week_17) | Allegra Petti |
+| February 20, 2023 | [Viral Genomics](lectures/week_18) | Todd Wylie  |
+| February 27, 2023 | Office Hours - short talk | |
+| March 6, 2023 | NO MEETING |  |
+| March 13, 2023 | All of Us data and pipelines | Thomas Kannampallil |
+| March 20, 2023 | [Genome Assembly and Long-Reads](lectures/week_22) | Chad Tomlinson | 
+| March 27, 2023 | Office Hours - short talk |  | 
+| April 3, 2023 | [GenVisR/R](lectures/week_24) | Zach Skidmore |
+| April 10, 2023 | NO MEETING | |
+| April 17, 2023 | NO MEETING | |
+| April 24, 2023 | [Public Cloud for Bioinformatics (Part 1)](lectures/week_27) | Jason Walker |
+| May 1, 2023 | [Public Cloud for Bioinformatics (Part 2)](lectures/week_28) | Chris Miller, Jason Walker |
 
 # Participation
 
-There are no requirements or qualifications to participate in the BFX Workshop. All we ask is that any willing participant visit our [Prerequisite](https://github.com/genome/bfx-workshop/blob/master/lectures/week_01/bfx_workshop_01_overview.ipynb) tutorial to understand the computer systems, tools, and languages that will be used throughout the course. Most of the languages and tools used are common to all fields and applications of Bioinformatics. No academic credits are earned for attending the course and there no attendance requirements.  There will be "assignments" given during some lectures and we strongly encourage you to complete them in order to get the most out of the course - there is no substitute for hands-on learning!
+There are no requirements or qualifications to participate in the BFX Workshop. All we ask is that any willing participant visit our [Prerequisite](lectures/week_01/bfx_workshop_01_overview.ipynb) tutorial to understand the computer systems, tools, and languages that will be used throughout the course. Most of the languages and tools used are common to all fields and applications of Bioinformatics. No academic credits are earned for attending the course and there no attendance requirements.  There will be "assignments" given during some lectures and we strongly encourage you to complete them in order to get the most out of the course - there is no substitute for hands-on learning!
 
 Unfortunately, we're unable to offer slack membership or cluster access to people outside of Washington University, but you are welcome to follow the recorded lectures and homework on your own.
 
