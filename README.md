@@ -76,7 +76,9 @@ This team of organizers and presenters are committed to sharing best practice me
 
 ## Slack
 
-For members of the mgibio Slack organization, please use the [#bfx_workshop](https://mgibio.slack.com/archives/CDE4LQHHD) channel. If you do not have access to the mgibio Slack organization please email one of the following organizers:
+For members of the mgibio Slack organization, please use the [#bfx_workshop]() channel. If you do not have access to the ICTS Precision Health Slack organization please email one of the following organizers:
+
+j.mckenzie at wustl.edu
 
 jason.walker at wustl.edu
 
