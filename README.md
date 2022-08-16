@@ -15,7 +15,7 @@ Weekly Workshops on Mondays @ 10am in [Mid-Campus Center](https://maps.google.co
 
 Please see the [Communications](README.md#Communications) section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling.
 
-The BFX Workshop schedule, _subject to change_, is available below. Last year's course materials can still be accessed in the "archive" folder.
+The BFX Workshop schedule, _subject to change_, is available below. Previous years' course materials can still be accessed in the "archive" folder. Additionally, a Zoom recording of each Workshop session will be made available shortly after each session.
 
 The first Monday of each month will be a short lecture (15-30m), followed by open "office hours" to get help with assignments, or ask for advice about your own projects. Please contact the organizers if you have suggestions for additional lectures.
 
