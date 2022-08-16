@@ -60,8 +60,6 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 
 There are no requirements or qualifications to participate in the BFX Workshop. All we ask is that any willing participant visit our [Prerequisite](lectures/week_01/bfx_workshop_01_overview.ipynb) tutorial to understand the computer systems, tools, and languages that will be used throughout the course. Most of the languages and tools used are common to all fields and applications of Bioinformatics. No academic credits are earned for attending the course and there no attendance requirements.  There will be "assignments" given during some lectures and we strongly encourage you to complete them in order to get the most out of the course - there is no substitute for hands-on learning!
 
-Unfortunately, we're unable to offer slack membership or cluster access to people outside of Washington University, but you are welcome to follow the recorded lectures and homework on your own.
-
 # Organizers
 
 This workshop is a collaborative effort between the Institute for Clinical and Translational Sciences (ICTS), McDonnell Genome Institute (MGI), Department of Medicine, Division of Hematology & Oncology, and Department of Pediatrics with faculty, staff, and student representation and participation from many other Institutes, Departments, and Divisions at Washington University School of Medicine in St. Louis.
