@@ -11,7 +11,7 @@ This workshop series is designed for people who want to:
 
 # Schedule
 
-Weekly Workshops on Mondays @ 10am in [Mid-Campus Center](https://maps.google.com/?q=4590%20Children) (MCC) 11th floor Main Conference Room
+Weekly Workshops on Monday's @ 10am in [Mid-Campus Center](https://maps.google.com/?q=4590%20Children) (MCC) 11th floor Main Conference Room
 
 Please see the [Communications](README.md#Communications) section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling.
 
