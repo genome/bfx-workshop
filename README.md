@@ -64,7 +64,9 @@ Unfortunately, we're unable to offer slack membership or cluster access to peopl
 
 # Organizers
 
-This workshop is a collaborative effort between the McDonnell Genome Institute, Department of Medicine, Division of Hematology & Oncology, and Department of Pediatrics with faculty, staff, and student representation and participation from many other Institutes, Departments, and Divisions at Washington University School of Medicine in St. Louis.
+This workshop is a collaborative effort between the Institute for Clinical and Translational Sciences (ICTS), McDonnell Genome Institute (MGI), Department of Medicine, Division of Hematology & Oncology, and Department of Pediatrics with faculty, staff, and student representation and participation from many other Institutes, Departments, and Divisions at Washington University School of Medicine in St. Louis.
+
+The organizers would like to specifically thank the [ICTS Precision Health](https://icts-precisionhealth.wustl.edu/) function for supporting the Bioinformatics Workshop. NIH CTSA Grant Number UL1TR002345
 
 The organizers and presenters of this workshop have multi-disciplinary backgrounds in Bioinformatics, Medicine, Computational Biology, Genetics, Computer Science, Oncology, Virology, Information Systems, Microbiology, Immunology, and many other combinations of both Data and Biological Sciences.
 
