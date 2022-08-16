@@ -1,6 +1,6 @@
 # Bioinformatics (BFX) Workshop
 
-Welcome to the Fall 2022 and Spring 2023 Bioinformatics (BFX) Workshop! 
+Welcome to the Fall 2021 and Spring 2022 Bioinformatics (BFX) Workshop! 
 
 # Objectives
 
@@ -13,7 +13,7 @@ This workshop series is designed for people who want to:
 
 Weekly Workshops on Mondays @ 10am
 
-For the Fall 2022 Semester, we will be holding all BFX Workshops in Mid-Campus Center (MCC) 11th floor Main Conference Room as well as a hybrid option via Zoom. Please see the [Communications](README.md#Communications) section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling.
+For the Fall 2021 Semester, we will start by holding all BFX Workshops remotely via Zoom. Please see the [Communications](README.md#communications) section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling.
 
 The BFX Workshop schedule, _subject to change_, is available below. Last year's course materials can still be accessed in the "archive" folder.
 
@@ -21,40 +21,39 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 
 |Date|Topic(s)|Presenter(s)|
 |----|--------|------------|
-| September 12, 2022 | [Workshop Intro and Prerequisite Review](lectures/week_01) | Chris Miller, Jason Walker | 
-| September 19, 2022 | [Sequence Data Generation]() | Chris Miller |
-| September 26, 2022 | [RIS Infrastructure + Office Hours]() | Stephen Tahan, Chris Miller | 
-| October 3, 2022 | [DNA Alignment Fundamentals]() | Jason Walker |
-| October 10, 2022 | NO MEETING | |
-| October 17, 2022 | [DNA Alignment Workflows]() | Jason Walker, Tom Mooney |
-| October 24, 2022 | [Exploring Data + Office Hours]() | Chris Miller |
-| October 31, 2022 | [Docker and Germline Variant Calling]() | Alex Paul, Chris Miller |
-| November 7, 2022 | [Somatic Variant Calling]() | Chris Miller|
-| November 14, 2022 | [Parsing and Filtering VCFs with Python]() | John Garza, Susanna Kiwala |
-| November 21, 2022 | THANKSGIVING BREAK | |
-| November 28, 2022 | [Annotation and R]() | Zach Skidmore |
-| December 5, 2022 | [RNAseq part 1]() | Felicia Gomez |
-| December 12, 2022 | [RNAseq part 2]() | Huiming Xia |
-| December 19, 2022 | WINTER BREAK | |
-| December 26, 2022 | WINTER BREAK | |
-| January 2, 2023 | WINTER BREAK | |
-| January 9, 2023 | [Epigenomics/Bisulfite sequencing]() | Chris Miller |
-| January 16, 2023 | NO MEETING |  | 
-| January 23, 2023 | [Office Hours + Command line skills]() | Chris Miller | 
-| January 30, 2023 | [Error-corrected sequencing/ctDNA]() | Aadel Chaudhuri | 
-| February 6, 2023 | [Single-cell RNAseq Pt 1]() | Allegra Petti |
-| February 13, 2023 | [Single-cell RNAseq Pt 2]() | Allegra Petti |
-| February 20, 2023 | [Viral Genomics]() | Todd Wylie  |
-| February 27, 2023 | Office Hours - short talk | |
-| March 6, 2023 | NO MEETING |  |
-| March 13, 2023 | All of Us data and pipelines | Thomas Kannampallil |
-| March 20, 2023 | [Genome Assembly and Long-Reads]() | Chad Tomlinson | 
-| March 27, 2023 | Office Hours - short talk |  | 
-| April 3, 2023 | [GenVisR/R]() | Zach Skidmore |
-| April 10, 2023 | NO MEETING | |
-| April 17, 2023 | NO MEETING | |
-| April 24, 2023 | [Public Cloud for Bioinformatics (Part 1)]() | Jason Walker |
-| May 1, 2023 | [Public Cloud for Bioinformatics (Part 2)]() | Chris Miller, Jason Walker |
+| September 13 | [Workshop Intro and Prerequisite Review](lectures/week_01) | Chris Miller, Jason Walker | 
+| September 20 | [Sequence Data Generation](lectures/week_02) | Chris Miller |
+| September 27 | [RIS Infrastructure + Office Hours](https://wustl.box.com/s/003l9e3q1oh8631fdzct90aafcuxot1b) | Stephen Tahan, Chris Miller | 
+| October 04 | [DNA Alignment Fundamentals](lectures/week_04) | Jason Walker |
+| October 11 | NO MEETING | |
+| October 18 | [DNA Alignment Workflows](lectures/week_05) | Jason Walker, Tom Mooney |
+| October 25 | [Exploring Data + Office Hours](lectures/week_06) | Chris Miller |
+| November 01 | [Docker and Germline Variant Calling](lectures/week_07) | Alex Paul, Chris Miller |
+| November 08 | [Somatic Variant Calling](lectures/week_08) | Chris Miller|
+| November 15 | [Parsing and Filtering VCFs with Python](lectures/week_09) | John Garza, Susanna Kiwala |
+| November 22 | THANKSGIVING BREAK | |
+| November 29 | [Annotation and R](lectures/week_10) | Zach Skidmore |
+| December 06 | [RNAseq part 1](lectures/week_11) | Felicia Gomez |
+| December 13 | [RNAseq part 2](lectures/week_12) | Huiming Xia |
+| December 20 | No meeting | |
+| December 27 | WINTER BREAK | |
+| January 10, 2022 | [Epigenomics/Bisulfite sequencing](lectures/week_13) | Chris Miller |
+| January 17, 2022 | MLK Day - no meeting |  | 
+| January 24, 2022 | [Office Hours + Command line skills](lectures/week_14) | Chris Miller | 
+| January 31, 2022 | [Error-corrected sequencing/ctDNA](lectures/week_15) | Aadel Chaudhuri | 
+| February 7, 2022 | [Single-cell RNAseq Pt 1](lectures/week_16) | Allegra Petti |
+| February 14, 2022 | [Single-cell RNAseq Pt 2](lectures/week_17) | Allegra Petti |
+| February 21, 2022 | [Viral Genomics](lectures/week_18) | Todd Wylie  |
+| February 28, 2022 | Office Hours - short talk | |
+| March 7, 2022 | No meeting |  |
+| March 14, 2022 | All of Us data and pipelines | Thomas Kannampallil |
+| March 21, 2022 | [Genome Assembly and Long-Reads](lectures/week_22) | Chad Tomlinson | 
+| March 28, 2022 | Office Hours - short talk |  | 
+| April 4, 2022 | [GenVisR/R](lectures/week_24) | Zach Skidmore |
+| April 11, 2022 | No Meeting | |
+| April 18, 2022 | No meeting | |
+| April 25, 2022 | [Public Cloud for Bioinformatics (Part 1)](lectures/week_27) | Jason Walker |
+| May 2, 2022 | [Public Cloud for Bioinformatics (Part 2)](lectures/week_28) | Chris Miller, Jason Walker |
 
 # Participation
 
@@ -90,4 +89,4 @@ bioinformatics at gowustl.onmicrosoft.com
 
 ## Archived Lectures
 
-If you'd like to look back at past sessions, course info and lectures from the [2020-2021](archive/v2020-2021) and [2021-2022](archive/v2021-2022) school year are available in the archive.
+If you'd like to look back at the past, The [course info and lectures from the 2020-2021 school year](../v2020-2021/README.md) are still available in the archives.
