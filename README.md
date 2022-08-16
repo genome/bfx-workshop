@@ -11,9 +11,9 @@ This workshop series is designed for people who want to:
 
 # Schedule
 
-Weekly Workshops on Mondays @ 10am
+Weekly Workshops on Mondays @ 10am in Mid-Campus Center (MCC) 11th floor Main Conference Room
 
-For the Fall 2022 Semester, we will be holding all BFX Workshops in Mid-Campus Center (MCC) 11th floor Main Conference Room as well as a hybrid option via Zoom. Please see the [Communications](README.md#Communications) section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling.
+Please see the [Communications](README.md#Communications) section below for accessing the Email alias to receive a Outlook Calendar invite that includes the Zoom meeting link. It's important to use the Outlook Calendar invite to be automatically notified of cancellations or changes to scheduling.
 
 The BFX Workshop schedule, _subject to change_, is available below. Last year's course materials can still be accessed in the "archive" folder.
 
