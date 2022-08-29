@@ -92,4 +92,4 @@ bioinformatics at gowustl.onmicrosoft.com
 
 ## Archived Lectures
 
-If you'd like to look back at past sessions, course info and lectures from the [2020-2021](archive/v2020-2021) and [2021-2022](archive/v2021-2022) school year are available in the archive.
+If you'd like to look back at past sessions, course info and lectures from the [2020-2021](archive/v2020-2021) and [2021-2022](archive/v2021-2022) academic year are available in the archive.
