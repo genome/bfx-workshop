@@ -60,7 +60,7 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 
 There are no requirements or qualifications to participate in the BFX Workshop. All we ask is that any willing participant visit our [Prerequisite](lectures/week_01/bfx_workshop_01_overview.ipynb) tutorial to understand the computer systems, tools, and languages that will be used throughout the course. Most of the languages and tools used are common to all fields and applications of Bioinformatics. No academic credits are earned for attending the course and there no attendance requirements.  There will be "assignments" given during some lectures and we strongly encourage you to complete them in order to get the most out of the course - there is no substitute for hands-on learning!
 
-For external or remote asyncronous participation, we suggest watching each weekly Zoom recording available shortly after each in-person session and strongly encourage interaction via [Slack](READM.md##Slack). The #bfx_workshop Slack channel is the primary form of interaction between workshop attendees, external participants, organizers, and presenters. 
+For external or remote asyncronous participation, we suggest watching each weekly Zoom recording available shortly after each in-person session and strongly encourage interaction via [Slack](README.md#Slack. The #bfx_workshop Slack channel is the primary form of interaction between workshop attendees, external participants, organizers, and presenters. 
 
 # Organizers
 
