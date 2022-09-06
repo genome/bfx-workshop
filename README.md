@@ -22,39 +22,24 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 |Date|Topic(s)|Presenter(s)|
 |----|--------|------------|
 | September 12, 2022 | [Workshop Intro and Prerequisite Review](lectures/week_01) | Chris Miller, Jason Walker | 
-| September 19, 2022 | [Sequence Data Generation]() | Chris Miller |
-| September 26, 2022 | [RIS Infrastructure + Office Hours]() | Stephen Tahan, Chris Miller | 
-| October 3, 2022 | [DNA Alignment Fundamentals]() | Jason Walker |
-| October 10, 2022 | NO MEETING | |
-| October 17, 2022 | [DNA Alignment Workflows]() | Jason Walker, Tom Mooney |
-| October 24, 2022 | [Exploring Data + Office Hours]() | Chris Miller |
-| October 31, 2022 | [Docker and Germline Variant Calling]() | Alex Paul, Chris Miller |
-| November 7, 2022 | [Somatic Variant Calling]() | Chris Miller|
-| November 14, 2022 | [Parsing and Filtering VCFs with Python]() | John Garza, Susanna Kiwala |
+| September 19, 2022 | Sequence Data Generation and Manipulation | Chris Miller |
+| September 26, 2022 | DNA Alignmentment tools and formats | Jason Walker | 
+| October 3, 2022 | Command line tips, office hours | Chris Miller et. al |
+| October 10, 2022 | DNA Alignment Workflows | Jason Walker, Tom Mooney |
+| October 17, 2022 | Docker and Germline Variant Calling | Alex Paul, Chris Miller |
+| October 24, 2022 | Somatic Variant Calling | Chris Miller|
+| October 31, 2022 | Parsing and Filtering VCFs with Python | John Garza, Susanna Kiwala | 
+| November 7, 2022 | Exploring Data + Office Hours | Chris Miller | 
+| November 14, 2022 | R basics | |
 | November 21, 2022 | THANKSGIVING BREAK | |
-| November 28, 2022 | [Annotation and R]() | Zach Skidmore |
-| December 5, 2022 | [RNAseq part 1]() | Felicia Gomez |
-| December 12, 2022 | [RNAseq part 2]() | Huiming Xia |
-| December 19, 2022 | WINTER BREAK | |
+| November 28, 2022 | VCF Annotation and Visualization | Zach Skidmore |
+| December 5, 2022 | short lecture, office hours | |
+| December 12, 2022 | RNAseq part 1 | | 
+| December 19, 2022 | RNAseq part 2 | |
 | December 26, 2022 | WINTER BREAK | |
 | January 2, 2023 | WINTER BREAK | |
-| January 9, 2023 | [Epigenomics/Bisulfite sequencing]() | Chris Miller |
-| January 16, 2023 | NO MEETING |  | 
-| January 23, 2023 | [Office Hours + Command line skills]() | Chris Miller | 
-| January 30, 2023 | [Error-corrected sequencing/ctDNA]() | Aadel Chaudhuri | 
-| February 6, 2023 | [Single-cell RNAseq Pt 1]() | Allegra Petti |
-| February 13, 2023 | [Single-cell RNAseq Pt 2]() | Allegra Petti |
-| February 20, 2023 | [Viral Genomics]() | Todd Wylie  |
-| February 27, 2023 | Office Hours - short talk | |
-| March 6, 2023 | NO MEETING |  |
-| March 13, 2023 | All of Us data and pipelines | Thomas Kannampallil |
-| March 20, 2023 | [Genome Assembly and Long-Reads]() | Chad Tomlinson | 
-| March 27, 2023 | Office Hours - short talk |  | 
-| April 3, 2023 | [GenVisR/R]() | Zach Skidmore |
-| April 10, 2023 | NO MEETING | |
-| April 17, 2023 | NO MEETING | |
-| April 24, 2023 | [Public Cloud for Bioinformatics (Part 1)]() | Jason Walker |
-| May 1, 2023 | [Public Cloud for Bioinformatics (Part 2)]() | Chris Miller, Jason Walker |
+
+The spring 2023 schedule will continue on Mondays at 10 am, and will include Single-cell RNAseq, bisulfite sequencing, ChIP-seq/epigenomics, error-corrected sequencing, viral genomics, cloud workflows, and more. Details to be announced shortly.
 
 # Participation
 
