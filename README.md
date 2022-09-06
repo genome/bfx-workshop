@@ -29,7 +29,7 @@ The first Monday of each month will be a short lecture (15-30m), followed by ope
 | October 17, 2022 | Docker and Germline Variant Calling | Alex Paul, Chris Miller |
 | October 24, 2022 | Somatic Variant Calling | Chris Miller|
 | October 31, 2022 | Parsing and Filtering VCFs with Python | John Garza, Susanna Kiwala | 
-| November 7, 2022 | Exploring Data + Office Hours | Chris Miller | 
+| November 7, 2022 | Exploring Data + Office Hours | | 
 | November 14, 2022 | R basics | |
 | November 21, 2022 | THANKSGIVING BREAK | |
 | November 28, 2022 | VCF Annotation and Visualization | Zach Skidmore |
