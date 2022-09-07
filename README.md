@@ -17,23 +17,23 @@ Please see the [Communications](README.md#Communications) section below for acce
 
 The BFX Workshop schedule, _subject to change_, is available below. Previous years' course materials can still be accessed in the "archive" folder. Additionally, a Zoom recording of each Workshop session will be made available shortly after each session. NOTE: See [Participation](README.md#Participation) for more details about external or remote participation.
 
-The first Monday of each month will be a short lecture (15-30m), followed by open "office hours" to get help with assignments, or ask for advice about your own projects. Please contact the organizers if you have suggestions for additional lectures.
+The last Monday of each month will be a short lecture (15-30m), followed by open "office hours" to get help with assignments, or ask for advice about your own projects. Please contact the organizers if you have suggestions for additional lectures.
 
 |Date|Topic(s)|Presenter(s)|
 |----|--------|------------|
 | September 12, 2022 | [Workshop Intro and Prerequisite Review](lectures/week_01) | Chris Miller, Jason Walker | 
 | September 19, 2022 | Sequence Data Generation and Manipulation | Chris Miller |
-| September 26, 2022 | DNA Alignmentment tools and formats | Jason Walker | 
-| October 3, 2022 | Command line tips, office hours | Chris Miller et. al |
+| September 26, 2022 | Command line tips, office hours | Chris Miller et. al | 
+| October 3, 2022 | DNA Alignmentment tools and formats | Jason Walker |
 | October 10, 2022 | DNA Alignment Workflows | Jason Walker, Tom Mooney |
 | October 17, 2022 | Docker and Germline Variant Calling | Alex Paul, Chris Miller |
 | October 24, 2022 | Somatic Variant Calling | Chris Miller|
-| October 31, 2022 | Parsing and Filtering VCFs with Python | John Garza, Susanna Kiwala | 
-| November 7, 2022 | Exploring Data + Office Hours | | 
+| October 31, 2022 | Exploring Data + Office Hours | |
+| November 7, 2022 | Parsing and Filtering VCFs with Python | John Garza, Susanna Kiwala | 
 | November 14, 2022 | R basics | |
 | November 21, 2022 | THANKSGIVING BREAK | |
-| November 28, 2022 | VCF Annotation and Visualization | Zach Skidmore |
-| December 5, 2022 | short lecture, office hours | |
+| November 28, 2022 | short lecture, office hours | |
+| December 5, 2022 | VCF Annotation and Visualization | Zach Skidmore |
 | December 12, 2022 | RNAseq part 1 | | 
 | December 19, 2022 | RNAseq part 2 | |
 | December 26, 2022 | WINTER BREAK | |
