@@ -71,7 +71,7 @@ c.a.miller at wustl.edu
 
 ## Email
 
-An Office 365 Group named Bioinformatics is used to distribute Calendar invites, announcements, and information regarding this workshop. Questions are welcome as well, but please be mindful that over 100 people subscribe to this alias. [Click here](https://outlook.office365.com/owa/bioinformatics@gowustl.onmicrosoft.com/groupsubscription.ashx?action=join&source=MSExchange/LokiServer&guid=2fdc302a-812b-4984-a57b-62ee21430272) to join.
+An Office 365 Group named Bioinformatics is used to distribute Calendar invites, announcements, and information regarding this workshop. Questions are welcome as well, but please be mindful that over 100 people subscribe to this alias. [Click here](https://outlook.office365.com/owa/bioinformatics@gowustl.onmicrosoft.com/groupsubscription.ashx?action=join&source=MSExchange/LokiServer&guid=bb337477-c0f6-49fd-91ef-d2a97af0782c) to join.
 
 The email address is: 
 
