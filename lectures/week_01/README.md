@@ -1,5 +1,5 @@
 ## Week 1: Overview and Prerequisites
-- [Lecture recording](https://wustl.box.com/s/vp8mcoybud6qgl15lzdw66k5zzdoj8oz)
+- [Lecture Recording](https://wustl.box.com/s/vp8mcoybud6qgl15lzdw66k5zzdoj8oz)
 - [Slides](bfx_workshop_01_overview.pdf)
 - [Jupytr Notebook](bfx_workshop_01_overview.ipynb)
 
