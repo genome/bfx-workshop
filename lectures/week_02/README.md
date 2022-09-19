@@ -2,7 +2,7 @@
 
 This week, we cover some basics of how sequence is generated, delve into the details of data and formats, and talk through basic QC of your sequence.
 
-- Lecture Recording
+- [Lecture Recording](https://wustl.box.com/s/yev38ztocy7uqn1tvwu7woskkswmlluo)
 
 - [Slides](bfx_workshop_02_sequencing.pdf)
 
