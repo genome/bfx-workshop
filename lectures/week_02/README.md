@@ -8,17 +8,17 @@ This week, we cover some basics of how sequence is generated, delve into the det
 
 ## Homework Assignment
 
-Let's play around with some real sequence data and QC it.  See the lecture for some commands that may help, and ask for help in #bfx_workshop if you get stuck!
+Let's play around with some real sequence data and QC it. The expectation is that you'll do this on your laptop/desktop, but it should also be possible to do all of this on the cluster or cloud, provided that docker is installed. See the lecture for some commands that may help, and ask for help in #bfx_workshop if you get stuck!
 
 1) Get an interactive job in a docker container. The image `chrisamiller/docker-genomic-analysis` has a lot of common genomics tools installed that may be useful for the first few steps
 
-2) We're going to work with data from a human cell line posted here: [https://storage.googleapis.com/bfx_workshop_tmp/Exome_Tumor.tar](https://storage.googleapis.com/bfx_workshop_tmp/Exome_Tumor.tar) Make a directory called "week2", and download the tarball to the cluster using the command line (`wget` or `curl`).
+2) We're going to work with data from a human cell line posted here: [https://storage.googleapis.com/bfx_workshop_tmp/Exome_Tumor.tar](https://storage.googleapis.com/bfx_workshop_tmp/Exome_Tumor.tar) Make a directory called "week2", and download the tarball to your computer using the command line (`wget` or `curl`).
 
-3) Use `tar -xvf` to extract the directory, then cd into the directory and look around.  We're not going to use all of this data in this week's homework. Let's focus on the contents of `Exome_Tumor.tar`. Untar it, then unzip the fastq files.
+3) Use `tar -xvf` to extract the directory from the tar file, then cd into the directory and look around.  We're not going to use all of this data in this week's homework. Let's focus on the contents of `Exome_Tumor.tar`. Untar it, then unzip the fastq files.
 
 4) Look at the first three records of each fastq file. Take a close look at the read names and how they match up across files. (Use the unix commands that we discussed in class to answer this and the following three questions)
 
-5) How many paired end sequences do these files contain? 
+5) How many paired end sequences do these files contain?
 
 6) What is the read length? Is the read length consistent for every record?
 
