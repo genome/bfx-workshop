@@ -23,7 +23,7 @@ The last Monday of each month will be a short lecture (15-30m), followed by open
 |----|--------|------------|
 | September 12, 2022 | [Workshop Intro and Prerequisite Review](lectures/week_01) | Chris Miller, Jason Walker | 
 | September 19, 2022 | [Sequence Data Generation and Manipulation](lectures/week_02) | Chris Miller |
-| September 26, 2022 | Command line tips, office hours | Chris Miller et. al | 
+| September 26, 2022 | [Command line tips, office hours](lectures/week_03) | Chris Miller | 
 | October 3, 2022 | DNA Alignmentment tools and formats | Jason Walker |
 | October 10, 2022 | DNA Alignment Workflows | Jason Walker, Tom Mooney |
 | October 17, 2022 | Docker and Germline Variant Calling | Alex Paul, Chris Miller |
