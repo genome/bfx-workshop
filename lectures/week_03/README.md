@@ -42,15 +42,20 @@ cat genes1 genes2 genes2 | sort | uniq -u
 cat genes1 genes1 genes2 | sort | uniq -u
 
 #get a certain column from a file
-cut -f 10 tcga.aml.tsv | head
+cut -f 10 tcga.tsv | head
 
 #find the most frequent items in a certain column
-cut -f 10 tcga.aml.tsv | sort | uniq -c | sort -nk 1 | head
+cut -f 10 tcga.tsv | sort | uniq -c | sort -nk 1 | head
 
-#find lines in one file that match genes from another
-grep -wf genes1 tcga.aml.tsv | less
+#output those top ten genes to a file, keeping only the second column (gene name)
+cut -f 10 tcga.tsv | sort | uniq -c | sort -nrk 1 | head -n 10 | awk '{print $2}'>topten_genes.txt
 
-#what if we want to find lines in genes1 that match the genes column in our complicated file?  
-# Nested expressions! <(command) treats the output of that command as a file
-grep -wf <(cut -f 10 tcga.aml.tsv | sort | uniq) genes1
+#find lines in one file that match genes from another - get the full lines from my 
+#top ten genes.  Note that I've piped this to "less", so that it doesn't scroll 
+#hundreds of lines past. Use the arrow keys to navigate, then `q` to quit
+grep -wf topten_genes.txt tcga.tsv | less
+
+# We can do the same thing without creating a topten file by using something called
+# nested expressions! <(command) treats the output of that command as a file
+grep -wf <(cut -f 10 tcga.tsv | sort | uniq -c | sort -nrk 1 | head -n 10 | awk '{print $2}') tcga.tsv | less
 ```
