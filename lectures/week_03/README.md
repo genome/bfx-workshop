@@ -3,6 +3,7 @@
 This week, we did a short talk about some unix command line utilities and how they can often get you to quick answers, followed by office hours to help with homework or answer general questions.
 
 - [Lecture Recording](https://wustl.app.box.com/s/sxndl8ohr6q6eit5gmivfti3efh5oihv)
+- Files that you can grab to recreate the command line examples I gave: [genes1](genes1.txt), [genes2](genes2.txt), and [tcga.tsv](tcga.tsv).  Also try this on your own files or data!
 
 ## Notes from the talk
 ```
@@ -21,7 +22,8 @@ date --asdf 2>err.log
 #you can get fancy and send both to the same file
 date 2>&1
 
-# Note: you can grab the [genes1](genes1.txt), [genes2](genes2.txt), and [tcga.tsv](tcga.tsv) files with wget, but any files will do!
+# Note: you can grab the genes1.txt, genes2.txt, and tcga.tsv files 
+# with wget
 
 #use wc -l to count the number of lines in a file
 wc -l genes1
