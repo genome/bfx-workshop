@@ -25,15 +25,15 @@ The last Monday of each month will be a short lecture (15-30m), followed by open
 | September 19, 2022 | [Sequence Data Generation and Manipulation](lectures/week_02) | Chris Miller |
 | September 26, 2022 | [Command line tips, office hours](lectures/week_03) | Chris Miller | 
 | October 3, 2022 | [DNA Alignmentment tools and formats](lectures/week_04) | Jason Walker |
-| October 10, 2022 | DNA Alignment Workflows | Jason Walker, Tom Mooney |
-| October 17, 2022 | Docker and Germline Variant Calling | Alex Paul, Chris Miller |
-| October 24, 2022 | Somatic Variant Calling | Chris Miller|
-| October 31, 2022 | Exploring Data + Office Hours | |
-| November 7, 2022 | Parsing and Filtering VCFs with Python | John Garza, Susanna Kiwala | 
-| November 14, 2022 | R basics | |
+| October 10, 2022 | Office Hours | |
+| October 17, 2022 | DNA Alignment Workflows | Jason Walker, Tom Mooney |
+| October 24, 2022 | Docker and Germline Variant Calling | Alex Paul, Chris Miller |
+| October 31, 2022 | Somatic Variant Calling | Chris Miller|
+| November 7, 2022 | Exploring Data + Office Hours | |
+| November 14, 2022 | Parsing and Filtering VCFs with Python | John Garza, Susanna Kiwala | 
 | November 21, 2022 | THANKSGIVING BREAK | |
-| November 28, 2022 | short lecture, office hours | |
-| December 5, 2022 | VCF Annotation and Visualization | Zach Skidmore |
+| November 28, 2022 | R basics | Chris Miller |
+| December 5, 2022 | VCF Annotation and Visualization | |
 | December 12, 2022 | RNAseq part 1 | | 
 | December 19, 2022 | RNAseq part 2 | |
 | December 26, 2022 | WINTER BREAK | |
