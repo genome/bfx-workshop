@@ -2,7 +2,7 @@
 
 This week, we cover sequence data alignment in more detail, including Base Quality Score Recalibration, SAM flags and marking of duplicate fragments (either from PCR or optical flowcell duplicates). We will then discuss streaming multiple steps together as well as an automated pipeline in the form of a Workflow. 
 
-- [Lecture Recording](https://wustl.box.com/s/pmrvbp5vfiwxzafetaqswujpo625m0t2)
+- [Lecture Recording]()
 
 - [Slides](bfx_workshop_06_alignment.pdf)
 
