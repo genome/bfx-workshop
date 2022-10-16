@@ -26,8 +26,8 @@ The last Monday of each month will be a short lecture (15-30m), followed by open
 | September 26, 2022 | [Command line tips, office hours](lectures/week_03) | Chris Miller | 
 | October 3, 2022 | [DNA Alignment tools and formats](lectures/week_04) | Jason Walker |
 | October 10, 2022 | Office Hours | |
-| October 17, 2022 | DNA Alignment Workflows | Jason Walker, Tom Mooney |
-| October 24, 2022 | Docker and Germline Variant Calling | Alex Paul, Chris Miller |
+| October 17, 2022 | [DNA Alignment Workflows](lectures/week_06) | Jason Walker |
+| October 24, 2022 | Germline Variant Calling | Alex Paul, Chris Miller |
 | October 31, 2022 | Somatic Variant Calling | Chris Miller|
 | November 7, 2022 | Exploring Data + Office Hours | |
 | November 14, 2022 | Parsing and Filtering VCFs with Python | John Garza, Susanna Kiwala | 
