@@ -54,7 +54,7 @@ Cromwell is an implementaiton of the [Global Alliance for Genomics and Health](h
 Please download and install gcloud on your local machine. We will not use it to execute the workflow. However, it will be used later to access workflow outputs, logs, etc. Using gcloud, you can use your local terminal for many tasks. For Google installation instructions:
 https://cloud.google.com/sdk/docs/install
 
-### glcoud Install Hints:
+### gcloud Install Hints:
 1. After installation, gcloud may not automatically appear in your $PATH. If so, `source /Users/<username>/google-cloud-sdk/path.bash.inc`
 2. Similarly, auto-compltion may not work immediately. If so, try `source /Users/<username>/google-cloud-sdk/path.bash.inc`
 3. If you are authenticating with gcloud for the first time, try `gcloud auth login` which will open a browser window prompting you to login. Use your WUSTL key to get access to the course workspace and resources.
@@ -106,7 +106,10 @@ NOTE: Do NOT use `1.0`! There is a difference and `1.0` would be used for `WDL` 
 All other settings (if not listed) can be left as the default setting or without a value.
 
 `Execute` the workflow and record the ID returned for use in later steps.
-NOTE: Please grab the Workflow ID that is unique to your execution of the workflow. The Sample ID is a different value located near the Workflow ID. Be sure to grab the Workflow ID.
+
+#### Understanding the API output
+
+The output of these executions can be confusing. The first two lines: `Curl` and `Request URL` show you information about how the API call was run. This is generally not going to be that useful to you.  What you're interested in is the `Server Response` section, which contains the actual information that the server sent back to you. Speciically, the `Response Body` will generally have the info you need - in this case, a workflow id like `b15cbfc3-f697-4d4a-8b18-8c4fbcad357d`.  Below that, in the `Responses` block, is information on the possible responses that could have been sent back. These can also generally be ignored.
 
 ## Workflow API Calls
 
@@ -115,7 +118,6 @@ Now we have a workflow that is running in the background.  How can we see what's
 ### Workflow Status
 
 Again, find this option in the list of API calls, click `Try it out`, and then paste in your workflow ID (from the above submission) to `GET` the workflow status.  You should see your workflow as `Running`, and then after about 20-30m, if you check back, it will say `Succeeded`.  If it shows anything else, check out "Troubleshooting" below.
-
 
 ### Workflow Outputs 
 
@@ -146,5 +148,11 @@ Next week, we'll start using these results to do variant calling.
 
 Just open a new one and run the same commands to get to your swagger API page. The server that's actually doing the work should still be chugging around happily in the background 
 
-- When I checked the status of my workflow, I got a `501 Unsupported HTTP method` error.  If you just executed your workflow, wait a minute or two and try again. It takes a short time for the server to spin up the job.
+- My API call returns `404 Error:  Not Found` and `content-length 0 . . .`
+
+This likely means that your cloud shell has timed out. Go back to that page, reconnect, run the connection command and reopen your swagger API window.
+
+- When I checked the status of my workflow, I got a `501 Unsupported HTTP method` error.  
+
+If you just executed your workflow, wait a minute or two and try again. It takes a short time for the server to spin up the job.
 
