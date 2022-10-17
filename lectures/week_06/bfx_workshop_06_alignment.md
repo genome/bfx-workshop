@@ -1,4 +1,4 @@
-##Week 06 Alignment Exercise
+## Week 06 Alignment Exercise
 
 Today, we're going to improve upon last week's alignment workflow in a few ways.
 
