@@ -1,4 +1,4 @@
-# Big Picture
+##Week 06 Alignment Exercise
 
 Today, we're going to improve upon last week's alignment workflow in a few ways.
 
@@ -14,7 +14,7 @@ To run this workflow we need three things:
 2. Data: The input files to run on.
 3. Executor: A program that coordinates the transfer of data, schedules the execution of steps, and collects the results
 
-# Tools
+## Tools
 
 There are several languages available for defining workflows, including [Common Workflow Language](https://www.commonwl.org/) (CWL), [Workflow Description Language](https://openwdl.org) (WDL), [SnakeMake](https://snakemake.readthedocs.io/en/stable/), and [Nextflow](https://www.nextflow.io/) (NF).  
 
@@ -27,19 +27,21 @@ https://github.com/genome/analysis-workflows/blob/2022-bfx-workshop/definitions/
 
 Take some time to review the structure of the CWL workflow, including the actual alignment commands called. Think about how many commands this is producing, and how long it would take you to run them by hand (and how that might not scale to hundreds or thousands of samples!)
 
-# Data
+## Data
 
 The input files are defined in a YAML for each sample.
 
+```
 HCC1395 Normal
 https://github.com/genome/analysis-workflows/blob/2022-bfx-workshop/example_data/normal_alignment_exome_gcloud.yaml
 
 HCC1395 Tumor
 https://github.com/genome/analysis-workflows/blob/2022-bfx-workshop/example_data/tumor_alignment_exome_gcloud.yaml
+```
 
-Let's take a closer look at each input file.  Notice that these paths all begin with `gs://` which means they're already stored in a Google Cloud bucket (think cloud filesystem). If you were using your own data, you'd have to upload it first.
+Download an input file, open it up, and take a closer look.  Notice that all the file paths begin with `gs://` which means they're already stored in a Google Cloud bucket. If you were using your own data, you'd have to upload it first.
 
-# Executor
+## Executor
 
 [Cromwell](https://cromwell.readthedocs.io/en/stable/) is the Workflow Mangement System we will use today. It takes in a description of a workflow, and handles all the behind-the-scenes actions that request appropriate machine sizes, spin up docker containers, execute the code, and keep track of hte outputs.  Specfically we will use Cromwell in Server mode: https://cromwell.readthedocs.io/en/stable/tutorials/ServerMode/
 
@@ -52,7 +54,7 @@ Cromwell is an implementaiton of the [Global Alliance for Genomics and Health](h
 Please download and install gcloud on your local machine. We will not use it to execute the workflow. However, it will be used later to access workflow outputs, logs, etc. Using gcloud, you can use your local terminal for many tasks. For Google installation instructions:
 https://cloud.google.com/sdk/docs/install
 
-### glcoud Install HINTS:
+### glcoud Install Hints:
 1. After installation, gcloud may not automatically appear in your $PATH. If so, `source /Users/<username>/google-cloud-sdk/path.bash.inc`
 2. Similarly, auto-compltion may not work immediately. If so, try `source /Users/<username>/google-cloud-sdk/path.bash.inc`
 3. If you are authenticating with gcloud for the first time, try `gcloud auth login` which will open a browser window prompting you to login. Use your WUSTL key to get access to the course workspace and resources.
@@ -65,16 +67,16 @@ Login to a Google Cloud Shell using your WUSTL Key: https://shell.cloud.google.c
 
 ### Communications Tunnel
  
-We have a cromwell server already running in the cloud, and you need to create a connection to it, using your authenticated WUSTL Key credentials, we need to run the following gcloud command:
+We have a cromwell server already running in the cloud, and you need connect to it, using your authenticated WUSTL Key credentials. To do so, run the following gcloud command:
 ```
 gcloud compute start-iap-tunnel cromwell-server 8000 --local-host-port=localhost:8080 --zone=us-central1-a --project icts-precision-health
 ```
 
-This command opens a communication (IAP for TCP forwarding) channel between the Cromwell Server and your Cloud Shell or local (if using gcloud locally) terminal session.  In other words, it allows the shell you're sitting at to talk talk to the cromwell server which will run your workflow.
+This command opens a communication (IAP for TCP forwarding) channel between the Cromwell Server and your Cloud Shell or local (if using gcloud locally) terminal session.  In other words, it allows the shell you're sitting at to talk to the cromwell server which will run your workflow.
 
 ### Cromwell API
 
-Using Cloud Shell, open a Web Preview using port 8080. Web Preview is a small icon near the top right of the Cloud Shell interface.  If you later want to try this using a local terminal session with gcloud, simply load this URL in a web browser of your choice: http://localhost:8080
+Using Cloud Shell, open a Web Preview using port 8080. Web Preview is a small icon near the top right of the Cloud Shell interface.  If you later want to try this using a local terminal session with gcloud (instead of the cloud shell), you would load this URL in a web browser of your choice: http://localhost:8080
 
 Once a Web Preview (via Cloud Shell) or web browser (via local browser) loads, a Swagger User Interface (UI) to the Cromwell API should be available.
 
