@@ -56,7 +56,7 @@ https://cloud.google.com/sdk/docs/install
 
 ### gcloud Install Hints:
 1. After installation, gcloud may not automatically appear in your $PATH. If so, `source /Users/<username>/google-cloud-sdk/path.bash.inc`
-2. Similarly, auto-compltion may not work immediately. If so, try `source /Users/<username>/google-cloud-sdk/path.bash.inc`
+2. Similarly, auto-completion may not work immediately. If so, try `source /Users/<username>/google-cloud-sdk/path.bash.inc`
 3. If you are authenticating with gcloud for the first time, try `gcloud auth login` which will open a browser window prompting you to login. Use your WUSTL key to get access to the course workspace and resources.
 
 ## Cloud Shell
