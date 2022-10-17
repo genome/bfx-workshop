@@ -33,10 +33,10 @@ The input files are defined in a YAML for each sample.
 
 ```
 HCC1395 Normal
-https://github.com/genome/analysis-workflows/blob/2022-bfx-workshop/example_data/normal_alignment_exome_gcloud.yaml
+https://raw.githubusercontent.com/genome/analysis-workflows/2022-bfx-workshop/example_data/normal_alignment_exome_gcloud.yaml
 
 HCC1395 Tumor
-https://github.com/genome/analysis-workflows/blob/2022-bfx-workshop/example_data/tumor_alignment_exome_gcloud.yaml
+https://raw.githubusercontent.com/genome/analysis-workflows/2022-bfx-workshop/example_data/tumor_alignment_exome_gcloud.yaml
 ```
 
 Download an input file, open it up, and take a closer look.  Notice that all the file paths begin with `gs://` which means they're already stored in a Google Cloud bucket. If you were using your own data, you'd have to upload it first.
@@ -151,6 +151,10 @@ Just open a new one and run the same commands to get to your swagger API page. T
 - My API call returns `404 Error:  Not Found` and `content-length 0 . . .`
 
 This likely means that your cloud shell has timed out. Go back to that page, reconnect, run the connection command and reopen your swagger API window.
+
+- My Execute command returned `{"status": "fail",  "message": . . .`
+
+Read the message, see if you can make sense of what happened (bad input files?) and if not, post in slack to get help!
 
 - When I checked the status of my workflow, I got a `501 Unsupported HTTP method` error.  
 
