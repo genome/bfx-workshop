@@ -93,7 +93,7 @@ https://raw.githubusercontent.com/genome/analysis-workflows/2022-bfx-workshop/de
 
 2. Where are the input files for this workflow? (what data are we aligning?)
 
-For `workflowInputs`, you will need to download or copy/paste the following YAML file and then 'Choose File' to upload the contents of that file.
+For `workflowInputs`, you will need to download the following YAML file and then 'Choose File' to upload it to the server.
 ```
 https://raw.githubusercontent.com/genome/analysis-workflows/2022-bfx-workshop/example_data/normal_alignment_exome_gcloud.yaml
 ```
@@ -138,5 +138,8 @@ Next week, we'll start using these results to do variant calling.
 ## Troubleshooting
 
 - My cloud shell timed out and gave me a connection error!
+
 Just open a new one and run the same commands to get to your swagger API page. The server that's actually doing the work should still be chugging around happily in the background 
+
+- When I checked the status of my workflow, I got a `501 Unsupported HTTP method` error.  Wait a minute or two and try again. It takes a short time for the server to spin up the job.
 
