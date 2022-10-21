@@ -46,30 +46,16 @@ RUN pip install vcfpy pysam
 COPY depth_filter.py /usr/bin/depth_filter.py
 ```
 
-4. Google Artifacts Repository
-
-In a Cloud Shell Terminal, execute the following command to create a new repository for this Docker image.
-
-NOTE: REPLACE $USER WITH YOUR WUSTL KEY
-
-```
-gcloud artifacts repositories create $USER-gatk-depth-filter-docker-repo --repository-format=docker  --location=us-central1 --description="Docker repository for GATK with depth filter."
-```
-List the repositories available in Google Artifacts Repository for the ICTS Precision Health project:
-```
-gcloud artifacts repositories list
-```
-
-5. Cloud Build
+4. Cloud Build
 
 Using the Cloud Shell Editor, Save a file named `cloudbuild.yaml` in the `gatk-depth-filter-docker` workspace containing:
 NOTE: REPLACE $USER WITH YOUR WUSTL KEY
 ```
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/icts-precision-health/$USER-gatk-depth-filter-docker-repo/gatk-depth-filter-image:tag1', '.' ]
+  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER-gatk-depth-filter-image:tag1', '.' ]
 images:
-- 'us-central1-docker.pkg.dev/icts-precision-health/$USER-gatk-depth-filter-docker-repo/gatk-depth-filter-image:tag1'
+- 'us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER-gatk-depth-filter-image:tag1'
 ```
 
 In a Cloud Shell Terminal, submit the build:
@@ -79,10 +65,10 @@ gcloud builds submit --region=us-central1 --config cloudbuild.yaml
 
 Use Google Cloud Build to view each build: https://console.cloud.google.com/cloud-build/dashboard;region=us-central1?project=icts-precision-health
 
-6. Docker Run
+5. Docker Run
 
 ```
-docker run -it us-central1-docker.pkg.dev/icts-precision-health/$USER-gatk-depth-filter-docker-repo/gatk-depth-filter-image:tag1
+docker run -it us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER-gatk-depth-filter-image:tag1
 ```
 
 # GATK
@@ -134,16 +120,13 @@ exit
 ```
 
 
-7. IGV
+6. IGV
 
 View the BAM and depth filtered VCF in IGV.
 
-8. Cleanup
+7. Cleanup
 
 Remove BFX Workshop scratch space:
 ```
 gsutil rm -r gs://icts-precision-health-bfx-workshop-scratch/$USER/
 ```
-
-Use Google Artifact Registry to remove the Docker image: https://console.cloud.google.com/artifacts?project=icts-precision-health
-
