@@ -130,11 +130,11 @@ exit
 ```
 
 
-**7)**IGV
+**7)** IGV
 
 View the BAM and depth filtered VCF in IGV.
 
-**)8** Cleanup
+**8)** Cleanup
 
 Remove BFX Workshop scratch space:
 ```
