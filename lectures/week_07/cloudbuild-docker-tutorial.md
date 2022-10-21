@@ -2,12 +2,24 @@
 
 Log in to a Cloud Shell Terminal: https://shell.cloud.google.com/?show=ide%2Cterminal
 
+Authenticate with WUSTL Key account.
+```
+gcloud auth login
+```
+
+Set the Google Project we are using.
+```
+gcloud config set project icts-precision-health
+```
+
 Show the value for the environment variable `$USER`
 
 NOTE: We will use this variable and value later in the tutorial.
 ```
 echo $USER
 ```
+
+
 
 Create a directory and setup a cloudshell workspace using the new directory:
 ```
