@@ -51,7 +51,6 @@ Now you can run the same image using:
 
 ```
 $ docker run -it gatk:$VERSION
-
 ```
 
 If you wanted to use this in places other than your computer (like a compute cluster or the cloud, you'd need to push this somewhere accessible to the world.  On option is to do this by signing up for dockerhub and pushing your images there.  Another option is covered in the [Cloud Build](cloudbuild-docker-tutorial.md) tutorial from this week, where you'll build and deploy an image to a private Google Artifact Registry for use on Google Cloud or other clusters.
