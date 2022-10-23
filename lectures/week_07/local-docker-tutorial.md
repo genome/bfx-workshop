@@ -27,12 +27,11 @@ Can you think of two different ways to include this script?  (hint: RUN/COPY)
 docker build gatk
 ```
 
-The outputs of your steps will scroll by, and if all goes well, you'll see something like:
-NOTE: `$HASH` is a placeholder for the hash returned during your execution.
-Example: `Successfully built $HASH`
+The outputs of your steps will scroll by, and if all goes well, you'll see something like `Successfully built $HASH`
 
-That $HASH value is the id of your container. You can now run your image using that value:
+`$HASH` is a placeholder for the hash, ex. sha256, returned by the build command.
 
+That `$HASH` value is the id of your container. You can now run your image using that value:
 ```
 docker run -it $HASH
 ```
