@@ -6,22 +6,26 @@ Let's build a docker container, but this time, we'll build it and host it in our
 
 Log in to a Cloud Shell Terminal: https://shell.cloud.google.com/?show=ide%2Cterminal
 
-Authenticate with WUSTL Key account.
+With Cloud Shell, you are automatically asked to authenticate with a WUSTL Key Google account.
+
+If you are attempting this tutorial OUTSIDE of a Cloud Shell Terminal session, ex. local bash terminal, explicitly authenticate with your WUSTL Key account. 
 ```
 gcloud auth login
 ```
 
-Set the Google Project we are using.
+Set the Google Project we are using for the remainder of this tutorial.
 ```
 gcloud config set project icts-precision-health
 ```
 
-Show the value for the environment variable `$USER`
+Show the value for the environment variable `$USER`.
 ```
 echo $USER
 ```
 
-Parts of GCP don't allow characters like underscores that are common in wustl user names. Set a new "clean" shell variable to remove invalid characters:
+Some Google Cloud services do not allow characters like underscores that are common in WUSTL Key account names. 
+
+Set a new "clean" shell variable to remove invalid characters:
 ```
 USER_CLEAN=`echo $USER | sed 's/_/-/g'` && export USER_CLEAN
 ```
@@ -34,6 +38,7 @@ mkdir gatk-depth-filter-docker
 ```
 cloudshell workspace gatk-depth-filter-docker
 ```
+
 With the buttons at the top right, you can toggle between the Terminal (using `Open/Close Terminal`) and the Editor (using `Open/Close Editor`). You can also leave them both open at the same time.
 
 In a Cloud Shell Terminal, navigate into the newly created directory:
@@ -131,8 +136,11 @@ Replace $BAM with the path returned from Cromwell.
 Example: `gs://icts-precision-health-cromwell-wf-exec/alignment_exome.cwl/d153b0da-ef5e-43ba-94dc-69e24311c83f/call-alignment/sequence_to_bqsr.cwl/a1da9f01-7014-411b-baef-e592bcf34cb6/call-index_bam/H_NJ-HCC1395-HCC1395_BL.bam`
 
 ## Output
+
 We are now in a Docker container which does not inherit the environment from our Cloud Shell Terminal.
-NOTE: Replace `$USER_CLEAN` in the path below
+
+NOTE: Replace `$USER_CLEAN` in the output path below.
+
 NOTE: Replace `$BAM` with the path returned by cromwell-server in the [DNA Alignment Workflow Tutorial](../week_06/bfx_workshop_06_alignment.md). 
 ```
 gatk HaplotypeCaller --input $BAM --output gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/H_NJ-HCC1395-HCC1395_BL.vcf --reference gs://analysis-workflows-example-data/somatic_inputs/hla_and_brca_genes.fa
@@ -142,6 +150,7 @@ gatk HaplotypeCaller --input $BAM --output gs://icts-precision-health-bfx-worksh
 ## Input
 
 Our Python script does not accept `gs://` paths. We must stage the file to run locally in our Cloud Shell Terminal.
+
 NOTE: Again, replace `$USER_CLEAN` with the value.
 ```
 cd ~
@@ -157,6 +166,7 @@ python /usr/bin/depth_filter.py --minimum_depth=30 H_NJ-HCC1395-HCC1395_BL.vcf H
 ## Output
 
 The file exists within our Docker container in Cloud Shell. Save it to a folder with your username inside the BFX Workshop scratch bucket.
+
 NOTE: One more time, replace `$USER_CLEAN` with the actual value.
 ```
 gsutil cp H_NJ-HCC1395-HCC1395_BL.depth_filter.vcf gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/
@@ -174,6 +184,7 @@ Load the BAM and depth filtered VCF in IGV. Use the [Cloud Bucket browser](https
 # Cleanup
 
 When you're all done, do some cleanup (cloud storage isn't free!) From a Cloud Shell Terminal, remove your filder within the BFX Workshop scratch space:
+
 NOTE: `$USER_CLEAN` should be set in our Cloud Shell Terminal environment.
 ```
 gsutil rm -r gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/
