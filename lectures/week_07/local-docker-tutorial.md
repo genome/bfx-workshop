@@ -4,16 +4,15 @@
 
 NOTE: `$VERSION` is a placeholder, ie. a variable, that we either need to set in a shell, find/replace the text, or type a reasonable value in the appropriate command or file.
 ```
-FROM broadinstitute/gatk:$VERSION
-
+FROM broadinstitute/gatk:4.2.0.0
+# install a package for identity management that's useful on clusters and the cloud
 RUN apt-get update && apt-get install -y libnss-sss && apt-get clean all
 ```
-
 As is, this just adds a package for identity management to the GATK container
 
-2. Update the `Dockerfile` to use the most recent version of GATK. You'll find that info on on the [gatk dockerhub page](https://hub.docker.com/r/broadinstitute/gatk/)
+2. Whoops - looks like this version of GATK is pretty out of date! Update the `Dockerfile` to use the most recent version of GATK. You'll find that info on on the [gatk dockerhub page](https://hub.docker.com/r/broadinstitute/gatk/).  Why might it be a bad idea to just use the `:latest` tag, if we're worried about reproducible workflows?
 
-3. Maybe we also want to do a little filtering of our VCFs.  Add in the `vcfpy` package. Typically, you'd install it using `pip install vcfpy`.
+3. Maybe we also want to do a little filtering of our VCFs without having to fire up another container.  Add the `vcfpy` package to this image. Typically, you'd install it using `pip install vcfpy`.
 
 4. Grab the depth filter script from this location and include it in your image:
 https://raw.githubusercontent.com/genome/docker-depth-filter/master/depth_filter.py
@@ -29,7 +28,7 @@ $ docker build gatk
 ```
 
 The outputs of your steps will scroll by, and if all goes well, you'll see something like:
-NOTE: `$HASH` is another placeholder for the hash returned during your execution.
+NOTE: `$HASH` is a placeholder for the hash returned during your execution.
 ```
 Successfully built $HASH
 ```
@@ -55,7 +54,7 @@ $ docker run -it gatk:$VERSION
 
 ```
 
-Later in the [Cloud Build](cloudbuild-docker-tutorial.md) tutorial you deploy the image to a Google Artifact Registry for use on Google Cloud or other compute clusters.
+If you wanted to use this in places other than your computer (like a compute cluster or the cloud, you'd need to push this somewhere accessible to the world.  On option is to do this by signing up for dockerhub and pushing your images there.  Another option is covered in the [Cloud Build](cloudbuild-docker-tutorial.md) tutorial from this week, where you'll build and deploy an image to a private Google Artifact Registry for use on Google Cloud or other clusters.
 
 # Detecting Germline Variants
 
