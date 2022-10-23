@@ -2,31 +2,34 @@
 
 **1)** Create a directory called `gatk`, and create a file called `Dockerfile` within it. Make the contents look like this:
 
+NOTE: `$VERSION` is a placeholder, ie. a variable, that we either need to set in a shell, find/replace the text, or type a reasonable value in the appropriate command or file.
 ```
-FROM broadinstitute/gatk:4.3.0.0
+FROM broadinstitute/gatk:$VERSION
 
 RUN apt-get update && apt-get install -y libnss-sss && apt-get clean all
 ```
 
 As is, this just adds a package for identity management to the GATK container
 
-**2)** Update the image to use the most recent version of GATK. You'll find that info on on the [gatk dockerhub page](https://hub.docker.com/r/broadinstitute/gatk/)
+**2)** Update the `Dockerfile` to use the most recent version of GATK. You'll find that info on on the [gatk dockerhub page](https://hub.docker.com/r/broadinstitute/gatk/)
 
 **3)** Maybe we also want to do a little filtering of our VCFs.  Add in the `vcfpy` package. Typically, you'd install it using `pip install vcfpy`.
 
-**4)** grab the depth filter script from this location and include it in your image:
+**4)** Grab the depth filter script from this location and include it in your image:
 https://raw.githubusercontent.com/genome/docker-depth-filter/master/depth_filter.py
 
 Can you think of two different ways to include this script?  (hint: RUN/COPY)
 
-**5)** when your Dockerfile is all set up, you're ready to execute the instructions and build your container.  Make sure that a) Docker is running on your computer (you'll see it in the taskbar). b) you're in the directory just above the `gatk` folder, then run :
-
+**5)** When your Dockerfile is all set up, you're ready to execute the instructions and build your container.  Make sure:
+- Docker is running on your computer (you'll see it in the taskbar).
+- You are in the directory just above the `gatk` folder.
+- Run the following:
 ```
 $ docker build gatk
 ```
 
 The outputs of your steps will scroll by, and if all goes well, you'll see something like:
-NOTE: `$HASH` is a placeholder for the hash returned during your execution.
+NOTE: `$HASH` is another placeholder for the hash returned during your execution.
 ```
 Successfully built $HASH
 ```
@@ -41,18 +44,18 @@ Voila! You're running in the enviroment that you just set up.  Play around if yo
 That hash is pretty hard to remember, though. "Tags" allow you to pick a name for your container that's easier to remember
 
 ```
-$ docker build -t gatk:4.3.0.0 gatk
+$ docker build -t gatk:$VERSION gatk
 ```
 You can tag an image with anything, but it's often useful to use the version number.
 
 Now you can run the same image using:
 
 ```
-$ docker run -it gatk:4.3.0.0
+$ docker run -it gatk:$VERSION
 
 ```
 
-See the [Cloud Build](cloudbuild-docker-tutorial.md) tutorial to deploy these images to a Google Artifact Registry for use on Google Cloud or other compute clusters.
+Later in the [Cloud Build](cloudbuild-docker-tutorial.md) tutorial you deploy the image to a Google Artifact Registry for use on Google Cloud or other compute clusters.
 
 # Detecting Germline Variants
 

@@ -1,3 +1,4 @@
+# Cloud Build Docker Tutorial
 1. Cloud Shell Workspace
 
 Log in to a Cloud Shell Terminal: https://shell.cloud.google.com/?show=ide%2Cterminal
@@ -90,7 +91,15 @@ Now, we can use the Docker `run` command to pulll the image from the Artifact Re
 docker run -it us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER_CLEAN-gatk-depth-filter-image:tag1 /bin/bash
 ```
 
-# GATK
+# Germline Variant Detection
+We will repeat the Germline Variant Detection steps from the local tutorial. 
+
+However, this time we will perform all of the steps in the cloud including the execution of the depth_filter.py script and upload of the VCF back to a Cloud Bucket for use with IGV.
+
+Please be sure you are using the Docker container terminal (in Cloud Shell) from Step 5 of the Cloud Build tutorial. If not, load the container using Step 5 in Cloud Shell now.
+
+## GATK
+
 ```
 gatk --list
 ```
@@ -106,10 +115,9 @@ Replace $BAM with the path returned from Cromwell.
 Example: `gs://icts-precision-health-cromwell-wf-exec/alignment_exome.cwl/d153b0da-ef5e-43ba-94dc-69e24311c83f/call-alignment/sequence_to_bqsr.cwl/a1da9f01-7014-411b-baef-e592bcf34cb6/call-index_bam/H_NJ-HCC1395-HCC1395_BL.bam`
 
 ## Output
-
-Replace `$USER_CLEAN` in the path below
-
-Replace `$BAM` with the path returned by cromwell-server. 
+We are now in a Docker container which does not inherit the environment from our Cloud Shell Terminal.
+NOTE: Replace `$USER_CLEAN` in the path below
+NOTE: Replace `$BAM` with the path returned by cromwell-server in the [DNA Alignment Workflow Tutorial](../week_06/bfx_workshop_06_alignment.md). 
 ```
 gatk HaplotypeCaller --input $BAM --output gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/H_NJ-HCC1395-HCC1395_BL.vcf --reference gs://analysis-workflows-example-data/somatic_inputs/hla_and_brca_genes.fa
 ```
@@ -130,7 +138,7 @@ depth_filter.py --minimum_depth=30 H_NJ-HCC1395-HCC1395_BL.vcf H_NJ-HCC1395-HCC1
 ## Output
 
 The file exists within our Docker container in Cloud Shell. Save it to the BFX Workshop scratch bucket.
-NOTE: One more time, replace `$USER_CLEAN` with the value.
+NOTE: One more time, replace `$USER_CLEAN` with the actual value.
 ```
 gsutil cp H_NJ-HCC1395-HCC1395_BL.depth_filter.vcf gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/
 ```
@@ -140,15 +148,13 @@ When finished with GATK and depth_filter.py, exit the Docker container in Cloud 
 exit
 ```
 
+# IGV
 
-6. IGV
+View the BAM and depth filtered VCF in IGV using the BFX Workshop Scratch Cloud Bucket.
 
-View the BAM and depth filtered VCF in IGV.
-
-7. Cleanup
-
-Remove BFX Workshop scratch space:
-NOTE: Replace `$USER_CLEAN` with the value.
+# Cleanup
+From a Cloud Shell Terminal, remove BFX Workshop scratch space:
+NOTE: `$USER_CLEAN` should be set in our Cloud Shell Terminal environment.
 ```
 gsutil rm -r gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/
 ```
