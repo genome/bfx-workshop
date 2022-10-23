@@ -53,11 +53,6 @@ In the Terminal, use `wget` to copy the Python script to our workspace directory
 wget https://raw.githubusercontent.com/genome/docker-depth-filter/master/depth_filter.py
 ```
 
-In the Terminal, add executable permissions to the Python script:
-```
-chmod +x depth_filter.py
-```
-
 3. Dockerfile - the script that docker will use to create the image
 
 Using the Editor, Save a file named `Dockerfile` in the `gatk-depth-filter-docker` workspace containing:
