@@ -13,13 +13,14 @@ gcloud config set project icts-precision-health
 ```
 
 Show the value for the environment variable `$USER`
-
-NOTE: We will use this variable and value later in the tutorial.
 ```
 echo $USER
 ```
 
-
+Set a new "clean" shell variable to remove invalid characters:
+```
+USER_CLEAN=`echo $USER | sed 's/_/-/g'` && export USER_CLEAN
+```
 
 Create a directory and setup a cloudshell workspace using the new directory:
 ```
@@ -53,7 +54,7 @@ chmod +x depth_filter.py
 Using the Cloud Shell Editor, Save a file named `Dockerfile` in the `gatk-depth-filter-docker` workspace containing:
 ```
 FROM broadinstitute/gatk:4.3.0.0
-
+RUN apt-get update && apt-get install -y libnss-sss && apt-get clean all
 RUN pip install vcfpy pysam
 COPY depth_filter.py /usr/bin/depth_filter.py
 ```
@@ -61,13 +62,13 @@ COPY depth_filter.py /usr/bin/depth_filter.py
 4. Cloud Build
 
 Using the Cloud Shell Editor, Save a file named `cloudbuild.yaml` in the `gatk-depth-filter-docker` workspace containing:
-NOTE: REPLACE $USER WITH YOUR WUSTL KEY
+NOTE: REPLACE `$USER_CLEAN` WITH THE VALUE FROM THE ENVIRONMENT VARIALBE, ie. your WUSTL Key with `-` instead of `_` characters.
 ```
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER-gatk-depth-filter-image:tag1', '.' ]
+  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER_CLEAN-gatk-depth-filter-image:tag1', '.' ]
 images:
-- 'us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER-gatk-depth-filter-image:tag1'
+- 'us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER_CLEAN-gatk-depth-filter-image:tag1'
 ```
 
 In a Cloud Shell Terminal, submit the build:
@@ -79,8 +80,14 @@ Use Google Cloud Build to view each build: https://console.cloud.google.com/clou
 
 5. Docker Run
 
+First, from a Cloud Shell Terminal, we need to configure the Artifact Registry credentials for the region Artifacy Registry we intend to pull the Docker image from.
 ```
-docker run -it us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER-gatk-depth-filter-image:tag1
+gcloud auth configure-docker us-central1-docker.pkg.dev
+```
+
+Now, we can use the Docker `run` command to pulll the image from the Artifact Registry and jump into the container once it's running with Docker.
+```
+docker run -it us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER_CLEAN-gatk-depth-filter-image:tag1 /bin/bash
 ```
 
 # GATK
@@ -100,19 +107,20 @@ Example: `gs://icts-precision-health-cromwell-wf-exec/alignment_exome.cwl/d153b0
 
 ## Output
 
-Replace `$USER` in the path below
+Replace `$USER_CLEAN` in the path below
 
 Replace `$BAM` with the path returned by cromwell-server. 
 ```
-gatk HaplotypeCaller --input $BAM --output gs://icts-precision-health-bfx-workshop-scratch/$USER/H_NJ-HCC1395-HCC1395_BL.vcf --reference gs://analysis-workflows-example-data/somatic_inputs/hla_and_brca_genes.fa
+gatk HaplotypeCaller --input $BAM --output gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/H_NJ-HCC1395-HCC1395_BL.vcf --reference gs://analysis-workflows-example-data/somatic_inputs/hla_and_brca_genes.fa
 ```
 # Depth Filter
 
 ## Input
 
 Our Python script does not accept `gs://` paths. We must stage the file to run locally in our Cloud Shell Terminal.
+NOTE: Again, replace `$USER_CLEAN` with the value.
 ```
-gsutil cp gs://icts-precision-health-bfx-workshop-scratch/$USER/H_NJ-HCC1395-HCC1395_BL.vcf .
+gsutil cp gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/H_NJ-HCC1395-HCC1395_BL.vcf .
 ```
 
 ```
@@ -122,8 +130,9 @@ depth_filter.py --minimum_depth=30 H_NJ-HCC1395-HCC1395_BL.vcf H_NJ-HCC1395-HCC1
 ## Output
 
 The file exists within our Docker container in Cloud Shell. Save it to the BFX Workshop scratch bucket.
+NOTE: One more time, replace `$USER_CLEAN` with the value.
 ```
-gsutil cp H_NJ-HCC1395-HCC1395_BL.depth_filter.vcf gs://icts-precision-health-bfx-workshop-scratch/$USER/
+gsutil cp H_NJ-HCC1395-HCC1395_BL.depth_filter.vcf gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/
 ```
 
 When finished with GATK and depth_filter.py, exit the Docker container in Cloud Shell Terminal returning to the original prompt.
@@ -139,6 +148,7 @@ View the BAM and depth filtered VCF in IGV.
 7. Cleanup
 
 Remove BFX Workshop scratch space:
+NOTE: Replace `$USER_CLEAN` with the value.
 ```
-gsutil rm -r gs://icts-precision-health-bfx-workshop-scratch/$USER/
+gsutil rm -r gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/
 ```
