@@ -1,5 +1,8 @@
 # Cloud Build Docker Tutorial
-1. Cloud Shell Workspace
+
+Let's build a docker container, but this time, we'll build it and host it in our cloud space, so that it's accessible when we try to run things there. 
+
+1. Cloud Shell Workspace - First, let's set up our workspace:
 
 Log in to a Cloud Shell Terminal: https://shell.cloud.google.com/?show=ide%2Cterminal
 
@@ -18,7 +21,7 @@ Show the value for the environment variable `$USER`
 echo $USER
 ```
 
-Set a new "clean" shell variable to remove invalid characters:
+Parts of GCP don't allow characters like underscores that are common in wustl user names. Set a new "clean" shell variable to remove invalid characters:
 ```
 USER_CLEAN=`echo $USER | sed 's/_/-/g'` && export USER_CLEAN
 ```
@@ -31,14 +34,14 @@ mkdir gatk-depth-filter-docker
 ```
 cloudshell workspace gatk-depth-filter-docker
 ```
-NOTE: Use the Cloud Shell feature to switch between the Terminal (using `Open Terminal`) and the Dditor (using `Open Editor`) where labeled throughtout the remainder of this tutorial.
+With the buttons at the top right, you can toggle between the Terminal (using `Open/Close Terminal`) and the Editor (using `Open/Close Editor`). You can also leave them both open at the same time.
 
 In a Cloud Shell Terminal, navigate into the newly created directory:
 ```
 cd gatk-depth-filter-docker
 ``` 
 
-2. Python Script
+2. Python Script - we need to pull in the python script that we want to include next to GATK in our container.
 
 Using the Cloud Shell Editor, Save a file named `depth_filter.py` in the `gatk-depth-filter-docker` workspace. 
 
@@ -50,7 +53,9 @@ In a Cloud Shell Terminal, add executable permissions to the Python script:
 chmod +x depth_filter.py
 ```
 
-3. Dockerfile
+(What other terminal commands could you have used to get this file instead of a copy/paste?)
+
+3. Dockerfile - the script that docker will use to create the image
 
 Using the Cloud Shell Editor, Save a file named `Dockerfile` in the `gatk-depth-filter-docker` workspace containing:
 ```
@@ -60,28 +65,35 @@ RUN pip install vcfpy pysam
 COPY depth_filter.py /usr/bin/depth_filter.py
 ```
 
-4. Cloud Build
+Note that this essentially the same thing we used in our local install, except that we added a library needed for the cloud (libnss-sss).  Generally speaking, a Dockerfile should be platform independent, even though the steps around building them might differ slightly.
+
+4. Cloud Build - create the docker image
+
+On our local machines, we could just say "docker build" to build an image, then "docker push" to shoot it up to dockerhub (assuming you've created an account there and are logged in).  Here on GCP, we need to use our own repository/registry, and set up a config file to tell the build process how to push it there for later use.
 
 Using the Cloud Shell Editor, Save a file named `cloudbuild.yaml` in the `gatk-depth-filter-docker` workspace containing:
-NOTE: REPLACE `$USER_CLEAN` WITH THE VALUE FROM THE ENVIRONMENT VARIALBE, ie. your WUSTL Key with `-` instead of `_` characters.
+NOTE: REPLACE `$USER_CLEAN` WITH THE VALUE FROM THE ENVIRONMENT VARIABLE. This should be your WUSTL Key with `-` instead of `_` characters.
 ```
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER_CLEAN-gatk-depth-filter-image:tag1', '.' ]
+  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER_CLEAN-gatk-depth-filter-image:0.1', '.' ]
 images:
-- 'us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER_CLEAN-gatk-depth-filter-image:tag1'
+- 'us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER_CLEAN-gatk-depth-filter-image:0.1'
 ```
+Note that we've given it a unique name ($USER_CLEAN-gatk-depth-filter-image) and a version tag (0.1)
 
 In a Cloud Shell Terminal, submit the build:
 ```
 gcloud builds submit --region=us-central1 --config cloudbuild.yaml
 ```
 
-Use Google Cloud Build to view each build: https://console.cloud.google.com/cloud-build/dashboard;region=us-central1?project=icts-precision-health
+If you hit errors like `ERROR: (gcloud.builds.submit) parsing cloudbuild.yaml: while parsing a block collection`, check that your yaml file's spacing and indentation are exactly the same as the example above. 
 
-5. Docker Run
+You can follow your build's progress on the command line, or by looking at the "History" tab in Google Cloud Build: https://console.cloud.google.com/cloud-build/dashboard;region=us-central1?project=icts-precision-health
 
-First, from a Cloud Shell Terminal, we need to configure the Artifact Registry credentials for the region Artifacy Registry we intend to pull the Docker image from.
+5. Docker Run - actually use your container
+
+First, from a Cloud Shell Terminal, we need to configure the Artifact Registry credentials for the region we intend to pull the Docker image from.
 ```
 gcloud auth configure-docker us-central1-docker.pkg.dev
 ```
