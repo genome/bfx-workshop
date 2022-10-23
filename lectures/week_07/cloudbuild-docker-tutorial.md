@@ -62,7 +62,7 @@ Using the Cloud Shell Editor, Save a file named `Dockerfile` in the `gatk-depth-
 FROM broadinstitute/gatk:4.3.0.0
 # make sure we're set up to securely pull packages from the repo
 RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-# install a necessary package
+# install a package for identity management that's useful on clusters and the cloud
 RUN apt-get update && apt-get install -y libnss-sss && apt-get clean all
 #now, go on with adding the tools/scripts we need
 RUN pip install vcfpy pysam
@@ -102,9 +102,9 @@ First, from a Cloud Shell Terminal, we need to configure the Artifact Registry c
 gcloud auth configure-docker us-central1-docker.pkg.dev
 ```
 
-Now, we can use the Docker `run` command to pulll the image from the Artifact Registry and jump into the container once it's running with Docker.
+Now, we can use the Docker `run` command to pull the image from the Artifact Registry and jump into the container once it's running with Docker.
 ```
-docker run -it us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER_CLEAN-gatk-depth-filter-image:tag1 /bin/bash
+docker run -it us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/$USER_CLEAN-gatk-depth-filter-image:0.1 /bin/bash
 ```
 
 # Germline Variant Detection
@@ -144,6 +144,9 @@ gatk HaplotypeCaller --input $BAM --output gs://icts-precision-health-bfx-worksh
 Our Python script does not accept `gs://` paths. We must stage the file to run locally in our Cloud Shell Terminal.
 NOTE: Again, replace `$USER_CLEAN` with the value.
 ```
+cd ~
+mkdir week_07_gatk
+cd week_07_gatk
 gsutil cp gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/H_NJ-HCC1395-HCC1395_BL.vcf .
 ```
 
@@ -153,7 +156,7 @@ depth_filter.py --minimum_depth=30 H_NJ-HCC1395-HCC1395_BL.vcf H_NJ-HCC1395-HCC1
 
 ## Output
 
-The file exists within our Docker container in Cloud Shell. Save it to the BFX Workshop scratch bucket.
+The file exists within our Docker container in Cloud Shell. Save it to a folder with your username inside the BFX Workshop scratch bucket.
 NOTE: One more time, replace `$USER_CLEAN` with the actual value.
 ```
 gsutil cp H_NJ-HCC1395-HCC1395_BL.depth_filter.vcf gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/
@@ -166,10 +169,11 @@ exit
 
 # IGV
 
-View the BAM and depth filtered VCF in IGV using the BFX Workshop Scratch Cloud Bucket.
+Load the BAM and depth filtered VCF in IGV. Use the [Cloud Bucket browser](https://console.cloud.google.com/storage/browser?project=icts-precision-health) to find your files (or use `gsutil ls`) 
 
 # Cleanup
-From a Cloud Shell Terminal, remove BFX Workshop scratch space:
+
+When you're all done, do some cleanup (cloud storage isn't free!) From a Cloud Shell Terminal, remove your filder within the BFX Workshop scratch space:
 NOTE: `$USER_CLEAN` should be set in our Cloud Shell Terminal environment.
 ```
 gsutil rm -r gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/
