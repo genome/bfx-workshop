@@ -24,33 +24,31 @@ Can you think of two different ways to include this script?  (hint: RUN/COPY)
 - You are in the directory just above the `gatk` folder.
 - Run the following:
 ```
-$ docker build gatk
+docker build gatk
 ```
 
 The outputs of your steps will scroll by, and if all goes well, you'll see something like:
 NOTE: `$HASH` is a placeholder for the hash returned during your execution.
-```
-Successfully built $HASH
-```
+Example: `Successfully built $HASH`
 
 That $HASH value is the id of your container. You can now run your image using that value:
 
 ```
-$ docker run -it $HASH
+docker run -it $HASH
 ```
 Voila! You're running in the enviroment that you just set up.  Play around if you wish, then type `exit` to close the container.
 
 That hash is pretty hard to remember, though. "Tags" allow you to pick a name for your container that's easier to remember
 
 ```
-$ docker build -t gatk:$VERSION gatk
+docker build -t gatk:$VERSION gatk
 ```
 You can tag an image with anything, but it's often useful to use the version number.
 
 Now you can run the same image using:
 
 ```
-$ docker run -it gatk:$VERSION
+docker run -it gatk:$VERSION
 ```
 
 If you wanted to use this in places other than your computer (like a compute cluster or the cloud, you'd need to push this somewhere accessible to the world.  On option is to do this by signing up for dockerhub and pushing your images there.  Another option is covered in the [Cloud Build](cloudbuild-docker-tutorial.md) tutorial from this week, where you'll build and deploy an image to a private Google Artifact Registry for use on Google Cloud or other clusters.
