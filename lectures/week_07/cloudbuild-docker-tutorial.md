@@ -60,12 +60,16 @@ chmod +x depth_filter.py
 Using the Cloud Shell Editor, Save a file named `Dockerfile` in the `gatk-depth-filter-docker` workspace containing:
 ```
 FROM broadinstitute/gatk:4.3.0.0
+# make sure we're set up to securely pull packages from the repo
+RUN curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+# install a necessary package
 RUN apt-get update && apt-get install -y libnss-sss && apt-get clean all
+#now, go on with adding the tools/scripts we need
 RUN pip install vcfpy pysam
 COPY depth_filter.py /usr/bin/depth_filter.py
 ```
 
-Note that this essentially the same thing we used in our local install, except that we added a library needed for the cloud (libnss-sss).  Generally speaking, a Dockerfile should be platform independent, even though the steps around building them might differ slightly.
+Note that this essentially the same thing we used in our local install, except that we added a step needed for securely installing software in the cloud.  Generally speaking, a Dockerfile should be platform independent, even though the steps around building them might differ slightly.
 
 4. Cloud Build - create the docker image
 
