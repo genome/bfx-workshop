@@ -62,17 +62,17 @@ Later in the [Cloud Build](cloudbuild-docker-tutorial.md) tutorial you deploy th
 The starting point for this tutorial is the HCC1395 Normal BAM file that you generated in last week's [DNA Alignment Workflow Tutorial](../week_06/bfx_workshop_06_alignment.md).
 
 1. run GATK HaplotypeCaller on this data, to produce a VCF file of germline variant calls.  Some hints:
- - you only need the three required parameters: `--input`, `--output`, and `--reference`
- - use the latest tagged GATK container from the broadinstitute dockerhub
- - get your reference file from the inputs.yaml that you used last week
+    - you only need the three required parameters: `--input`, `--output`, and `--reference`
+    - use the latest tagged GATK container from the broadinstitute dockerhub
+    - get your reference file from the inputs.yaml that you used last week
 2. Examine the VCF by using `less` or your favorite text editor.
- - Note how each field in the VCF has a definition in the header.
- - Find a variant that has at least 100 reads of support for the variant allele
- - Find a site that is an indel (insertion or deletion)
+    - Note how each field in the VCF has a definition in the header.
+    - Find a variant that has at least 100 reads of support for the variant allele
+    - Find a site that is an indel (insertion or deletion)
 3. Use command line utilities that tells you how many variants were called (don't count the header line!)
 4. Open IGV, make sure you have genome build hg38 set, then load the bam file and the VCF using "Open File".  go to the position of the first variant in your VCF.  Do you have high confidence that this variant is homozygous?
 5. Now jump to the location of your variant with >100 reads of support. Are you more confident in this site or the previous one?
 6. Click on the name of your VCF file in the lefthand panel, then hit "CTRL-F".  Note how it jumps to the next variant in the file.  Jump through until you find the following:
- - an insertion and a deletion. Note how each is represented in IGV.
- - a heterozygous variant
- - a variant that lies in the exon of a gene
+    - an insertion and a deletion. Note how each is represented in IGV.
+    - a heterozygous variant
+    - a variant that lies in the exon of a gene
