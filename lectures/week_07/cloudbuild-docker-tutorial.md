@@ -151,7 +151,7 @@ gsutil cp gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/H_NJ-HCC13
 ```
 
 ```
-depth_filter.py --minimum_depth=30 H_NJ-HCC1395-HCC1395_BL.vcf H_NJ-HCC1395-HCC1395_BL H_NJ-HCC1395-HCC1395_BL.depth_filter.vcf
+python /usr/bin/depth_filter.py --minimum_depth=30 H_NJ-HCC1395-HCC1395_BL.vcf H_NJ-HCC1395-HCC1395_BL H_NJ-HCC1395-HCC1395_BL.depth_filter.vcf
 ```
 
 ## Output
