@@ -41,28 +41,26 @@ cloudshell workspace gatk-depth-filter-docker
 
 With the buttons at the top right, you can toggle between the Terminal (using `Open/Close Terminal`) and the Editor (using `Open/Close Editor`). You can also leave them both open at the same time.
 
-In a Cloud Shell Terminal, navigate into the newly created directory:
+In the Terminal, navigate into the newly created directory:
 ```
 cd gatk-depth-filter-docker
 ``` 
 
 2. Python Script - we need to pull in the python script that we want to include next to GATK in our container.
 
-Using the Cloud Shell Editor, Save a file named `depth_filter.py` in the `gatk-depth-filter-docker` workspace. 
+In the Terminal, use `wget` to copy the Python script to our workspace directory directly from GitHub.  
+```
+wget https://raw.githubusercontent.com/genome/docker-depth-filter/master/depth_filter.py
+```
 
-Copy/Paste the contents of `depth_filter.py` from GitHub:
-https://raw.githubusercontent.com/genome/docker-depth-filter/master/depth_filter.py
-
-In a Cloud Shell Terminal, add executable permissions to the Python script:
+In the Terminal, add executable permissions to the Python script:
 ```
 chmod +x depth_filter.py
 ```
 
-(What other terminal commands could you have used to get this file instead of a copy/paste?)
-
 3. Dockerfile - the script that docker will use to create the image
 
-Using the Cloud Shell Editor, Save a file named `Dockerfile` in the `gatk-depth-filter-docker` workspace containing:
+Using the Editor, Save a file named `Dockerfile` in the `gatk-depth-filter-docker` workspace containing:
 ```
 FROM broadinstitute/gatk:4.3.0.0
 # make sure we're set up to securely pull packages from the repo
@@ -80,7 +78,7 @@ Note that this essentially the same thing we used in our local install, except t
 
 On our local machines, we could just say "docker build" to build an image, then "docker push" to shoot it up to dockerhub (assuming you've created an account there and are logged in).  Here on GCP, we need to use our own repository/registry, and set up a config file to tell the build process how to push it there for later use.
 
-Using the Cloud Shell Editor, Save a file named `cloudbuild.yaml` in the `gatk-depth-filter-docker` workspace containing:
+Using the Editor, Save a file named `cloudbuild.yaml` in the `gatk-depth-filter-docker` workspace containing:
 NOTE: REPLACE `$USER_CLEAN` WITH THE VALUE FROM THE ENVIRONMENT VARIABLE. This should be your WUSTL Key with `-` instead of `_` characters.
 ```
 steps:
@@ -91,7 +89,7 @@ images:
 ```
 Note that we've given it a unique name ($USER_CLEAN-gatk-depth-filter-image) and a version tag (0.1)
 
-In a Cloud Shell Terminal, submit the build:
+In the Terminal, submit the build:
 ```
 gcloud builds submit --region=us-central1 --config cloudbuild.yaml
 ```
@@ -102,7 +100,7 @@ You can follow your build's progress on the command line, or by looking at the "
 
 5. Docker Run - actually use your container
 
-First, from a Cloud Shell Terminal, we need to configure the Artifact Registry credentials for the region we intend to pull the Docker image from.
+First, from a Terminal, we need to configure the Artifact Registry credentials for the region we intend to pull the Docker image from.
 ```
 gcloud auth configure-docker us-central1-docker.pkg.dev
 ```
@@ -185,7 +183,7 @@ Load the BAM and depth filtered VCF in IGV. Use the [Cloud Bucket browser](https
 
 When you're all done, do some cleanup (cloud storage isn't free!) From a Cloud Shell Terminal, remove your filder within the BFX Workshop scratch space:
 
-NOTE: `$USER_CLEAN` should be set in our Cloud Shell Terminal environment.
+NOTE: `$USER_CLEAN` should still be set in our Terminal environment from earlier.
 ```
 gsutil rm -r gs://icts-precision-health-bfx-workshop-scratch/$USER_CLEAN/
 ```
