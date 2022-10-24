@@ -1,6 +1,6 @@
 # Week 7: Docker and Germline Variant Calling
 
-- [Lecture Recording]()
+- [Lecture Recording](https://wustl.box.com/s/xihj6bjbp6wesm4zy80bl9wl0jab5gra)
 - [Slides](bfx_workshop_07_docker_variant_calling_2021.pdf)
 
 # Week 07 Homework
