@@ -1,7 +1,7 @@
 # Week 7: Docker and Germline Variant Calling
 
 - [Lecture Recording]()
-- [Slides]()
+- [Slides](bfx_workshop_07_docker_variant_calling_2021.pdf)
 
 # Week 07 Homework
 - Part 1: Build a docker image and use it to run GATK variant calling on your local machine: [Local Docker Tutorial](local-docker-tutorial.md)
