@@ -97,6 +97,8 @@ rm tmp.mut tmp.var
 
 ### Using a Pipeline
 
+**NOTE - we are debugging a (permissions?) error with this pipeline - check back in a few hours and we should have things straightened out**
+  
 Varscan is a little different because a) it produces separate snp and indel VCFs, which require later merging and b) is very permissive (sensitive), and then relies on a lot of post-caller filtering. Let's use a CWL to streamline some of these steps, specifically the workflow here: [`varscan_pre_and_post_processing.cwl`](https://github.com/genome/analysis-workflows/blob/2022-bfx-workshop/definitions/subworkflows/varscan_pre_and_post_processing.cwl)
 
 - Click around and trace a path through the steps of this workflow to get a quick understand what it's doing under the hood.
