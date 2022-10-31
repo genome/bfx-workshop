@@ -12,10 +12,10 @@ Start by gathering some data. Here is a set of aligned bam files (human build38)
 
 ```
 #normal bam 
-gs://icts-precision-health-bfx-workshop-scratch/inputs/normal.bam
+gs://icts-precision-health-cromwell-wf-exec/inputs/normal.bam
 
 #tumor bam
-gs://icts-precision-health-bfx-workshop-scratch/inputs/tumor.bam
+gs://icts-precision-health-cromwell-wf-exec/inputs/tumor.bam
 
 ```
 
@@ -31,14 +31,14 @@ Fire up a docker image containing mutect and being sure to mount the current dir
 Once there, start by setting some variables so you don't have to type the full gs:// path later:
 
 ```
-NORMAL_BAM=gs://icts-precision-health-bfx-workshop-scratch/inputs/normal.bam
+NORMAL_BAM=gs://icts-precision-health-cromwell-wf-exec/inputs/normal.bam
 ```
 make sure you've stored it correctly by typing `echo $NORMAL_BAM`, Then do the same for the tumor bam using the path above.
 
 Mutect, as part of the GATK suite, is capable of operating directly on files at these gs:// paths.  So now you can run Mutect like this:
 
 ```
-/gatk/gatk Mutect2 --java-options "-Xmx1g" -O mutect.vcf.gz -R gs://icts-precision-health-bfx-workshop-scratch/inputs/chr17.fa -I $TUMOR_BAM -tumor Exome_Tumor -I $NORMAL_BAM -normal Exome_Normal
+/gatk/gatk Mutect2 --java-options "-Xmx1g" -O mutect.vcf.gz -R gs://icts-precision-health-cromwell-wf-exec/inputs/chr17.fa -I $TUMOR_BAM -tumor Exome_Tumor -I $NORMAL_BAM -normal Exome_Normal
 ```
 
 Mutect will display a progress monitor - observe that this takes about 15 minutes to run, even though we're only operating on a very small portion of the genome. That's because of some of the complications that we talked about in this week's lecture - it's more complex that germline calling.
@@ -109,13 +109,13 @@ Now, let's put together an inputs yaml file for this pipeline. Open a text edito
 ```
 reference: 
   class: File
-  path: gs://icts-precision-health-bfx-workshop-scratch/inputs/chr17.fa
+  path: gs://icts-precision-health-cromwell-wf-exec/inputs/chr17.fa
 ref_dict:
   class: File
-  path: gs://icts-precision-health-bfx-workshop-scratch/inputs/chr17.dict
+  path: gs://icts-precision-health-cromwell-wf-exec/inputs/chr17.dict
 ref_fai:
   class: File
-  path: gs://icts-precision-health-bfx-workshop-scratch/inputs/chr17.fa.fai
+  path: gs://icts-precision-health-cromwell-wf-exec/inputs/chr17.fa.fai
 tumor_bam:
   class: File
   path: /path/to/tumor.bam
@@ -141,7 +141,7 @@ Lots of things to talk about here:
 
 1) We need to drop in the actual `gs://` paths to the bam files and bam indices from above (replacing `/path/to/...`). Note that we're passing in the bam's index file twice here: once as `file.bam.bai` and once as `file.bai`. Tools tend to be very opinionated about which one they'll accept, and there's no consensus in the field, sadly. In our pipelines, we often just pass the bam index both ways so we don't have to worry about it.
 
-2) Looking at the inputs that CWL expects, we're missing the `interval_list` parameter.  This is nothing complicated - it's just a list of regions of the genome in which to call variants. In exome data, for example, this would be the genic regions that were targeted. For the purposes of this exercise, we'll use this file of just the exome intervals on chr17 - add it as one of your inputs in this file: `gs://icts-precision-health-bfx-workshop-scratch/inputs/chr17_exome.interval_list`
+2) Looking at the inputs that CWL expects, we're missing the `interval_list` parameter.  This is nothing complicated - it's just a list of regions of the genome in which to call variants. In exome data, for example, this would be the genic regions that were targeted. For the purposes of this exercise, we'll use this file of just the exome intervals on chr17 - add it as one of your inputs in this file: `gs://icts-precision-health-cromwell-wf-exec/inputs/chr17_exome.interval_list`
 
 3) These inputs have defaults that will work for our purposes today.  It's important to be aware of them, though!  For example, `min_var_freq` is set to `0.1`. If you're doing deep sequencing and looking for very rare variants, or have a very impure tumor, this might not be an appropriate setting!
 
@@ -180,7 +180,7 @@ While you're waiting, let's go back to the cloud shell and get on with filtering
 There are multiple layers of filtering in our somatic pipeline, but here we'll just run the first-pass, built-in filter, using the same GATK container as above (`broadinstitute/gatk:4.1.8.1`).  Hint: You can use the up arrow to scroll back through your commands and reuse the previous one.
 
 ```
-/gatk/gatk FilterMutectCalls -R gs://icts-precision-health-bfx-workshop-scratch/inputs/chr17.fa -V mutect.vcf.gz -O mutect.filtered.vcf.gz
+/gatk/gatk FilterMutectCalls -R gs://icts-precision-health-cromwell-wf-exec/inputs/chr17.fa -V mutect.vcf.gz -O mutect.filtered.vcf.gz
 ```
 
 You'll find some detailed stats in `mutect.filtered.vcf.gz.filteringStats.tsv` afterwards.  Now, compare the number of mutations in these VCFs before and after filtering:
