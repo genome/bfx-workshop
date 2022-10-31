@@ -97,7 +97,7 @@ rm tmp.mut tmp.var
 
 ### Using a Pipeline
 
-Varscan is a little different because a) it produces separate snp and indel VCFs, which require later merging and b) is very permissive (sensitive), and then relies on a lot of post-caller filtering. Let's use a CWL to streamline some of these steps, specifically the workflow here: [`varscan_pre_and_post_processing.cwl`](https://github.com/genome/analysis-workflows/blob/master/definitions/subworkflows/varscan_pre_and_post_processing.cwl)
+Varscan is a little different because a) it produces separate snp and indel VCFs, which require later merging and b) is very permissive (sensitive), and then relies on a lot of post-caller filtering. Let's use a CWL to streamline some of these steps, specifically the workflow here: [`varscan_pre_and_post_processing.cwl`](https://github.com/genome/analysis-workflows/blob/2022-bfx-workshop/definitions/subworkflows/varscan_pre_and_post_processing.cwl)
 
 - Click around and trace a path through the steps of this workflow to get a quick understand what it's doing under the hood.
 
@@ -108,6 +108,12 @@ Now, let's put together an inputs yaml file for this pipeline. Open a text edito
 reference: 
   class: File
   path: gs://icts-precision-health-bfx-workshop-scratch/inputs/chr17.fa
+ref_dict:
+  class: File
+  path: gs://icts-precision-health-bfx-workshop-scratch/inputs/chr17.dict
+ref_fai:
+  class: File
+  path: gs://icts-precision-health-bfx-workshop-scratch/inputs/chr17.fa.fai
 tumor_bam:
   class: File
   path: /path/to/tumor.bam
@@ -154,7 +160,7 @@ Then, open a Web Preview using port 8080 using the button at the top of your clo
 
 Expand the first section `Submit a workflow for execution`, click `Try it out`, then fill in the following values:
 
-1) `workflowUrl`, set to `https://raw.githubusercontent.com/genome/analysis-workflows/master/definitions/subworkflows/varscan_pre_and_post_processing.cwl`
+1) `workflowUrl`, set to `https://raw.githubusercontent.com/genome/analysis-workflows/2022-bfx-workshop/definitions/subworkflows/varscan_pre_and_post_processing.cwl`
 
 2) `workflowInputs` upload the yaml file you created and saved on your hard drive.
 
