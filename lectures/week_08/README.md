@@ -3,7 +3,7 @@
 This week, we cover somatic variant calling and some of the characteristics of tumor data that make variant calling harder. The assignment walks through making calls from a paired set of tumor/normal bams.
 
 - [Lecture recording]()
-- [Slides]()
+- [Slides](bfx_workshop_week_08.pdf)
 
 
 ## Assignment
