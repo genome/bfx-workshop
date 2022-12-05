@@ -33,7 +33,7 @@ The last Monday of each month will be a short lecture (15-30m), followed by open
 | November 14, 2022 | [Parsing and Filtering VCFs with Python](lectures/week_10) | John Garza, Susanna Kiwala | 
 | November 21, 2022 | THANKSGIVING BREAK | |
 | November 28, 2022 | [R basics](lectures/week_11) | Chris Miller |
-| December 5, 2022 | Data visualization with R and ggplot2 | Chris Miller |
+| December 5, 2022 | [Data visualization with R and ggplot2](lectures/week_12) | Chris Miller |
 | December 12, 2022 | RNAseq part 1 | | 
 | December 19, 2022 | RNAseq part 2 | |
 | December 26, 2022 | WINTER BREAK | |
