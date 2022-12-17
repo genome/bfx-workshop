@@ -34,12 +34,26 @@ The last Monday of each month will be a short lecture (15-30m), followed by open
 | November 21, 2022 | THANKSGIVING BREAK | |
 | November 28, 2022 | [R basics](lectures/week_11) | Chris Miller |
 | December 5, 2022 | [Data visualization with R and ggplot2](lectures/week_12) | Chris Miller |
-| December 12, 2022 | RNAseq part 1 | | 
-| December 19, 2022 | RNAseq part 2 | |
+| December 19, 2022 | RNAseq part 1 | Kelsey Cotto | 
 | December 26, 2022 | WINTER BREAK | |
 | January 2, 2023 | WINTER BREAK | |
+| January 9, 2023 | RNAseq part 2 | Kelsey Cotto |
+| January 16, 2023 | MLK Day - no meeting | |
+| January 23, 2023 | Epigenomics, ChIP/ATAC/WGBS | Chris Miller |
+| January 30, 2023 | Office Hours | |
+| February 6, 2023 | ctDNA/Error-corrected sequencing | Aadel Chaudhuri |
+| February 13, 2023 | | |
+| February 20, 2023 | President's Day - no meeting | |
+| February 27, 2023 | Office Hours | |
+| March 6, 2023 | Single-cell RNAseq | Jennifer Foltz |
+| March 13, 2023 | Single-cell RNAseq | Jennifer Foltz |
+| March 20, 2023 | Spring Break - no meeting | |
+| March 27, 2023 | Office Hours | |
+| April 3, 2023 | Microbial Genomics/16S seq | Brigida Rusconi |
+| April 10, 2023 | Genome Assembly/Pangenome | Juan Macias |
+| April 17, 2023 | | |
+| April 24, 2023 | Office Hours | |
 
-The spring 2023 schedule will continue on Mondays at 10 am, and will include Single-cell RNAseq, bisulfite sequencing, ChIP-seq/epigenomics, error-corrected sequencing, viral genomics, cloud workflows, and more. Details to be announced shortly.
 
 # Participation
 
