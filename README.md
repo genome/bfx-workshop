@@ -34,7 +34,7 @@ The last Monday of each month will be a short lecture (15-30m), followed by open
 | November 21, 2022 | THANKSGIVING BREAK | |
 | November 28, 2022 | [R basics](lectures/week_11) | Chris Miller |
 | December 5, 2022 | [Data visualization with R and ggplot2](lectures/week_12) | Chris Miller |
-| December 19, 2022 | Data Munging/Cleaning in R | Chris Miller| 
+| December 19, 2022 | [Data Munging/Cleaning in R](lectures/week_13) | Chris Miller| 
 | December 26, 2022 | WINTER BREAK | |
 | January 2, 2023 | WINTER BREAK | |
 | January 9, 2023 | RNAseq part 1 | Kelsey Cotto |
