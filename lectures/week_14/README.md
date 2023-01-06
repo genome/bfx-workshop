@@ -49,6 +49,10 @@ source ~/.bashrc
 ```
 NOTE: Using Docker and the persistent "workspace" volume we attached will allow you to start/stop as you wish. EVERYTIME YOU LOGIN TO THE DOCKER CONTAINER, YOU MUST LOGIN AS THE `ubuntu` USER.
 
+### Known Issues
+1. `geneBody_coverage.py` in the optional RSeQC section is not correctly in the `PATH`. Use the full path to the python script `/home/ubuntu/.local/bin/geneBody_coverage.py`
+
+
 ## Homework Assignments
 1. TODO
 2. TODO
