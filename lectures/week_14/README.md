@@ -88,5 +88,5 @@ To exit the file, type `q`.
 
 
 ## Homework Assignments
-1. Finish module 1 - Inputs
-2. Complete module 2 - Alignment
+1. Finish Module 1 - [Inputs](https://rnabio.org/module-01-inputs/0001/01/01/Intro_to_Inputs/)
+2. Complete Module 2 - [Alignment](https://rnabio.org/module-02-alignment/0002/01/01/Intro_to_Alignment/)
