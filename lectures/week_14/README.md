@@ -58,6 +58,31 @@ source ~/.bashrc
 
 NOTE: Using Docker and the persistent "workspace" volume we attached will allow you to start/stop as you wish. EVERYTIME YOU LOGIN TO THE DOCKER CONTAINER, YOU MUST LOGIN AS THE `ubuntu` USER.
 
+### Environment Setup
+
+Create a working directory and set the ‘RNA_HOME’ environment variable
+```
+mkdir -p ~/workspace/rnaseq/
+
+export RNA_HOME=~/workspace/rnaseq
+```
+
+Make sure whatever the working dir is, that it is set and is valid
+```
+echo $RNA_HOME
+```
+
+Since all the environment variables we set up for the RNA-seq workshop start with ‘RNA’ we can easily view them all by combined use of the env and grep commands as shown below. The env command shows all environment variables currently defined and the grep command identifies string matches.
+```
+env | grep RNA
+```
+
+In order to view the contents of this file, you can type:
+```
+less ~/.bashrc
+```
+To exit the file, type `q`.
+
 ### Known Issues
 1. `geneBody_coverage.py` in the optional RSeQC section is not correctly in the `PATH`. Use the full path to the python script `/home/ubuntu/.local/bin/geneBody_coverage.py`
 
