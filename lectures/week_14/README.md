@@ -1,6 +1,5 @@
 # Week 14
 ## RNAseq Part 1
-TODO: Overview
 
 - [Lecture Recording]()
 
