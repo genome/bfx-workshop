@@ -1,7 +1,7 @@
 # Week 14
 ## RNAseq Part 1
 
-- [Lecture Recording]()
+- [Lecture Recording](https://wustl.box.com/s/g0b3tz7xcb8y0hegy3npxaz0wlkgxd45)
 
 - [Slides](https://github.com/griffithlab/rnabio.org/blob/master/assets/lectures/cshl/2022/full/RNASeq_Module1_IntrotoRNA.pdf)
 
