@@ -18,26 +18,26 @@ https://console.cloud.google.com/artifacts/docker/icts-precision-health/us-centr
 
 1. Use these commands with the Docker client to pull the image. To use these commands, your Docker client must be configured to authenticate with `us-central1-docker.pkg.dev`. If this is the first time that you are pulling an image from `us-central1-docker.pkg.dev` with your Docker client, run the following command on the machine where Docker is installed. You may have to install the [gcloud cli](https://cloud.google.com/sdk/docs/install) if you have not previously.
 
-```
+```bash
 gcloud auth configure-docker us-central1-docker.pkg.dev
 ```
 
 2. This command will pull the image `ami-09b613ae9751a96b1` to your local Docker client with the tag `0.0.1` from the `bfx-workshop-repo` repository in the `icts-precision-health` project:
 
-```
+```bash
 docker pull \
     us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/ami-09b613ae9751a96b1:0.0.1
 ```
 
 3. Setup a local workspace directory for the RNAseq course. If you change the path or command used here in Step 3, please update the path to the workspace directory accordingly in Step 4.
 
-```
+```bash
 mkdir -p ~/rnabio-workspace
 ```
 
 4. Initialize a Docker container using the image we pulled above. `-v` tells Docker to mount our workspace directory within the Docker container as `/workspace` with read-write priveleges. You'll see in the RNAseq course `/workspace` is the base directory for nearly all commands and steps.
 
-```
+```bash
 docker run -v ~/rnabio-workspace:/workspace:rw -it us-central1-docker.pkg.dev/icts-precision-health/bfx-workshop-repo/ami-09b613ae9751a96b1:0.0.1 /bin/bash
 ```
 
@@ -47,13 +47,13 @@ Now that we are running a Docker container, Docker, by default, will log you in 
 
 1. Switch User `su` to the unbutu user:
 
-```
+```bash
 su ubuntu
 ```
 
 2. Source the pre-installed `.bashrc` file to configure your environment to match the RNAseq course:
 
-```
+```bash
 source ~/.bashrc
 ```
 
@@ -64,7 +64,5 @@ NOTE: Using Docker and the persistent "workspace" volume we attached will allow 
 
 
 ## Homework Assignments
-1. TODO
-2. TODO
-3. TODO
-4. TODO
+1. Finish module 1 - Inputs
+2. Complete module 2 - Alignment
