@@ -39,7 +39,7 @@ The last Monday of each month will be a short lecture (15-30m), followed by open
 | January 2, 2023 | WINTER BREAK | |
 | January 9, 2023 | [RNAseq part 1](lectures/week_14) | Kelsy Cotto |
 | January 16, 2023 | MLK Day - no meeting | |
-| January 23, 2023 | RNAseq part 2 | Kelsy Cotto |
+| January 23, 2023 | [RNAseq part 2](lectures/week_15) | Kelsy Cotto |
 | January 30, 2023 | Office Hours | |
 | February 6, 2023 | ctDNA/Error-corrected sequencing | Aadel Chaudhuri |
 | February 13, 2023 | Epigenomics, ChIP/ATAC/WGBS | Chris Miller |
