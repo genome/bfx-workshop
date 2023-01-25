@@ -2,7 +2,7 @@
 
 ## RNAseq Part 2
 
-- [Lecture Recording]()
+- [Lecture Recording](https://wustl.box.com/s/ccxqu5k69gpfr6hnn5w555wtf8ug0t1s)
 
 - [Abundance Estimation Slides](https://github.com/griffithlab/rnabio.org/blob/master/assets/lectures/cshl/2022/mini/RNASeq_MiniLecture_03_01_AbundanceEstimation.pdf)
 - [HTSEQ slides](https://github.com/griffithlab/rnabio.org/blob/master/assets/lectures/cshl/2022/mini/RNASeq_MiniLecture_03_02_HTSEQ.pdf)
