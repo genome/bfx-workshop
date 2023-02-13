@@ -42,7 +42,7 @@ The last Monday of each month will be a short lecture (15-30m), followed by open
 | January 23, 2023 | [RNAseq part 2](lectures/week_15) | Kelsy Cotto |
 | January 30, 2023 | Office Hours | |
 | February 6, 2023 | [ctDNA/Error-corrected sequencing](lectures/week_17) | Aadel Chaudhuri |
-| February 13, 2023 | Epigenomics, ChIP/ATAC/WGBS | Chris Miller |
+| February 13, 2023 | [Epigenomics, ChIP/ATAC/WGBS](lectures/week_18) | Chris Miller |
 | February 20, 2023 | President's Day - no meeting | |
 | February 27, 2023 | Office Hours | |
 | March 6, 2023 | Single-cell RNAseq | Jennifer Foltz |
