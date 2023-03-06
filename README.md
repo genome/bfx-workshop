@@ -45,7 +45,7 @@ The last Monday of each month will be a short lecture (15-30m), followed by open
 | February 13, 2023 | [Epigenomics, ChIP/ATAC/WGBS](lectures/week_18) | Chris Miller |
 | February 20, 2023 | President's Day - no meeting | |
 | February 27, 2023 | Office Hours | |
-| March 6, 2023 | Single-cell RNAseq | Jennifer Foltz |
+| March 6, 2023 | [Single-cell RNAseq](lectures/week_20) | Jennifer Foltz |
 | March 13, 2023 | Single-cell RNAseq | Jennifer Foltz |
 | March 20, 2023 | Spring Break - no meeting | |
 | March 27, 2023 | Office Hours | |
