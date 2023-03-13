@@ -1,0 +1,170 @@
+---
+title: "BFX_2023_Day_2"
+author: "Jennifer Foltz"
+date: "2023-03-13"
+output: html_document
+params:
+  res: 0.8 # where this is the resolution for your clustering
+  PC: 14 # the number of principle components for your analysis
+  nFeatLow: 200 # the lower level of cut-off for your number of features (aka genes in a cell)
+  nFeatHigh: 5000 # the higher level cut-off of genes in a cell
+  MThigh: 15 # the highest percent mitochondrial reads in a cell that you want to allow (to remove dying/dead cells)
+  nCountHigh: 20000 # the high cutoff for total counts in a cell
+  nVar: 2000 # the number of variable genes 
+  GOI: "GZMA" # the gene you are interested in seeing plotted
+  GOI2: "GZMK" # the 2nd gene you are interested in plotted
+  dir: "/Users/jenniferfoltz-stringfellow/Library/CloudStorage/Box-Box/TAF Lab Box Share/DROBO 6 Fehniger Lab/Users/Jennifer Foltz/Presentations/BFX_workshop2023/" # the file path to where your sample is located, and where you would like the output (html) file to be saved, and the seurat file in rds format
+      
+---
+ Once you set the above parameters, click Knit in R studio.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library("Seurat")
+library("ggplot2")
+library("cowplot")
+library("dplyr")
+library("Matrix")
+library("viridis")
+library("harmony")
+library("SeuratWrappers")
+```
+Download dataset from here: https://www.10xgenomics.com/resources/datasets/integrated-gex-totalseq-c-and-bcr-analysis-of-chromium-connect-generated-library-from-10k-human-pbmcs-2-standard
+
+And flex dataset from here: https://www.10xgenomics.com/resources/datasets/10k-human-pbmcs-stained-with-totalseq-b-human-universal-cocktail-singleplex-sample-1-standard
+
+```{r}
+setwd(params$dir)
+
+object.data <- Read10X("5prime/sample_feature_bc_matrix")
+flex.data <- Read10X("Flex/sample_filtered_feature_bc_matrix")
+
+```
+Here you are reading in the output from cellranger. This matrix is all droplets deemed to be cells by cellranger
+If you have questions about functions and the arguments (e.g. the parameters) that can be passed to the function type ?nameoffunction and press enter and the right side of the Rstudio screen will display your options
+```{r}
+object <- CreateSeuratObject(object.data$`Gene Expression`, project = "5prime")
+flex <- CreateSeuratObject(flex.data$`Gene Expression`, project = "flex")
+```
+Here you are creating a Seurat "object" which is the class of data that Seurat works with, feel free to call the project something besides object but it must be in quotes
+```{r}
+object[["percent.mt"]] = PercentageFeatureSet(object, pattern = "^MT-", assay = "RNA")
+flex[["percent.mt"]] = PercentageFeatureSet(flex, pattern = "^MT-", assay = "RNA")
+
+```
+Here you assign this feature/gene set to an assay, this is important for future analysis where you could have multiple analysis such as batch corrected, antibody staining, TCR/BCR sequencing
+```{r, fig.fullwidth=TRUE}
+VlnPlot(object, features = c("percent.mt", "nFeature_RNA", "nCount_RNA"), pt.size = 0.1) 
+VlnPlot(flex, features = c("percent.mt", "nFeature_RNA", "nCount_RNA"), pt.size = 0.1) 
+
+```
+
+
+Here you are plotting a QC plot.
+Now choose the parameters that you think are the best for QC filtering, this will remove those cells from your Seurat object, and replot the qc thresholds
+```{r, fig.width=7.5,fig.fullwidth = TRUE}
+object <- subset(object, nFeature_RNA > params$nFeatLow & percent.mt < params$MThigh & nFeature_RNA < params$nFeatHigh & nCount_RNA < params$nCountHigh) # just examplenumbers, but replace with what you want
+
+VlnPlot(object, features = c("percent.mt", "nFeature_RNA", "nCount_RNA"), pt.size = 0.1) 
+
+```
+
+
+Now, let's normalize the cell for different sequencing depths using lognormalization and find variable features, feel free to play with this setting to see how it changes your data
+```{r}
+object <- merge(x=object, y = flex)
+table(object$orig.ident)
+object <- NormalizeData(object = object, normalization.method = "LogNormalize", scale.factor = 10000, assay = "RNA") 
+
+object <- FindVariableFeatures(object = object, selection.method = 'vst', nfeatures = params$nVar, mean.cutoff = c(0.1, 8), dispersion.cutoff = c(1, Inf), assay = "RNA")
+```
+
+Here you are reading in lists of cell cycle genes in order to regress out the effect of cell cycle which can drive clustering more than cell lineages. With this function you are scoring each cell for cell cycle signatures which you should plot later to visualize whether the regression in scaledata removed these as a driver of clustering which we will discuss further in the future. 
+
+ScaleData by default scales only the variable genes, if you want to scale all of them - e.g. to make a heatmap in Seurat you should set features = rownames(object) within the function
+```{r}
+s.genes <- cc.genes.updated.2019$s.genes 
+g2m.genes <- cc.genes.updated.2019$g2m.genes
+object <- CellCycleScoring(object=object, s.features=s.genes, g2m.features=g2m.genes)  
+object <- ScaleData(object = object, vars.to.regress = c("S.Score","G2M.Score"), verbose = TRUE)
+```
+
+We will talk more about PCA and clustering in the future but for now run this code so you can get a feel for the data
+```{r, fig.width = 7.5, fig.height= 5}
+object <- RunPCA(object, npcs = 50, assay = "RNA")
+object <- JackStraw(object, num.replicate = 100, dims = 30)
+
+object <- ScoreJackStraw(object, dims = 1:30)
+JackStrawPlot(object, dims = 1:30)
+
+ElbowPlot(object)
+```
+
+
+It can be helpful to visualize the genes driving the PCs, and to be sure we are not excluding any populations of cells we are interested in that may account for only a small portion of the variability in the overall dataset (e.g. tumor clone, dendritic cells)
+
+```{r, fig.width = 15, fig.height= 30, fig.fullwidth=TRUE}
+DimHeatmap(object, dims = 1:12, balanced = TRUE, cells = 500)
+
+DimHeatmap(object, dims = 13:24, balanced = TRUE, cells = 500)
+
+DimHeatmap(object, dims = 25:36, balanced = TRUE, cells = 500)
+```
+Based on the above, how many PCs do you think are informative?
+```{r, fig.fullwidth=TRUE}
+object <- FindNeighbors(object, dims = 1:params$PC)
+
+object <- FindClusters(object, resolution = params$res)
+
+object <- RunTSNE(object, dims = 1:params$PC)
+
+DimPlot(object, label = TRUE, group.by = "orig.ident")
+
+object <- RunUMAP(object, dims = 1:params$PC, group.by = "orig.ident")
+
+DimPlot(object, label = TRUE) # plot your UMAP with clusters visualized
+```
+
+Use feature plot here to visualize different markers, I have written some out as example but plot your favorite ones to see where they are located and whether expression is as you would expect
+```{r, fig.width = 15, fig.height= 25, fig.fullwidth=TRUE}
+FeaturePlot(object, features = c("nCount_RNA", "nFeature_RNA", "percent.mt", "GNLY", "TRG-AS1", "JCHAIN", "CD3G", "CD79A", "CD34", "LYZ", "HBA1", "GZMK", "S.Score", "G2M.Score", "PPBP", "MKI67", "CD3D", "TRAC", "CD8A", "CD4", "TRAV1-2"), ncol = 3, cols = c("lightgrey", "red"))
+```
+
+Now, we want to see how PC 1 and PC 2 look across our 2 sequencing technologies
+```{r}
+FeatureScatter(object, feature1 = "PC_1", feature2 = "PC_2", group.by = "orig.ident")
+
+```
+
+Now let's see how it looks batch corrected
+
+```{r, fig.width = 7.5, fig.height= 5}
+object <- RunHarmony(object, c("orig.ident"), reduction.save = "harmony.gex")
+
+ElbowPlot(object, reduction = "harmony.gex")
+
+
+```
+
+```{r, fig.fullwidth=TRUE}
+object <- FindNeighbors(object, dims = 1:params$PC, reduction = "harmony.gex")
+
+object <- FindClusters(object, resolution = params$res)
+
+object <- RunTSNE(object, dims = 1:params$PC, reduction = "harmony.gex")
+
+DimPlot(object, label = TRUE, group.by = "orig.ident", reduction = "tsne")
+
+object <- RunUMAP(object, dims = 1:params$PC, reduction = "harmony.gex")
+
+DimPlot(object, label = TRUE, group.by = "orig.ident")
+DimPlot(object, label = TRUE, group.by = "seurat_clusters")
+
+```
+
+```{r, fig.width = 15, fig.height= 25, fig.fullwidth=TRUE}
+FeaturePlot(object, features = c("nCount_RNA", "nFeature_RNA", "percent.mt", "GNLY", "TRG-AS1", "JCHAIN", "CD3G", "CD79A", "CD34", "LYZ", "HBA1", "GZMK", "S.Score", "G2M.Score", "PPBP", "MKI67", "CD3D", "TRAC", "CD8A", "CD4", "TRAV1-2"), ncol = 3, cols = c("lightgrey", "red"))
+```
