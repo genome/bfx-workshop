@@ -49,7 +49,7 @@ The last Monday of each month will be a short lecture (15-30m), followed by open
 | March 13, 2023 | [Single-cell RNAseq](lectures/week_21) | Jennifer Foltz |
 | March 20, 2023 | Spring Break - no meeting | |
 | March 27, 2023 | [Long Read Sequencing](lectures/week_22)/Office Hours | Chris Miller |
-| April 3, 2023 | Microbial Genomics/16S seq | Brigida Rusconi |
+| April 3, 2023 | [Microbial Genomics/16S seq](lectures/week_23) | Brigida Rusconi |
 | April 10, 2023 | Genome Assembly/Pangenome | Juan Macias |
 | April 17, 2023 | Cloud Computing - getting started | |
 | April 24, 2023 | Office Hours | |
