@@ -20,7 +20,8 @@ rm(x,devlib)
 
 3) if you haven't already, pull down the week 23 data/scripts and unzip them:
 
-```wget -v -O week_23.tar.gz -L https://wustl.box.com/shared/static/8g2spm9vn8agzlkp2h8l4we1ssfj381p
+```
+wget -v -O week_23.tar.gz -L https://wustl.box.com/shared/static/8g2spm9vn8agzlkp2h8l4we1ssfj381p
 tar -xzvf week_23.tar.gz
 ```
 
