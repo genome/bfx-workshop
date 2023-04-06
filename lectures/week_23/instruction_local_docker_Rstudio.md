@@ -8,7 +8,8 @@ To run the docker image with metagenomics packages pre-installed on your laptop/
 
 2) Pull down the week 23 data/scripts and unzip them:
 
-```wget -v -O week_23.tar.gz -L https://wustl.box.com/shared/static/8g2spm9vn8agzlkp2h8l4we1ssfj381p
+```
+wget -v -O week_23.tar.gz -L https://wustl.box.com/shared/static/8g2spm9vn8agzlkp2h8l4we1ssfj381p
 tar -xzvf week_23.tar.gz
 ```
 
