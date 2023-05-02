@@ -52,8 +52,7 @@ The last Monday of each month will be a short lecture (15-30m), followed by open
 | April 3, 2023 | [Microbial Genomics/16S seq](lectures/week_23) | Brigida Rusconi |
 | April 10, 2023 | [Genome Assembly/Pangenome](lectures/week_24) | Juan Macias-Velasco |
 | April 17, 2023 | [Cloud Computing - getting started](lectures/week_25) | Malachi Griffith |
-| April 24, 2023 | Office Hours | |
-| May 1, 2023 | Cloud Analysis platforms - Anvil/Terra/etc | Jason Walker | 
+| April 24, 2023 | Office Hours | | 
 
 
 # Participation
