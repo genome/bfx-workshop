@@ -46,6 +46,20 @@ Time will be built into some sessions for "office hours", where you can get help
 |11/27/24	| Data cleaning and visualization with R and ggplot2 | Chris Miller, PhD |
 |12/04/24	| Long Read Sequencing	| Chris Miller, PhD |
 
+Topics planned for the spring semester include:
+
+- Epigenomics, ChIP/ATAC/WGBS
+- Microbial Genomics
+- Single-cell RNAseq
+- Structural Variant calling and filtering
+- Genome Assembly/Pangenome
+- Genomic Workflows
+- Cloud Computing part 1
+- Cloud Computing part 2
+- Advanced data visualization
+- ctDNA/error-corrected sequencing
+
+
 
 ## Participation
 
