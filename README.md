@@ -32,19 +32,19 @@ Time will be built into some sessions for "office hours", where you can get help
 
 |Date|Topic|Presenter|
 |----|--------|------------|
-|09/11/24	| Workshop Intro and Prerequisite Review | Chris Miller, PhD |
-|09/18/24	| Command line skills, Basic plotting with R |Chris Miller, PhD |
-|09/25/24	| Sequence data generation/manipulation | Chris Miller, PhD |
-|10/2/24	| DNA Alignment Fundamentals | Jason Walker, MS |
-|10/09/24	| NO SEMINAR – FALL BREAK	| |
-|10/16/24	| Sequence data visualization/IGV | Chris Miller, PhD |
-|10/23/24	| RNA sequencing I – Data and Alignment | TBD |
-|10/30/24	| RNA sequencing II – Transcript Quantification | TBD |
-|11/06/24	| RNA sequencing III – Differential Expression | TBD |
-|11/13/24	| Germline and Somatic Variant Calling | Chris Miller, PhD |
-|11/20/24	| Parsing, Filtering, and Annotating VCFs | Susanna Kiwala, John Garza |
-|11/27/24	| Data cleaning and visualization with R and ggplot2 | Chris Miller, PhD |
-|12/04/24	| Long Read Sequencing	| Chris Miller, PhD |
+|09/11/23	| Workshop Intro and Prerequisite Review | Chris Miller, PhD |
+|09/18/23	| Command line skills, Basic plotting with R |Chris Miller, PhD |
+|09/25/23	| Sequence data generation/manipulation | Chris Miller, PhD |
+|10/02/23	| DNA Alignment Fundamentals | Jason Walker, MS |
+|10/09/23	| NO SEMINAR – FALL BREAK	| |
+|10/16/23	| Sequence data visualization/IGV | Chris Miller, PhD |
+|10/23/23	| RNA sequencing I – Data and Alignment | TBD |
+|10/30/23	| RNA sequencing II – Transcript Quantification | TBD |
+|11/06/23	| RNA sequencing III – Differential Expression | TBD |
+|11/13/23	| Germline and Somatic Variant Calling | Chris Miller, PhD |
+|11/20/23	| Parsing, Filtering, and Annotating VCFs | Susanna Kiwala, John Garza |
+|11/27/23	| Data cleaning and visualization with R and ggplot2 | Chris Miller, PhD |
+|12/04/23	| Long Read Sequencing	| Chris Miller, PhD |
 
 Topics planned for the spring semester include:
 
