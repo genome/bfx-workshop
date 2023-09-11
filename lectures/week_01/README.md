@@ -1,6 +1,6 @@
 ## Week 1: Overview and Prerequisites
 - [Lecture Recording](https://wustl.box.com/s/d1g88zomjqw4zvwws4620wvi5gu4bdkw)
-- [Slides](lectures/week_01/bfx_workshop_01_overview.pdf)
+- [Slides](bfx_workshop_01_overview.pdf)
 - [Jupyter Notebook](bfx_workshop_01_overview.ipynb)
 
 ## Homework Assignments
