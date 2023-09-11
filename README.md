@@ -32,7 +32,7 @@ Time will be built into some sessions for "office hours", where you can get help
 
 |Date|Topic|Presenter|
 |----|--------|------------|
-|09/11/23	| Workshop Intro and Prerequisite Review | Chris Miller |
+|09/11/23	| [Workshop Intro and Prerequisite Review](lectures/week_01) | Chris Miller |
 |09/18/23	| Command line skills, Basic plotting with R |Chris Miller |
 |09/25/23	| Sequence data generation/manipulation | Chris Miller |
 |10/2/23	| DNA Alignment Fundamentals | Jason Walker |
