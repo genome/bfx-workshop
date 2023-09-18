@@ -1,5 +1,5 @@
 ## Week 2: 
-- [Lecture Recording]()
+- [Lecture Recording](https://wustl.box.com/s/jdg8wjqyzqaxosd10u36uygl2wj01jf8)
 - [Slides](intro_to_R.pdf)
 
 ## Homework Assignment
