@@ -34,7 +34,7 @@ Time will be built into some sessions for "office hours", where you can get help
 |----|--------|------------|
 |09/11/23	| [Workshop Intro and Prerequisite Review](lectures/week_01) | Chris Miller |
 |09/18/23	| [Command line skills, Basic plotting with R](lectures/week_02) |Chris Miller |
-|09/25/23	| Sequence data generation/manipulation | Chris Miller |
+|09/25/23	| [Sequence data generation/manipulation](lectures/week_03) | Chris Miller |
 |10/2/23	| DNA Alignment Fundamentals | Jason Walker |
 |10/09/23	| NO SEMINAR – FALL BREAK	| |
 |10/16/23	| Sequence data visualization/IGV | Chris Miller |
