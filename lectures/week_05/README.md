@@ -4,7 +4,7 @@ This week, we cover visualizing your sequence data using the Integrated Genome V
 
 - [Lecture Recording](https://wustl.box.com/s/7wq3fugtsj3jn0yaywj5j5mam01zab2r)
 
-- [Slides]()
+- [Slides](week_05_sequence_data_visualization.pdf)
 
 ## Homework Assignment
 
