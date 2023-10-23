@@ -24,7 +24,7 @@ Unwad the inputs tarball with `tar -xvf` and look at the files:
 
 Generate a germline variant VCF from an aligned sequence bam and examine it.
 
-1. Use GATK HaplotypeCaller to produce a VCF file of germline variant calls.  Some hints:
+1. Use GATK HaplotypeCaller to produce a VCF file of germline variant calls (from the normal bam).  Some hints:
 
   - Pull and launch docker images to run your commands, just like you did in previous weeks. 
  - Either using a jupyter notebook or running things from the command line directly is fine! 
@@ -62,7 +62,7 @@ java -jar /opt/varscan/VarScan.jar somatic <(/opt/samtools/bin/samtools mpileup 
 ```
 Note the piping on the command line with `<()` that takes the input of `samtools mpileup` and feeds it to varscan.
 
-- Which caller was faster?  (and remember, we're only calling variants on a very small portion of the genome!!)
+- Which caller was faster?
 
 Both callers typically require post-processing to give only high-quality variant calls, but let's take a quick look at the raw outputs. Mutect outputs a gzipped files, so you'll have to either run `gunzip -c mutect.vcf.gz | less`, or for a shortcut, just use `zless mutect.vcf.gz`
 
@@ -154,15 +154,13 @@ Notice that we have to tell the tool what to do with overlaps. If both VCFs cont
 
 - Take a look through this file - how many variants (if any) were called by both callers?
 
-The differences in variants called reflect different underlying statistical models and assumptions. In this case, it also reflects that we didn't run through the whole Mutect filtering process as implemented in our pipelines. Still, it's important to realize that different callers have different strengths and weaknesses!
-
-
+The differences in variants called reflect different underlying statistical models and assumptions. In this case, it also reflects that we didn't run through the whole Mutect filtering process, and didn't filter the VarScan calls at all! Still, it's important to realize that different callers have different strengths and weaknesses!
 
  
 ## Wrap up
-If all of this seems a little complicated, well, that's because it is!  Variant calling, filtering, and prioritization is a difficult problem, and doubly so for somatic variants - the challenges of purity, ploidy, and heterogeneity that we talked about in the lecture are difficult to overcome.  
+If all of this seems a little complicated, well, that's because it is!  Variant calling, filtering, and prioritization is a difficult problem, and doubly so for somatic variants - the challenges of purity, ploidy, and heterogeneity that we talked about in the lecture are challenging to overcome.  
 
-Thankfully, solid pipelines exist for running variant calling. Pipelines help you in two ways: 1) they encapsulate many of these steps, and just allow you specify needed inputs and say "Go".  2) They benefit from years of fine-tuning from folks who have thought deeply about the problem. Many such pipelines exist, for one example, you could look at the CWL pipelines in the [analysis-workflows](https://github.com/genome/analysis-workflows) repository or comparable WDL workflows in the [analysis-wdls](https://github.com/wustl-oncology/analysis-wdls/issues) repository. You still need to be aware of some of the underlying issues and relevant parameters, as we discussed above, but using a pre-built pipeline can save you a lot of time!
+Thankfully, solid pipelines exist for running variant calling. Pipelines help you in two ways: 1) they encapsulate many of these steps, and allow you specify needed inputs and just say "Go".  2) They benefit from years of fine-tuning from folks who have thought deeply about the problem. Many such pipelines exist: for one example, you could look at the CWL pipelines in the [analysis-workflows](https://github.com/genome/analysis-workflows) repository or comparable WDL workflows in the [analysis-wdls](https://github.com/wustl-oncology/analysis-wdls/issues) repository. You still need to be aware of some of the underlying issues and relevant parameters, as we discussed above, but using a pre-built pipeline can save you a lot of time!
 
 
 ## Visualization (optional)
