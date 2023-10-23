@@ -38,7 +38,7 @@ Time will be built into some sessions for "office hours", where you can get help
 |10/2/23	| [DNA Alignment Fundamentals](lectures/week_04) | Jason Walker |
 |10/09/23	| NO SEMINAR – FALL BREAK	| |
 |10/16/23	| [Sequence data visualization/IGV](lectures/week_05) | Chris Miller |
-|10/23/23	| [Germline and Somatic Variant Calling(lectures/week_06) | Chris Miller |
+|10/23/23	| [Germline and Somatic Variant Calling](lectures/week_06) | Chris Miller |
 |10/30/23	| Parsing, Filtering, and Annotating VCFs | Susanna Kiwala, John Garza |
 |11/06/23	| Data cleaning and visualization with R and ggplot2 | Chris Miller |
 |11/13/23	| NO SEMINAR  | | 
