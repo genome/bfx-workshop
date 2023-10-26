@@ -58,7 +58,7 @@ Use docker to fire up the same image we used for germline calling: `broadinstitu
 Next, let's run Varscan, a different variant caller. For this, we'll use a different docker container: `mgibio/varscan_helper-cwl:1.0.0`  Varscan can be run like this:
 
 ```
-java -jar /opt/varscan/VarScan.jar somatic <(/opt/samtools/bin/samtools mpileup --no-baq -f /data/inputs/chr17.fa /data/inputs/normal.bam /data/inputs/tumor.bam) varscan.vcf --strand-filter 0 --min-coverage 8 --min-var-freq 0.1 --p-value 0.99 --mpileup 1 --output-vcf
+java -jar /opt/varscan/VarScan.jar somatic <(/opt/samtools/bin/samtools mpileup --no-baq -f /data/inputs/chr17.fa /data/inputs/normal.bam /data/inputs/tumor.bam) /data/varscan.vcf --strand-filter 0 --min-coverage 8 --min-var-freq 0.1 --p-value 0.99 --mpileup 1 --output-vcf
 ```
 Note the piping on the command line with `<()` that takes the input of `samtools mpileup` and feeds it to varscan.
 
