@@ -2,7 +2,7 @@
 
 This week's lecture and exercise talks about some fundamentals of data visualization, then dives into creating graphics with the ggplot2 package in R. Follow along with the [R visualization - ggplot2](https://pmbio.org/module-10-appendix/0010/07/01/ggplot2/) page. 
 
-[Lecture Video](https://wustl.box.com/s/mk8dt5sv5xdd49nosagpysmcw15rc3ma)
+[Lecture Video](https://wustl.box.com/s/h9fxv7it7wew527w024wkj3hyjgrx9sk)
 [Lecture Slides](r_dataviz.pdf)
 
 This week's assignment is:
