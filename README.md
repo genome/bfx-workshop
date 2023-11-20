@@ -42,7 +42,7 @@ Time will be built into some sessions for "office hours", where you can get help
 |10/30/23	| [Parsing, Filtering, and Annotating VCFs](lectures/week_07) | Susanna Kiwala, John Garza |
 |11/06/23	| [Data visualization with R and ggplot2](lectures/week_08) | Chris Miller |
 |11/13/23	| NO SEMINAR  | | 
-|11/20/23 | Long Read Sequencing	| Chris Miller |
+|11/20/23 | [Long Read Sequencing](lectures/week_09)	| Chris Miller |
 |11/27/23	| RNA sequencing I – Data and Alignment | My Hoang |
 |12/04/23	| RNA sequencing II – Transcript Quantification | Kartik Singhal |
 |12/11/23	| RNA sequencing III – Differential Expression | Mariam Khanfar |
