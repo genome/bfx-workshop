@@ -106,9 +106,6 @@ Open both the Illumina and ONT bams in IGV, using the Human (hg38) reference gen
 
 4) Now navigate to the DNMT3A gene and zoom in on the 3' (left) end.  What do you notice about the reads and the coverage?  Do these look like full-length transcripts to you?
 
-5) Go to the ensembl website and pull look at the gold transcripts - the most stable, well characterized.  How long is the  the dominant isoform is over 9421 basepairs long.  Mostly because of RNA fragmentation (during extraction and library prepration), very few full-length reads were generated.
+5) Go to the ensembl website and pull look at the gold transcripts for DNMT3A - the most stable, well characterized.  How long is the the dominant isoform? Does that information help explain what you see in IGV?
 
-Compare this to the short read data. Which is more useful in this situation? What kinds of biases does this filtering present when estimating gene expression or transcript abundance?
-
-
-
+Compare this to the short read data. Which is more useful in this situation? Think about what kinds of biases this can introduce when estimating gene expression or transcript abundance.
