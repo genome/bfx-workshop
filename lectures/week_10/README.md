@@ -89,7 +89,12 @@ less ~/.bashrc
 To exit the file, type `q`.
 
 ### Known Issues
-1. `geneBody_coverage.py` in the optional RSeQC section is not correctly in the `PATH`. Use the full path to the python script `/home/ubuntu/.local/bin/geneBody_coverage.py`
+1. When running the check strandedness tool in the Module 1, RNAseq Data section, the docker run command cannot be run from within your rnabio docker session. To run it, we suggest entering the `rnaseq` directory you created at the beginning of the course, and using the following command instead-
+```
+docker run -v $PWD/:/docker_workspace mgibio/checkstrandedness:latest check_strandedness --gtf /docker_workspace/refs/chr22_with_ERCC92_tidy.gtf --transcripts /docker_workspace/refs/chr22_ERCC92_transcripts.clean.fa --reads_1 /docker_workspace/data/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz --reads_2 /docker_workspace/data/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz
+```
+ 
+2. `geneBody_coverage.py` in the optional RSeQC section is not correctly in the `PATH`. Use the full path to the python script `/home/ubuntu/.local/bin/geneBody_coverage.py`
 
 
 ## Homework Assignments
