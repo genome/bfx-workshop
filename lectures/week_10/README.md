@@ -88,14 +88,19 @@ less ~/.bashrc
 ```
 To exit the file, type `q`.
 
-### Known Issues
+### Known Issues/ Discrepancies from RNAbio website
 1. When running the check strandedness tool in the Module 1, RNAseq Data section, the docker run command cannot be run from within your `griffithlab/rnabio:0.0.1` docker session. To run it, we suggest opening a new tab, `cd` into the `rnaseq` directory you created at the beginning of the course, and using the following command instead-
 ```
 docker run -v $PWD/:/docker_workspace mgibio/checkstrandedness:latest check_strandedness --gtf /docker_workspace/refs/chr22_with_ERCC92_tidy.gtf --transcripts /docker_workspace/refs/chr22_ERCC92_transcripts.clean.fa --reads_1 /docker_workspace/data/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz --reads_2 /docker_workspace/data/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz
 ```
 This is the same command as what is mentioned in the course webpage, except that instead of mounting (`-v` flag) `/home/ubuntu/workspace/rnaseq` to the docker image- which is where the data was stored for students running through the course on an AMI, you will instead mount whatever your current directory is. 
+
+2. In various parts of RNAbio, in order to view HTML files, plots, etc., the tutorial suggests going to a public IPV4 address link in your browser window. That is only needed for the AMI. Since you'll be running everything locally, you can just find the files in your Finder window or File Explorer and open them directly!
+
+3. In Pre-alignment QC, an optional QC analysis is running fastp. This software is not available in your docker, so please skip it (the fastqc and multiqc analysis should still work and can be used for analysis).
+Similarly, you can also skip the adapter trim step as the data provided here does not actually need to be adapter trimmed (however the code is available if you need to do it for your own data)
  
-2. `geneBody_coverage.py` in the optional RSeQC section is not correctly in the `PATH`. Use the full path to the python script `/home/ubuntu/.local/bin/geneBody_coverage.py`
+4. `geneBody_coverage.py` in the optional RSeQC section is not correctly in the `PATH`. Use the full path to the python script `/home/ubuntu/.local/bin/geneBody_coverage.py`
 
 
 ## Homework Assignments
