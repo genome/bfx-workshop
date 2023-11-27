@@ -37,7 +37,7 @@ cd bfx-workshop/rnabio-workspace
 docker run -v $PWD/:/workspace:rw -it griffithlab/rnabio:0.0.1 /bin/bash
 ```
 
-5. Use `ls` to see what's in this file, enter the `workspace` folder and then use `ls` again to see what is in the `workspace` folder.
+5. Use `ls` to see what's in your current directory, then enter the `workspace` folder and use `ls` again to see what is in the `workspace` folder.
 
 ```bash
 ls
