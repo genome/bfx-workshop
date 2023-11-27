@@ -43,7 +43,7 @@ Time will be built into some sessions for "office hours", where you can get help
 |11/06/23	| [Data visualization with R and ggplot2](lectures/week_08) | Chris Miller |
 |11/13/23	| NO SEMINAR  | | 
 |11/20/23 | [Long Read Sequencing](lectures/week_09)	| Chris Miller |
-|11/27/23	| RNA sequencing I – Data and Alignment | Kartik Singhal |
+|11/27/23	| [RNA sequencing I – Data and Alignment](lectures/week_10) | Kartik Singhal |
 |12/04/23	| RNA sequencing II – Transcript Quantification | My Hoang |
 |12/11/23	| RNA sequencing III – Differential Expression | Mariam Khanfar |
 
