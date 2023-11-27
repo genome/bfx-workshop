@@ -86,7 +86,7 @@ In order to view the contents of this file, you can type:
 ```
 less ~/.bashrc
 ```
-To exit the file, type `q`.
+To exit `less`, type `q`.
 
 ### Known Issues/ Discrepancies from RNAbio website
 1. When running the check strandedness tool in the Module 1, RNAseq Data section, the docker run command cannot be run from within your `griffithlab/rnabio:0.0.1` docker session. To run it, we suggest opening a new tab, `cd` into the `rnaseq` directory you created at the beginning of the course, and using the following command instead-
