@@ -89,7 +89,7 @@ less ~/.bashrc
 To exit `less`, type `q`.
 
 ### Known Issues/ Discrepancies from RNAbio website
-1. When running the check strandedness tool in the Module 1, RNAseq Data section, the docker run command cannot be run from within your `griffithlab/rnabio:0.0.1` docker session. To run it, we suggest opening a new tab, `cd` into the `rnaseq` directory you created at the beginning of the course, and using the following command instead-
+1. When running the check strandedness tool in the Module 1, RNAseq Data section, the docker run command cannot be run from within your `griffithlab/rnabio:0.0.1` docker session. To run it, we suggest that you open a new terminal window, `cd` into the `rnaseq` directory you created at the beginning of this assignment, and use the following command instead:
 ```
 docker run -v $PWD/:/docker_workspace mgibio/checkstrandedness:latest check_strandedness --gtf /docker_workspace/refs/chr22_with_ERCC92_tidy.gtf --transcripts /docker_workspace/refs/chr22_ERCC92_transcripts.clean.fa --reads_1 /docker_workspace/data/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read1.fastq.gz --reads_2 /docker_workspace/data/HBR_Rep1_ERCC-Mix2_Build37-ErccTranscripts-chr22.read2.fastq.gz
 ```
