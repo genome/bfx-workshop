@@ -2,7 +2,7 @@
 
 ## RNAseq Part 2
 
-- [Lecture Recording](coming soon)
+- [Lecture Recording](https://wustl.box.com/s/br2dug45v4ve5ar8wjeljl7kkf5rua96)
 
 - [Abundance Estimation Slides](https://github.com/genome/bfx-workshop/lectures/week_11/RNASeq_Module3_AbundanceEstimation.pdf)
 
