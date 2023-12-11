@@ -28,8 +28,9 @@ Weekly Workshops on Mondays @ 10am in [Mid-Campus Center](https://maps.google.co
 
 The BFX Workshop schedule, __subject to change__, is available below. Previous years' course materials can still be accessed in the [archive](archive) folder. We *strongly* encourage in-person participation, but a Zoom recording of each Workshop session will also be made available shortly after each session. See [Participation](README.md#Participation) for more details about external or remote participation.
 
-Time will be built into some sessions for "office hours", where you can get help with assignments, or ask for advice about your own projects.
+Time will be set aside before and after lectures for "office hours", where you can get help with assignments, or ask for advice about your own projects.
 
+### Fall 2023
 |Date|Topic|Presenter|
 |----|--------|------------|
 |09/11/23	| [Workshop Intro and Prerequisite Review](lectures/week_01) | Chris Miller |
@@ -47,19 +48,22 @@ Time will be built into some sessions for "office hours", where you can get help
 |12/04/23	| [RNA sequencing II – Transcript Quantification](lectures/week_11) | My Hoang |
 |12/11/23	| [RNA sequencing III – Differential Expression](lectures/week_12) | Mariam Khanfar |
 
-
-Topics planned for the spring semester include:
-
-- Epigenomics, ChIP/ATAC/WGBS
-- Microbial Genomics
-- Single-cell RNAseq
-- Structural Variant calling and filtering
-- Genome Assembly/Pangenome
-- Genomic Workflows
-- Cloud Computing part 1
-- Cloud Computing part 2
-- Advanced data visualization
-- ctDNA/error-corrected sequencing
+### Spring 2024
+|Date|Topic|Presenter|
+|----|--------|------------|
+| 01/22/24 | Course review, prereqs, bedtools | Chris Miller |
+| 01/29/24 | Epigenomics, ChIP/ATAC/WGBS | Chris Miller |
+| 02/12/24 | Single-cell RNAseq part 1 | Jennifer Foltz |
+| 02/19/24 | Single-cell RNAseq part 2 | Jennifer Foltz |
+| 02/26/24 | Advanced data visualization | Chris Miller |
+| 03/4/24 | Genome Assembly, Pangenome | Juan Macias |
+| 03/11/24 | NO SEMINAR - SPRING BREAK | NO SEMINAR - SPRING BREAK |
+| 03/18/24 | ctDNA/error-corrected sequencing | TBD |
+| 03/25/24 | Structural Variant/CN calling and filtering | Chris Miller |
+| 04/1/24 | Microbial Genomics | Brigida Rusconi |
+| 04/8/24 | Genomic Workflows | Jason Walker |
+| 04/15/24 | Cloud Computing part 1 | Malachi Griffith |
+| 04/22/24 | Genomic Medicine | Chris Miller |
 
 
 
