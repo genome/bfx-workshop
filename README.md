@@ -45,7 +45,7 @@ Time will be built into some sessions for "office hours", where you can get help
 |11/20/23 | [Long Read Sequencing](lectures/week_09)	| Chris Miller |
 |11/27/23	| [RNA sequencing I – Data and Alignment](lectures/week_10) | Kartik Singhal |
 |12/04/23	| [RNA sequencing II – Transcript Quantification](lectures/week_11) | My Hoang |
-|12/11/23	| RNA sequencing III – Differential Expression | Mariam Khanfar |
+|12/11/23	| [RNA sequencing III – Differential Expression](lectures/week_12) | Mariam Khanfar |
 
 
 Topics planned for the spring semester include:
