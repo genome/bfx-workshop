@@ -1,10 +1,10 @@
-# Week 11
+# Week 12
 
-## RNAseq Part 2
+## RNAseq Part 3
 
-- [Lecture Recording](https://wustl.box.com/s/br2dug45v4ve5ar8wjeljl7kkf5rua96)
+- [Lecture Recording](coming soon!)
 
-- [Abundance Estimation Slides](https://github.com/genome/bfx-workshop/blob/master/lectures/week_11/RNASeq_Module3_AbundanceEstimation.pdf)
+- [Differential Expression Slides](https://github.com/genome/bfx-workshop/blob/master/lectures/week_12/bfx-RNASeq-Module3-DifferentialExpression.pdf)
 
 - [RNA-seq Bioinformatics](https://rnabio.org/course)
 
@@ -31,9 +31,14 @@ su ubuntu
 ```bash
 source ~/.bashrc
 ```
+3. Set the environment variable
+```bash
+export RNA_HOME=~/workspace/rnaseq
+``` 
 
 NOTE: Using Docker and the persistent "workspace" volume we attached will allow you to start/stop as you wish. EVERYTIME YOU LOGIN TO THE DOCKER CONTAINER, YOU MUST LOGIN AS THE `ubuntu` USER *AND* `source ~/.bashrc` UPON EACH LOGIN.
 
 ## Homework Assignments
 
-1. Complete Module 3 - [Expression](https://rnabio.org/module-03-expression/0003/02/01/Expression/)
+Complete Module 3 - [Differential Expression](https://rnabio.org/module-03-expression/0003/03/01/Differential_Expression/)
+and [DE Visualization](https://rnabio.org/module-03-expression/0003/04/01/DE_Visualization/)
