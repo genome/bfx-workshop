@@ -4,7 +4,7 @@
 
 - [Lecture Recording](coming soon!)
 
-- [Abundance Estimation Slides](https://github.com/genome/bfx-workshop/blob/master/lectures/week_12/bfx-RNASeq-Module3-DifferentialExpression.pdf)
+- [Differential Expression Slides](https://github.com/genome/bfx-workshop/blob/master/lectures/week_12/bfx-RNASeq-Module3-DifferentialExpression.pdf)
 
 - [RNA-seq Bioinformatics](https://rnabio.org/course)
 
