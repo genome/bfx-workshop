@@ -2,7 +2,7 @@
 
 ## RNAseq Part 3
 
-- [Lecture Recording](coming soon!)
+- [Lecture Recording](https://wustl.box.com/s/1frgkv9qa1vc9xcnlqs7w8g6pjbrg3e4)
 
 - [Differential Expression Slides](https://github.com/genome/bfx-workshop/blob/master/lectures/week_12/bfx-RNASeq-Module3-DifferentialExpression.pdf)
 
