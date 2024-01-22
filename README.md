@@ -51,7 +51,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 ### Spring 2024
 |Date|Topic|Presenter|
 |----|--------|------------|
-| 01/22/24 | Course review, prereqs, bedtools | Chris Miller |
+| 01/22/24 | [Course review, prereqs, bedtools](lectures/week_13) | Chris Miller |
 | 01/29/24 | Epigenomics, ChIP/ATAC/WGBS | Chris Miller |
 | 02/12/24 | Advanced data visualization | Chris Miller |
 | 02/12/24 | Single-cell RNAseq part 1 | Jennifer Foltz |
