@@ -2,7 +2,7 @@
 
 - [Lecture Recording]()
 
-- [Lecture Slides]()
+- [Lecture Slides](chipseq_bisulfite.pdf)
 
 
 
