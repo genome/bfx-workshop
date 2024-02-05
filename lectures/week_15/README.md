@@ -6,7 +6,7 @@ This week's lecture and exercise is in two parts:
 
 2) For those of you who missed the ggplot2 tutorial last semester, we're going to revisit that, and talk about the fundamentals of creating plots using the ggplot2 package in R. Follow along with the [R visualization - ggplot2](https://pmbio.org/module-10-appendix/0010/07/01/ggplot2/) page.
 
-[Lecture Video]()
+[Lecture Video](https://wustl.box.com/s/atj2b2kpawyrkuuokfbzbvemlpcas5qs)
 
 
 This week's assignment is:
