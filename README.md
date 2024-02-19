@@ -55,7 +55,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 | 01/29/24 | [Epigenomics, ChIP/ATAC/WGBS](lectures/week_14) | Chris Miller |
 | 02/05/24 | [Data visualization](lectures/week_15) | Chris Miller |
 | 02/12/24 | [Single-cell RNAseq part 1](lectures/week_16) | Jennifer Foltz |
-| 02/19/24 | Single-cell RNAseq part 2 | Jennifer Foltz |
+| 02/19/24 | [Single-cell RNAseq part 2](lectures/week_17) | Jennifer Foltz |
 | 02/26/24 | When Good Experiments Go Bad | Chris Miller |
 | 03/4/24 | Genome Assembly, Pangenome | Juan Macias |
 | 03/11/24 | NO SEMINAR - SPRING BREAK | NO SEMINAR - SPRING BREAK |
