@@ -35,3 +35,11 @@ To run the day 2 [Rmarkdown homework file](BFXworkshop_2024scRNA_Day2.Rmd), the 
 [Direct download link for flex dataset](https://www.10xgenomics.com/resources/datasets/10k-human-pbmcs-stained-with-totalseq-b-human-universal-cocktail-singleplex-sample-1-standard)
 
 Use the #bfx-workshop slack channel to ask questions.
+
+There are several questions in this week's notebook:
+
+- Based on the above, how many PCs do you think are informative?
+- Now we cluster using both the RNA and protein data. How does it compare to RNA only?
+
+For-credit-students: send a brief answer to each question to Jenny as proof of completion.
+
