@@ -11,7 +11,7 @@ Presenter Dr. Jennifer Foltz
 
 ## Homework Assignments
 
-This homework builds on what we learned last week. To complete the homework assignment you will need to have R/Rstudio installed. You will not be able to open the Rmarkdown homeowrk file without this installation. In addition, we recommend installation of the following packages within R/Rstudio to do the homework for week 20 and week 21. (note: RStudio may prompt you to install these when you open the Rmarkdown file) 
+This homework builds on what we learned last week. To complete the homework assignment you will need to have R/Rstudio installed. You will not be able to open the Rmarkdown homeowrk file without this installation. In addition, we recommend installation of the following packages within R/Rstudio to do the homework for week 16 and week 17. (note: RStudio may prompt you to install these when you open the Rmarkdown file) 
 - Seurat
 - RMarkdown
 - ggplot2
