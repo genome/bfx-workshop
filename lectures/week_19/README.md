@@ -55,4 +55,4 @@ Use the `+` and `-` keys to zoom in/out, and the scroll bars in the window or th
 What seems to be happenening at this location? What would this look like in a linear reference, and what effect could this have on alignments at this locus?
 
 ## For-credit student homework:
-Please send in a screenshot from Bandage of the region surrounding node `8737`, as well a brief answer to both questions.
+Please send in a screenshot from Bandage of the region surrounding node `8737`, as well a brief answer to the questions in the [Graph Construction](#graph-construction) and [Visualization](#visualization) sections.
