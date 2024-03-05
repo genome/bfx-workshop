@@ -7,7 +7,7 @@
 
 ### Graph Construction
 
-For this week's exercise, we will be constructing a pangenome graph using the [Minigraph-Cactus pipeline](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/pangenome.md). We will focus on a small region of chromosome 8, with sequences pulled from the T2T-CHM13 linear reference and from the phased assembly of HG00621, one of the individuals used in the Human Pangenome Reference Consortium (HPRC) pangenome reference. 
+For this week's exercise, we will be constructing a pangenome graph using the [Minigraph-Cactus pipeline](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/pangenome.md). We will focus on a small region of chromosome 8, with sequences pulled from the T2T-CHM13 linear reference and from the phased assembly of HG00621, one of the individuals used in the Human Pangenome Reference Consortium (HPRC) pangenome reference.  
 
 First, make a working directory. Download the following 2 files and place them in this directory:
 - [Sequence file](https://storage.googleapis.com/icts-precision-health-bfx-workshop-public-data/pangenome/seqfile)
@@ -25,13 +25,23 @@ Inside the container, start the alignment and graph construction by running the 
 `bash mcgb.sh`
 This will take about 10 minutes to run. After the script completes, you can exit the container. All outputs will be found in the `out` directory. 
 
+#### Script overview
+The provided script launches the minigraph-cactus pipeline. There is a wrapper command that runs the entire pipeline (`cactus-pangenome`), but due to some occasional bugs, we find it more reliable to manually run each command in the pipeline. Let's go through a high-level overview of each step:
+1. `cactus-minigraph`: this uses minigraph to progressively build an initial graph, starting from the reference assembly and aligning large syntenic chunks from each additional assembly in the order provided. The resulting graph will only contain large SVs.
+2. `cactus-graphmap`: this uses minigraph to map each assembly back to the graph constructed in the previous step
+3. `cactus-graphmap-split`: this splits the assemblies and the mappings from the previous step by chromosome. Optional, but reduces memory in the next steps, which is especially important for our purposes, since we are running this exercise locally with limited RAM. 
+4. `cactus-align`: this combines the mappings from the previous step into a multiple genome alignment, then converts that into a cactus graph. See the [Minigraph-Cactus paper](https://doi.org/10.1038/s41587-023-01793-w) for more information about these structures.
+5. `cactus-graphmap-join`: this step runs several post-processing steps, such as normalizing, clipping, and filtering, to produce the final output graph. Also produces indices. The exact processing steps performed and indices generated may be adjusted based on a variety of flags as appropriate for the desired downstream analyses.
+
+Note that some of these commands are themselves wrappers around multiple steps. For more information, see the [Minigraph-Cactus documentation](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/pangenome.md#pipeline) and the [Minigraph-Cactus paper](https://doi.org/10.1038/s41587-023-01793-w).
+
 #### Question
 Look at the outputs in the `out` directory. Which files are indices, and which are graph files? What are some of the differences between the various graph file types?
-- Hint: Try looking for the file extensions in:
-	- [The Minigraph-Cactus documentation](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/pangenome.md#output)
-	- [VG file format list](https://github.com/vgteam/vg/wiki/File-Types)- a fairly comprehensive overview of graph-specific file types
-		- The "File Formats" and "Index Types" pages linked at the top of this page may also be useful- they describe some of the common formats in more detail
-	- Note that `.gz` and `.tgz` extensions mean that a file has been compressed; you can ignore them when trying to determine the type of a file from its extensions
+- Hint: Try looking for the file extensions in: 
+        - [The Minigraph-Cactus documentation](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/pangenome.md#output)
+        - [VG file format list](https://github.com/vgteam/vg/wiki/File-Types)- a fairly comprehensive overview of graph-specific file types
+                - The "File Formats" and "Index Types" pages linked at the top of this page may also be useful- they describe some of the common formats in more detail
+        - Note that `.gz` and `.tgz` extensions mean that a file has been compressed; you can ignore them when trying to determine the type of a file from its extensions
 
 ### Visualization
 Download [Bandage](https://rrwick.github.io/Bandage/).
