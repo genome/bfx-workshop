@@ -59,7 +59,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 | 02/26/24 | [When Good Experiments Go Bad](lectures/week_18) | Chris Miller |
 | 03/4/24 | [Genome Assembly, Pangenome](lectures/week_19) | Juan Macias |
 | 03/11/24 | NO SEMINAR - SPRING BREAK | NO SEMINAR - SPRING BREAK |
-| 03/18/24 | ctDNA/error-corrected sequencing | TBD |
+| 03/18/24 | [ctDNA/error-corrected sequencing](lectures/week_20) | Chris Miller |
 | 03/25/24 | Structural Variant/CN calling and filtering | Chris Miller |
 | 04/1/24 | Microbial Genomics | Brigida Rusconi |
 | 04/8/24 | Genomic Workflows | Jason Walker |
