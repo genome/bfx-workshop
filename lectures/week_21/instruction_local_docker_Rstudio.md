@@ -16,7 +16,7 @@ tar -xzvf week_23.tar.gz
 3) Mount the path where your data is stored when launching your docker image. 
 
 ```
-docker run --rm -p 8888:8787 -v /path/to/week_23:/home/rstudio/data -e PASSWORD=password rstudio_workshop
+docker run --rm -p 8888:8787 -v /path/to/week_23:/home/rstudio/data -e PASSWORD=password brusconi/rstudio_workshop
 ```
 
 4) Now open a browser like chrome and navigate to the URL `http://localhost:8888`
