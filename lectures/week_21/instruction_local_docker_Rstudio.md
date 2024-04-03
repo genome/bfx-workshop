@@ -28,4 +28,4 @@ Username: rstudio
 Password: password
 ```
 
-5) Use RStudio to open the Rmd files from your directory (that you mounted at `/home/rstudio/data` and step through the details.
+5) Use RStudio to open the Rmd files from the scripts subdirectory within your directory (that you mounted at `/home/rstudio/data`) and step through the details. For each of the 3 scripts, make sure to update the paths in the setup section to point to the appropriate locations within the docker image.
