@@ -62,9 +62,10 @@ Time will be set aside before and after lectures for "office hours", where you c
 | 03/18/24 | [ctDNA/error-corrected sequencing](lectures/week_20) | Chris Miller |
 | 03/25/24 | NO SEMINAR |  |
 | 04/1/24 | [Microbial Genomics](lectures/week_21) | Brigida Rusconi |
-| 04/8/24 | Genomic Workflows | Jason Walker |
-| 04/15/24 | Cloud Computing part 1 | Malachi Griffith |
-| 04/22/24 | Genomic Medicine | Chris Miller |
+| 04/8/24 | NO SEMINAR |   |
+| 04/15/24 | [Cloud Computing part 1](lectures/week_22) | Malachi Griffith |
+| 04/22/24 | Genomic Workflows | Jason Walker |
+| 04/29/24 | Genomic Medicine | Chris Miller |
 
 
 
