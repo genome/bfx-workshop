@@ -49,7 +49,7 @@ miniwdl run -o out.json -i SingleSampleQc.downsample.json SingleSampleQc.wdl
 
 The input JSON refers to files hosted in Google Cloud Storage, so `miniwdl` will start by downloading them to your local machine (to the download cache we configured earlier).  This may take awhile depending on the download speeds.  Then it will start running the steps of the workflow.
 
-The terminal will be updated with the progress of the workflow as it goes along.
+The terminal will be updated with the progress of the workflow as it goes along. Depending on availabe resources, it may take 1-2 hours to complete.
 
 By default miniwdl creates a directory in your current directory named with a timestamp, so once the workflow finsihes we can look at what it created:
 
@@ -67,6 +67,10 @@ If something went wrong, the `out.json` file should instead contain an error mes
 
 For usage and install instructions, please see [MultiQC](https://github.com/MultiQC/MultiQC).
 
-Generate an HTML report for the workflow output and submit as homework.
+Generate an HTML report for the workflow output and submit as homework. Based on the report, please answer the following questions:
+
+1. What percentage of reads were aligned?
+2. Roughly what insert size, in base pairs, has the greatest amount of coverage?
+3. Which category did the highest percentage of filtered bases fall in?
 
 
