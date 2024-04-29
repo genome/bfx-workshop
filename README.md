@@ -65,7 +65,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 | 04/8/24 | NO SEMINAR |   |
 | 04/15/24 | [Cloud Computing part 1](lectures/week_22) | Malachi Griffith |
 | 04/22/24 | [Genomic Workflows](lectures/week_23) | Jason Walker |
-| 04/29/24 | Genomic Medicine | Chris Miller |
+| 04/29/24 | [Genomic Medicine](lectures/week_24) | Chris Miller |
 
 
 
