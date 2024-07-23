@@ -20,7 +20,7 @@ By the end of this series, participants will be able to:
 
 ## Registration
 
-You are welcome to join at any time by [registering on this form](https://redcap.link/BFX2023). After registering, you'll be added to an email distribution list and slack channel for the course. See the [Communications](README.md#Communications) section below for details. There is no obligation to complete the course if you register, but it helps us with planning and securing appropriate resources.
+You are welcome to join at any time by [registering on this form](https://redcap.link/BFX2024). After registering, you'll be added to an email distribution list and slack channel for the course. See the [Communications](README.md#Communications) section below for details. There is no obligation to complete the course if you register, but it helps us with planning and securing appropriate resources.
 
 ## Schedule
 
