@@ -1,6 +1,6 @@
 ![](images/banner.jpg)
 
-Welcome to the Fall 2024 and Spring 2025 Bioinformatics (BFX) Workshop! It can be taken for credit under the WUSTL course titles: Applied Bioinformatics for Genomics I and II
+Welcome to the Fall 2024 and Spring 2025 Bioinformatics (BFX) Workshop! It can be taken for credit under the WUSTL course titles: Applied Bioinformatics for Genomics I and II.
 
 
 ## Objectives
@@ -11,7 +11,7 @@ This workshop series is designed for people who want to:
 - use this information to improve and expedite their research
 - expand their knowledge by hearing from experts in other subject areas
 
-By the end of this course, participants will be able to:
+By the end of this series, participants will be able to:
 
 - Demonstrate basic competency in running key bioinformatics software
 - Analyze sequencing data, going from raw data to biologically interpretable results
@@ -32,23 +32,25 @@ Time will be set aside before and after lectures for "office hours", where you c
 
 
 ### Fall 2024
-|Date|Topic|Presenter|
-|----|--------|------------|
-|08/26/24	| Workshop Intro and Prerequisite Review | Chris Miller |
-|09/02/24	| NO SEMINAR - LABOR DAY | | 
-|09/09/24 | Command line skills, Basic plotting with R |Chris Miller |
-|09/16/24	| Sequence data generation/manipulation | Chris Miller |
-|09/23/24 | DNA Alignment Fundamentals | Jason Walker |
-|09/30/24 | Sequence data visualization/IGV | Chris Miller |
-|10/07/24	| NO SEMINAR – FALL BREAK	| |
-|10/14/24	| Data manipulation and basic plotting with R | Chris Miller |
-|10/21/24	| RNA sequencing I – Data and Alignment | Kartik Singhal |
-|10/28/24	| RNA sequencing II – Transcript Quantification | My Hoang |
-|11/04/24	| RNA sequencing III – Differential Expression | Mariam Khanfar |
-|11/11/24	| NO SEMINAR  | | 
-|11/18/24	| Germline and Somatic Variant Calling| Chris Miller |
-|11/25/24	| Parsing, Filtering, and Annotating VCFs | Susanna Kiwala, John Garza |
-|12/02/24	| Troubleshooting bioinformatics, Semester wrap-up | Chris Miller |
+|Date|Time|Topic|Presenter|
+|----|-----|---------|------------|
+|08/26/24	| 10:00am | Workshop Intro + setting up your laptop for bioinformatics | Chris Miller |
+|	| 11:00am | Extra hands-on help with setup | |
+|09/02/24	| | NO SEMINAR - LABOR DAY | | 
+|09/09/24 |	9:00am | Extra hands-on help with setup | |
+|  |	10:00am | Introduction to Unix and the command line |Chris Miller |
+|  |	11:00am | Extra hands-on help with setup/unix |  |
+|09/16/24 | 10:00am | Sequence data generation/manipulation | Chris Miller |
+|09/23/24 | 10:00am | DNA Alignment Fundamentals | Jason Walker |
+|09/30/24 | 10:00am | Sequence data visualization/IGV | Chris Miller |
+|10/07/24 | 10:00am	| NO SEMINAR – FALL BREAK	| | |10/14/24 |	10:00am	| Data manipulation and basic plotting with R | Chris Miller |
+|10/21/24 | 10:00am	| RNA sequencing I – Data and Alignment | Kartik Singhal |
+|10/28/24 |10:00am	| RNA sequencing II – Transcript Quantification | My Hoang |
+|11/04/24 | 10:00am	| RNA sequencing III – Differential Expression | Mariam Khanfar |
+|11/11/24 | 10:00am	| NO SEMINAR  | | 
+|11/18/24 | 10:00am	| Germline and Somatic Variant Calling| Chris Miller |
+|11/25/24 | 10:00am	| Parsing, Filtering, and Annotating VCFs | Susanna Kiwala, John Garza |
+|12/02/24 | 10:00am	| Troubleshooting bioinformatics, Semester wrap-up | Chris Miller |
 
 
 
@@ -57,21 +59,21 @@ Time will be set aside before and after lectures for "office hours", where you c
 
 |Date|Topic|Presenter|
 |----|--------|------------|
-| 01/13/25 | Intro/prereqs, Genomic Intervals and Bedtools| Chris Miller |
-| 01/20/25 | NO SEMINAR - MLK DAY | |
-| 01/27/25 | Epigenomics, ChIP/ATAC/WGBS | Chris Miller |
-| 02/03/25 | Genome Assembly, Pangenome | Juan Macias |
-| 02/10/25 | Data visualization with R and ggplot2 - part 1 | Chris Miller |
-| 02/17/25 | Data visualization with R and ggplot2 - part 2 | Chris Miller |
-| 02/24/25 | Single-cell RNAseq part 1 | Jennifer Foltz |
-| 03/03/25 | Single-cell RNAseq part 2 | Jennifer Foltz |
-| 03/10/25 | NO SEMINAR - SPRING BREAK | |
-| 03/17/25 | Genomic Workflows/Cloud Computing | Jason Walker |
-| 03/24/25 | Microbial Genomics | Brigida Rusconi |
-| 03/31/25 | Machine Learning/AI in Genomics | TBD |
-| 04/07/25 | NO SEMINAR | |
-| 04/14/25 | Long Read Sequencing | Chris Miller |
-| 04/21/25 | Genomic Medicine, course wrap-up | Chris Miller |
+| 01/13/25 | 10:00am | Intro/prereqs, Genomic Intervals and Bedtools| Chris Miller |
+| 01/20/25 |   | NO SEMINAR - MLK DAY | |
+| 01/27/25 | 10:00am | Epigenomics, ChIP/ATAC/WGBS | Chris Miller |
+| 02/03/25 | 10:00am | Genome Assembly, Pangenome | Juan Macias |
+| 02/10/25 | 10:00am | Data visualization with R and ggplot2 - part 1 | Chris Miller |
+| 02/17/25 | 10:00am | Data visualization with R and ggplot2 - part 2 | Chris Miller |
+| 02/24/25 | 10:00am | Single-cell RNAseq part 1 | Jennifer Foltz |
+| 03/03/25 | 10:00am | Single-cell RNAseq part 2 | Jennifer Foltz |
+| 03/10/25 |   | NO SEMINAR - SPRING BREAK | |
+| 03/17/25 | 10:00am | Genomic Workflows/Cloud Computing | Jason Walker |
+| 03/24/25 | 10:00am | Microbial Genomics | Brigida Rusconi |
+| 03/31/25 | 10:00am | Machine Learning/AI in Genomics | TBD |
+| 04/07/25 |   | NO SEMINAR | |
+| 04/14/25 | 10:00am | Long Read Sequencing | Chris Miller |
+| 04/21/25 | 10:00am | Genomic Medicine, course wrap-up | Chris Miller |
 
 
 
