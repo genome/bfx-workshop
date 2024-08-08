@@ -43,7 +43,8 @@ Time will be set aside before and after lectures for "office hours", where you c
 |09/16/24 | 10:00am | Sequence data generation/manipulation | Chris Miller |
 |09/23/24 | 10:00am | DNA Alignment Fundamentals | Jason Walker |
 |09/30/24 | 10:00am | Sequence data visualization/IGV | Chris Miller |
-|10/07/24 | 10:00am	| NO SEMINAR – FALL BREAK	| | |10/14/24 |	10:00am	| Data manipulation and basic plotting with R | Chris Miller |
+|10/07/24 |	10:00am	| Data manipulation and basic plotting with R | Chris Miller |
+|10/14/24 | 10:00am	| NO SEMINAR – FALL BREAK	| |
 |10/21/24 | 10:00am	| RNA sequencing I – Data and Alignment | Kartik Singhal |
 |10/28/24 |10:00am	| RNA sequencing II – Transcript Quantification | My Hoang |
 |11/04/24 | 10:00am	| RNA sequencing III – Differential Expression | Mariam Khanfar |
@@ -79,7 +80,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 
 ## Participation
 
-There are no requirements or qualifications to participate in the BFX Workshop. However, this course ramps up quickly and you will need to have basic competency at the unix command line within the first three weeks. We will cover some of these skills in the first two weeks of class, but if you are new to computational skills, we **strongly recommend** that you work through the command-line exercises listed on the prerequisites page ahead of the course, and/or block out some substantial time to work through them in the first two weeks. 
+There are no requirements or qualifications to participate in the BFX Workshop. However, this course ramps up quickly and you will need to have basic competency at the unix command line within the first three weeks. We will cover some of these skills in the first two weeks of class, but if you are new to working at a terminal, we **strongly recommend** that you work through the command-line exercises listed on the prerequisites page ahead of the course, and/or block out some substantial time to work through them in the first two weeks. 
 
 If you are not taking the course for credit, there are no attendance requirements. There will be "assignments" given during most lectures and we strongly encourage you to complete them in order to get the most out of the course - lectures are no substitute for hands-on learning!
 
@@ -89,13 +90,11 @@ For external or remote asyncronous participation, we suggest watching each weekl
 
 This workshop is a collaborative effort between the Institute for Clinical and Translational Sciences (ICTS), the Department of Medicine, McDonnell Genome Institute (MGI), the Division of Hematology & Oncology, and the Department of Pediatrics with faculty, staff, and student representation and participation from many other Institutes, Departments, and Divisions at Washington University School of Medicine in St. Louis.
 
+The course director is [Chris Miller](https://oncology.wustl.edu/people/christopher-a-miller-phd/) (c.a.miller@wustl dot edu), [Jenny Mckenzie](https://icts-precisionhealth.wustl.edu/people/jenny-mckenzie-phd/) (j.mckenzie@wustl dot edu) is the course coordinator, and John Garza is our dedicated teaching assistant.
+
+Folks giving lectures in this workshop have multi-disciplinary backgrounds in Bioinformatics, Medicine, Computational Biology, Genetics, Computer Science, Oncology, Virology, Information Systems, Microbiology, Immunology, and many other combinations of both Data and Biological Sciences. They share best practices, technology, and knowledge from decades of experience working in these fields of study. Each year, the course evolves to match the rapidly evolving landscape of tools and techniques. 
+
 The organizers would like to specifically thank the [ICTS Precision Health](https://icts-precisionhealth.wustl.edu/) function for supporting the Bioinformatics Workshop. (NIH CTSA Grant Number UL1TR002345)
-
-Folks giving lectures in this workshop have multi-disciplinary backgrounds in Bioinformatics, Medicine, Computational Biology, Genetics, Computer Science, Oncology, Virology, Information Systems, Microbiology, Immunology, and many other combinations of both Data and Biological Sciences.
-
-Our team is committed to sharing best practice methods, technology, and knowledge from decades of experience working in these fields of study. Each year, the course evolves to match the rapidly evolving landscape of tools and techniques. 
-
-New and novel applications of genome sequencing data are constantly evolving and even more so the analytical processes and tools used to translate data to information and knowledge are ever growing and changing. The team leading this workshop will focus on standard best practices while having an eye toward the future direction of each Bioinformatics topic.
 
 ## Communications
 
