@@ -5,9 +5,6 @@
 - [Setup Instructions for Windows](bfx_workshop_01_overview_windows.ipynb)
 
 ## Assignment
-
-Get your computer set up using the above instructions. Post questions to the ICTS Precision Health [#bfx-workshop](https://ictsprecisionhealth.slack.com/archives/C040Q704WS2) Slack channel.
-
 1. Get your computer set up using the instructions above
 2. Working through the [Terminal Basics tutorial](https://sandbox.bio/tutorials?id=terminal-basics) at sandbox.bio
 3. Drop into the [#bfx-workshop](https://ictsprecisionhealth.slack.com/archives/C040Q704WS2) slack channel and introduce yourself!
