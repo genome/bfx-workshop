@@ -34,7 +34,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 ### Fall 2024
 |Date|Time|Topic|Presenter|
 |----|-----|---------|------------|
-|08/26/24	| 10:00am | Intro to Bioinformatics and Computer Setup | Chris Miller |
+|08/26/24	| 10:00am | [Intro to Bioinformatics and Computer Setup](lectures/week_01) | Chris Miller |
 |	| 11:00am | Extra hands-on help with setup | |
 |09/02/24	| | NO SEMINAR - LABOR DAY | | 
 |09/09/24 |	9:00am | Extra hands-on help with setup | |
