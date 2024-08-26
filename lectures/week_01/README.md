@@ -1,5 +1,5 @@
 ## Week 1: Intro to Bioinformatics and Computer Setup
-- Lecture Recording
+- [Lecture Recording](https://wustl.box.com/s/c5tlii9ju944cvmk2mc35wvojvlfedr2)
 - [Slides](bfx_workshop_01_overview.pdf)
 - [Setup Instructions for MacOSX/Linux](bfx_workshop_01_overview.ipynb)
 - [Setup Instructions for Windows](bfx_workshop_01_overview_windows.ipynb)
@@ -12,4 +12,4 @@
 
 
 **Students taking the course for credit**: 
-As proof of completion, submit a screenshot of your terminal window, with a listing ('ls') of the bfx-workshop directory that you successfully cloned during setup.
+As proof of completion, submit a screenshot of your terminal window to Jenny, with a listing ('ls') of the bfx-workshop directory that you successfully cloned during setup.
