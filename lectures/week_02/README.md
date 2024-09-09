@@ -1,7 +1,7 @@
 ## Week 2: Intro to the Unix shell
 
 - Lecture Recording
-- [Slides]()
+- [Slides](bfx_unix_shell_2024.pdf)
 
 ## Homework Assignment
 
