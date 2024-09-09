@@ -1,6 +1,6 @@
 ## Week 2: Intro to the Unix shell
 
-- Lecture Recording
+- [Lecture Recording](https://wustl.box.com/s/1nd67gi5tjg8jf1gq62adbccvhipqy9r)
 - [Slides](bfx_unix_shell_2024.pdf)
 
 ## Homework Assignment
