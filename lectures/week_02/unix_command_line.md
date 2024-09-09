@@ -288,7 +288,8 @@ cut -f 8 tcga.tsv | head
 You can also cut multiple columns using comma separated fields or ranges:
 
 ```
-cut -f 2-4,8,10 tcga.tsv | head```
+cut -f 2-4,8,10 tcga.tsv | head
+```
 
 Now, let's use the commands we learned above to find the most frequently mutated genes in this column.  Note: `uniq -c` returns a count of how many times an item appears in a list:
 
