@@ -5,7 +5,7 @@
 
 ## Homework Assignment
 
-1) Work though the remainder of the [Unix Command-line Basics](bash_intro.md) module.
+1) Work though the remainder of the [Unix Command-line Basics](unix_command_line.md) module.
 
 2) Create a command that will reveal the total number of *ASXL1* mutations in the tcga.tsv file.
 
