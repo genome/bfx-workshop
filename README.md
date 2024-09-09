@@ -38,7 +38,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 |	| 11:00am | Extra hands-on help with setup | |
 |09/02/24	| | NO SEMINAR - LABOR DAY | | 
 |09/09/24 |	9:00am | Extra hands-on help with setup | |
-|  |	10:00am | Introduction to Unix and the command line |Chris Miller |
+|  |	10:00am | [Introduction to Unix and the command line](lectures/week_02) |Chris Miller |
 |  |	11:00am | Extra hands-on help with setup/unix |  |
 |09/16/24 | 10:00am | Sequence data generation/manipulation | Chris Miller |
 |09/23/24 | 10:00am | DNA Alignment Fundamentals | Jason Walker |
