@@ -14,7 +14,7 @@ This is not a step-by-step tutorial, but all of the commands you need to complet
 
 1) Get an interactive job in a docker container. The image [chrisamiller/docker-genomic-analysis](https://registry.hub.docker.com/r/chrisamiller/docker-genomic-analysis/tags) has a lot of common genomics tools installed that may be useful for the first few steps. Be sure to mount your working directory so that you have access inside the container!  (see slides for examples of this)
 
-2) We're going to work with data from a human cell line posted here: [https://storage.googleapis.com/bfx_workshop_tmp/Exome_Tumor.tar](https://storage.googleapis.com/bfx_workshop_tmp/Exome_Tumor.tar) Make a directory called "week2", and download the tarball to your computer using the command line (`wget` or `curl`).
+2) We're going to work with data from a human cell line posted here: [https://storage.googleapis.com/bfx_workshop_tmp/Exome_Tumor.tar](https://storage.googleapis.com/bfx_workshop_tmp/Exome_Tumor.tar) Make a directory called "week03", and download the tarball to your computer using the command line (`wget` or `curl`).
 
 3) Use `tar -xvf` to extract the directory from the tar file, then cd into the directory and look around with `ls`. We're not going to use all of this data in this week's homework. Let's focus on the contents of `Exome_Tumor.tar`. Untar it, then unzip the fastq files.
 
