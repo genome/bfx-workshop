@@ -32,7 +32,7 @@ This is not a step-by-step tutorial, but all of the commands you need to complet
 
 10) Run fastqc on these data:  `fastqc *.fastq.gz`  What is the asterisk doing here?  Note the files it produces - an HTML file, with a user-friendly summary, and a zip file, which you can dig into if you need more details, or wanted to parse the output files by hand.
 
-11) Exit the docker image, browse to the html files, and open them up.  Do you see any potential issues with the sequence data?
+11) Exit the docker image, browse to the html files, and open them up.  Do you see any potential issues with the sequence data?  (Handy shortcuts: If you're using WSL/Ubuntu on a windows machine, try typing `explorer.exe myfile.html` to open the html file in a browser.  Mac users can use `open myfile.html`.)
 
 
 ## For-credit students:
