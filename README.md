@@ -36,17 +36,17 @@ Time will be set aside before and after lectures for "office hours", where you c
 |----|-----|---------|------------|
 |08/26/24	| 10:00am | [Intro to Bioinformatics and Computer Setup](lectures/week_01) | Chris Miller |
 |	| 11:00am | Extra hands-on help with setup | |
-|09/02/24	| | NO SEMINAR - LABOR DAY | | 
+|09/02/24 | | NO SEMINAR - LABOR DAY | | 
 |09/09/24 |	9:00am | Extra hands-on help with setup | |
 |  |	10:00am | [Introduction to Unix and the command line](lectures/week_02) |Chris Miller |
 |  |	11:00am | Extra hands-on help with setup/unix |  |
-|09/16/24 | 10:00am | [Sequence data generation/manipulation](lectures/week_03) | Chris Miller |
-|09/23/24 | 10:00am | [DNA Alignment Fundamentals](lectures/week_04) | Jason Walker |
-|09/30/24 | 10:00am | Sequence data visualization/IGV | Chris Miller |
-|10/07/24 |	10:00am	| Data manipulation and basic plotting with R | Chris Miller |
+|09/16/24 | 10:00am     | [Sequence data generation/manipulation](lectures/week_03) | Chris Miller |
+|09/23/24 | 10:00am     | [DNA Alignment Fundamentals](lectures/week_04) | Jason Walker |
+|09/30/24 | 10:00am     | [Sequence data visualization/IGV](lectures/week_05) | Chris Miller |
+|10/07/24 | 10:00am	| Data manipulation and basic plotting with R | Chris Miller |
 |10/14/24 | 10:00am	| NO SEMINAR – FALL BREAK	| |
 |10/21/24 | 10:00am	| RNA sequencing I – Data and Alignment | Kartik Singhal |
-|10/28/24 |10:00am	| RNA sequencing II – Transcript Quantification | My Hoang |
+|10/28/24 | 10:00am	| RNA sequencing II – Transcript Quantification | My Hoang |
 |11/04/24 | 10:00am	| RNA sequencing III – Differential Expression | Mariam Khanfar |
 |11/11/24 | 10:00am	| NO SEMINAR  | | 
 |11/18/24 | 10:00am	| Germline and Somatic Variant Calling| Chris Miller |
