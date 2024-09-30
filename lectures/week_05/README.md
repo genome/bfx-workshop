@@ -2,7 +2,7 @@
 
 This week, we cover visualizing your sequence data using the Integrated Genome Viewer (IGV)
 
-- Lecture Recording
+- [Lecture Recording](https://wustl.box.com/s/v8a4jffyu34f4drd8zwze2rbwszigijg)
 
 - [Slides](week_05_sequence_data_visualization.pdf)
 
