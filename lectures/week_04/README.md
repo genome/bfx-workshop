@@ -13,3 +13,5 @@ This week, we cover some basics of how sequence is generated, delve into the det
 ## Homework Assignment
 
 Let's play around with some real sequence data and align it, working in a jupyter notebook. (Note that jupyter is only one way to run these commands. The same steps would work directly from a unix terminal prompt). Ask for help in the #bfx_workshop slack channel if you get stuck!
+
+For-credit students: Send Jenny the answers to the question near the end:  `@RG and @PG tags - What do those stand for? How many tag lines do you see?` 
