@@ -43,7 +43,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 |09/16/24 | 10:00am     | [Sequence data generation/manipulation](lectures/week_03) | Chris Miller |
 |09/23/24 | 10:00am     | [DNA Alignment Fundamentals](lectures/week_04) | Jason Walker |
 |09/30/24 | 10:00am     | [Sequence data visualization/IGV](lectures/week_05) | Chris Miller |
-|10/07/24 | 10:00am	| Data manipulation and basic plotting with R | Chris Miller |
+|10/07/24 | 10:00am	| [Data manipulation and basic plotting with R](lectures/week06) | Chris Miller |
 |10/14/24 | 10:00am	| NO SEMINAR – FALL BREAK	| |
 |10/21/24 | 10:00am	| RNA sequencing I – Data and Alignment | Kartik Singhal |
 |10/28/24 | 10:00am	| RNA sequencing II – Transcript Quantification | My Hoang |
