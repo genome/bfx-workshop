@@ -1,6 +1,6 @@
 ## Week 6: Data manipulation and basic plotting with R
 
-- Lecture Recording
+- [Lecture Recording](https://wustl.box.com/s/uqtw3i63h23ga6fcyzghdasnvdq7v06h)
 - [Slides](intro_to_R.pdf)
 
 ## Homework Assignment
