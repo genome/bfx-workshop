@@ -106,3 +106,5 @@ Similarly, you can also skip the adapter trim step as the data provided here doe
 ## Homework Assignments
 1. Finish Module 1 - [Inputs](https://rnabio.org/module-01-inputs/0001/01/01/Intro_to_Inputs/)
 2. Complete Module 2 - [Alignment](https://rnabio.org/module-02-alignment/0002/01/01/Intro_to_Alignment/)
+
+For-credit students: please count the number of lines in the merged UHR.bam and HBR.bam files and send to Jenny along with an IGV screenshot with the UHR and HBR merged BAM files at the following location on chromosome 22: `chr22:40,363,200-40,367,500`. 
