@@ -61,7 +61,7 @@ su ubuntu
 source ~/.bashrc
 ```
 
-NOTE: Using Docker and the persistent "workspace" volume we attached will allow you to start/stop as you wish. EVERYTIME YOU LOGIN TO THE DOCKER CONTAINER, YOU MUST LOGIN AS THE `ubuntu` USER *AND* `source ~/.bashrc` UPON EACH LOGIN.
+NOTE: Using Docker and the persistent "workspace" volume we attached will allow you to start/stop as you wish. EVERY TIME YOU LOGIN TO THE DOCKER CONTAINER, YOU MUST LOGIN AS THE `ubuntu` USER *AND* `source ~/.bashrc` UPON EACH LOGIN.
 
 ### Environment Setup
 
@@ -95,7 +95,7 @@ docker run -v $PWD/:/docker_workspace mgibio/checkstrandedness:latest check_stra
 ```
 This is the same command as what is mentioned in the course webpage, except that instead of mounting (`-v` flag) `/home/ubuntu/workspace/rnaseq` to the docker image- which is where the data was stored for students running through the course on an AMI, you will instead mount whatever your current directory is. Also, this is different from an interactive session where we are able to enter the docker and run commands within it. Instead we are executing our command directly all in that one line of code.
 
-2. In various parts of RNAbio, in order to view HTML files, plots, etc., the tutorial suggests going to a public IPV4 address link in your browser window. That is only needed for the AMI. Since you'll be running everything locally, you can just find the files in your Finder window or File Explorer and open them directly!
+2. In various parts of RNAbio, in order to view HTML files, plots, etc., the tutorial suggests going to a public IPV4 address link in your browser window. That is only needed for the AMI. Since you'll be running everything locally, you can either find the files in your Finder window or File Explorer and open them directly; or even better, use `open [your_file.html]` on Mac and `explorer.exe [your_file.html]` on Windows/WSL2 to open the file in your default browser!
 
 3. In Pre-alignment QC, an optional QC analysis is running fastp. This software is not available in your docker, so please skip it (the fastqc and multiqc analysis should still work and can be used for analysis).
 Similarly, you can also skip the adapter trim step as the data provided here does not actually need to be adapter trimmed (however the code is available if you need to do it for your own data)
