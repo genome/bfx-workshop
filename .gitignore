@@ -1,1 +1,9 @@
 .ipynb_checkpoints
+# Ignore macOS system files
+.DS_Store
+archive/.DS_Store
+lectures/.DS_Store
+
+# Ignore R history files
+.Rhistory
+
