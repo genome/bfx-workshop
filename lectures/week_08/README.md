@@ -36,4 +36,6 @@ NOTE: Using Docker and the persistent "workspace" volume we attached will allow 
 
 ## Homework Assignments
 
-1. Complete Module 3 - [Expression](https://rnabio.org/module-03-expression/0003/02/01/Expression/)
+Complete Expression Analysis portion of Module 3 - [Expression](https://rnabio.org/module-03-expression/0003/02/01/Expression/)
+
+For-credit students: please find the TPM value of gene CECR7 in sample HBR_Rep1 and send that to Jenny. 
