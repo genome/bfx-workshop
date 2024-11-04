@@ -43,4 +43,8 @@ NOTE: Using Docker and the persistent "workspace" volume we attached will allow 
 Start with [Differential Expression Ballgown](https://rnabio.org/module-03-expression/0003/03/01/Differential_Expression-Ballgown/), and continue through the pages, finishing with "DE Visualization Advanced".
 
 ### For-credit students
-Please turn in a screenshot of
+Please provide a screenshot of a volcano plot representing the differentially expressed genes in the dataset. Set the p-value cutoff to 0.01 and the log fold change threshold to 2.  Send it to Jenny, as usual.
+
+
+
+
