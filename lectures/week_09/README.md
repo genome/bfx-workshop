@@ -1,8 +1,8 @@
-# Week 12
+# Week 9
 
 ## RNAseq Part 3
 
-- [Lecture Recording](https://wustl.box.com/s/1frgkv9qa1vc9xcnlqs7w8g6pjbrg3e4)
+- [Lecture Recording](https://wustl.box.com/s/61eqvllpsjil3bh4ei26z8zhob2wojrq)
 
 - [Differential Expression Slides](bfx_RNASeq_Module3_2024.pdf)
 
