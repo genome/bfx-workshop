@@ -4,7 +4,7 @@
 
 - [Lecture Recording](https://wustl.box.com/s/1frgkv9qa1vc9xcnlqs7w8g6pjbrg3e4)
 
-- [Differential Expression Slides](https://github.com/genome/bfx-workshop/blob/master/lectures/week_12/bfx-RNASeq-Module3-DifferentialExpression.pdf)
+- [Differential Expression Slides](bfx-RNASeq-Module3-DifferentialExpression.pdf)
 
 - [RNA-seq Bioinformatics](https://rnabio.org/course)
 
@@ -14,7 +14,7 @@ For the BFX Workshop, we will not be using AWS Cloud. Instead, we will use a Doc
 
 ### Docker Setup
 
-Instructions for setting up docker can be found [here](https://github.com/genome/bfx-workshop/tree/master/lectures/week_10)
+Instructions for setting up docker can be found [here](https://github.com/genome/bfx-workshop/tree/master/archive/v2023-2024/lectures/week_10)
 
 ### User Setup
 
