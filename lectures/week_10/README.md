@@ -2,7 +2,7 @@
 
 This week, we cover how to detect small SNPs/Indels in genomes by using variant calling
 
-- Lecture Recording
+- [Lecture Recording](https://wustl.box.com/s/rxirnv002j0qvvl9tus63cheg0qyetw6)
 
 - [Slides](bfx_workshop_variant_calling.pdf)
 
