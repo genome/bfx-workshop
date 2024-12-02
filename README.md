@@ -51,7 +51,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 |11/11/24 | 10:00am	| [Germline and Somatic Variant Calling](lectures/week_10) | Chris Miller |
 |11/18/24 | 10:00am	| NO SEMINAR  | | 
 |11/25/24 | 10:00am	| [Parsing, Filtering, and Annotating VCFs](lectures/week_11) | John Garza |
-|12/02/24 | 10:00am	| Troubleshooting bioinformatics, Semester wrap-up | Chris Miller |
+|12/02/24 | 10:00am	| [Troubleshooting bioinformatics, Semester wrap-up](lectures/week_12) | Chris Miller |
 
 
 
