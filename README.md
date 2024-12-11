@@ -56,11 +56,10 @@ Time will be set aside before and after lectures for "office hours", where you c
 
 
 ### Spring 2025
-*Spring presenters and topics are still tentative*
 
-|Date|Topic|Presenter|
-|----|--------|------------|
-| 01/13/25 | 10:00am | Intro/prereqs, Genomic Intervals and Bedtools| Chris Miller |
+|Date|Time|Topic|Presenter|
+|----|-----|---------|------------|
+| 01/13/25 | 10:00am | Intro/prereqs, Genomic Intervals and Bedtools | Chris Miller |
 | 01/20/25 |   | NO SEMINAR - MLK DAY | |
 | 01/27/25 | 10:00am | Epigenomics, ChIP/ATAC/WGBS | Chris Miller |
 | 02/03/25 | 10:00am | Genome Assembly, Pangenome | Juan Macias |
@@ -71,11 +70,10 @@ Time will be set aside before and after lectures for "office hours", where you c
 | 03/10/25 |   | NO SEMINAR - SPRING BREAK | |
 | 03/17/25 | 10:00am | Genomic Workflows/Cloud Computing | Jason Walker |
 | 03/24/25 | 10:00am | Microbial Genomics | Brigida Rusconi |
-| 03/31/25 | 10:00am | Machine Learning/AI in Genomics | TBD |
+| 03/31/25 | 10:00am | Machine Learning/AI in Genomics | Obi Griffith |
 | 04/07/25 |   | NO SEMINAR | |
 | 04/14/25 | 10:00am | Long Read Sequencing | Chris Miller |
 | 04/21/25 | 10:00am | Genomic Medicine, course wrap-up | Chris Miller |
-
 
 
 ## Participation
