@@ -59,7 +59,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 
 |Date|Time|Topic|Presenter|
 |----|-----|---------|------------|
-| 01/13/25 | 10:00am | Intro/prereqs, Genomic Intervals and Bedtools | Chris Miller |
+| 01/13/25 | 10:00am | [Intro/prereqs, Genomic Intervals and Bedtools](lectures/week_13) | Chris Miller |
 | 01/20/25 |   | NO SEMINAR - MLK DAY | |
 | 01/27/25 | 10:00am | Epigenomics, ChIP/ATAC/WGBS | Chris Miller |
 | 02/03/25 | 10:00am | Genome Assembly, Pangenome | Juan Macias |
