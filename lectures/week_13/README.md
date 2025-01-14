@@ -2,7 +2,7 @@
 
 ## Genome Arithmetic and bedtools
 
-- Lecture Recording
+- [Lecture Recording](https://wustl.box.com/s/6vgp937ibj3xta60lnkz5bhb4nvelef6)
 
 - Slides
 
