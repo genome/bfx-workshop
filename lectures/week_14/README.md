@@ -1,6 +1,6 @@
 # Week 14 - Epigenomics, ChIP/ATAC/WGBS
 
-- [Lecture Recording](https://wustl.box.com/s/z5bz5ly87llmty8uidj3d9p597o6bl0e)
+- [Lecture Recording](https://wustl.box.com/s/m0raeh2qo5mbx7eti4hmsb3j50zyxklj)
 
 - [Lecture Slides](chipseq_bisulfite.pdf)
 
