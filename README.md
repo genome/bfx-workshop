@@ -88,7 +88,7 @@ For external or remote asyncronous participation, we suggest watching each weekl
 
 This workshop is a collaborative effort between the Institute for Clinical and Translational Sciences (ICTS), the Department of Medicine, McDonnell Genome Institute (MGI), the Division of Hematology & Oncology, and the Department of Pediatrics with faculty, staff, and student representation and participation from many other Institutes, Departments, and Divisions at Washington University School of Medicine in St. Louis.
 
-The course director is [Chris Miller](https://oncology.wustl.edu/people/christopher-a-miller-phd/) (c.a.miller@wustl dot edu), [Jenny Mckenzie](https://icts-precisionhealth.wustl.edu/people/jenny-mckenzie-phd/) (j.mckenzie@wustl dot edu) is the course coordinator, and John Garza is our dedicated teaching assistant.
+The course director is [Chris Miller](https://oncology.wustl.edu/people/christopher-a-miller-phd/) (c.a.miller@wustl dot edu) and John Garza (johnegarza@wustl dot edu) is our dedicated teaching assistant.
 
 Folks giving lectures in this workshop have multi-disciplinary backgrounds in Bioinformatics, Medicine, Computational Biology, Genetics, Computer Science, Oncology, Virology, Information Systems, Microbiology, Immunology, and many other combinations of both Data and Biological Sciences. They share best practices, technology, and knowledge from decades of experience working in these fields of study. Each year, the course evolves to match the rapidly evolving landscape of tools and techniques. 
 
