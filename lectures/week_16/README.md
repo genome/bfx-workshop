@@ -1,4 +1,4 @@
-# Data visualization with R and ggplot2 - part 1
+# Data visualization with R and ggplot2 - part 2
 
 This week, we will continue working together to create graphics using R's ggplot2 library. 
 
