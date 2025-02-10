@@ -98,7 +98,7 @@ The organizers would like to specifically thank the [ICTS Precision Health](http
 
 ### Slack
 
-Announcements, discussion, and homework help all take place primarily via Slack. For members of the ICTS Precision Health Slack organization [ictsprecisionhealth.slack.com](http://ictsprecisionhealth.slack.com), please use the [#bfx-workshop](https://ictsprecisionhealth.slack.com/archives/C040Q704WS2) channel. If you do not have access to the ICTS Precision Health Slack, please email [j.mckenzie at wustl.edu]
+Announcements, discussion, and homework help all take place primarily via Slack. For members of the ICTS Precision Health Slack organization [ictsprecisionhealth.slack.com](http://ictsprecisionhealth.slack.com), please use the [#bfx-workshop](https://ictsprecisionhealth.slack.com/archives/C040Q704WS2) channel. If you do not have access to the ICTS Precision Health Slack, please email [johnegarza at wustl.edu]
 
 ### Email
 
