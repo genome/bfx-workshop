@@ -1,7 +1,7 @@
 # Week 17: Genome and Pangenome Assembly
 
-- [Lecture Recording]()
-- [Slides]()
+- [Lecture Recording](https://wustl.box.com/s/yrb4fzx5oqecyjzvtmccd9en55sqb8th)
+- [Slides](Genome-Pangenome-Assembly.pdf)
 
 ## Exercise
 
