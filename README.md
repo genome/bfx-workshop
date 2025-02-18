@@ -64,7 +64,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 | 01/27/25 | 10:00am | [Epigenomics, ChIP/ATAC/WGBS](lectures/week_14) | Chris Miller |
 | 02/03/25 | 10:00am | [Data visualization with R and ggplot2 - part 1](lectures/week_15) | Chris Miller |
 | 02/10/25 | 10:00am | [Data visualization with R and ggplot2 - part 2](lectures/week_16) | Chris Miller |
-| 02/17/25 | 10:00am | Genome Assembly, Pangenome | Juan Macias |
+| 02/17/25 | 10:00am | [Genome Assembly, Pangenome](lectures/week_17) | Juan Macias |
 | 02/24/25 | 10:00am | Single-cell RNAseq part 1 | Jennifer Foltz |
 | 03/03/25 | 10:00am | Single-cell RNAseq part 2 | Jennifer Foltz |
 | 03/10/25 |   | NO SEMINAR - SPRING BREAK | |
