@@ -4,7 +4,7 @@
 
 - [Lecture Recording](https://wustl.box.com/s/2q7e78fkm9bnz0lv4mnv3q696bd8k0r3)
 
-- [Lecture Slides]()
+- [Lecture Slides](BFXworkshop2025scRNADay1.pdf)
 
 Presenter Dr. Jennifer Foltz
 
