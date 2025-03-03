@@ -1,0 +1,170 @@
+---
+title: "BFX_2025_Day_2"
+author: "Jennifer Foltz"
+date: "2025-02-18"
+output: html_document
+params:
+  res: 0.8 # where this is the resolution for your clustering
+  PC: 14 # the number of principle components for your analysis
+  nFeatLow: 200 # the lower level of cut-off for your number of features (aka genes in a cell)
+  nFeatHigh: 5000 # the higher level cut-off of genes in a cell
+  MThigh: 15 # the highest percent mitochondrial reads in a cell that you want to allow (to remove dying/dead cells)
+  nCountHigh: 20000 # the high cutoff for total counts in a cell
+  nVar: 2000 # the number of variable genes 
+  GOI: "NCAM1" # the gene you are interested in seeing plotted
+  GOI2: "GZMK" # the 2nd gene you are interested in plotted
+  dir: "/Users/Jennifer.a.foltz/Library/CloudStorage/Box-Box/Foltz_Lab/Members/JAF/Presentations/BFX_workshop2025/" # the file path to where your sample is located, and where you would like the output (html) file to be saved, and the seurat file in rds format
+  dataset1: "/Users/Jennifer.a.foltz/Library/CloudStorage/Box-Box/Foltz_Lab/Members/JAF/Presentations/BFX_workshop2025/Day1" # the path to the first dataset from week 1
+
+---
+ Once you set the above parameters, click Knit in R studio.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library("Seurat")
+library("ggplot2")
+library("cowplot")
+library("dplyr")
+library("Matrix")
+library("viridis")
+library("harmony")
+library("SeuratWrappers")
+library("scCustomize")
+```
+Download dataset from here: https://www.10xgenomics.com/resources/datasets/integrated-gex-totalseq-c-and-bcr-analysis-of-chromium-connect-generated-library-from-10k-human-pbmcs-2-standard . Note if you followed week 1, you will already have this dataset.
+
+Here you are reading in the output from cellranger. This matrix is all droplets deemed to be cells by cellranger
+If you have questions about functions and the arguments (e.g. the parameters) that can be passed to the function type ?nameoffunction and press enter and the right side of the Rstudio screen will display your options
+```{r}
+
+object.data <- Read10X(paste0(params$dataset1, "/sample_feature_bc_matrix"))
+
+```
+
+Here you are creating a Seurat "object" which is the class of data that Seurat works with, feel free to call the project something besides "5prime" but it must be in quotes
+```{r}
+object <- CreateSeuratObject(object.data$`Gene Expression`, project = "5prime")
+```
+
+Here you assign this feature/gene set to an assay, this is important for future analysis where you could have multiple analysis such as batch corrected, antibody staining, TCR/BCR sequencing
+```{r}
+object[["protein"]] <- CreateAssayObject(object.data$`Antibody Capture`)
+```
+
+```{r}
+object[["percent.mt"]] = PercentageFeatureSet(object, pattern = "^MT-", assay = "RNA")
+
+```
+
+```{r, fig.fullwidth=TRUE}
+VlnPlot(object, features = c("percent.mt", "nFeature_RNA", "nCount_RNA"), pt.size = 0.1) 
+
+```
+
+Here you are plotting a QC plot.
+Now choose the parameters that you think are the best for QC filtering, this will remove those cells from your Seurat object, and replot the qc thresholds. If I use Seurat, I have to iteratively plot with different thresholds to determine which thresholds to choose, scCustomize allows me to see where my proposed cut-offs are located. 
+```{r, fig.width=7.5,fig.fullwidth = TRUE}
+QC_Plots_Mito(object, high_cutoff = params$MThigh, mito_name = "percent.mt")
+object <- subset(object, nFeature_RNA > params$nFeatLow & percent.mt < params$MThigh & nFeature_RNA < params$nFeatHigh & nCount_RNA < params$nCountHigh) # just examplenumbers, but replace with what you want
+
+VlnPlot(object, features = c("percent.mt", "nFeature_RNA", "nCount_RNA"), pt.size = 0.1) 
+
+```
+
+
+Now, let's normalize the cell for different sequencing depths using lognormalization and find variable features, feel free to play with this setting to see how it changes your data
+```{r}
+
+table(object$orig.ident)
+object <- NormalizeData(object = object, normalization.method = "LogNormalize", scale.factor = 10000, assay = "RNA") 
+
+object <- FindVariableFeatures(object = object, selection.method = 'vst', nfeatures = params$nVar, mean.cutoff = c(0.1, 8), dispersion.cutoff = c(1, Inf), assay = "RNA")
+```
+
+Here you are reading in lists of cell cycle genes in order to regress out the effect of cell cycle which can drive clustering more than cell lineages. With this function you are scoring each cell for cell cycle signatures which you should plot later to visualize whether the regression in scaledata removed these as a driver of clustering which we will discuss further in the future. 
+
+ScaleData by default scales only the variable genes, if you want to scale all of them - e.g. to make a heatmap in Seurat you should set features = rownames(object) within the function
+```{r}
+s.genes <- cc.genes.updated.2019$s.genes 
+g2m.genes <- cc.genes.updated.2019$g2m.genes
+object <- CellCycleScoring(object=object, s.features=s.genes, g2m.features=g2m.genes)  
+object <- ScaleData(object = object, vars.to.regress = c("S.Score","G2M.Score"), verbose = TRUE)
+```
+
+```{r, fig.width = 7.5, fig.height= 5}
+object <- RunPCA(object, npcs = 50, assay = "RNA")
+object <- JackStraw(object, num.replicate = 100, dims = 30)
+# 
+object <- ScoreJackStraw(object, dims = 1:30)
+JackStrawPlot(object, dims = 1:30)
+
+ElbowPlot(object)
+```
+
+
+It can be helpful to visualize the genes driving the PCs, and to be sure we are not excluding any populations of cells we are interested in that may account for only a small portion of the variability in the overall dataset (e.g. tumor clone, dendritic cells)
+
+```{r, fig.width = 15, fig.height= 30, fig.fullwidth=TRUE}
+DimHeatmap(object, dims = 1:12, balanced = TRUE, cells = 500)
+
+DimHeatmap(object, dims = 13:24, balanced = TRUE, cells = 500)
+
+DimHeatmap(object, dims = 25:36, balanced = TRUE, cells = 500)
+```
+Based on the above, how many PCs do you think are informative?
+
+Now, we are going to perform clustering and dimensional reduction, comparing tSNE vs. UMAP using default Seurat
+
+
+```{r, fig.fullwidth=TRUE}
+object <- FindNeighbors(object, dims = 1:params$PC)
+
+object <- FindClusters(object, resolution = params$res)
+
+object <- RunTSNE(object, dims = 1:params$PC)
+
+DimPlot(object, label = TRUE)
+
+object <- RunUMAP(object, dims = 1:params$PC)
+
+DimPlot(object, label = TRUE) # plot your UMAP with clusters visualized
+```
+Seurat visualizes are based on ggplot2 and are pretty basic, some of the colors for clusters are very similar making it difficult to see clusters. To overcome this problem, we could do this manually or we can use scCustomize which takes care of this for us:
+
+```{r, fig.fullwidth=TRUE}
+DimPlot_scCustom(object, label = TRUE, figure_plot = TRUE)
+```
+
+
+
+Let's say that I am really interested in cluster 1 for my research, and I want to highlight this cluster on the UMAP
+
+```{r, fig.fullwidth=TRUE}
+Cluster_Highlight_Plot(object, cluster_name = "1", highlight_color = "purple2", background_color = "black")
+
+```
+Let's look at differentially expressed genes in our dataset. It is often helpful to know how many cells express a given gene in one cluster compared to another cluster, and we can accomplish this like this:
+```{r, fig.fullwidth=TRUE}
+markers <- FindAllMarkers(object, min.pct = 0.25, logfc.threshold = 0.25, only.pos = TRUE, return.thresh = 0.05) %>% Add_Pct_Diff()
+markers <- markers[markers$p_val_adj < 0.05,]
+
+df = Extract_Top_Markers(markers, num_genes = 2, rank_by = "avg_log2FC", data_frame = TRUE)
+head(df, n= 10)
+forplot = Extract_Top_Markers(markers, num_genes = 2, rank_by = "avg_log2FC", data_frame = FALSE)
+Iterate_FeaturePlot_scCustom(object, features = forplot, single_pdf = TRUE, file_name = "mymarkers", features_per_page = 4)
+
+Proportion_Plot(object, plot_type = "pie")
+```
+
+
+
+Use feature plot here to visualize different markers, I have written some out as example but plot your favorite ones to see where they are located and whether expression is as you would expect
+```{r, fig.width = 15, fig.height= 25, fig.fullwidth=TRUE}
+
+FeaturePlot(object, features = c("CD3D", "CD79A", "NCAM1", "CD4", "CD8A", "LYZ", "CD34", "FCGR3A"), ncol = 4)
+
+FeaturePlot_scCustom(object, features = c("CD3D", "CD79A", "NCAM1", "CD4", "CD8A", "LYZ", "CD34", "FCGR3A"), num_columns = 4)
+```
