@@ -68,7 +68,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 | 02/24/25 | 10:00am | [Single-cell RNAseq part 1](lectures/week_18) | Jennifer Foltz |
 | 03/03/25 | 10:00am | [Single-cell RNAseq part 2](lectures/week_19) | Jennifer Foltz |
 | 03/10/25 |   | NO SEMINAR - SPRING BREAK | |
-| 03/17/25 | 10:00am | Genomic Workflows/Cloud Computing | TBD |
+| 03/17/25 | 10:00am | Genomic Workflows/Cloud Computing | Jason Walker |
 | 03/24/25 | 10:00am | Microbial Genomics | Brigida Rusconi |
 | 03/31/25 | 10:00am | Machine Learning/AI in Genomics | Obi Griffith |
 | 04/07/25 |   | NO SEMINAR | |
