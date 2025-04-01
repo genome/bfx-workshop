@@ -70,7 +70,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 | 03/10/25 |   | NO SEMINAR - SPRING BREAK | |
 | 03/17/25 | 10:00am | [Genomic Workflows/Cloud Computing](lectures/week_20) | Jason Walker |
 | 03/24/25 | 10:00am | [Microbial Genomics](lectures/week_21) | Brigida Rusconi |
-| 03/31/25 | 10:00am | Machine Learning/AI in Genomics | Obi Griffith |
+| 03/31/25 | 10:00am | [Machine Learning/AI in Genomics](lectures/week_22) | Obi Griffith |
 | 04/07/25 |   | NO SEMINAR | |
 | 04/14/25 | 10:00am | Long Read Sequencing | Chris Miller |
 | 04/21/25 | 10:00am | Genomic Medicine, course wrap-up | Chris Miller |
