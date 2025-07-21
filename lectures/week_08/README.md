@@ -14,7 +14,7 @@ For the BFX Workshop, we will not be using AWS Cloud. Instead, we will use a Doc
 
 ### Docker Setup
 
-Instructions for setting up docker can be found [in last week lecture](https://github.com/genome/bfx-workshop/tree/master/lectures/week_07)
+Instructions for setting up docker can be found [in last week's lecture](../week_07)
 
 ### User Setup
 
