@@ -34,10 +34,42 @@ Time will be set aside before and after lectures for "office hours", where you c
 
 
 ### Fall 2025
-TBD
+
+| Date    | Time     | Topic                                            | Presenter       |
+|---------|----------|--------------------------------------------------|-----------------|
+| 8/25/25 | 10:00am  | Intro to Bioinformatics and Computer Setup       | Chris Miller    |
+|         | 11:00am  | Extra help with setup                            |                 |
+| 9/1/25  |          | NO CLASS – Labor Day                             |                 |
+| 9/8/25  | 9:00am   | Extra help with setup                            |                 |
+|         | 10:00am  | Introduction to Unix and the command line        | Chris Miller    |
+|         | 11:00am  | Extra help with setup                            |                 |
+| 9/15/25 | 10:00am  | Sequence data generation/manipulation            | Chris Miller    |
+| 9/22/25 | 10:00am  | DNA Alignment Fundamentals                       | TBD             |
+| 9/29/25 | 10:00am  | Sequence data visualization/IGV                  | Chris Miller    |
+| 10/6/25 |          | NO CLASS – Fall Break                            |                 |
+| 10/13/25| 10:00am  | Data manipulation and basic plotting with R      | Chris Miller    |
+| 10/20/25| 10:00am  | RNA sequencing I – Data and Alignment            | TBD             |
+| 10/27/25| 10:00am  | RNA sequencing II – Transcript Quantification    | TBD             |
+| 11/3/25 | 10:00am  | RNA sequencing III – Differential Expression     | TBD             |
+| 11/10/25|          | NO CLASS                                         |                 |
+| 11/17/25| 10:00am  | Germline and Somatic Variant Calling             | Chris Miller    |
+| 11/24/25| 10:00am  | Parsing, Filtering, and Annotating VCFs          | John Garza      |
+| 12/1/25 | 10:00am  | Troubleshooting Bioinformatics, semester wrap‑up | Chris Miller    |
 
 ### Spring 2026
-TBD
+
+Dates and presenters TBD
+
+Topics will include:
+- Genomic Intervals and Bedtools
+- Epigenomics, ChIP/ATAC/WGBS
+- Data visualization with R
+- Genome Assembly, Pangenome
+- Single-cell RNAseq
+- Genomic Workflows/Cloud Computing
+- Microbial Genomics
+- Machine Learning/AI in Genomics
+- Long Read Sequencing
 
 
 ## Participation
