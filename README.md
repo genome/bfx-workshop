@@ -1,6 +1,6 @@
 ![](images/banner.jpg)
 
-Welcome to the Fall 2024 and Spring 2025 Bioinformatics (BFX) Workshop! It can be taken for credit under the WUSTL course titles: Applied Bioinformatics for Genomics I and II.
+Welcome to the Fall 2025 and Spring 2026 Bioinformatics (BFX) Workshop! It can be taken for credit under the WUSTL course titles: Applied Bioinformatics for Genomics I and II.
 
 
 ## Objectives
@@ -20,7 +20,9 @@ By the end of this series, participants will be able to:
 
 ## Registration
 
-You are welcome to join at any time by [registering on this form](https://redcap.link/BFX2024). After registering, you'll be added to an email distribution list and slack channel for the course. See the [Communications](README.md#Communications) section below for details. There is no obligation to complete the course if you register, but it helps us with planning and securing appropriate resources.
+Registration for the 2025-2026 Workshop will open soon!
+
+After registering, you'll be added to an email distribution list and slack channel for the course. See the [Communications](README.md#Communications) section below for details. There is no obligation to complete the course if you register, but it helps us with planning and securing appropriate resources.
 
 ## Schedule
 
@@ -31,49 +33,11 @@ The BFX Workshop schedule, __subject to change__, is available below. Previous y
 Time will be set aside before and after lectures for "office hours", where you can get help with assignments, or ask for advice about your own projects.
 
 
-### Fall 2024
-|Date|Time|Topic|Presenter|
-|----|-----|---------|------------|
-|08/26/24	| 10:00am | [Intro to Bioinformatics and Computer Setup](lectures/week_01) | Chris Miller |
-|	| 11:00am | Extra hands-on help with setup | |
-|09/02/24 | | NO SEMINAR - LABOR DAY | | 
-|09/09/24 |	9:00am | Extra hands-on help with setup | |
-|  |	10:00am | [Introduction to Unix and the command line](lectures/week_02) |Chris Miller |
-|  |	11:00am | Extra hands-on help with setup/unix |  |
-|09/16/24 | 10:00am     | [Sequence data generation/manipulation](lectures/week_03) | Chris Miller |
-|09/23/24 | 10:00am     | [DNA Alignment Fundamentals](lectures/week_04) | Jason Walker |
-|09/30/24 | 10:00am     | [Sequence data visualization/IGV](lectures/week_05) | Chris Miller |
-|10/07/24 | 10:00am	| [Data manipulation and basic plotting with R](lectures/week_06) | Chris Miller |
-|10/14/24 | 10:00am	| NO SEMINAR – FALL BREAK	| |
-|10/21/24 | 10:00am	| [RNA sequencing I – Data and Alignment](lectures/week_07) | Kartik Singhal |
-|10/28/24 | 10:00am	| [RNA sequencing II – Transcript Quantification](lectures/week_08) | My Hoang |
-|11/04/24 | 10:00am	| [RNA sequencing III – Differential Expression](lectures/week_09) | Mariam Khanfar |
-|11/11/24 | 10:00am	| [Germline and Somatic Variant Calling](lectures/week_10) | Chris Miller |
-|11/18/24 | 10:00am	| NO SEMINAR  | | 
-|11/25/24 | 10:00am	| [Parsing, Filtering, and Annotating VCFs](lectures/week_11) | John Garza |
-|12/02/24 | 10:00am	| [Troubleshooting bioinformatics, Semester wrap-up](lectures/week_12) | Chris Miller |
+### Fall 2025
+TBD
 
-
-
-### Spring 2025
-
-|Date|Time|Topic|Presenter|
-|----|-----|---------|------------|
-| 01/13/25 | 10:00am | [Intro/prereqs, Genomic Intervals and Bedtools](lectures/week_13) | Chris Miller |
-| 01/20/25 |   | NO SEMINAR - MLK DAY | |
-| 01/27/25 | 10:00am | [Epigenomics, ChIP/ATAC/WGBS](lectures/week_14) | Chris Miller |
-| 02/03/25 | 10:00am | [Data visualization with R and ggplot2 - part 1](lectures/week_15) | Chris Miller |
-| 02/10/25 | 10:00am | [Data visualization with R and ggplot2 - part 2](lectures/week_16) | Chris Miller |
-| 02/17/25 | 10:00am | [Genome Assembly, Pangenome](lectures/week_17) | Juan Macias |
-| 02/24/25 | 10:00am | [Single-cell RNAseq part 1](lectures/week_18) | Jennifer Foltz |
-| 03/03/25 | 10:00am | [Single-cell RNAseq part 2](lectures/week_19) | Jennifer Foltz |
-| 03/10/25 |   | NO SEMINAR - SPRING BREAK | |
-| 03/17/25 | 10:00am | [Genomic Workflows/Cloud Computing](lectures/week_20) | Jason Walker |
-| 03/24/25 | 10:00am | [Microbial Genomics](lectures/week_21) | Brigida Rusconi |
-| 03/31/25 | 10:00am | [Machine Learning/AI in Genomics](lectures/week_22) | Obi Griffith |
-| 04/07/25 |   | NO SEMINAR | |
-| 04/14/25 | 10:00am | [Long Read Sequencing](lectures/week_23) | Chris Miller |
-| 04/21/25 | 10:00am | [Genomic Medicine, course wrap-up](lectures/week_24) | Chris Miller |
+### Spring 2026
+TBD
 
 
 ## Participation
@@ -112,5 +76,6 @@ If you'd like to look back at past sessions, course info and lectures from previ
 - [2021-2022](archive/v2021-2022) 
 - [2022-2023](archive/v2022-2023)
 - [2023-2024](archive/v2023-2024)
+- [2024-2025](archive/v2024-2025)
 
 <sub>Banner image adapted from [NHGRI](https://www.flickr.com/photos/genomegov/27862777945) (public domain)</sub>
