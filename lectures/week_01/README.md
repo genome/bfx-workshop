@@ -1,6 +1,6 @@
 ## Week 1: Intro to Bioinformatics and Computer Setup
 - Lecture Recording
-- Slides
+- [Slides](bfx_workshop_01_overview.pdf)
 - [Setup Instructions for MacOSX/Linux](bfx_workshop_01_overview.ipynb)
 - [Setup Instructions for Windows](bfx_workshop_01_overview_windows.ipynb)
 
