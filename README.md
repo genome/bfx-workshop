@@ -37,7 +37,7 @@ Time will be set aside before and after lectures for "office hours", where you c
 
 | Date    | Time     | Topic                                            | Presenter       |
 |---------|----------|--------------------------------------------------|-----------------|
-| 8/25/25 | 10:00am  | Intro to Bioinformatics and Computer Setup       | Chris Miller    |
+| 8/25/25 | 10:00am  | [Intro to Bioinformatics and Computer Setup](lectures/week_01/)       | Chris Miller    |
 |         | 11:00am  | Extra help with setup                            |                 |
 | 9/1/25  |          | NO CLASS – Labor Day                             |                 |
 | 9/8/25  | 9:00am   | Extra help with setup                            |                 |
