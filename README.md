@@ -58,6 +58,8 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 | 11/24/25| 10:00am  | Parsing, Filtering, and Annotating VCFs          | John Garza      |
 | 12/1/25 | 10:00am  | Troubleshooting Bioinformatics, semester wrap‑up | Chris Miller    |
 
+**If you missed the first week, it's fine! Join us on Sept 8th - there's plenty of time to catch up!**
+
 ### Spring 2026
 
 Dates and presenters TBD
