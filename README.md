@@ -24,13 +24,15 @@ Register for the 2025-2026 Workshop [here](https://redcap.link/BFX2025)!
 
 After registering, you'll be added to an email distribution list and slack channel for the course. See the [Communications](README.md#Communications) section below for details. There is no obligation to complete the course if you register, but it helps us with planning and securing appropriate resources.
 
+**You can join the course at any time!**  All of the lessons and lectures are archived, so you are welcome to "catch-up" on your own - we're happy to help talk you through homework questions, even if they're from a month ago!
+
 ## Schedule
 
 Weekly workshops are held on Mondays @ 10am in [Mid-Campus Center](https://maps.google.com/?q=4590%20Children) (MCC) 11th floor Main Conference Room (Room #11504)
 
 The BFX Workshop schedule, __subject to change__, is available below. Previous years' course materials can still be accessed in the [archive](archive) folder. We *strongly* encourage in-person participation, but a Zoom recording of each Workshop session will also be made available shortly after each session. See [Participation](README.md#Participation) for more details about external or remote participation.
 
-Time will be set aside before and after lectures for "office hours", where you can get help with assignments, or ask for advice about your own projects.
+Time will be set aside 30 minutes before and after each lecture for "office hours", where you can get help with assignments, or ask for advice about your own projects.
 
 
 ### Fall 2025
@@ -74,7 +76,7 @@ Topics will include:
 
 ## Participation
 
-There are no requirements or qualifications to participate in the BFX Workshop. However, this course ramps up quickly and you will need to have basic competency at the unix command line within the first three weeks. We will cover some of these skills in the first two weeks of class, but if you are new to working at a terminal, we **strongly recommend** that you work through the command-line exercises listed on the prerequisites page ahead of the course, and/or block out some substantial time to work through them in the first two weeks. 
+There are no requirements or qualifications to participate in the BFX Workshop. However, this course ramps up quickly and you will need to have basic competency at the unix command line within the first three weeks. We will cover some of these skills in the first two weeks of class, but if you are new to working at a terminal, we **strongly recommend** that you block out some substantial time to work through the command-line exercises in the first two week's assignments.
 
 If you are not taking the course for credit, there are no attendance requirements. There will be "assignments" given during most lectures and we strongly encourage you to complete them in order to get the most out of the course - lectures are no substitute for hands-on learning!
 
