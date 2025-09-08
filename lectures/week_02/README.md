@@ -1,7 +1,7 @@
 ## Week 2: Intro to the Unix shell
 
-- [Lecture Recording](https://wustl.box.com/s/1nd67gi5tjg8jf1gq62adbccvhipqy9r)
-- [Slides](bfx_unix_shell_2024.pdf)
+- [Lecture Recording](https://wustl.box.com/s/ka4l8fwnngimfrj8kujpvp2iuei5yn99)
+- [Slides]()
 
 ## Homework Assignment
 
@@ -10,4 +10,4 @@
 2) Create a command that will reveal the total number of *ASXL1* mutations in the tcga.tsv file.
 
 ### For-credit students:
-As proof of completion, send the command and result from question #2 to Jenny.
+As proof of completion, send the command and result from question #2 to John.
