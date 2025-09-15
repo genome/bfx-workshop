@@ -4,7 +4,7 @@ This week, we cover some basics of how sequence is generated, delve into the det
 
 - [Lecture Recording]()
 
-- [Slides]()
+- [Slides](week_03.pdf)
 
 ## Homework Assignment
 
