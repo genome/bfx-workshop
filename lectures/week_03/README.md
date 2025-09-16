@@ -2,7 +2,7 @@
 
 This week, we cover some basics of how sequence is generated, delve into the details of data and formats, and talk through basic QC of your sequence.
 
-- [Lecture Recording]()
+- [Lecture Recording](https://wustl.box.com/s/foq768ibxq71auhfcgxjhszhue576fw4)
 
 - [Slides](week_03.pdf)
 
@@ -37,4 +37,4 @@ This is not a step-by-step tutorial, but all of the commands you need to complet
 
 ## For-credit students:
 
-Send the answers to questions 5-7, plus a screenshot of part of the fastq output to Jenny as proof of completion.
+Send the answers to questions 5-7, plus a screenshot of part of the fastq output to John as proof of completion.
