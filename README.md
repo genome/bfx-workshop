@@ -46,7 +46,7 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 |         | 10:00am  | [Introduction to Unix and the command line](lectures/week_02)        | Chris Miller    |
 |         | 11:00am  | Extra help with setup                            |                 |
 | 9/15/25 | 10:00am  | [Sequence data generation/manipulation](lectures/week_03)            | Chris Miller    |
-| 9/22/25 | 10:00am  | DNA Alignment Fundamentals                       | TBD             |
+| 9/22/25 | 10:00am  | [DNA Alignment Fundamentals](lectures/week_04)                       | Chris Miller             |
 | 9/29/25 | 10:00am  | Sequence data visualization/IGV                  | Chris Miller    |
 | 10/6/25 |          | NO CLASS – Fall Break                            |                 |
 | 10/13/25| 10:00am  | Data manipulation and basic plotting with R      | Chris Miller    |
