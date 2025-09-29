@@ -191,7 +191,7 @@ What does the output of the above command look like? Is it a familiar file forma
 Maybe we should re-run this command and output to a proper file. Let's take a look at `samtools view`, a basic command often used to read and write alignment formats.
 
 ```
-/usr/gitc/bwa mem ref/hla_and_brca_genes.fa unaligned/normal/2895499331_1.fastq.gz unaligned/normal/2895499331_2.fastq.gz > aligned/normal/2895499331.sam"
+/usr/gitc/bwa mem ref/hla_and_brca_genes.fa unaligned/normal/2895499331_1.fastq.gz unaligned/normal/2895499331_2.fastq.gz > aligned/normal/2895499331.sam
 
 head aligned/normal/2895499331.sam
 ```
