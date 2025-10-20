@@ -1,6 +1,6 @@
 ## Week 6: Data manipulation and basic plotting with R
 
-- Lecture Recording
+- [Lecture Recording](https://wustl.box.com/s/f3h6cg2k4ezyofddvjnwg1fbkmomcmex)
 - [Slides](intro_to_R.pdf)
 
 ## Homework Assignment
@@ -11,4 +11,4 @@
 
 3) Finally, using R and some of the commands from this week's lecture and slides, try reading in a data file that you have lying around and making some sort of simple plot from it. If you don't have anything, ask in slack and we can make some suggestions for public data. 
 
-For-credit students: please send Jenny the temperature boxplot you create from the cleaned-up data (in #2) as proof of completion.
+For-credit students: please send John the temperature boxplot you create from the cleaned-up data (in #2) as proof of completion.
