@@ -1,7 +1,7 @@
 # Week 7
 ## RNAseq Part 1 - Introduction and Alignment
 
-- Lecture Recording
+- [Lecture Recording](https://wustl.box.com/s/l65rqdcew6rnk31a9sgppkjz8bu3s4p6)
 
 - [Slides](RNASeq_part1_bfx.pdf)
 
