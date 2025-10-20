@@ -11,7 +11,7 @@
 1. Complete the short "RNAseq Course Setup" section below to get your computer ready to do RNAseq analysis.
 
 2. Finish Module 1 of the RNAbio course: [Inputs](https://rnabio.org/module-01-inputs/0001/01/01/Intro_to_Inputs/)
-    - Be sure to note the "Knpwn issues" section at the bottom of this page, which has you modify a key check-strandedness command in #1. 
+    - Be sure to note the "Known issues" section at the bottom of this page, which has you modify a key check-strandedness command in #1. 
 3. Finish Module 2 of the RNAbio course: [Alignment](https://rnabio.org/module-02-alignment/0002/01/01/Intro_to_Alignment/)
     - Skip the "IGV" section, as we've covered most of that in class previously. 
     - The "Team Assignment - Alignment" section is optional. Feel free to complete it if you want a challenge!
@@ -36,12 +36,12 @@ For the BFX Workshop, we will not be using AWS Cloud. Instead, we will use a Doc
 3) Initialize a Docker container using the image we pulled above
 
 ```
-    docker run -it -p 8080:8080 -v ~/workshop/rnabio-workspace:/workspace -v /var/run/docker.sock:/var/run/docker.sock griffithlab/rnaseq-toolkit:latest
+    docker run -it -p 8080:8080 -v ~/workshop/rnabio-workspace:/workspace griffithlab/rnaseq-toolkit:latest
 ```
 
 Notes about this command:
 - in our previous docker exercises, we've often mounted things to `/data/`, but here, we're following the convention of this course, and mounting them to `/workspace`.  This is the base directory for nearly all commands and steps in RNAbio.
-- we're running ths docker image interactively, opening port 8080 so that we can access files in specific ways, and also mounting docker.sock in such a way that we can run docker images inside our docker image. 
+- we're running ths docker image interactively and opening port 8080 so that we can access files in specific ways.
 
 
 --- 
