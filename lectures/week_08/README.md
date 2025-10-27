@@ -2,7 +2,7 @@
 
 ## RNAseq Part 2 - Quantification
 
-- Lecture Recording
+- [Lecture Recording](https://wustl.box.com/s/bxyr44421vvd6psh77cmvo2o7jxkgr2l)
 
 - [Abundance Estimation Slides](RNASeq_part2_bfx.pdf)
 
