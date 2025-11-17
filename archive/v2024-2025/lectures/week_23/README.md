@@ -2,7 +2,7 @@
 
 [Lecture slides](long_read_sequencing.pdf)
 
-[Lecture video](https://wustl.box.com/s/21f0n8kerlwz3whxpkbet9g57768ceir) 
+[Lecture video](https://wustl.box.com/s/pamv6vzs8sy6laexddyep6xfpo4u31ga) 
 
 
 ## Assignment
