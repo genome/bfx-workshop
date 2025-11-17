@@ -54,7 +54,7 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 | 10/27/25| 10:00am  | [RNA sequencing II – Transcript Quantification](lectures/week_08)  | Chris Miller    |
 | 11/3/25 | 10:00am  | [RNA sequencing III – Differential Expression](lectures/week_09)   | Chris Miller    |
 | 11/10/25|          | NO CLASS                                         |                 |
-| 11/17/25| 10:00am  | Germline and Somatic Variant Calling             | Chris Miller    |
+| 11/17/25| 10:00am  | [Germline and Somatic Variant Calling](lectures/week_10)           | Chris Miller    |
 | 11/24/25| 10:00am  | Parsing, Filtering, and Annotating VCFs          | John Garza      |
 | 12/1/25 | 10:00am  | Troubleshooting Bioinformatics, semester wrap‑up | Chris Miller    |
 
