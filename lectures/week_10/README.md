@@ -2,7 +2,7 @@
 
 This week, we cover how to detect small SNPs/Indels in genomes by using variant calling
 
-- Lecture Recording
+- [Lecture Recording](https://wustl.box.com/s/sdjisckmgl9618axvq7d419dyufqz5v2)
 
 - [Slides](bfx_workshop_variant_calling.pdf)
 
@@ -176,4 +176,4 @@ If you'd like to see the results of your hard work, you can take a look at some 
 
 
 ### For-Credit Students
-As proof of completion, please send Jenny a screenshot from IGV of a germline site that has an insertion or deletion.
+As proof of completion, please send John a screenshot from IGV of a germline site that has an insertion or deletion.
