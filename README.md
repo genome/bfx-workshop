@@ -41,22 +41,22 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 |---------|----------|--------------------------------------------------|-----------------|
 | 8/25/25 | 10:00am  | [Intro to Bioinformatics and Computer Setup](lectures/week_01/)    | Chris Miller    |
 |         | 11:00am  | Extra help with setup                            |                 |
-| 9/1/25  |          | NO CLASS – Labor Day                             |                 |
-| 9/8/25  | 9:00am   | Extra help with setup                            |                 |
+| 9/01/25 |          | NO CLASS – Labor Day                             |                 |
+| 9/08/25 | 9:00am   | Extra help with setup                            |                 |
 |         | 10:00am  | [Introduction to Unix and the command line](lectures/week_02)      | Chris Miller    |
 |         | 11:00am  | Extra help with setup                            |                 |
 | 9/15/25 | 10:00am  | [Sequence data generation/manipulation](lectures/week_03)          | Chris Miller    |
 | 9/22/25 | 10:00am  | [DNA Alignment Fundamentals](lectures/week_04)                     | Chris Miller             |
 | 9/29/25 | 10:00am  | [Sequence data visualization/IGV](lectures/week_05)                | Chris Miller    |
-| 10/6/25 |          | NO CLASS – Fall Break                            |                 |
+| 10/06/25|          | NO CLASS – Fall Break                            |                 |
 | 10/13/25| 10:00am  | [Data manipulation and basic plotting with R](lectures/week_06)    | Chris Miller    |
 | 10/20/25| 10:00am  | [RNA sequencing I – Data and Alignment](lectures/week_07)          | Chris Miller    |
 | 10/27/25| 10:00am  | [RNA sequencing II – Transcript Quantification](lectures/week_08)  | Chris Miller    |
-| 11/3/25 | 10:00am  | [RNA sequencing III – Differential Expression](lectures/week_09)   | Chris Miller    |
+| 11/03/25| 10:00am  | [RNA sequencing III – Differential Expression](lectures/week_09)   | Chris Miller    |
 | 11/10/25|          | NO CLASS                                         |                 |
 | 11/17/25| 10:00am  | [Germline and Somatic Variant Calling](lectures/week_10)           | Chris Miller    |
-| 11/24/25| 10:00am  | Parsing, Filtering, and Annotating VCFs          | John Garza      |
-| 12/1/25 | 10:00am  | Troubleshooting Bioinformatics, semester wrap‑up | Chris Miller    |
+| 11/24/25| 10:00am  | [Variant annotation - what does it mean?](lectures/week_11)        | Chris Miller    |
+| 12/01/25| 10:00am  | Troubleshooting Bioinformatics, semester wrap‑up | Chris Miller    |
 
 **If you missed the first week, it's fine! Join us on Sept 8th - there's plenty of time to catch up!**
 
