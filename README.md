@@ -58,8 +58,6 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 | 11/24/25| 10:00am  | [Variant annotation - what does it mean?](lectures/week_11)        | Chris Miller    |
 | 12/01/25| 10:00am  | [Troubleshooting Bioinformatics, semester wrap‑up](lectures/week_12) | Chris Miller    |
 
-**If you missed the first week, it's fine! Join us on Sept 8th - there's plenty of time to catch up!**
-
 ### Spring 2026
 
 | Date    | Time     | Topic                                            | Presenter       |
