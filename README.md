@@ -62,18 +62,23 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 
 ### Spring 2026
 
-Dates and presenters TBD
-
-Topics will include:
-- Genomic Intervals and Bedtools
-- Epigenomics, ChIP/ATAC/WGBS
-- Data visualization with R
-- Genome Assembly, Pangenome
-- Single-cell RNAseq
-- Genomic Workflows/Cloud Computing
-- Microbial Genomics
-- Machine Learning/AI in Genomics
-- Long Read Sequencing
+| Date    | Time     | Topic                                            | Presenter       |
+|---------|----------|--------------------------------------------------|-----------------|
+| 1/12/25 | 10:00am | Intro/prereqs, Genomic Intervals and Bedtools | Chris Miller |
+| 1/19/25 |  | NO SEMINAR - MLK DAY |  |
+| 1/26/25 | 10:00am | Epigenomics, ChIP/ATAC/WGBS | Chris Miller |
+| 2/2/25 | 10:00am | Data visualization with R and ggplot2 - part 1 | Chris Miller |
+| 2/9/25 | 10:00am | Data visualization with R and ggplot2 - part 2 | Chris Miller |
+| 2/16/25 | 10:00am | Genome Assembly, Pangenome | Juan Macias |
+| 2/23/25 | 10:00am | Single-cell RNAseq part 1 | Jennifer Foltz |
+| 3/2/25 | 10:00am | Single-cell RNAseq part 2 | Jennifer Foltz |
+| 3/9/25 |  | NO SEMINAR - SPRING BREAK |  |
+| 3/16/25 | 10:00am | Genomic Workflows/Cloud Computing | TBD |
+| 3/23/25 | 10:00am | Microbial Genomics | TBD |
+| 3/30/25 | 10:00am | Machine Learning/AI in Genomics | Obi Griffith |
+| 4/6/25 |  | NO SEMINAR |  |
+| 4/13/25 | 10:00am | Long Read Sequencing | Chris Miller |
+| 4/20/25 | 10:00am | Genomic Medicine, course wrap-up | Chris Miller |
 
 
 ## Participation
