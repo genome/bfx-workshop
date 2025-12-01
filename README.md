@@ -56,7 +56,7 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 | 11/10/25|          | NO CLASS                                         |                 |
 | 11/17/25| 10:00am  | [Germline and Somatic Variant Calling](lectures/week_10)           | Chris Miller    |
 | 11/24/25| 10:00am  | [Variant annotation - what does it mean?](lectures/week_11)        | Chris Miller    |
-| 12/01/25| 10:00am  | Troubleshooting Bioinformatics, semester wrap‑up | Chris Miller    |
+| 12/01/25| 10:00am  | [Troubleshooting Bioinformatics, semester wrap‑up](lectures/week_12) | Chris Miller    |
 
 **If you missed the first week, it's fine! Join us on Sept 8th - there's plenty of time to catch up!**
 
