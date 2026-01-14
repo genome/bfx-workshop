@@ -62,7 +62,7 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 
 | Date    | Time     | Topic                                            | Presenter       |
 |---------|----------|--------------------------------------------------|-----------------|
-| 1/12/25 | 10:00am | Intro/prereqs, Genomic Intervals and Bedtools | Chris Miller |
+| 1/12/25 | 10:00am | [Intro/prereqs, Genomic Intervals and Bedtools](lectures/week_13) | Chris Miller |
 | 1/19/25 |  | NO SEMINAR - MLK DAY |  |
 | 1/26/25 | 10:00am | Epigenomics, ChIP/ATAC/WGBS | Chris Miller |
 | 2/2/25 | 10:00am | Data visualization with R and ggplot2 - part 1 | Chris Miller |
