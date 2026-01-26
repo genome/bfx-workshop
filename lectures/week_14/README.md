@@ -1,6 +1,6 @@
 # Week 14 - Epigenomics, ChIP/ATAC/WGBS
 
-- [Lecture Recording](https://wustl.box.com/s/wo27iy1fc6pb88ue70ze9prdrjjdruc3
+- [Lecture Recording](https://wustl.box.com/s/wo27iy1fc6pb88ue70ze9prdrjjdruc3)
 
 - Lecture Slides
 
