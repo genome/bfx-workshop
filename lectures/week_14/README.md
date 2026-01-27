@@ -2,7 +2,7 @@
 
 - [Lecture Recording](https://wustl.box.com/s/wo27iy1fc6pb88ue70ze9prdrjjdruc3)
 
-- Lecture Slides
+- [Lecture Slides](epigenomics.pdf)
 
 
 
