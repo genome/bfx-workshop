@@ -65,7 +65,7 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 | 1/12/25 | 10:00am | [Intro/prereqs, Genomic Intervals and Bedtools](lectures/week_13) | Chris Miller |
 | 1/19/25 |  | NO SEMINAR - MLK DAY |  |
 | 1/26/25 | 10:00am | [Epigenomics, ChIP/ATAC/WGBS](lectures/week_14) | John Garza |
-| 2/2/25 | 10:00am | Data visualization with R and ggplot2 - part 1 | Chris Miller |
+| 2/2/25 | 10:00am | [Data visualization with R and ggplot2 - part 1](lectures/week_15) | Chris Miller |
 | 2/9/25 | 10:00am | Data visualization with R and ggplot2 - part 2 | Chris Miller |
 | 2/16/25 | 10:00am | Genome Assembly, Pangenome | Juan Macias |
 | 2/23/25 | 10:00am | Single-cell RNAseq part 1 | Jennifer Foltz |
