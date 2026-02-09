@@ -6,15 +6,9 @@ This week, we will continue working together to reformat data and create graphic
 - [ggplot protein abundance tutorial](geneplots.md)
 - [Volcano plots](https://biocorecrg.github.io/CRG_RIntroduction/volcano-plots.html) tutorial
 
-Lecture Resources:
+All of these are best experienced by working through them yourself!  Take some time and try them out on your own datasets
 
+Lecture Video
 
 Homework:
-
-Take some of your data that you have lying around. Read it in, get it into a tidy format, and then make an informative plot, complete with labels, theming, etc.  For-credit students, send a nice-looking plot and the code you used to create it to John.
-
-If you don't have a data set, feel free to use one of the example sets from this week's lecture.
-
-
-
-
+Work through the Volcano plots tutorial above. For-credit students, send a screenshot of your final volcano plot to John as proof of completion.
