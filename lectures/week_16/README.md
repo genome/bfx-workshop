@@ -8,7 +8,7 @@ This week, we will continue working together to reformat data and create graphic
 
 All of these are best experienced by working through them yourself!  Take some time and try them out on your own datasets
 
-Lecture Video
+[Lecture Video](https://wustl.box.com/s/s6nt2mgtitjqwqzzlav7qdbncaw1fi8b)
 
 Homework:
 Work through the Volcano plots tutorial above. For-credit students, send a screenshot of your final volcano plot to John as proof of completion.
