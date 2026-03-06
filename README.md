@@ -69,7 +69,7 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 | 2/9/25 | 10:00am | [Data visualization with R and ggplot2 - part 2](lectures/week_16) | Chris Miller |
 | 2/16/25 | 10:00am | [Genome Assembly, Pangenome](lectures/week_17) | Juan Macias |
 | 2/23/25 | 10:00am | [Single-cell RNAseq part 1](lectures/week_18) | Jennifer Foltz |
-| 3/2/25 | 10:00am | Single-cell RNAseq part 2 | Jennifer Foltz |
+| 3/2/25 | 10:00am | [Single-cell RNAseq part 2](lectures/week_19) | Jennifer Foltz |
 | 3/9/25 |  | NO SEMINAR - SPRING BREAK |  |
 | 3/16/25 | 10:00am | Genomic Workflows/Cloud Computing | TBD |
 | 3/23/25 | 10:00am | Microbial Genomics | Brigida Rusconi |
