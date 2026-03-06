@@ -4,7 +4,7 @@
 
 - [Lecture Recording](https://wustl.box.com/s/8bkepigmn523fbfsalj3umlgvgxzq2yu)
 
-- [Lecture Slides](BFXworkshopDay2_2025.pdf)
+- [Lecture Slides](BFXworkshopDay2_2026.pdf)
 
 Presenter: Dr. Jennifer Foltz
 
