@@ -1,4 +1,4 @@
-# Week 23 - Long Read Alignment
+# Week 20 - Long Read Alignment
 
 [Lecture slides](long_read_sequencing.pdf)
 
