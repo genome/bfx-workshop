@@ -72,7 +72,7 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 | 3/2/26 | 10:00am | [Single-cell RNAseq part 2](lectures/week_19) | Jennifer Foltz |
 | 3/9/26 |  | NO SEMINAR - SPRING BREAK |  |
 | 3/16/26 | 10:00am | [Long Read Sequencing](lectures/week_20) | Chris Miller |
-| 3/23/26 | 10:00am | Microbial Genomics | Brigida Rusconi |
+| 3/23/26 | 10:00am | [Microbial Genomics](lectures/week_21) | Brigida Rusconi |
 | 3/30/26 | 10:00am | Machine Learning/AI in Genomics | Obi Griffith |
 | 4/6/26 |  | NO SEMINAR |  |
 | 4/13/26 | 10:00am | Genomic Workflows/Cloud Computing | TBD |
