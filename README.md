@@ -73,7 +73,7 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 | 3/9/26 |  | NO SEMINAR - SPRING BREAK |  |
 | 3/16/26 | 10:00am | [Long Read Sequencing](lectures/week_20) | Chris Miller |
 | 3/23/26 | 10:00am | [Microbial Genomics](lectures/week_21) | Brigida Rusconi |
-| 3/30/26 | 10:00am | Machine Learning/AI in Genomics | Obi Griffith |
+| 3/30/26 | 10:00am | [Machine Learning/AI in Genomics](lectures/week_22) | Obi Griffith |
 | 4/6/26 |  | NO SEMINAR |  |
 | 4/13/26 | 10:00am | Genomic Workflows/Cloud Computing | TBD |
 | 4/20/26 | 10:00am | Genomic Medicine, course wrap-up | Chris Miller |
