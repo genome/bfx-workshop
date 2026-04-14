@@ -1,6 +1,6 @@
 # Week 23: Genomic Workflows/Cloud Computing
 
-- Lecture Recording
+- [Lecture Recording](https://wustl.box.com/s/qwmq2kh3xdfbaez1aunb594uzl29e3gz)
 - [Lecture Slides](bfx_genomic_workflows.pdf)
 
 
