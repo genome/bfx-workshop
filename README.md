@@ -1,6 +1,8 @@
 ![](images/banner.jpg)
 
-Welcome to the Fall 2025 and Spring 2026 Bioinformatics (BFX) Workshop! It can be taken for credit under the WUSTL course titles: Applied Bioinformatics for Genomics I and II.
+Welcome to the Fall 2026/Spring 2027 Bioinformatics (BFX) Workshop! 
+
+It can be taken for credit under the WUSTL course titles: Applied Bioinformatics for Genomics I and II (BIOL 5624).
 
 
 ## Objectives
@@ -8,8 +10,9 @@ Welcome to the Fall 2025 and Spring 2026 Bioinformatics (BFX) Workshop! It can b
 This workshop series is designed for people who want to:
 
 - learn the fundamentals of computational genomics
-- use this information to improve and expedite their research
-- expand their knowledge by hearing from experts in other subject areas
+- gain practical skills that they can apply to their own research
+- understand how to leverage AI to accelerate their analyses
+- expand their knowledge by hearing from experts in current and emerging technologies
 
 By the end of this series, participants will be able to:
 
@@ -20,12 +23,18 @@ By the end of this series, participants will be able to:
 
 ## Registration
 
-Register for the 2025-2026 Workshop [here](https://redcap.link/BFX2025)!
+Register for the 2025-2026 Workshop [here](https://redcap.link/BFX2026)!
 
 After registering, you'll be added to an email distribution list and slack channel for the course. See the [Communications](README.md#Communications) section below for details. There is no obligation to complete the course if you register, but it helps us with planning and securing appropriate resources.
 
 **You can join the course at any time!**  All of the lessons and lectures are archived, so you are welcome to "catch-up" on your own - we're happy to help talk you through homework questions, even if they're from a month ago!
 
+## Things You'll need
+
+- A laptop that you can bring to class every week, and on which you have administrator privileges (you can install software, etc)
+- Access to one or more AI assistants (WUSTL provides access to several, and we'll discuss in class). 
+- Some patience. We have to walk before we can run, and the first few weeks will be building up fundamental knowledge so that we then zoom off on a tour through a wide range of approaches and technologies.
+ 
 ## Schedule
 
 Weekly workshops are held on Mondays @ 10am in [Mid-Campus Center](https://maps.google.com/?q=4590%20Children) (MCC) 11th floor Main Conference Room (Room #11504)
@@ -35,50 +44,40 @@ The BFX Workshop schedule, __subject to change__, is available below. Previous y
 Time will be set aside 30 minutes before and after each lecture for "office hours", where you can get help with assignments, or ask for advice about your own projects.
 
 
-### Fall 2025
+### Fall 2026
 
-| Date    | Time     | Topic                                            | Presenter       |
-|---------|----------|--------------------------------------------------|-----------------|
-| 8/25/25 | 10:00am  | [Intro to Bioinformatics and Computer Setup](lectures/week_01/)    | Chris Miller    |
-|         | 11:00am  | Extra help with setup                            |                 |
-| 9/01/25 |          | NO CLASS – Labor Day                             |                 |
-| 9/08/25 | 9:00am   | Extra help with setup                            |                 |
-|         | 10:00am  | [Introduction to Unix and the command line](lectures/week_02)      | Chris Miller    |
-|         | 11:00am  | Extra help with setup                            |                 |
-| 9/15/25 | 10:00am  | [Sequence data generation/manipulation](lectures/week_03)          | Chris Miller    |
-| 9/22/25 | 10:00am  | [DNA Alignment Fundamentals](lectures/week_04)                     | Chris Miller             |
-| 9/29/25 | 10:00am  | [Sequence data visualization/IGV](lectures/week_05)                | Chris Miller    |
-| 10/06/25|          | NO CLASS – Fall Break                            |                 |
-| 10/13/25| 10:00am  | [Data manipulation and basic plotting with R](lectures/week_06)    | Chris Miller    |
-| 10/20/25| 10:00am  | [RNA sequencing I – Data and Alignment](lectures/week_07)          | Chris Miller    |
-| 10/27/25| 10:00am  | [RNA sequencing II – Transcript Quantification](lectures/week_08)  | Chris Miller    |
-| 11/03/25| 10:00am  | [RNA sequencing III – Differential Expression](lectures/week_09)   | Chris Miller    |
-| 11/10/25|          | NO CLASS                                         |                 |
-| 11/17/25| 10:00am  | [Germline and Somatic Variant Calling](lectures/week_10)           | Chris Miller    |
-| 11/24/25| 10:00am  | [Variant annotation - what does it mean?](lectures/week_11)        | Chris Miller    |
-| 12/01/25| 10:00am  | [Troubleshooting Bioinformatics, semester wrap‑up](lectures/week_12) | Chris Miller    |
+| Date | Time | Topic | Presenter |
+|------|------|-------|-----------|
+| 8/24/26 | 10:00am | Intro to Bioinformatics and Computer Setup | Chris Miller |
+| 8/31/26 | 10:00am | The command line and the compute cluster | Chris Miller |
+| 9/14/26 | 10:00am | Sequence data generation/manipulation | Chris Miller |
+| 9/21/26 | 10:00am | DNA Alignment and Sequence visualization | Chris Miller |
+| 9/28/26 | 10:00am | Data manipulation and basic plotting with R | Chris Miller |
+| 10/5/26 | - | NO CLASS | - |
+| 10/12/26 | 10:00am | Data visualization with R and ggplot2 | Chris Miller |
+| 10/19/26 | 10:00am | RNA sequencing I – Data and Alignment | Chris Miller |
+| 10/26/26 | 10:00am | RNA sequencing II – Transcript Quantification | Chris Miller |
+| 11/02/26 | 10:00am | RNA sequencing III – Differential Expression | Chris Miller |
+| 11/09/26 | — | NO CLASS | — |
+| 11/16/26 | 10:00am | Variant Calling and Annotation | Chris Miller |
+| 11/23/26 | 10:00am | Genomic Intervals and Bedtools | Chris Miller |
+| 11/30/26 | 10:00am | Troubleshooting Bioinformatics, semester wrap-up | Chris Miller |
 
-### Spring 2026
+### Spring 2027
 
-| Date    | Time     | Topic                                            | Presenter       |
-|---------|----------|--------------------------------------------------|-----------------|
-| 1/12/26 | 10:00am | [Intro/prereqs, Genomic Intervals and Bedtools](lectures/week_13) | Chris Miller |
-| 1/19/26 |  | NO SEMINAR - MLK DAY |  |
-| 1/26/26 | 10:00am | [Epigenomics, ChIP/ATAC/WGBS](lectures/week_14) | John Garza |
-| 2/2/26 | 10:00am | [Data visualization with R and ggplot2 - part 1](lectures/week_15) | Chris Miller |
-| 2/9/26 | 10:00am | [Data visualization with R and ggplot2 - part 2](lectures/week_16) | Chris Miller |
-| 2/16/26 | 10:00am | [Genome Assembly, Pangenome](lectures/week_17) | Juan Macias |
-| 2/23/26 | 10:00am | [Single-cell RNAseq part 1](lectures/week_18) | Jennifer Foltz |
-| 3/2/26 | 10:00am | [Single-cell RNAseq part 2](lectures/week_19) | Jennifer Foltz |
-| 3/9/26 |  | NO SEMINAR - SPRING BREAK |  |
-| 3/16/26 | 10:00am | [Long Read Sequencing](lectures/week_20) | Chris Miller |
-| 3/23/26 | 10:00am | [Microbial Genomics](lectures/week_21) | Brigida Rusconi |
-| 3/30/26 | 10:00am | [Machine Learning/AI in Genomics](lectures/week_22) | Obi Griffith |
-| 4/6/26 |  | NO SEMINAR |  |
-| 4/13/26 | 10:00am | [Genomic Workflows/Cloud Computing](lectures/week_23) | Chris Miller |
-| 4/20/26 | 10:00am | [Genomic Medicine, course wrap-up](lectures/week_24) | Chris Miller |
+Schedule TBD.  Topics will include:
 
+- Epigenomics, ChIP/ATAC/WGBS
+- Advanced Data viz 
+- Genome Assembly, Pangenome
+- Single-cell RNAseq 
+- Long Read Sequencing
+- Microbial Genomics
+- Machine Learning
+- Genomic Workflows
+- Cloud Computing 
 
+ 
 ## Participation
 
 There are no requirements or qualifications to participate in the BFX Workshop. However, this course ramps up quickly and you will need to have basic competency at the unix command line within the first three weeks. We will cover some of these skills in the first two weeks of class, but if you are new to working at a terminal, we **strongly recommend** that you block out some substantial time to work through the command-line exercises in the first two week's assignments.
@@ -116,5 +115,7 @@ If you'd like to look back at past sessions, course info and lectures from previ
 - [2022-2023](archive/v2022-2023)
 - [2023-2024](archive/v2023-2024)
 - [2024-2025](archive/v2024-2025)
+- [2025-2026](archive/v2025-2026)
+
 
 <sub>Banner image adapted from [NHGRI](https://www.flickr.com/photos/genomegov/27862777945) (public domain)</sub>
