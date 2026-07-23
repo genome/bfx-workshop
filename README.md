@@ -23,7 +23,7 @@ By the end of this series, participants will be able to:
 
 ## Registration
 
-Register for the 2025-2026 Workshop [here](https://redcap.link/BFX2026)!
+Register for the 2026-2027 Workshop [here](https://redcap.link/bfx26-27)!
 
 After registering, you'll be added to an email distribution list and slack channel for the course. See the [Communications](README.md#Communications) section below for details. There is no obligation to complete the course if you register, but it helps us with planning and securing appropriate resources.
 
