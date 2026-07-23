@@ -1,0 +1,83 @@
+---
+title: "BFX_2026_Day_2"
+author: "Jennifer Foltz"
+date: "2026-03-02"
+output: html_document
+params:
+  res: 0.8 # where this is the resolution for your clustering
+  PC: 14 # the number of principle components for your analysis
+  nFeatLow: 200 # the lower level of cut-off for your number of features (aka genes in a cell)
+  nFeatHigh: 5000 # the higher level cut-off of genes in a cell
+  MThigh: 15 # the highest percent mitochondrial reads in a cell that you want to allow (to remove dying/dead cells)
+  nCountHigh: 20000 # the high cutoff for total counts in a cell
+  nVar: 2000 # the number of variable genes 
+  GOI: "NCAM1" # the gene you are interested in seeing plotted
+  GOI2: "GZMK" # the 2nd gene you are interested in plotted
+  dir: "/Users/Jennifer.a.foltz/Library/CloudStorage/Box-Box/Foltz_Lab/Members/JAF/Presentations/BFX_workshop2025" # the file path to where your sample is located, and where you would like the output (html) file to be saved, and the seurat file in rds format
+  
+
+---
+ Once you set the above parameters, click Knit in R studio.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library("Seurat")
+library("ggplot2")
+library("cowplot")
+library("dplyr")
+library("Matrix")
+library("viridis")
+library("harmony")
+library("SeuratWrappers")
+library("scCustomize")
+```
+
+
+```{r}
+
+setwd(params$dir)
+
+object <- readRDS("bfxworkshop.rds")
+```
+
+Seurat visualizes are based on ggplot2 and are pretty basic, some of the colors for clusters are very similar making it difficult to see clusters. To overcome this problem, we could do this manually or we can use scCustomize which takes care of this for us:
+
+```{r, fig.fullwidth=TRUE}
+DimPlot_scCustom(object, label = TRUE, figure_plot = TRUE)
+```
+
+
+
+Let's say that I am really interested in cluster 1 for my research, and I want to highlight this cluster on the UMAP
+
+```{r, fig.fullwidth=TRUE}
+Cluster_Highlight_Plot(object, cluster_name = "1", highlight_color = "purple2", background_color = "black")
+
+```
+
+
+Let's look at differentially expressed genes in our dataset. It is often helpful to know how many cells express a given gene in one cluster compared to another cluster, and we can accomplish this like this:
+```{r, fig.fullwidth=TRUE}
+markers <- FindAllMarkers(object, min.pct = 0.25, logfc.threshold = 0.25, only.pos = TRUE, return.thresh = 0.05) %>% Add_Pct_Diff()
+markers <- markers[markers$p_val_adj < 0.05,]
+
+df = Extract_Top_Markers(markers, num_genes = 2, rank_by = "avg_log2FC", data_frame = TRUE)
+head(df, n= 10)
+forplot = Extract_Top_Markers(markers, num_genes = 2, rank_by = "avg_log2FC", data_frame = FALSE)
+Iterate_FeaturePlot_scCustom(object, features = forplot, single_pdf = TRUE, file_name = "mymarkers", features_per_page = 4)
+
+Proportion_Plot(object, plot_type = "pie")
+```
+
+
+
+Use feature plot here to visualize different markers, I have written some out as example but plot your favorite ones to see where they are located and whether expression is as you would expect
+```{r, fig.width = 15, fig.height= 15, fig.fullwidth=TRUE}
+
+FeaturePlot(object, features = c("CD3D", "CD79A", "NCAM1", "CD4", "CD8A", "LYZ", "CD34", "FCGR3A"), ncol = 4)
+
+FeaturePlot_scCustom(object, features = c("CD3D", "CD79A", "NCAM1", "CD4", "CD8A", "LYZ", "CD34", "FCGR3A"), num_columns = 4)
+```
