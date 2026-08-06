@@ -4,6 +4,8 @@ Welcome to the Fall 2026/Spring 2027 Bioinformatics (BFX) Workshop!
 
 It can be taken for credit under the WUSTL course titles: Applied Bioinformatics for Genomics I and II (BIOL 5624).
 
+[Register here](https://redcap.link/bfx26-27)!
+
 
 ## Objectives
 
