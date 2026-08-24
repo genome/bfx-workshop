@@ -50,7 +50,7 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 
 | Date | Time | Topic | Presenter |
 |------|------|-------|-----------|
-| 8/24/26 | 10:00am | Intro to Bioinformatics and Computer Setup | Chris Miller |
+| 8/24/26 | 10:00am | [Intro to Bioinformatics and the Command Line](lectures/week_01) | Chris Miller & John Garza |
 | 8/31/26 | 10:00am | The command line and the compute cluster | Chris Miller |
 | 9/14/26 | 10:00am | Sequence data generation/manipulation | Chris Miller |
 | 9/21/26 | 10:00am | DNA Alignment and Sequence visualization | Chris Miller |
