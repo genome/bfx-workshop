@@ -1,5 +1,5 @@
 ## Week 2: Intro to the RIS Compute Cluster
-- [Lecture Recording]()
+- [Lecture Recording](https://wustl.box.com/s/qxi1ukz4ycburj7jkva2p8ylailwria9)
 - [Getting started on Compute2](compute2-slurm-intro.md)
 
 ## Exercise
