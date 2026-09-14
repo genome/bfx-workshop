@@ -5,7 +5,7 @@ This week, we cover some basics of how sequence is generated, delve into the det
 - [Lecture Recording](https://wustl.box.com/s/h89fnuqxid6nxmch25a3m5ttc7icd26i)
 - [Slides](week03.pdf)
 
-###Assignment for this week
+### Assignment for this week
 
 1. Complete all of the questions in the [Sequence Data and Containers](sequence-data-and-containers.md) exercise.
 
