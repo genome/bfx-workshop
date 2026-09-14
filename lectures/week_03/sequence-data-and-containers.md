@@ -30,22 +30,30 @@ core, or a public repository like the [SRA](https://www.ncbi.nlm.nih.gov/sra) or
 and then figure out how to move it to the cluster, but it's much faster (and for big datasets,
 the only realistic option) to download it directly onto the cluster.
 
-Log in to Compute2, move into your workshop directory, and make a folder for this week:
+Log in to Compute2, and make sure your "workshop" directory still exists.  Replace \<washukey\> with your own username.
 
 ```bash
 ssh <washukey>@c2-login-002.ris.wustl.edu
+ls -l
+```
+(If not, refer back to [last's week's exercise](https://github.com/genome/bfx-workshop/blob/master/lectures/week_02/compute2-slurm-intro.md#3-where-is-my-data) to get that folder/shortcut set up)
+
+Then, move into your workshop directory, make a folder for this week, and move into it.
+
+```bash
 cd ~/workshop
 mkdir week03
 cd week03
 ```
 
-Now download the file. A common tool for doing this is `curl`.  Just like the other command line tool we've been using, `curl` spits it's output to STDOUT, so we'll redirect it to a file:
+
+Next, you'll need to download the file. A common tool for doing this is `curl`.  Just like the other command line tool we've been using, `curl` spits it's output to STDOUT, so we'll redirect it to a file:
 
 ```bash
 curl https://storage.googleapis.com/bfx_workshop_tmp/Exome_Tumor.tar >Exome_Tumor.tar
 ```
 
-(Alternately, you can pass the `-O` flag, which tells `curl` to save the file using its original name. 
+(Alternately, you can pass the `-O` flag, which tells `curl` to save the file using its original name. Either approach is fine)
 
 ```bash
 curl -O https://storage.googleapis.com/bfx_workshop_tmp/Exome_Tumor.tar 
@@ -76,7 +84,7 @@ Our file ends in `.tar`, which tells us it's a **tar archive**.
 > In unix, we commonly split those two jobs between two different tools:
 > 
 > - **`tar`** (short for "tape archive") only does the *bundling*. It glues files and
-> directories together into one file, keeping the folder structure intact. By itself, a `.tar` file is no smaller than the files inside it.
+> directories together into one big file that's easy to move around, keeping the folder structure intact. By itself, a `.tar` file is no smaller than the files inside it.
 > 
 > - **`gzip`** only does the *compressing*. It shrinks a single file
 > and adds `.gz` to the name.
@@ -133,7 +141,7 @@ why you'll almost always receive and store it compressed.
 
 ## 3. Exploring the FASTQ files
 
-As a quick refresher from lecture, a FASTQ file is made of **records**, and every record is
+As a quick refresher from the lecture, a FASTQ file is made of **records**, and every record is
 exactly **four lines**:
 
 ```
@@ -143,7 +151,7 @@ GATTTGGGGTTCAAAGCAG   <- 2. the sequence
 !''*((((***+))%%%++   <- 4. quality scores, one character per base
 ```
 
-Let's answer some questions about our data.
+Let's explore these data and answer some questions about it.
 
 ### Question 1
 
@@ -274,7 +282,7 @@ How many total nucleotides of sequence are contained in these two files?
 <details>
 <summary>Hint</summary>
 
-Modify the `awk` command from the previous question to *add up* the lengths instead of printing them. (`awk` has an `END` block that runs after the last line is read.)
+Modify the `awk` command from the previous question to *add up* the lengths instead of printing them. Again, a chat with an AI assistant might be helpful!
 
 Also, you already know how many reads there are and how long each one is. So you can verify your solution by doing the math! 
 
@@ -294,7 +302,7 @@ cat *.fastq | awk 'NR % 4 == 2 {total += length($0)} END {print total}'
 ```
 5000000
 ```
-Ask your LLM partner to explain the awk block to you!
+Ask your LLM partner to explain the awk block to you so that you understand how it works.
 
 For perspective, the human genome is about 3.1 billion bases, so this is a tiny subsample. A real exome would typically have tens of millions of read pairs.
 
@@ -302,7 +310,7 @@ For perspective, the human genome is about 3.1 billion bases, so this is a tiny 
 
 ### Question 5
 
-Use `gzip` to recompress these two fastq files to save space.
+Recompress these two fastq files to save space.
 
 <details>
 <summary>Hint</summary>
@@ -333,7 +341,7 @@ Back to ~1 MB each.
 
 ## 4. Quality control with FastQC
 
-Now that we have a feel for the data, let's run a proper quality check. The standard first-pass
+Now that we have a feel for the data, let's run a full quality check. The standard first-pass
 tool for this is [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/), which
 produces a report of a dozen different quality metrics.
 
@@ -404,8 +412,6 @@ How does it work, at a high level?
   Python 2 and a container with Python 3 can run side by side on the same node without ever
   knowing about each other. Nothing you install or break inside one container affects any other
   container, or the cluster itself. When you exit, the container goes away.
-- **Your storage is still available inside it.** The software comes from the container, but it
-  can still read and write the files in your storage allocation, so your results stick around after the container is gone.
 - **An *image* is the blueprint; a *container* is a running copy of it.** Images are stored in
   online registries like [Docker Hub](https://hub.docker.com/) and [Quay.io](https://quay.io/),
   and anyone can download and run them.
@@ -483,7 +489,7 @@ $ pwd -P
 /
 ```
 
-It jus treturns a slash, which means we're at the very top of the filesystem.  Okay, easy enough - let's just navigate back to where our data lives:
+It just returns a slash, which means we're at the very top of the filesystem.  Okay, easy enough - let's just navigate back to where our data lives:
 
 ```
 $ cd ~/workshop/
@@ -492,7 +498,7 @@ bash: cd: /home/c.a.miller/workshop/: No such file or directory
 
 ### Problem #2 - our filesystems aren't mounted
 
-We talked about how docker images are little-self contained operating systems, and by default, only your home directory gets shared inside.  Look - it's still there, but when we look at our workshop shortcut link, it's broken:
+We talked about how docker images are little-self contained operating systems, and by default, only your home directory gets shared inside.  Look - the shortcut is still there, but is highlighted in red giving us a warning that the thing it's pointing to isn't there - the link is broken:
 
 ```
 $ ls -l ~
@@ -504,8 +510,7 @@ Let's exit out of the docker container and back to the head node by simply typin
 exit
 ```
 
-
-To fix that, we'll need to tell slurm and docker to pass that directory throughusing a new option to slurm called `--container-mounts`.  It takes a quoted! list of colon-separated source and destination directories. To make things simple, let's just make them the same on both sies.
+To fix our data problem, we'll need to tell slurm and docker to pass that directory throughusing a new option to slurm called `--container-mounts`.  It takes a quoted list of colon-separated source and destination directories. To make things simple, let's just make them the same on both sies.
 
 Adding it to our command gets us the full command we need:
 
@@ -518,7 +523,7 @@ srun -A compute2-workshop -p workshop -c 1 --mem=4G --pty \
 
 ## 7. Finally running FASTQC on the cluster
 
-Now that we've run the above command, we finally got all pieces in place: We have the tool we need (via the docker container) and the data is mounted. 
+Now that we've run the above command, we finally have all the pieces in place: We have the tool we need (via the docker container) and the data is mounted. 
 
 Let's move to the right directory:
 
@@ -584,8 +589,7 @@ exit
 ```
 
 You're back on the login node, and the container is gone. Try `fastqc --version` again to
-convince yourself. The output files, however, are still in your directory, because they were
-written to your storage allocation, not inside the container.
+convince yourself (it'll say 'not found'). The output files, however, are still in your directory, because they were written to your storage directory, not somewhere inside the container.
 
 ---
 
@@ -600,6 +604,7 @@ The `scp` ("secure copy") command copies files over the same connection that `ss
 ```bash
 scp "<washukey>@c2-login-002.ris.wustl.edu:~/workshop/week03/Exome_Tumor/*.html" .
 ```
+(don't forget to replace \<washukey\> with your own username!)
 
 The format is `scp <from> <to>`, and the `.` means "the directory I'm in right now".
 The quotes stop your laptop's shell from trying to expand the `*` itself, so the wildcard gets
@@ -657,11 +662,10 @@ Overall: this looks like good quality data!
 
 ```bash
 # --- download ---
-wget <url>                        # download a file
 curl -O <url>                     # same thing, with curl
 
 # --- archives and compression ---
-tar -tvf archive.tar              # list what's inside
+tar -tvf archive.tar              # list what's inside a tar archive
 tar -xvf archive.tar              # extract
 tar -czvf dir.tar.gz dir/         # bundle and compress a directory
 gunzip file.gz                    # decompress
@@ -671,7 +675,7 @@ zcat file.gz | head               # peek inside without decompressing
 # --- FASTQ ---
 head -n 12 reads.fastq                                  # first 3 records
 wc -l reads.fastq                                       # lines (÷ 4 = records)
-awk 'NR % 4 == 2 {print length($0)}' reads.fastq       # length of every read
+awk 'NR % 4 == 2 {print length($0)}' reads.fastq        # length of every read
 
 # --- get an interactive shell in a container ---
 srun -A compute-workshop -p workshop --pty \
@@ -679,9 +683,9 @@ srun -A compute-workshop -p workshop --pty \
   --container-mounts="/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch:/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch" \ 
   /bin/bash                  
 
-# --- copy files to your laptop (run ON your laptop) ---
-scp "<washukey>@c2-login-002.ris.wustl.edu:<path>" .
-```
+# --- copy files to your laptop (run ON your laptop, don't forget the final ".") ---
+scp "<washukey>@c2-login-002.ris.wustl.edu:<path>" .   
+``` 
 
 ---
 
