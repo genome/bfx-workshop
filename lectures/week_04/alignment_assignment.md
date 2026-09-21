@@ -482,7 +482,7 @@ open smb://storage1.ris.wustl.edu/c.a.miller/Active/bfx-workshop-scratch/<washuk
 
 Login with your wustl credentials when prompted. 
 
-The resulting shortcut folder will show up under /Volumes/<wustl_key> in Finder
+The resulting shortcut folder will show up under /Volumes/<washukey> in Finder
 
 ---
 
@@ -493,6 +493,8 @@ The resulting shortcut folder will show up under /Volumes/<wustl_key> in Finder
 You'll want to use 
 `\\storage1.ris.wustl.edu\c.a.miller\Active\bfx-workshop-scratch\<washukey>`
 (as always, replacing \<washukey> with your actual username)
+
+After hitting enter, it may silently take a few seconds to connect.  When logging in, don't forget to change the username use the "accounts" prefix:  `accounts\<washukey>`
 
 ---
 ### Fire up IGV
