@@ -53,17 +53,17 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 | 8/24/26 | 10:00am | [Intro to Bioinformatics and the Command Line](lectures/week_01) | Chris Miller & John Garza |
 | 8/31/26 | 10:00am | [The command line and the compute cluster](lectures/week_02) | Chris Miller |
 | 9/14/26 | 10:00am | [Sequence data generation/manipulation](lectures/week_03) | Chris Miller |
-| 9/21/26 | 10:00am | DNA Alignment and Sequence visualization | Chris Miller |
-| 9/28/26 | 10:00am | Data manipulation and basic plotting with R | Chris Miller |
+| 9/21/26 | 10:00am | [DNA Alignment and Sequence visualization](lectures/week_04) | Chris Miller |
+| 9/28/26 | 10:00am | Visualizing sequence data with IGV | Chris Miller |
 | 10/5/26 | - | NO CLASS | - |
-| 10/12/26 | 10:00am | Data visualization with R and ggplot2 | Chris Miller |
-| 10/19/26 | 10:00am | RNA sequencing I – Data and Alignment | Chris Miller |
-| 10/26/26 | 10:00am | RNA sequencing II – Transcript Quantification | Chris Miller |
-| 11/02/26 | 10:00am | RNA sequencing III – Differential Expression | Chris Miller |
+| 10/12/26 | 10:00am | Data manipulation and basic plotting with R | Chris Miller |
+| 10/19/26 | 10:00am | Data visualization with R and ggplot2 | Chris Miller |
+| 10/26/26 | 10:00am | RNA sequencing I – Data and Alignment | Chris Miller |
+| 11/02/26 | 10:00am | RNA sequencing II – Transcript Quantification | Chris Miller |
 | 11/09/26 | — | NO CLASS | — |
-| 11/16/26 | 10:00am | Variant Calling and Annotation | Chris Miller |
-| 11/23/26 | 10:00am | Genomic Intervals and Bedtools | Chris Miller |
-| 11/30/26 | 10:00am | Troubleshooting Bioinformatics, semester wrap-up | Chris Miller |
+| 11/16/26 | 10:00am | RNA sequencing III – Differential Expression | Chris Miller |
+| 11/23/26 | 10:00am | Variant Calling and Annotation | Chris Miller |
+| 11/30/26 | 10:00am | Genomic Intervals and Bedtools | Chris Miller |
 
 ### Spring 2027
 
