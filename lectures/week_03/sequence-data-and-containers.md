@@ -455,7 +455,7 @@ Most of this should look familiar:
 | Option | Meaning |
 |---|---|
 | `-A compute2-workshop` | charge the job to the workshop account |
-| `-p workshop-` | submit to the workshop's interactive partition |
+| `-p workshop` | submit to the workshop's interactive partition |
 | `-c 1 --mem=4G` | one CPU and 4 GB of RAM |
 | `--pty ... /bin/bash` | give me an interactive shell |
 | `--container-image=...` | **new!** run that shell inside this image |
@@ -516,8 +516,8 @@ Adding it to our command gets us the full command we need:
 
 ```
 srun -A compute2-workshop -p workshop -c 1 --mem=4G --pty \
---container-image=quay.io/biocontainers/fastqc:0.11.9--0 \ 
---container-mounts="/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch:/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch" \ 
+--container-image=quay.io/biocontainers/fastqc:0.11.9--0 \
+--container-mounts="/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch:/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch" \
 /bin/bash
 ```
 
@@ -678,9 +678,9 @@ wc -l reads.fastq                                       # lines (÷ 4 = records)
 awk 'NR % 4 == 2 {print length($0)}' reads.fastq        # length of every read
 
 # --- get an interactive shell in a container ---
-srun -A compute-workshop -p workshop --pty \
+srun -A compute2-workshop -p workshop --pty \
   --container-image=<image> \
-  --container-mounts="/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch:/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch" \ 
+  --container-mounts="/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch:/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch" \
   /bin/bash                  
 
 # --- copy files to your laptop (run ON your laptop, don't forget the final ".") ---
