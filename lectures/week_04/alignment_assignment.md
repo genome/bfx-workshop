@@ -7,6 +7,7 @@ Last week we downloaded some sequence data, unpacked it, and ran QC on it using 
 - Stream the whole process (FASTQ → alignment → BAM) in a single piped command
 - Look inside aligned BAM files, and decode SAM flags
 - Merge read groups into a single BAM, and understand what the header is telling you
+- View your alignments in IGV to see what you've created
 
 > [!NOTE]
 > As always, we strongly suggest typing the commands out yourself rather than copying and pasting. It really does help it stick.
@@ -138,7 +139,7 @@ You'll see one header line (`>chr6`), followed by 19 lines of nothing but `N` ch
 `N` means "any/unknown base." Two things are going on here:
 
 - The very beginning of every chromosome is a telomere, which is made of highly repetitive sequence that can't be assembled well, so even the full human reference starts each chromosome with a big run of `N`s.
-- This toy reference has also been **masked**: every base outside of our target genes has been replaced with `N`.  This makes alignment way faster for example purposes. 
+- This toy reference has also been **masked**: every base outside of our target genes has been replaced with `N`.  This keeps the exercise small: reads can only align to our target genes.
 
 The `.fai` shows that chr6 and chr17 are their full lengths (170,805,979 and 83,257,441 bp), but only about 247,000 of those ~254 million bases are real sequence. Keeping the full chromosome lengths means that coordinates in this reference match the real human genome (GRCh38), which will come in handy when we view our alignments in IGV.
 
@@ -149,7 +150,7 @@ The `.fai` shows that chr6 and chr17 are their full lengths (170,805,979 and 83,
 Now use `samtools faidx` again, but this time pass it a chromosome name and start and end positions:
 
 ```bash
-samtools faidx ref/hla_and_brca_genes.fa chr17:43044295-43170245
+samtools faidx ref/hla_and_brca_genes.fa chr17:43044295-43045295
 ```
 
 What do you see in the output? Does this look more familiar than the `head` command run earlier?
@@ -159,13 +160,13 @@ What do you see in the output? Does this look more familiar than the `head` comm
 
 This time we get real sequence (A, C, G, T), in FASTA format, with a header line named after the region we asked for (`>chr17:43044295-43045295`).
 
-That region is the beginning of the  **BRCA1** gene, one of the regions that wasn't masked. Notice that samtools returned it instantly, even though it's ~174 million bytes into the file. That's the index making things fast - rather than reading through the big fasta file from the top, samtools used the `.fai` to calculate exactly where to jump.
+That region is a piece of the  **BRCA1** gene, one of the regions that wasn't masked. Notice that samtools returned it instantly, even though it's ~217 million bytes into the file. That's the index making things fast - rather than reading through the big fasta file from the top, samtools used the `.fai` to calculate exactly where to jump.
 
 </details>
 
 ### BWA index
 
-BWA needs its own, much more elaborate index of the reference. It actually consists of several files and data structures that all work together (and are all required) for the alignment commands (`mem`, `aln`, `sampe`, etc). These are the same concept a the hash we used in our alignment example in the lecture. We can use `bwa index` to create this index for our genome:
+BWA needs its own, much more elaborate index of the reference. It actually consists of several files and data structures that all work together (and are all required) for the alignment commands (`mem`, `aln`, `sampe`, etc). These are conceptually the same as the hash we used in the lecture's alignment example. We can use `bwa index` to create this index for our genome:
 
 ```bash
 /usr/gitc/bwa index ref/hla_and_brca_genes.fa
@@ -212,7 +213,7 @@ Does this look like a FASTQ file? How could you look at the contents without dec
 
 You'll see a screen full of garbled characters (and it may even mess up your terminal - type `reset` and hit enter if it does). That's because `head` is showing the raw **compressed binary** data, which isn't meant for humans to read.
 
-Last week, we used `gunzip` to decompress the whole file, then used `gzip` to compress it again. For a real data set, that wastes a lot of time and disk space. Instead, use `gunzip -c` (`-c` means "unzip the file without modifying the original") to decompress the data and pipe the result to `head`:
+Last week, we used `gunzip` to decompress the whole file, then used `gzip` to compress it again. For a real data set, that wastes a lot of time and disk space. Instead, use `gunzip -c` to decompress the data and pipe the result to `head` (`-c` means "write the unzipped file to STDOUT without modifying the original").
 
 ```bash
 gunzip -c unaligned/normal/2895499331_1.fastq.gz | head -n 8
@@ -247,7 +248,7 @@ That's 7,088 lines ÷ 4 = **1,772 read pairs** for 2895499331, and 6,544 lines �
 
 ### Align step by step
 
-Now let's align! Give `bwa mem` the reference, followed by the read 1 and read 2 FASTQ files, and pipe the output to a file. 
+Now let's align! Give `bwa mem` the reference, followed by the read 1 and read 2 FASTQ files, and redirect the output to a file. 
 
 ```bash
 /usr/gitc/bwa mem ref/hla_and_brca_genes.fa unaligned/normal/2895499331_1.fastq.gz unaligned/normal/2895499331_2.fastq.gz >aligned/normal/2895499331.sam
@@ -258,7 +259,7 @@ Now let's align! Give `bwa mem` the reference, followed by the read 1 and read 2
 less aligned/normal/2895499331.sam
 ```
 
-> [!Note]
+> [!NOTE]
 > Reminder - to exit `less`, type `q`, for "quit".
 
 
@@ -272,33 +273,13 @@ ls -lh aligned/normal/2895499331.sam unaligned/normal/2895499331_*.fastq.gz
 
 The SAM is about 1.5 MB, compared to about 350 KB for the two FASTQs combined, even though it holds the same reads! For a whole genome, that difference is hundreds of gigabytes. That's why we almost always store alignments in the compressed binary **BAM** (or even more compressed **CRAM**) format instead.
 
-Notice one other thing: this SAM header has no `@RG` (read group) line! FASTQ files don't carry any information about which sample, library, or lane the reads came from, so there was nothing for `bwa mem` to put there. We'll fix that next.
+We can convert this sam file to a bam file with `samtools`:
 
-### Adding read groups and converting to BAM
-
-Let's try aligning this read group again, this time outputting to compressed BAM format. To do so, we'll pipe the SAM output directly to `samtools view`, which can convert between formats.
-
-We'll also give `bwa mem` a `-R` argument containing the read group information, which it will put in the header and attach to each read. This information usually comes from whoever did the sequencing (your sequencing core, or the metadata in a public repository). Ours came from the sequencing center, and looks like this:
-
-| Read group ID | Platform | Platform unit (flowcell-barcode.lane) | Library | Sample |
-|---|---|---|---|---|
-| 2895499331 | ILLUMINA | H7HY2CCXX-TGACCACG.3 | H\_NJ-HCC1395-HCC1395_BL-lg21-lib1 | H\_NJ-HCC1395-HCC1395_BL |
-| 2895499399 | ILLUMINA | H7HY2CCXX-TGACCACG.4 | H\_NJ-HCC1395-HCC1395_BL-lg21-lib1 | H\_NJ-HCC1395-HCC1395_BL |
-
-```bash
-/usr/gitc/bwa mem -R "@RG\tID:2895499331\tPL:ILLUMINA\tPU:H7HY2CCXX-TGACCACG.3\tLB:H_NJ-HCC1395-HCC1395_BL-lg21-lib1\tSM:H_NJ-HCC1395-HCC1395_BL\tCN:MGI" ref/hla_and_brca_genes.fa unaligned/normal/2895499331_1.fastq.gz unaligned/normal/2895499331_2.fastq.gz | samtools view -o aligned/normal/2895499331.bam -
+```
+samtools view -Sb aligned/normal/2895499331.bam aligned/normal/2895499331.sam
 ```
 
-That's a long one, and another one where it's okay to copy/paste, but make sure you look at all the new pieces here:
-
-| Piece | Meaning |
-|---|---|
-| `-R "@RG\t..."` | the read group header line to add. `\t` stands for a tab character |
-| `|` | pipe the SAM output of `bwa mem` into `samtools view` |
-| `-o aligned/...bam` | the output file |
-| `-` | read the input from STDIN (i.e. from the pipe) rather than from a file |
-
-This file is compressed, like our fastq file was eariler. That means we can't just use `less` or `cat` to look at the file directly, we have to uncompress it first.  We use `samtools` to do this:
+BAM files are compressed and binary, so `less` and `cat` won't work directly, and neither will `gunzip -c` - we'll get the same nonsense output we saw earlier. Instead, `samtools view` decodes bam files for us.
 
 Take a look at the header of the BAM file we just created (`-H` means "header"):
 
@@ -311,6 +292,37 @@ Now look at the alignments stored in the body of the BAM file. There are going t
 ```bash
 samtools view aligned/normal/2895499331.bam | less
 ```
+
+Clean this bam up because we're going to redo this using fewer steps in the next section:
+
+```bash
+rm aligned/normal/2895499331.sam aligned/normal/2895499331.bam
+```
+
+### Adding read groups and converting to BAM
+
+Let's try aligning this read group again, this time outputting straighed compressed BAM format. To do so, we'll pipe the SAM output directly to `samtools view`, which can convert between formats.
+
+We'll also give `bwa mem` a `-R` argument containing the read group information, which it will put in the header and attach to each read. This information usually comes from whoever did the sequencing (your sequencing core, or the metadata in a public repository). Ours came from the sequencing center, and looks like this:
+
+| Read group ID | Platform | Platform unit (flowcell-barcode.lane) | Library | Sample |
+|---|---|---|---|---|
+| 2895499331 | ILLUMINA | H7HY2CCXX-TGACCACG.3 | H\_NJ-HCC1395-HCC1395_BL-lg21-lib1 | H\_NJ-HCC1395-HCC1395_BL |
+| 2895499399 | ILLUMINA | H7HY2CCXX-TGACCACG.4 | H\_NJ-HCC1395-HCC1395_BL-lg21-lib1 | H\_NJ-HCC1395-HCC1395_BL |
+
+```bash
+/usr/gitc/bwa mem -R "@RG\tID:2895499331\tPL:ILLUMINA\tPU:H7HY2CCXX-TGACCACG.3\tLB:H_NJ-HCC1395-HCC1395_BL-lg21-lib1\tSM:H_NJ-HCC1395-HCC1395_BL" ref/hla_and_brca_genes.fa unaligned/normal/2895499331_1.fastq.gz unaligned/normal/2895499331_2.fastq.gz | samtools view -o aligned/normal/2895499331.bam -
+```
+
+That's a long one, and another one where it's okay to copy/paste, but make sure you look at all the new pieces here:
+
+| Piece | Meaning |
+|---|---|
+| `-R "@RG\t..."` | the read group header line to add. `\t` stands for a tab character |
+| `|` | pipe the SAM output of `bwa mem` into `samtools view` |
+| `-o aligned/...bam` | the output file |
+| `-` | read the input from STDIN (i.e. from the pipe) rather than from a file |
+
 
 ### Question 5
 
@@ -362,7 +374,7 @@ Use the up arrow to find the `bwa mem -R ... | samtools view ...` command above,
 <summary>Solution</summary>
 
 ```bash
-/usr/gitc/bwa mem -R "@RG\tID:2895499399\tPL:ILLUMINA\tPU:H7HY2CCXX-TGACCACG.4\tLB:H_NJ-HCC1395-HCC1395_BL-lg21-lib1\tSM:H_NJ-HCC1395-HCC1395_BL\tCN:MGI" ref/hla_and_brca_genes.fa unaligned/normal/2895499399_1.fastq.gz unaligned/normal/2895499399_2.fastq.gz | samtools view -o aligned/normal/2895499399.bam -
+/usr/gitc/bwa mem -R "@RG\tID:2895499399\tPL:ILLUMINA\tPU:H7HY2CCXX-TGACCACG.4\tLB:H_NJ-HCC1395-HCC1395_BL-lg21-lib1\tSM:H_NJ-HCC1395-HCC1395_BL" ref/hla_and_brca_genes.fa unaligned/normal/2895499399_1.fastq.gz unaligned/normal/2895499399_2.fastq.gz | samtools view -o aligned/normal/2895499399.bam -
 ```
 
 A few things change:
@@ -402,7 +414,7 @@ rm aligned/normal/2895499331.sam
 
 ### Merge and sort alignments
 
-Now that we have two read group BAMs, we want to combine them into a single BAM with all of the alignments for the Normal HCC1395 sample. At the same time, we'll **sort** the alignments by position. Right now, the reads are in the order they came off the sequencer, which means reads from the same part of the genome are scattered all through the file. Most downstream tools (including IGV, which we'll use for homework) need them ordered by chromosome and position instead.
+Now that we have two read group BAMs, we want to combine them into a single BAM with all of the alignments for the Normal HCC1395 sample. At the same time, we'll **sort** the alignments by position. Right now, the reads are in the order they came off the sequencer, which means reads from the same part of the genome are scattered all through the file. Most downstream tools (including IGV, which we'll use below) need them ordered by chromosome and position instead.
 
 We can do both in one step, by piping `samtools merge` into `samtools sort`:
 
@@ -426,13 +438,13 @@ samtools view -H aligned/normal.bam
 - **`@RG`** - We now have two read group tags. Every read in the body of the file has an `RG:Z:` tag pointing back to one of these IDs, so we know where each read came from.
 - **`@PG`** - we now also have several records documenting which program (and which version, and the exact command line) was used to produce the data. It's a built-in record of how the file was made!
 
-There's also a new **`@HD`** line at the top with `SO:coordinate`. That was added by `samtools sort`, and it records that the reads are now ordered by chromosome and position, rather than in the order they came off the sequencer. That will be important for the homework!
+There's also a new **`@HD`** line at the top with `SO:coordinate`. That was added by `samtools sort`, and it records that the reads are now ordered by chromosome and position, rather than in the order they came off the sequencer.
 
 </details>
 
 ### Index and view the data
 
-Bams are most useful when they have an index file, which is that Table of Contents that lets us jump straight to various portions of the genome.  Create that index for the `normal.bam` file:
+BAM files are most useful when they have an index file, which is that Table of Contents that lets us jump straight to various portions of the genome.  Create that index for the `normal.bam` file:
 
 ```
 samtools index aligned/normal.bam
@@ -443,6 +455,10 @@ This creates `aligned/normal.bam.bai`.
 
 Note that a BAM file must be **sorted by coordinate** before it can be indexed. Our merged BAM is, because we ran it through `samtools sort`. If you try to index one of the unsorted read group BAMs, like `aligned/normal/2895499331.bam`, samtools will give you an error.
 
+### Cleaning up
+
+When you're done, type `exit` in the container to release your interactive job.
+
 
 ## 5 Viewing the data with IGV
 
@@ -452,48 +468,48 @@ There are multiple ways to do this - we could use `scp` to copy the data from th
 
 This procedure is slightly different, depending on whether you're on Mac or Windows, but the end result is the same.  Use the RIS documentation to see how you can connect:
 
+---
+
 #### MacOS
 - [Connecting to Storage from MacOS](https://washu.atlassian.net/wiki/spaces/RUD/pages/1795784747/Connecting+to+Storage+from+MacOS)
 
-If you prefer to use Finder like they describe, that's fine, but I think it's sometime easier to use a Terminal and just type:
+You can use Finder like they describe, but I think it's sometimes easier to use a Terminal and just type:
 
 ```
-open smb://storage1.ris.wustl.edu/c.a.miller/Active/bfx-workshop-scratch/<wustl_key>/
+open smb://storage1.ris.wustl.edu/c.a.miller/Active/bfx-workshop-scratch/<washukey>
 ```
-(as always, replacing \<wustl_key> with your actual username)
+(as always, replacing \<washukey> with your actual username)
 
 Login with your wustl credentials when prompted. 
 
 The resulting shortcut folder will show up under /Volumes/<wustl_key> in Finder
 
+---
+
 #### Windows
 
-- [Connecting to Storage from+Windows](https://washu.atlassian.net/wiki/spaces/RUD/pages/1795588135/Connecting+to+Storage+from+Windows)
+- [Connecting to Storage from Windows](https://washu.atlassian.net/wiki/spaces/RUD/pages/1795588135/Connecting+to+Storage+from+Windows)
 
 You'll want to use 
-`\\storage1.ris.wustl.edu\c.a.miller\Active\bfx-workshop-scratch\<wustl_key>`
-(as always, replacing \<wustl_key> with your actual username)
+`\\storage1.ris.wustl.edu\c.a.miller\Active\bfx-workshop-scratch\<washukey>`
+(as always, replacing \<washukey> with your actual username)
 
-
+---
 ### Fire up IGV
 
 1. If you don't have it installed, grab it from [https://igv.org/doc/desktop/](https://igv.org/doc/desktop/)
 
 2. Choose the **Human (hg38)** genome from the dropdown at the top left. Our toy reference uses full-length chr6 and chr17 with GRCh38 coordinates, so the alignments line up with the standard genome.
-3. Choose **File > Load from File...** and select `normal.bam`.
+3. Choose **File > Load from File...**, then navigate to the folder we've been working in: `week04/aligned/` and select `normal.bam`.
 4. Type `BRCA1` into the search box and hit Go.
 
 Zoom in until you see the reads.  Notice how they cluster over exons - this was clearly exome sequencing.  
 
 We'll dive much more deeply into IGV in future sessions.
 
-### Cleaning up
-
-When you're done, type `exit` in the container to release your interactive job.
-
 ---
 
-## 5. Cheat sheet
+## 6. Cheat sheet
 
 ```bash
 # --- interactive shell in the alignment container ---
@@ -504,7 +520,7 @@ srun -A compute2-workshop -p workshop -c 1 --mem=8G --pty \
 
 # --- indexing ---
 samtools faidx ref.fa                          # index a FASTA (.fai)
-samtools faidx ref.fa chr17:43044295-43170245  # pull out one region
+samtools faidx ref.fa chr17:43044295-43045295  # pull out one region
 /usr/gitc/bwa index ref.fa                     # build the BWA index (slow!)
 
 # --- looking at FASTQ/SAM/BAM files ---
@@ -520,8 +536,6 @@ samtools view -o out.bam -                     # convert SAM on STDIN to BAM
 samtools merge - a.bam b.bam | samtools sort -o merged.bam -
 samtools index merged.bam                      # index a sorted BAM (.bai)
 
-# --- piping safely ---
-set -o pipefail
 ```
 
 ---
