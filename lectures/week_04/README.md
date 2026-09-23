@@ -2,8 +2,8 @@
 
 This week, we cover how to take raw sequence data, align it to the genome, and then how to look at it in IGV. 
 
-- [Lecture Recording]()
-- [Slides]()
+- [Lecture Recording](https://wustl.box.com/s/cwz1scx7twi4lpvcwotrplowwtkugo79)
+- [Slides](bfx_workshop_04_alignment.pdf)
 
 ### Assignment for this week
 
