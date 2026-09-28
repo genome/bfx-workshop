@@ -54,7 +54,7 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 | 8/31/26 | 10:00am | [The command line and the compute cluster](lectures/week_02) | Chris Miller |
 | 9/14/26 | 10:00am | [Sequence data generation/manipulation](lectures/week_03) | Chris Miller |
 | 9/21/26 | 10:00am | [DNA Alignment and Sequence visualization](lectures/week_04) | Chris Miller |
-| 9/28/26 | 10:00am | Visualizing sequence data with IGV | Chris Miller |
+| 9/28/26 | 10:00am | [Visualizing sequence data with IGV](lectures/week_05) | Chris Miller |
 | 10/5/26 | - | NO CLASS | - |
 | 10/12/26 | 10:00am | Data manipulation and basic plotting with R | Chris Miller |
 | 10/19/26 | 10:00am | Data visualization with R and ggplot2 | Chris Miller |
