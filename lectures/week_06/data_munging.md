@@ -50,7 +50,7 @@ into a **data frame**, which is R's version of a spreadsheet table. `head()` sho
 first six rows.
 
 ``` r
-fundata <- read.csv("http://genomedata.org/seq-tec-workshop/misc/fundata.csv")
+fundata <- read.csv("https://raw.githubusercontent.com/genome/bfx-workshop/refs/heads/master/lectures/week_06/fundata.csv")
 head(fundata) # Look at the data
 ```
 
