@@ -43,7 +43,7 @@ Writing down what you *expect* to see is often the most important step in QC. Mo
 are only visible when you compare what's actually in the file to what should be there.
 Keep this design handy, because we'll keep coming back to it.
 
-### Step one: Import and prepare
+### Step 1: Import and prepare
 
 The `read.csv()` function reads a comma-separated file (from your computer or from a URL)
 into a **data frame**, which is R's version of a spreadsheet table. `head()` shows the
@@ -56,10 +56,10 @@ head(fundata) # Look at the data
 
     ##   siteplot       date temp_c
     ## 1      A.1 03-21-2017  31.50
-    ## 2      B.2 04-21-2017  33.63
-    ## 3      C.3 05-21-2017  32.56
+    ## 2      B.3 04-21-2017  33.63
+    ## 3      C.2 05-21-2017  32.56
     ## 4      D.4 06-21-2017  31.22
-    ## 5      E.5 07-21-2017  25.44
+    ## 5      E.1 07-21-2017  25.44
     ## 6      F.6 08-21-2017  33.55
 
 `str()` (short for "structure") tells you how many rows ("obs." = observations) and columns
@@ -71,7 +71,7 @@ str(fundata)
 ```
 
     ## 'data.frame':    355 obs. of  3 variables:
-    ##  $ siteplot: chr  "A.1" "B.2" "C.3" "D.4" ...
+    ##  $ siteplot: chr  "A.1" "B.3" "C.2" "D.4" ...
     ##  $ date    : chr  "03-21-2017" "04-21-2017" "05-21-2017" "06-21-2017" ...
     ##  $ temp_c  : num  31.5 33.6 32.6 31.2 25.4 ...
 
@@ -93,10 +93,6 @@ summary(fundata)
     ##                                        Max.   :  180.00  
     ##                                        NA's   :1
 
-> **Ask an LLM:** If any part of the `str()` or `summary()` output is confusing (what's a
-> quartile? why does `summary` treat the text columns differently?), paste the output into
-> an LLM and ask it to explain each line. Then check whether its explanation matches what you
-> see.
 
 What's our assessment of this dataset from the above commands? Compare it to the
 experimental design above and write down every problem you can spot before opening the hints.
@@ -112,6 +108,9 @@ experimental design above and write down every problem you can spot before openi
 </details>
 
 Let's get to work cleaning up this dataset and getting it ready for analysis. 
+
+### Step 2: Cleaning the data
+
 
 #### Cleanup Task #1: Split siteplot into two columns
 
@@ -137,7 +136,7 @@ head(lettersdf)
     ## 5     E.V
     ## 6     F.U
 
-And then here's some example code that splits them inte separate columns:
+And then here's some example code that splits them into separate columns:
 
 ```r
 head(separate(lettersdf, letters, c("letter_one", "letter_two"), sep = "\\."))
@@ -172,10 +171,10 @@ head(fundata)
 
     ##   site plot       date temp_c
     ## 1    A    1 03-21-2017  31.50
-    ## 2    B    2 04-21-2017  33.63
-    ## 3    C    3 05-21-2017  32.56
+    ## 2    B    3 04-21-2017  33.63
+    ## 3    C    2 05-21-2017  32.56
     ## 4    D    4 06-21-2017  31.22
-    ## 5    E    5 07-21-2017  25.44
+    ## 5    E    1 07-21-2017  25.44
     ## 6    F    6 08-21-2017  33.55
 
 Note the `fundata = ...` at the beginning. Most R functions don't change your data in place.
@@ -184,11 +183,6 @@ to the screen and is gone.
 
 </p>
 </details> 
-
-> **Ask an LLM:**  If we hadn't give you the separate command, you could ask an LLM what the best way to split the `siteplot` column using only "base R" (no
-> tidyverse packages). Compare its answer to `separate()`. Which is easier to read? Run its
-> code and check that you get the same result. There is often more than one right way to do
-> something in R.
 
 #### Cleanup Task #2: What's up with those dates?
 
@@ -255,6 +249,10 @@ So `"%Y-%m-%d"` means "year, dash, month, dash, day". If the format doesn't matc
 `as.Date()` won't give you an error. It just quietly returns `NA`, so always check
 your result!
 
+**Exercise:** Convert the `date` column in `fundata` from a character vector to a Date
+vector with `as.Date()`. Look carefully at what order the month, day, and year are in. Then
+check your work with `str()` and by sorting the dates again.
+
 <details><summary>Answer</summary>
 <p>
 
@@ -267,7 +265,7 @@ str(fundata)
 
     ## 'data.frame':    355 obs. of  4 variables:
     ##  $ site  : chr  "A" "B" "C" "D" ...
-    ##  $ plot  : chr  "1" "2" "3" "4" ...
+    ##  $ plot  : chr  "1" "3" "2" "4" ...
     ##  $ date  : Date, format: "2017-03-21" "2017-04-21" "2017-05-21" "2017-06-21" ...
     ##  $ temp_c: num  31.5 33.6 32.6 31.2 25.4 ...
 
@@ -275,7 +273,7 @@ The `date` column is now type `Date`, and R prints it in the standard year-month
 Sorting now works in time order:
 
 ``` r
-head(sort(fundata$date), 10)
+head(unique(sort(fundata$date)), 10)
 ```
 
     ##  [1] "2016-03-21" "2016-04-21" "2016-05-21" "2016-05-21" "2016-06-21" "2016-06-21"
@@ -287,9 +285,6 @@ It's also a good idea to make sure none of the dates failed to convert:
 </p>
 </details> 
 
-> **Ask an LLM:** Dates come in many formats: `21 Mar 2017`, `3/21/17`, `2017.03.21`, etc.
-> Pick a couple and ask an LLM what `format` string you'd need for `as.Date()`. Then test
-> its answer in R. Does it give a real date or `NA`?
 
 #### Cleanup Task #3: Checking the sites and plots: 
 
@@ -354,10 +349,18 @@ comparing sites.
 </p>
 </details> 
 
+We can also apply table in two dimensions.  What happens if you run 
+
+``` r 
+table(fundata$site, fundata$plot)
+```
+
+That's a pretty handy way to view this data!
+
     
 #### Cleanup task #4: Temperature readings
 
-Get some basic stats about the `temp_c` column with `summary()`:
+Our temps looks funky earlier.  Start by gettin some basic stats about the `temp_c` column with `summary()`:
 
 ``` r
 summary(fundata$temp_c)
@@ -388,9 +391,8 @@ range(fundata$temp_c, na.rm = TRUE)
 
 In addition to looking at text output, plotting your data is always a good idea and can often uncover issues.  For a single numeric variable, a box plot is a great way to look at the distribution of values. The thick line is the median, the box covers the
 middle 50% of the data, and points drawn individually beyond the "whiskers" are potential
-outliers. Try it with some randomly generated data:
-
-this function draws 100 random numbers from a normal distribution with mean 50 and standard deviation 5):
+outliers. Try it with some randomly generated data. This function draws 100 random numbers from a
+normal distribution with mean 50 and standard deviation 5:
 
 ``` r
 normdata = rnorm(100, 50, 5)
@@ -399,7 +401,7 @@ normdata = rnorm(100, 50, 5)
 Then we can plot it using the boxplot() function:
 
 ``` r
-boxplot(normadata)
+boxplot(normdata)
 ```
 
 **Exercise:** Use the `boxplot()` function to make a boxplot of your temperature values. What do you see?
@@ -426,19 +428,14 @@ fundata[which(fundata$temp_c < -100 | fundata$temp_c > 100), ]
 ```
 
     ##     site plot       date temp_c
-    ## 116    D    4 2017-06-21  -9999
-    ## 164    D    4 2017-06-21  -9999
+    ## 116    D    5 2017-06-21  -9999
+    ## 164    D    5 2017-06-21  -9999
     ## 258    C    3 2017-05-21  -9999
     ## 305    D    4 2017-06-21    180
-    ## 312    E    5 2017-07-21  -9999
-    ## 320    A    1 2017-03-21  -9999
+    ## 312    E    4 2017-07-21  -9999
+    ## 320    A    6 2017-03-21  -9999
 
-There are five values of exactly -9999. An exact, round, impossible number that shows up
-over and over is almost never a measurement. It's a **placeholder for missing data** (sometimes
-called a "sentinel value"). Many instruments, databases, and older file formats use codes
-like `-9999`, `-99`, `999`, `0`, or `.` to mean "no reading". The 180 °C value is different:
-it only appears once, and it might be a typo (e.g. `18.0` with a misplaced decimal) or a
-broken sensor. Either way, we can't trust it.
+There are five values of exactly -9999.  The 180 value might be a typo (e.g. `18.0` with a misplaced decimal) or a broken sensor. Either way, we can't trust it.
 
 Assuming we can't go back to our original data and fill these in, the best solution is often to drop these rows. There is more than one way to do this, but we're going to use the dplyr `filter` function to drop those rows.
 
@@ -454,23 +451,30 @@ filter(fundata, site == "B")
 <p>
 
 First, check our filter command 
+
 ``` r
 filter(fundata, temp_c < 100)
 ```
+
 That's way too much output, so let's flip the sign and make sure it grabs just the rows we want:
+
 ``` r
 filter(fundata, temp_c > 100)
 ```
+
 Okay, so that row is what we'll be removing. Now let's save the result.
+
 ``` r
 fundata = filter(fundata, temp_c < 100)
 ```
+
 Then repeat the process to remove the low value:
+
 ``` r
 fundata = filter(fundata, temp_c > -100)
 ```
 
-Worth noting that we could have gotten fancy and do them both with one command, using the ampersand to mean "AND":
+Worth noting that we could have gotten fancy and done them both with one command, using the ampersand to mean "AND":
 
 ``` r
 fundata = filter(fundata, temp_c > -100 & temp_c < 100)
@@ -479,22 +483,22 @@ fundata = filter(fundata, temp_c > -100 & temp_c < 100)
 </details> 
 
 
-Then try the boxplot and summary again:
+Let's try the boxplot and summary again:
 
 ``` r
 boxplot(fundata$temp_c)
 summary(fundata$temp_c)
 ```
 
-    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
-    ##   17.53   26.91   30.25   29.98   33.37   41.42       7 
+    ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    ##   17.53   26.91   30.25   29.98   33.37   41.42 
 
-Now the temperatures range from about 17.5 to 41.4 °C, which is plausible. We s have 7 `NA`s: the original
-1, plus the 5 placeholders and 1 impossible value we just converted.
+Now the temperatures range from about 17.5 to 41.4 °C, which is plausible. We removed 7 rows
+(355 goes down to 348).
 
 Notice that this also dropped our "NA" values, since they didn't match the filter criteria.  This may or may not be desired behavior, but keep it in mind!
 
-### Step three: Summarize and save
+### Step 3: Summarize and save
 
 Finally, save your cleaned data so you don't have to repeat all of this every time you want to work with it.
 `row.names = FALSE` stops R from adding an extra column of row numbers:
@@ -503,6 +507,8 @@ Finally, save your cleaned data so you don't have to repeat all of this every ti
 write.csv(fundata, "fundata_clean.csv", row.names = FALSE)
 ```
 Where did it write that file? Check `getwd()` to see your working directory on the filesystem.  You can also provide a full path in the save command:  `/Users/cmiller/fundata_clean.csv`
+
+This data is now ready for analyses - we could do stats on the sites, or plot temperatures over time, etc.  **If we hadn't carefully examined our data first, though, all of those analyses would be wrong!**
 
 
 ## LLM assisted cleanup. 
@@ -529,42 +535,39 @@ this exercise (e.g. `fundata_llm_qc.R`), because you'll be turning it in.
 <p>
 
 Things you might want to mention: 
+
 - I'm still learning R
 - describe the study design a little
 - what kinds of errors should it be looking for?
-- how will it decide whether points are outliers or not?
+ 
 </p>
 </details> 
 
-Don't just ask it to fix the data! You need a reproducible way to get from point A to point B. Ask it to generate an R script that does the cleanup you decide on after going back and forth with the LLM about potential issues. 
+Don't just ask it to fix the data! You need a reproducible way to get from this original file to a new "cleaned" file. Ask it to generate an R script that does the cleanup you decide on after going back and forth with the LLM about potential issues. 
 
 ### Part 2: Compare and contrast
 
-- Did the LLM find **all** of the problems we found above? Which did it miss? In particular,
-  did it notice that each site has only one plot, or that each site was sampled in a different
-  month?
-- Did it find anything we **didn't** find? If so, run its code yourself. Is it a real problem?
+- Did the LLM find **all** of the problems we found above? Which did it miss? 
+- Did it find anything we **didn't** find? If so, examine the finding yourself. Is it a real problem?
 - Did it report anything that is **wrong**? For example, check every number it gives you
-  (how many rows are missing, how many `-9999`s, etc.) by running R code yourself. LLMs that
+  (how many rows are missing, how many `-9999`s, etc.) Verify by running the R code yourself and comparing. LLMs that
   don't actually run code can easily get counts wrong while sounding very confident.
-- Did it make different **decisions** than we did? (For example, did it delete the 2016
-  rows instead of correcting them? Remove the duplicates?) Is its choice reasonable? Did it
+- Did it make different **decisions** than we did? Were those choices reasonable? Did it
   explain why?
 - How did its approach compare to ours? Did it use the same kinds of checks (`table()`,
   `summary()`, plots), or different ones?
 
 ### Part 3: Make sure you understand the code
 
-1. Copy the R code that the LLM generated into your script and **run it, one chunk at a time.** 
+1. Copy the R code that the LLM generated into RStudo and **run it, one chunk at a time.** 
 
 2. Look for functions you don't recognize. LLMs often use tidyverse packages like `dplyr`
-   (`filter()`, `mutate()`, `group_by()`, `summarise()`, `%>%` or `|>` pipes) and `ggplot2`
-   (`ggplot()`, `geom_boxplot()`, etc.). These are great tools that you may learn later, but
-   for this exercise, ask the LLM to rewrite the code in base R. For example:
+   (`mutate()`, `group_by()`, `summarise()`, `%>%` or `|>` pipes) and `ggplot2`
+   (`ggplot()`, `geom_boxplot()`, etc.). These are great tools that we may learn later, but for this exercise, ask the LLM to keep it simple. For example:
 
-   > Please rewrite this code without using piping (%>%) and stick to simple functions that are understanable to an R beginner.
+   > Please rewrite this code without using piping (%>%) and stick to simple functions that are understandable to an R beginner.
 
-3. Make sure the final script runs without errors.  Does the output match what the LLM said it would show? If you get an error, paste the error message back to the LLM and ask it to find the error, explain what went wrong, and suggest a fix to the code. 
+3. Make sure the final script runs without errors.  Does the output match what the LLM said it would show? If you get an error, paste the error message back to the LLM and ask it to find the problem, explain what went wrong, and suggest a fix to the code.  Saying "Just fix it" doesn't help you understand and learn.
 
 
 ### Part 4: Comment the code yourself
@@ -590,11 +593,13 @@ table(fundata$site)
 This one shows that you understand the code and what it found:
 
 ``` r
-# Count how many samples there are from each site. From the study design, we expect 60 per site. 
+# Count how many samples there are from each site. 
+# From the study design, we expect 60 in each. 
 table(fundata$site)
 ```
 
-### What to turn in
+
+### What to turn in (for-credit students)
 
 1. Your commented R script (`fundata_llm_qc.R`)
 2. A few sentences of reflection: What was the LLM good at? Did it find anything that we didn't?  Did it miss anything we found?  Where would you *not* trust it without checking? Would you have caught its mistakes (if any) if you hadn't done this exercise by hand first?
