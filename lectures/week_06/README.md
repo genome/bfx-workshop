@@ -2,7 +2,7 @@ Week 05: Introduction to R and data munging
 
 This week, we cover the basics of using the R programming language to read in and manipulate data.  We also started talking about data visualization, as a prelude to next week
 
- - [Lecture Recording]()
+ - [Lecture Recording](https://wustl.box.com/s/5qu8x3ecr2spp01wgs5s3mgccz21wlyt)
  - [Slides]()
 
 Homework Assignment:
