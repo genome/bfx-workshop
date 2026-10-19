@@ -3,7 +3,7 @@
 This week, we will discuss some of the fundamentals of data visualization, then work together during lecture to create graphics using R's ggplot2 library. Follow along with the [Intro to ggplot2](intro_to_ggplot.md) page.
 
 - [Lecture Slides](dataviz.pdf)
-- Lecture recording
+- [Lecture recording](https://wustl.box.com/s/dszy94lh0zf0yqm02zbm3fn1kjjc2y5k)
 
 ### Assignment:  
 1. Finish the [Intro to ggplot2 exercise](intro_to_ggplot.md) that we started in class together.
