@@ -1,3 +1,4 @@
+
 ![](images/banner.jpg)
 
 Welcome to the Fall 2026/Spring 2027 Bioinformatics (BFX) Workshop! 
@@ -58,7 +59,7 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 | 10/5/26 | - | NO CLASS | - |
 | 10/12/26 | 10:00am | [Cleaning datasets with R](lectures/week_06) | Chris Miller |
 | 10/19/26 | 10:00am | [Data visualization with R and ggplot2](lectures/week_07) | Chris Miller |
-| 10/26/26 | 10:00am | RNA sequencing I – Data and Alignment | Chris Miller |
+| 10/26/26 | 10:00am | [RNA sequencing I – Data and Alignment](lectures/week_08) | Chris Miller |
 | 11/02/26 | 10:00am | RNA sequencing II – Transcript Quantification | Chris Miller |
 | 11/09/26 | — | NO CLASS | — |
 | 11/16/26 | 10:00am | RNA sequencing III – Differential Expression | Chris Miller |
