@@ -1,6 +1,6 @@
 # RNA-seq Part 1: Inputs and Alignment on the Cluster
 
-This week we start working through the [RNA-seq Bioinformatics course](https://rnabio.org/course/) (rnabio.org), developed by the Griffith Lab and used here with permission. That course was written to run on an Amazon (AWS) cloud machine. We'll run it on Compute2 instead, inside a Docker container that has all of the course's tools pre-installed.
+This week we start working through parts of the [RNA-seq Bioinformatics course](https://rnabio.org/course/) (rnabio.org), developed by the Griffith Lab and used here with permission. That course was written to run on an Amazon (AWS) cloud machine. We'll run it on Compute2 instead, inside a Docker container that has all of the course's tools pre-installed.
 
 By the end of this exercise you should be able to:
 
@@ -197,7 +197,7 @@ env | grep RNA
 
 **You'll need to re-run `source /workspace/rnabio_env.sh` every time you start a new container session.** If a command from the course ever complains about a missing directory, or something like `cd: too many arguments`, the first thing to check is `echo $RNA_HOME`.
 
-### Question 3
+### Question 2
 
 Why do we put the `export` commands in a file and `source` it, rather than just typing them in once?
 
@@ -246,8 +246,6 @@ Each lesson ends with a practical exercise that asks you to repeat what you just
 
 ---
 
-> [!NOTE]
-> The rest of this page is adapted from the [RNA-seq Bioinformatics course](https://rnabio.org/course/) by the Griffith Lab (Malachi Griffith, Obi Griffith, and colleagues), released under a CC License. Each section heading links to the original lesson. The commands have been adjusted to run in our container on Compute2.
 
 ## 6. Module 1: Inputs
 
@@ -282,31 +280,39 @@ ls
 
 **Use your favorite LLM to help you answer the following questions:**
 
-View the first 10 lines of this file. Why does it look like this?
+1) View the first 10 lines of this file. Why does it look like this?
 
 ```bash
 head chr22_with_ERCC92.fa
 ```
 
-How many lines and characters are in this file? How long is this chromosome (in bases and Mbp)?
+2) How many lines and characters are in this file? How long is this chromosome (in bases and Mbp)?
 
 ```bash
 wc chr22_with_ERCC92.fa
 ```
 
-View 10 lines from approximately the middle of this file. What is the significance of the upper and lower case characters?
+3) View 10 lines from approximately the middle of this file. What is the significance of the upper and lower case characters?
 
 ```bash
 head -n 425000 chr22_with_ERCC92.fa | tail
 ```
 
-What is the count of each base in the entire reference genome file (skipping the header lines for each sequence)?
+4) What is the count of each base in the entire reference genome file (skipping the header lines for each sequence)?
 
 ```bash
 cat chr22_with_ERCC92.fa | grep -v ">" | perl -ne 'chomp $_; $bases{$_}++ for split //; if (eof){print "$_ $bases{$_}\n" for sort keys %bases}'
 ```
 
-CC: Add a collapsible answer block with 4 list items inside: - The centromeres in GRCh38 are unmappable and replaced with Ns. Newer references from the T2T consortium may have resolution in these regions.  - 51751056 is the count of bytes from `wc`.  There are some newlines and header lines included there, but 51Mb is a reasonable estimate - lowercase letters represent "soft-masking", generally of regions that are flagged by RepeatMasker - That's a perl solution to the problem, but solutions in awk, python, or other such tools would be just as valid.  On the command line, there is almost always more than one way to do something!
+<details>
+<summary>Answers</summary>
+
+- 1) After the `>22` header line, the sequence is all `N`s. Regions in GRCh38 that are unassembled are replaced with Ns. These are typically things like centromeres and telomeres.  Newer references from the T2T consortium may have resolution in these regions.
+- 2) 51751056 is the count of bytes (characters) from `wc`. There are some newlines and header lines included there, but ~51 Mbp is a reasonable estimate of the chromosome's length.
+- 3) Lowercase letters represent "soft-masking", generally of regions that are flagged by RepeatMasker. For things like alignment here, we can just ignore case.
+- 4) That's a perl solution to the problem, but solutions in awk, python, or other such tools would be just as valid. On the command line, there is almost always more than one way to do something!
+
+</details>
 
 
 In your own work, instead of the above, you could also consider getting reference genomes and associated annotations from [UCSC, e.g. the UCSC GRCh38 download](https://hgdownload.cse.ucsc.edu/goldenPath/hg38/chromosomes/).
@@ -347,7 +353,7 @@ less start_codon -S $RNA_REF_GTF
 Note how the `-S` option makes it easier to view this file with `less`. Make the formatting a bit nicer still:
 
 ```bash
-cat chr22_with_ERCC92.gtf | column -t | less -p exon -S
+cat chr22_with_ERCC92.gtf | column -t | less -S
 ```
 
 How many unique gene IDs are in the GTF file? We can use a perl command-line command to find out:
@@ -419,7 +425,7 @@ A more detailed discussion of commonly used versions of the human reference geno
 
 ### 6.3 Indexing
 
-If you want a refresher on indexing, the RNAbio folks have made an [indexing mini lecture](https://github.com/griffithlab/rnabio.org/blob/master/assets/lectures/cbw/2026/mini/RNASeq_MiniLecture_01_02_Indexing.pdf) available.
+Remember that indexing is the "lookup table" that the aligner uses to find matches very quickly. If you want a detailed refresher on indexing, the RNAbio folks have a [indexing mini lecture](https://github.com/griffithlab/rnabio.org/blob/master/assets/lectures/cbw/2026/mini/RNASeq_MiniLecture_01_02_Indexing.pdf) available.
 
 #### Create a HISAT2 index
 
