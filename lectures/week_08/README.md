@@ -1,6 +1,6 @@
 ## RNAseq Part 1 - Introduction and Alignment
 
-- [Lecture Recording]()
+- [Lecture Recording](https://wustl.box.com/s/7zkzr6yk1w14cuh2aekkephq6vyolbii)
 
 - [Slides](RNASeq_part1_bfx.pdf)
 
