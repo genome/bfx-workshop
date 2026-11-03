@@ -1,6 +1,6 @@
 ## RNAseq Part 2 - Transcript Quantification
 
-- [Lecture Recording]()
+- [Lecture Recording](https://wustl.box.com/s/7obeccqwcdnxccrpw3n0sahi0axhce31)
 
 - [Slides](RNASeq_part2_bfx.pdf)
 
