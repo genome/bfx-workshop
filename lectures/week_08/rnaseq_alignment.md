@@ -347,7 +347,7 @@ Take a look at the contents of the GTF file. Press `q` to exit the `less` displa
 
 ```bash
 echo $RNA_REF_GTF
-less start_codon -S $RNA_REF_GTF
+less -p start_codon -S $RNA_REF_GTF
 ```
 
 Note how the `-S` option makes it easier to view this file with `less`. Make the formatting a bit nicer still:
