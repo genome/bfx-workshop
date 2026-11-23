@@ -63,8 +63,8 @@ Time will be set aside 30 minutes before and after each lecture for "office hour
 | 11/02/26 | 10:00am | [RNA sequencing II – Transcript Quantification](lectures/week_09) | Chris Miller |
 | 11/09/26 | — | NO CLASS | — |
 | 11/16/26 | 10:00am | [RNA sequencing III – Differential Expression](lectures/week_10) | Chris Miller |
-| 11/23/26 | 10:00am | Variant Calling and Annotation | Chris Miller |
-| 11/30/26 | 10:00am | Genomic Intervals and Bedtools | Chris Miller |
+| 11/23/26 | 10:00am | [Variant Calling](lectures/week_11) | Chris Miller |
+| 11/30/26 | 10:00am | Variant Annotation - from variants to disease | Chris Miller |
 
 ### Spring 2027
 
