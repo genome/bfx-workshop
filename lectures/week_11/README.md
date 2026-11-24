@@ -2,7 +2,7 @@
 
 This week, we cover how to detect small germline SNPs/Indels in genomes by using variant calling tools.  This includes discussions of single-sample calling, joint calling and GVCFs, and how to find data from online sources that use the FAIR principles.
 
-- [Lecture Recording]()
+- [Lecture Recording](https://wustl.box.com/s/4ht5pj8y1wbg9bn9t3qbjfdk87s1lv7s)
 
 - [Slides](bfx_workshop_variant_calling.pdf)
 
