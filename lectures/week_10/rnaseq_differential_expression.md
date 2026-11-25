@@ -41,7 +41,7 @@ ssh <washukey>@c2-login-002.ris.wustl.edu
 
 srun -A compute2-workshop -p workshop -c 2 --mem=8G --pty \
   --container-image=griffithlab/rnaseq-toolkit:1.1.1 \
-  --container-mounts="/rdcw/fs2/c.a.miller/Active/bfx-workshop-scratch/$USER/rnabio-workspace:/workspace" \
+  --container-mounts="/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch/$USER/rnabio-workspace:/workspace" \
   --container-workdir=/workspace \
   /bin/bash
 ```
@@ -1574,7 +1574,7 @@ When you're done for the day, type `quit(save = "no")` to leave R (if you're sti
 # --- on the login node: start the RNA-seq toolkit container ---
 srun -A compute2-workshop -p workshop -c 2 --mem=8G --pty \
   --container-image=griffithlab/rnaseq-toolkit:1.1.1 \
-  --container-mounts="/rdcw/fs2/c.a.miller/Active/bfx-workshop-scratch/$USER/rnabio-workspace:/workspace" \
+  --container-mounts="/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch/$USER/rnabio-workspace:/workspace" \
   --container-workdir=/workspace \
   /bin/bash
 
