@@ -360,7 +360,7 @@ That's a pretty handy way to view this data!
     
 #### Cleanup task #4: Temperature readings
 
-Our temps looks funky earlier.  Start by gettin some basic stats about the `temp_c` column with `summary()`:
+Our temps looked funky earlier.  Start by getting some basic stats about the `temp_c` column with `summary()`:
 
 ``` r
 summary(fundata$temp_c)
@@ -387,7 +387,7 @@ range(fundata$temp_c, na.rm = TRUE)
 
     ## [1] -9999   180
 
-180 degrees seems implausible, whether we're in Celcius or Farenheit!  And unless we've invented some new physics, -9999 is absolutely a mistake.
+180 degrees seems implausible, whether we're in Celsius or Fahrenheit!  And unless we've invented some new physics, -9999 is absolutely a mistake.
 
 In addition to looking at text output, plotting your data is always a good idea and can often uncover issues.  For a single numeric variable, a box plot is a great way to look at the distribution of values. The thick line is the median, the box covers the
 middle 50% of the data, and points drawn individually beyond the "whiskers" are potential
@@ -522,7 +522,7 @@ this exercise (e.g. `fundata_llm_qc.R`), because you'll be turning it in.
 1. Get the **original, uncleaned** data. Download it to your computer with:
 
    ``` r
-   download.file("http://genomedata.org/seq-tec-workshop/misc/fundata.csv", "fundata.csv")
+   download.file("https://raw.githubusercontent.com/genome/bfx-workshop/refs/heads/master/lectures/week_06/fundata.csv", "fundata.csv")
    ```
 
 2. Start a **new** conversation with an LLM (so it doesn't know about this exercise), and
@@ -559,7 +559,7 @@ Don't just ask it to fix the data! You need a reproducible way to get from this 
 
 ### Part 3: Make sure you understand the code
 
-1. Copy the R code that the LLM generated into RStudo and **run it, one chunk at a time.** 
+1. Copy the R code that the LLM generated into RStudio and **run it, one chunk at a time.** 
 
 2. Look for functions you don't recognize. LLMs often use tidyverse packages like `dplyr`
    (`mutate()`, `group_by()`, `summarise()`, `%>%` or `|>` pipes) and `ggplot2`
