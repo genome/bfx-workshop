@@ -91,7 +91,7 @@ readlink -f ~/workshop/rnabio-workspace
 It should print something like:
 
 ```
-/rdcw/fs2/c.a.miller/Active/bfx-workshop-scratch/<washukey>/rnabio-workspace
+/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch/<washukey>/rnabio-workspace
 ```
 
 ### Question 1
@@ -114,7 +114,7 @@ Now we'll request an interactive job running inside the RNA-seq toolkit image, w
 ```bash
 srun -A compute2-workshop -p workshop -c 2 --mem=8G --pty \
   --container-image=griffithlab/rnaseq-toolkit:1.1.1 \
-  --container-mounts="/rdcw/fs2/c.a.miller/Active/bfx-workshop-scratch/$USER/rnabio-workspace:/workspace" \
+  --container-mounts="/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch/$USER/rnabio-workspace:/workspace" \
   --container-workdir=/workspace \
   /bin/bash
 ```
@@ -1358,7 +1358,7 @@ When you're done for the day, type `exit` to leave the container and release you
 # --- on the login node: start the RNA-seq toolkit container ---
 srun -A compute2-workshop -p workshop -c 2 --mem=8G --pty \
   --container-image=griffithlab/rnaseq-toolkit:1.1.1 \
-  --container-mounts="/rdcw/fs2/c.a.miller/Active/bfx-workshop-scratch/$USER/rnabio-workspace:/workspace" \
+  --container-mounts="/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch/$USER/rnabio-workspace:/workspace" \
   --container-workdir=/workspace \
   /bin/bash
 
