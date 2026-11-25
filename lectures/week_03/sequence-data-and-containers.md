@@ -47,7 +47,7 @@ cd week03
 ```
 
 
-Next, you'll need to download the file. A common tool for doing this is `curl`.  Just like the other command line tool we've been using, `curl` spits it's output to STDOUT, so we'll redirect it to a file:
+Next, you'll need to download the file. A common tool for doing this is `curl`.  Just like the other command line tool we've been using, `curl` spits its output to STDOUT, so we'll redirect it to a file:
 
 ```bash
 curl https://storage.googleapis.com/bfx_workshop_tmp/Exome_Tumor.tar >Exome_Tumor.tar
@@ -510,7 +510,7 @@ Let's exit out of the docker container and back to the head node by simply typin
 exit
 ```
 
-To fix our data problem, we'll need to tell slurm and docker to pass that directory throughusing a new option to slurm called `--container-mounts`.  It takes a quoted list of colon-separated source and destination directories. To make things simple, let's just make them the same on both sies.
+To fix our data problem, we'll need to tell slurm and docker to pass that directory through using a new option to slurm called `--container-mounts`.  It takes a quoted list of colon-separated source and destination directories. To make things simple, let's just make them the same on both sides.
 
 Adding it to our command gets us the full command we need:
 
@@ -528,7 +528,7 @@ Now that we've run the above command, we finally have all the pieces in place: W
 Let's move to the right directory:
 
 ```
-cd ~/workshop/week03/
+cd ~/workshop/week03/Exome_Tumor
 ```
 
 Now let's run FastQC on our data:
