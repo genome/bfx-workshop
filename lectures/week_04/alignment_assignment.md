@@ -263,7 +263,7 @@ less aligned/normal/2895499331.sam
 > Reminder - to exit `less`, type `q`, for "quit".
 
 
-The first lines of our SAM file are a header. `@SQ` lines describe the reference sequences.  (Remember, we're using a toy reference with two chromosomes, so there are only two lines here, instead of a list of all the human chromosomes).  Next is a `@PG` line recording the `bwa mem` command that made the file. In the body of the file , we see one line per read with its name, the chromosome and position it aligned to, a mapping quality, a CIGAR string, and the sequence and qualities from the FASTQ.
+The first lines of our SAM file are a header. `@SQ` lines describe the reference sequences.  (Remember, we're using a toy reference with two chromosomes, so there are only two lines here, instead of a list of all the human chromosomes).  Next is a `@PG` line recording the `bwa mem` command that made the file. In the body of the file, we see one line per read with its name, the chromosome and position it aligned to, a mapping quality, a CIGAR string, and the sequence and qualities from the FASTQ.
 
 It's human-readable, but SAM is plain text and not compressed, so it won't scale well. Compare the size of the SAM file to the two gzipped FASTQ files it came from:
 
@@ -276,7 +276,7 @@ The SAM is about 1.5 MB, compared to about 350 KB for the two FASTQs combined, e
 We can convert this sam file to a bam file with `samtools`:
 
 ```
-samtools view -Sb aligned/normal/2895499331.bam aligned/normal/2895499331.sam
+samtools view -Sb -o aligned/normal/2895499331.bam aligned/normal/2895499331.sam
 ```
 
 BAM files are compressed and binary, so `less` and `cat` won't work directly, and neither will `gunzip -c` - we'll get the same nonsense output we saw earlier. Instead, `samtools view` decodes bam files for us.
@@ -301,7 +301,7 @@ rm aligned/normal/2895499331.sam aligned/normal/2895499331.bam
 
 ### Adding read groups and converting to BAM
 
-Let's try aligning this read group again, this time outputting straighed compressed BAM format. To do so, we'll pipe the SAM output directly to `samtools view`, which can convert between formats.
+Let's try aligning this read group again, this time outputting straight to compressed BAM format. To do so, we'll pipe the SAM output directly to `samtools view`, which can convert between formats.
 
 We'll also give `bwa mem` a `-R` argument containing the read group information, which it will put in the header and attach to each read. This information usually comes from whoever did the sequencing (your sequencing core, or the metadata in a public repository). Ours came from the sequencing center, and looks like this:
 
@@ -399,18 +399,11 @@ Which files do you now have for read group 2895499399? How does that compare to 
 ls -lh aligned/normal
 ```
 
-For **2895499331**, we have a SAM file and a BAM file. For **2895499399**, we have only the BAM file.
+For both read groups, we have only a BAM file. We deleted 2895499331's SAM file (from our first, step-by-step attempt) by hand, but 2895499399 never had one.
 
 The piped approach streamed the alignments from `bwa mem` straight into `samtools view` in memory, so no intermediate SAM file was ever written to disk. For a whole genome, that SAM file could be hundreds of gigabytes, and writing it out and then reading it back in takes a lot of time. It also means there's nothing left over to clean up afterwards.
 
 </details>
-
-
-Since we don't need it anymore, go ahead and delete the SAM file:
-
-```bash
-rm aligned/normal/2895499331.sam
-```
 
 ### Merge and sort alignments
 
@@ -439,8 +432,6 @@ samtools view -H aligned/normal.bam
 - **`@PG`** - we now also have several records documenting which program (and which version, and the exact command line) was used to produce the data. It's a built-in record of how the file was made!
 
 There's also a new **`@HD`** line at the top with `SO:coordinate`. That was added by `samtools sort`, and it records that the reads are now ordered by chromosome and position, rather than in the order they came off the sequencer.
-
-</details>
 
 ### Index and view the data
 
