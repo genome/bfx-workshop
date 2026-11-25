@@ -310,12 +310,18 @@ gpu                up   infinite     94   idle  c2-gpu-[001-016],c2-node-[001-08
 
 Reading this:
 
-- **`general-cup`** — the default partition. General-purpose CPU work.
+- **`general-cpu`** — the default partition. General-purpose CPU work.
 - **`general-short`** — same nodes, but a short 30-minute time limit; jobs here often start
   sooner because the scheduler knows they'll finish quickly.
 - **`bigmem`** — nodes with much more RAM, for memory-hungry jobs.
 - **`gpu`** — nodes that have GPUs. (GPUs are also reachable from the general and general-short
   partitions)
+
+Your own `sinfo` output will list a few more partitions than this example. Two that we'll use
+in this workshop:
+
+- **`general-interactive`** — for interactive work and quick test jobs; we'll use it below.
+- **`workshop`** — reserved for this workshop's students; later lessons run their containers here.
 
 ### Our first Slurm job
 
@@ -630,15 +636,15 @@ each other.)
 
 5. Submit a batch job to the cluster that accomplishes the same thing as #4. 
 
-6.  What did the job actually use? After your batch job from #5 finishes, `scontrol show job <id>` stops working — it only sees running jobs. Run `
+6.  What did the job actually use? After your batch job from #5 finishes, `scontrol show job <id>` stops working — it only sees running jobs. Run:
 
 ```
 sacct -j <jobid> --format=JobID,JobName,State,Elapsed,ReqMem,MaxRSS,ExitCode
-````
+```
 How much memory did the job really use versus the 4GB default? What would you request next time?
 
 
-7. We talked about STDOUT and STDERR above.  By default Slurm mixes the two into your ouput file.  Try submitting a batch job that runs the command:
+7. We talked about STDOUT and STDERR above.  By default Slurm mixes the two into your output file.  Try submitting a batch job that runs the command:
 
 ```
 cat tcga.tsv tcga_missing.tsv
@@ -647,7 +653,7 @@ Note that `tcga_missing.tsv` doesn't exist!
 
 Open the output of the job with `less` and scroll through the output (the space bar acts like page down and jumps down a full page).  Is it obvious that something went wrong?
 
-8.  Slurm has the ability to separate those STDOUT and STDERR streams by adding the `--error <filename>` flag.  Re-run the command from #6, adding this flag to catch any warnings or errors from STDERR.  Save it to `tcga_output.err`. 
+8.  Slurm has the ability to separate those STDOUT and STDERR streams by adding the `--error <filename>` flag.  Re-run the command from #7, adding this flag to catch any warnings or errors from STDERR.  Save it to `tcga_output.err`. 
 
 
 9. Since we're going to be using this directory every week, let's clean it up when you're done.  Make a new directory called `week02`.  Move all of the files we created today into that folder.  (hint - use the wildcard character `*` to make it faster)
