@@ -237,7 +237,7 @@ cd ~/workshop/week11/germline
 
 sbatch -A compute2-workshop -p general-cpu -t 4:00:00 -c 2 --mem=8G -J wgs_hc \
   --container-image=broadinstitute/gatk:4.7.0.0 \
-  --container-mounts="/rdcw/fs2/c.a.miller/Active/bfx-workshop-scratch/$USER/week11:/workspace" \
+  --container-mounts="/storage1/fs1/c.a.miller/Active/bfx-workshop-scratch/$USER/week11:/workspace" \
   --container-workdir=/workspace/germline \
   --output=logs/hc_wgs.out --error=logs/hc_wgs.err \
   --wrap="gatk --java-options '-Xmx5g' HaplotypeCaller \
